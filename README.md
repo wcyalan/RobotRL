@@ -4,10 +4,10 @@
 
 ## 学习计划与进度
 
-### 阶段 0：工具链跑通（第 1 周）
-- [ ] 安装 `gymnasium[mujoco]` / `mujoco` / `stable-baselines3` / `torch`
-- [ ] 随机策略渲染 CartPole
-- [ ] SB3 PPO 训 CartPole 到满分（作为后续手写实现的对照组）
+### 阶段 0：工具链跑通（第 1 周）— 2026-10-08 完成
+- [x] 安装 `gymnasium[mujoco]` / `mujoco` / `stable-baselines3` / `torch`（仓库内 `.venv`：torch 2.14.1+cpu / gymnasium 1.4.0 / mujoco 3.15.0 / sb3 2.9.0，清华镜像源）
+- [x] 随机策略 CartPole：10 局平均 **30.3 ± 18.2**（`phase0_setup/01_random_cartpole.py`，加 `--render` 弹窗观看）
+- [x] SB3 PPO 训 CartPole 满分：**500.0 ± 0.0**，40,363 步提前收敛（`phase0_setup/02_sb3_ppo_cartpole.py`，曲线 `experiments/phase0_sb3_ppo/curve.png`，加 `--watch` 观看策略）
 
 ### 阶段 1：手写 REINFORCE → PPO（第 2–4 周，重心）
 - [ ] REINFORCE（策略梯度定理落地），CartPole 收敛
@@ -37,6 +37,7 @@
 | 目录 | 用途 |
 |---|---|
 | `notes/` | 理论笔记（策略梯度定理、GAE、特权学习、奖励设计、sim-to-real 总览）|
+| `phase0_setup/` | 阶段 0 工具链验证脚本 |
 | `phase1_ppo/` | 阶段 1 手写算法代码 |
 | `phase2_walker/` | 阶段 2 Walker2d + DR 实验代码 |
 | `experiments/` | 实验记录：config + 曲线 + 结论 |

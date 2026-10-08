@@ -9,6 +9,7 @@ venv/
 *.pt
 *.pth
 *.onnx
+*.zip
 wandb/
 runs/
 logs/
