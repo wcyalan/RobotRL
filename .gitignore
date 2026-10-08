@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ML artifacts
+*.pt
+*.pth
+*.onnx
+wandb/
+runs/
+logs/
+
+# Data & media（曲线 png 保留，大文件不进库）
+*.mp4
+*.gif
+*.npy
+*.npz
+*.hdf5
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
