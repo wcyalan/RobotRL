@@ -14,9 +14,9 @@ REINFORCE ──→ 自然策略梯度 ──→ TRPO ──→ PPO(Penalty / Cl
 
 ## 2. 自然策略梯度（2002）：用 KL 散度度量"策略变了多少"
 
-把约束写成 $\mathrm{KL}(\pi_{\mathrm{old}} \,\|\, \pi_{\mathrm{new}}) \le \delta$，推出更新方向 $\propto F^{-1} \nabla_\theta J$（$F$ = Fisher 信息矩阵，衡量分布对参数的局部敏感度），得到"随分布曲率自动伸缩的动态步长"。
+把约束写成 $\mathrm{KL}(\pi_{\mathrm{old}} \,\|\, \pi_{\mathrm{new}}) \le \delta$ ，推出更新方向 $\propto F^{-1} \nabla_\theta J$ （ $F$ = Fisher 信息矩阵，衡量分布对参数的局部敏感度），得到"随分布曲率自动伸缩的动态步长"。
 
-遗留问题：$F^{-1}$ 求逆 $O(N^3)$；用近似代替约束可能违反约束；算出的更新不验证是否真改进。
+遗留问题： $F^{-1}$ 求逆 $O(N^3)$ ；用近似代替约束可能违反约束；算出的更新不验证是否真改进。
 
 ## 3. TRPO（2015）：surrogate objective + 三件工程套件
 
@@ -32,7 +32,7 @@ $$
 
 2. **单调改进保证**：surrogate 改进量减去一个 KL 惩罚项仍 > 0 时，真实目标 $J$ 一定改进（定理保证"小步走一定能进步"）。
 
-工程三件套：共轭梯度法解 $Fx = \nabla J$（免显式求逆）、线搜索（逐步缩短直到满足 KL 约束）、改进检查（surrogate 必须上升）。
+工程三件套：共轭梯度法解 $Fx = \nabla J$ （免显式求逆）、线搜索（逐步缩短直到满足 KL 约束）、改进检查（surrogate 必须上升）。
 
 遗留问题：二阶方法慢、实现复杂、不能用 Adam。
 
@@ -46,7 +46,7 @@ $$
 L = \mathbb{E}\left[ r_t \cdot A_t - \beta \cdot \mathrm{KL}(\pi_{\mathrm{old}} \,\|\, \pi_\theta) \right]
 $$
 
-$\beta$ 动态调整：实际 KL 超过 $1.5\delta$ → $\beta \times 2$；太小 → $\beta \div 2$。
+$\beta$ 动态调整：实际 KL 超过 $1.5\delta$ → $\beta \times 2$ ；太小 → $\beta \div 2$。
 
 ### 4.2 PPO-Clip（默认形态）
 
@@ -61,14 +61,14 @@ clip 如何起作用，六种情形（ratio 高于上界/界内/低于下界 × 
 
 | $\hat{A}$ 符号 | ratio 界内 | ratio > 1+ε | ratio < 1−ε |
 |---|---|---|---|
-| **$\hat{A} > 0$**（好动作，想调大概率） | 正常梯度上升 | **梯度 = 0**（不再奖励继续调大） | 拉回界内 |
-| **$\hat{A} < 0$**（差动作，想调小概率） | 正常梯度下降 | 拉回界内 | **梯度 = 0**（不再奖励继续调小） |
+| **$\hat{A} > 0$** （好动作，想调大概率） | 正常梯度上升 | **梯度 = 0**（不再奖励继续调大） | 拉回界内 |
+| **$\hat{A} < 0$** （差动作，想调小概率） | 正常梯度下降 | 拉回界内 | **梯度 = 0**（不再奖励继续调小） |
 
 要点：
 
 - $\min(\cdot)$ 取两式的保守者 → 目标是 clip 的**下界**，"只惩罚越界、不奖励越界"；
 - 单侧截断：越界的样本不是被"夹回来"，而是**该方向上直接不更新**——信任域外的信息被丢弃；
-- 经验值 **$\epsilon = 0.2$**，几乎所有任务通用；**整个机制只依赖一阶梯度**，Adam 可用。
+- 经验值 $\epsilon = 0.2$ ，几乎所有任务通用；**整个机制只依赖一阶梯度**，Adam 可用。
 
 ### 4.3 现代标准 PPO 的完整训练循环（论文 Clip + GAE + 工程细节）
 
@@ -84,7 +84,7 @@ repeat:
 
 各部分一句话：
 
-- **value loss**：$0.5 \cdot \big( V_\theta - G_t^\lambda \big)^2$（可再加 clip 防值函数跳变）；
+- **value loss**： $0.5 \cdot \big( V_\theta - G_t^\lambda \big)^2$ （可再加 clip 防值函数跳变）；
 - **entropy bonus**：鼓励探索，防过早收敛到确定性策略；
 - **为什么能多 epoch 复用数据**：ratio + clip 就是对"数据已过期"的修正与保险——这正是 PPO 相对 REINFORCE 的样本效率来源。
 
@@ -93,8 +93,8 @@ repeat:
 - advantage 批内归一化（优先级最高）
 - observation 归一化（RunningMeanStd，训练时用、评估时冻结）
 - value loss 系数 0.5、entropy 系数 ~0.0、梯度全局范数裁剪 0.5
-- 默认超参：$\gamma = 0.99,\ \lambda = 0.95,\ \epsilon = 0.2$, lr=3e-4, n_steps=2048, epochs=10
-- 早停诊断：$\mathrm{kl}(\pi_{\mathrm{old}} \| \pi_\theta)$ 持续 > 0.02 说明步子太大
+- 默认超参： $\gamma = 0.99,\ \lambda = 0.95,\ \epsilon = 0.2$ ， lr=3e-4, n_steps=2048, epochs=10
+- 早停诊断： $\mathrm{kl}(\pi_{\mathrm{old}} \| \pi_\theta)$ 持续 > 0.02 说明步子太大
 
 ## 5. 为什么 PPO 成了默认选择
 
