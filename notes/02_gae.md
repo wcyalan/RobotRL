@@ -34,6 +34,8 @@ $$
 \delta_t = r_{t+1} + \gamma V(s_{t+1}) - V(s_t)
 $$
 
+> 下标记号：这里沿用 S&B 约定 $r_{t+1} = R(s_t, a_t)$ （奖励按到达时刻编号）。代码实现常用 $r_t = R(s_t, a_t)$ （按产生它的动作编号），则写作 $\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)$ ——两套约定等价，只需保证 $\delta_t$ 的第一笔奖励是 $a_t$ 挣到的那笔。
+
 n-step advantage 相邻 $\delta$ telescoping 相消，几何加权后有闭式解：
 
 $$
