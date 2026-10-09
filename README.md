@@ -1,6 +1,6 @@
 # RobotRL — 机器人强化学习学习仓库
 
-从零到 sim-to-real 的学习主线（4 周压缩版）：手写 PPO → 训练双足机器人行走（带 Domain Randomization）→ 特权学习 mini 实验。时间预算约 **9 h/周**；阶段 0 已提前完成，省出约一周。
+从零到 sim-to-real 的学习主线：手写 PPO → 训练双足机器人行走（带 Domain Randomization）→ 特权学习 mini 实验。
 
 ## 学习计划与进度（2026-10-13 周一开工，11-07 前完成）
 
