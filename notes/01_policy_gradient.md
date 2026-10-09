@@ -8,18 +8,18 @@
 
 | | 学什么 | 代表算法 | 策略形态 | 特点 |
 |---|---|---|---|---|
-| **基于值函数** | $Q(s,a)$ 或 $V(s)$ ，贪心导出动作 | Q-Learning, SARSA, DQN | 隐式、确定性 | 样本效率高；难处理连续动作；策略不随机 |
+| **基于值函数** | $Q(sa)$ 或 $V(s)$ ，贪心导出动作 | Q-Learning SARSA DQN | 隐式、确定性 | 样本效率高；难处理连续动作；策略不随机 |
 | **基于策略** | 直接参数化 $\pi_\theta(a\mid s)$ | REINFORCE | 显式、随机 | 天然支持随机策略与连续动作；方差大、样本效率低 |
-| **Actor-Critic** | 策略头 + 价值头一起学 | A2C, PPO, SAC, DDPG | 显式（随机或确定性） | 两者折中，现代主流 |
+| **Actor-Critic** | 策略头 + 价值头一起学 | A2C PPO SAC DDPG | 显式（随机或确定性） | 两者折中，现代主流 |
 
 基于值函数的路线靠递归求解 Bellman 方程（A2 作业写的就是这个）；基于策略的路线**跳过价值函数、直接对期望回报做梯度上升**——这是策略梯度方法的出发点。
 
 ## 2. 目标函数与策略梯度定理
 
-轨迹 $\tau = (s_0, a_0, \dots, s_T)$ ，目标：
+轨迹 $\tau = (s_0 a_0 \dots s_T)$ ，目标：
 
 $$
-J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\left[ R(\tau) \right] = \sum_\tau P(\tau;\theta)\, R(\tau)
+J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\left[ R(\tau) \right] = \sum_\tau P(\tau;\theta)\ R(\tau)
 $$
 
 **策略梯度定理**（Sutton et al. 1999，只陈述不证明）：
@@ -31,7 +31,7 @@ $$
 推导只用了两步思想：
 
 1. **log-derivative trick**： $\nabla P = P \cdot \nabla \log P$ ，把轨迹概率的梯度变成它自己分布下的期望；
-2. **环境项消失**： $\log P(\tau;\theta)$ 中初始分布和转移概率 $p(s' \mid s, a)$ 与 $\theta$ 无关，求导后只剩 $\sum_t \nabla_\theta \log \pi_\theta(a_t \mid s_t)$ 这一项。
+2. **环境项消失**： $\log P(\tau;\theta)$ 中初始分布和转移概率 $p(s' \mid s a)$ 与 $\theta$ 无关，求导后只剩 $\sum_t \nabla_\theta \log \pi_\theta(a_t \mid s_t)$ 这一项。
 
 推论：**不需要知道环境模型**（免模型的来源），只需能采样。
 
@@ -41,10 +41,10 @@ $$
 
 | | 权重 | 形式 |
 |---|---|---|
-| 监督学习极大似然 | 全 1（每个标签同等对待） | $L = -\mathrm{mean}\,\log p(y \mid x)$ |
+| 监督学习极大似然 | 全 1（每个标签同等对待） | $L = -\mathrm{mean}\\log p(y \mid x)$ |
 | 策略梯度 | **回报**（好轨迹的动权重高，差的为负） | $L = -\mathrm{mean}\left[ \log \pi(a \mid s) \cdot R \right]$ |
 
-CS285 的总结：PG **只是把 trial-and-error（试错学习）形式化**——"good stuff is made more likely, bad stuff is made less likely"。第 2 周手写时会发现代码就是极大似然训练改一下权重（slides 里有并排伪代码对照）。
+CS285 的总结：PG **只是把 trial-and-error（试错学习）形式化**——"good stuff is made more likely bad stuff is made less likely"。第 2 周手写时会发现代码就是极大似然训练改一下权重（slides 里有并排伪代码对照）。
 
 ## 4. 高方差问题的本质：credit assignment 的噪声
 
@@ -90,8 +90,8 @@ REINFORCE = 定理的直接落地（无三板斧版）：
 
 | 动作空间 | 策略 | 说明 |
 |---|---|---|
-| 离散 | **Softmax**： $\pi(a \mid s) = \dfrac{e^{\phi(s,a)^\top \theta}}{\sum_{a'} e^{\phi(s,a')^\top \theta}}$ | log-grad = 观测特征 − 平均特征；好回报 + 偏离均值远 → 强更新 |
-| 连续 | **高斯**： $\mu_\theta(s)$ 由网络给出， $\sigma$ 可学习 | $\nabla_\theta \log \pi(a \mid s) \propto \dfrac{(a - \mu_\theta(s))\, \phi(s)}{\sigma^2}$ ；好回报时远离均值的动作触发强更新 |
+| 离散 | **Softmax**： $\pi(a \mid s) = \dfrac{e^{\phi(sa)^\top \theta}}{\sum_{a'} e^{\phi(sa')^\top \theta}}$ | log-grad = 观测特征 − 平均特征；好回报 + 偏离均值远 → 强更新 |
+| 连续 | **高斯**： $\mu_\theta(s)$ 由网络给出， $\sigma$ 可学习 | $\nabla_\theta \log \pi(a \mid s) \propto \dfrac{(a - \mu_\theta(s))\ \phi(s)}{\sigma^2}$ ；好回报时远离均值的动作触发强更新 |
 
 实现上不手推梯度： $L = -\log \pi_\theta(a \mid s) \cdot A_t$ 让框架自动求导——和极大似然训练只差一个加权。
 

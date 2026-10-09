@@ -14,7 +14,7 @@ REINFORCE ──→ 自然策略梯度 ──→ TRPO ──→ PPO(Penalty / Cl
 
 ## 2. 自然策略梯度（2002）：用 KL 散度度量"策略变了多少"
 
-把约束写成 $\mathrm{KL}(\pi_{\mathrm{old}} \,\|\, \pi_{\mathrm{new}}) \le \delta$ ，推出更新方向 $\propto F^{-1} \nabla_\theta J$ （ $F$ = Fisher 信息矩阵，衡量分布对参数的局部敏感度），得到"随分布曲率自动伸缩的动态步长"。
+把约束写成 $\mathrm{KL}(\pi_{\mathrm{old}} \\|\ \pi_{\mathrm{new}}) \le \delta$ ，推出更新方向 $\propto F^{-1} \nabla_\theta J$ （ $F$ = Fisher 信息矩阵，衡量分布对参数的局部敏感度），得到"随分布曲率自动伸缩的动态步长"。
 
 遗留问题： $F^{-1}$ 求逆 $O(N^3)$ ；用近似代替约束可能违反约束；算出的更新不验证是否真改进。
 
@@ -25,7 +25,7 @@ REINFORCE ──→ 自然策略梯度 ──→ TRPO ──→ PPO(Penalty / Cl
 1. **重要性采样重写目标**：让旧策略采的数据在新策略下可用——
 
 $$
-L(\theta) = \mathbb{E}\left[ \frac{\pi_\theta(a \mid s)}{\pi_{\mathrm{old}}(a \mid s)} \cdot A^{\mathrm{old}}(s, a) \right]
+L(\theta) = \mathbb{E}\left[ \frac{\pi_\theta(a \mid s)}{\pi_{\mathrm{old}}(a \mid s)} \cdot A^{\mathrm{old}}(s a) \right]
 $$
 
    这就是 ratio 的来源（理论上要求新旧策略足够接近，否则方差爆炸）；
@@ -43,17 +43,17 @@ $$
 把 TRPO 的硬约束改成软罚项，惩罚系数自适应：
 
 $$
-L = \mathbb{E}\left[ r_t \cdot A_t - \beta \cdot \mathrm{KL}(\pi_{\mathrm{old}} \,\|\, \pi_\theta) \right]
+L = \mathbb{E}\left[ r_t \cdot A_t - \beta \cdot \mathrm{KL}(\pi_{\mathrm{old}} \\|\ \pi_\theta) \right]
 $$
 
 $\beta$ 动态调整：实际 KL 超过 $1.5\delta$ → $\beta \times 2$ ；太小 → $\beta \div 2$。
 
 ### 4.2 PPO-Clip（默认形态）
 
-**不加 KL 项，直接把 ratio 裁剪到 $[1-\epsilon,\ 1+\epsilon]$**：
+**不加 KL 项，直接把 ratio 裁剪到 $[1-\epsilon\ 1+\epsilon]$**：
 
 $$
-L^{\mathrm{CLIP}}(\theta) = \mathbb{E}\left[ \min\Big( r_t(\theta) \cdot \hat{A}_t,\ \ \mathrm{clip}\big(r_t(\theta),\, 1-\epsilon,\, 1+\epsilon\big) \cdot \hat{A}_t \Big) \right],
+L^{\mathrm{CLIP}}(\theta) = \mathbb{E}\left[ \min\Big( r_t(\theta) \cdot \hat{A}_t\ \ \mathrm{clip}\big(r_t(\theta)\ 1-\epsilon\ 1+\epsilon\big) \cdot \hat{A}_t \Big) \right]
 \qquad r_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\mathrm{old}}(a_t \mid s_t)}
 $$
 
@@ -74,7 +74,7 @@ clip 如何起作用，六种情形（ratio 高于上界/界内/低于下界 × 
 
 ```
 repeat:
-    1. 用 π_old 在 N 个并行环境收集 T 步（如 N=8, T=2048）→ rollout buffer
+    1. 用 π_old 在 N 个并行环境收集 T 步（如 N=8 T=2048）→ rollout buffer
     2. 算 GAE(λ)：δ_t → Â_t = Σ (γλ)^l δ_{t+l}；value target = V + Â
     3. 批内 advantage 归一化：(Â − μ)/σ
     4. 重复 K 个 epoch（如 10），每个 epoch 切 minibatch 更新：
@@ -93,7 +93,7 @@ repeat:
 - advantage 批内归一化（优先级最高）
 - observation 归一化（RunningMeanStd，训练时用、评估时冻结）
 - value loss 系数 0.5、entropy 系数 ~0.0、梯度全局范数裁剪 0.5
-- 默认超参： $\gamma = 0.99,\ \lambda = 0.95,\ \epsilon = 0.2$ ， lr=3e-4, n_steps=2048, epochs=10
+- 默认超参： $\gamma = 0.99\ \lambda = 0.95\ \epsilon = 0.2$ ， lr=3e-4 n_steps=2048 epochs=10
 - 早停诊断： $\mathrm{kl}(\pi_{\mathrm{old}} \| \pi_\theta)$ 持续 > 0.02 说明步子太大
 
 ## 5. 为什么 PPO 成了默认选择

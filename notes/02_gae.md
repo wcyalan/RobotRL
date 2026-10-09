@@ -34,12 +34,12 @@ $$
 \delta_t = r_{t+1} + \gamma V(s_{t+1}) - V(s_t)
 $$
 
-> 下标记号：这里沿用 S&B 约定 $r_{t+1} = R(s_t, a_t)$ （奖励按到达时刻编号）。代码实现常用 $r_t = R(s_t, a_t)$ （按产生它的动作编号），则写作 $\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)$ ——两套约定等价，只需保证 $\delta_t$ 的第一笔奖励是 $a_t$ 挣到的那笔。
+> 下标记号：这里沿用 S&B 约定 $r_{t+1} = R(s_t a_t)$ （奖励按到达时刻编号）。代码实现常用 $r_t = R(s_t a_t)$ （按产生它的动作编号），则写作 $\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)$ ——两套约定等价，只需保证 $\delta_t$ 的第一笔奖励是 $a_t$ 挣到的那笔。
 
 n-step advantage 相邻 $\delta$ telescoping 相消，几何加权后有闭式解：
 
 $$
-\hat{A}_t^{\mathrm{GAE}(\lambda)} = \sum_{l \geq 0} (\gamma \lambda)^l \, \delta_{t+l}
+\hat{A}_t^{\mathrm{GAE}(\lambda)} = \sum_{l \geq 0} (\gamma \lambda)^l \ \delta_{t+l}
 $$
 
 实现 = 存一串 $\delta$ 从后往前累乘 $\gamma\lambda$ （注意 done 掩码和 bootstrap 尾巴），十行以内。
@@ -52,5 +52,5 @@ $$
 
 ## 5. 默认值与诊断
 
-- 起点： $\gamma = 0.99,\ \lambda = 0.95$ （绝大多数连续控制任务）。
+- 起点： $\gamma = 0.99\ \lambda = 0.95$ （绝大多数连续控制任务）。
 - 曲线方差大、学一阵崩 → $\lambda$ 偏大 / advantage 没归一化；学得慢、对 critic 敏感 → $\lambda$ 偏小。
