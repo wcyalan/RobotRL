@@ -1,11 +1,11 @@
-"""Typeset the note's editable pseudocode as paper-style PNG/SVG algorithms.
+"""Typeset the algorithm source as paper-style SVG figures.
 
 Run from any directory with the project's Python environment:
     python notes/render_ppo_algorithms.py
 
-The fenced text in 03_ppo.md is the source of truth. This is a document
+assets/ppo_algorithms/source.json is the source of truth. This is a document
 renderer, not an implementation of the reinforcement learning algorithms.
-Requires matplotlib and Pillow. Fonts default to Windows Times/SimSun;
+Requires matplotlib. Fonts default to Windows Times/SimSun;
 DejaVu Serif and Noto Serif CJK SC are fallback families on other systems.
 """
 
@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import json
 import re
-import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -23,7 +22,6 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 from matplotlib.text import Text
-from PIL import Image, ImageOps
 
 
 HERE = Path(__file__).resolve().parent
@@ -150,16 +148,6 @@ def notation(text: str) -> str:
         for part in text.split("optimizer step")
     )
 
-
-def extract(markdown: str, section: str) -> str:
-    section_match = re.search(r"^### " + re.escape(section) + r"\s[^\n]*\n(.*?)(?=^###? |\Z)",
-                              markdown, re.M | re.S)
-    if not section_match:
-        raise ValueError(f"Section {section} missing")
-    blocks = re.findall(r"^```text\n(.*?)^```", section_match.group(1), re.M | re.S)
-    if len(blocks) != 1:
-        raise ValueError(f"Section {section}: expected one source block, got {len(blocks)}")
-    return blocks[0].rstrip()
 
 
 def properties(weight="normal", size=FONT_SIZE):
@@ -300,7 +288,6 @@ def render(spec: Spec, number: int, source: str) -> dict:
                     transform=fig.transFigure, color="#b9b9b9", linewidth=0.4))
         bounds.append({"line": ln, "x": round(x, 2), "y": round(row_y, 2), "right": round(cursor, 2)})
 
-    fig.savefig(OUT / f"{spec.slug}.png", dpi=DPI)
     fig.savefig(OUT / f"{spec.slug}.svg", metadata={"Date": None, "Creator": "RobotRL algorithm renderer"})
     plt.close(fig)
     return {"algorithm": number, "section": spec.section, "slug": spec.slug,
@@ -308,51 +295,16 @@ def render(spec: Spec, number: int, source: str) -> dict:
             "rendered_rows": len(rows), "row_bounds": bounds}
 
 
-def embed(markdown: str, spec: Spec, number: int, source: str) -> str:
-    image = f"![Algorithm {number}：{spec.title}](assets/ppo_algorithms/{spec.slug}.png)"
-    if image in markdown:
-        return markdown
-    fenced = "```text\n" + source + "\n```"
-    if markdown.count(fenced) != 1:
-        raise ValueError(f"Ambiguous source block: {spec.slug}")
-    replacement = (image + f"\n\n[下载 SVG 矢量版](assets/ppo_algorithms/{spec.slug}.svg)\n\n"
-        "<details>\n<summary>展开可复制的伪代码文本</summary>\n\n" + fenced + "\n\n</details>")
-    return markdown.replace(fenced, replacement, 1)
-
-
-def make_preview():
-    thumb_width = 560
-    thumbs = []
-    for spec in SPECS:
-        im = Image.open(OUT / f"{spec.slug}.png").convert("RGB")
-        im = ImageOps.contain(im, (thumb_width, 1400))
-        thumbs.append(im)
-    gap = 22
-    rows = [thumbs[i:i+3] for i in range(0, len(thumbs), 3)]
-    row_heights = [max(im.height for im in row) for row in rows]
-    sheet = Image.new("RGB", (3 * thumb_width + 4 * gap, sum(row_heights) + gap * (len(rows) + 1)), "#e6e6e6")
-    y = gap
-    for row, h in zip(rows, row_heights):
-        for col, im in enumerate(row):
-            sheet.paste(im, (gap + col * (thumb_width + gap), y))
-        y += h + gap
-    path = Path(tempfile.gettempdir()) / "robotrl-ppo-algorithms-preview.png"
-    sheet.save(path)
-    print(f"Preview: {path}")
-
 
 def main():
-    markdown = NOTE.read_text(encoding="utf-8")
+    sources = json.loads((OUT / "source.json").read_text(encoding="utf-8"))
     OUT.mkdir(parents=True, exist_ok=True)
     reports = []
     for number, spec in enumerate(SPECS, 1):
-        source = extract(markdown, spec.section)
+        source = sources[spec.slug]
         reports.append(render(spec, number, source))
-        markdown = embed(markdown, spec, number, source)
         print(f"Rendered Algorithm {number}: {spec.title}")
-    NOTE.write_text(markdown, encoding="utf-8", newline="\n")
     (OUT / "layout.json").write_text(json.dumps(reports, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    make_preview()
 
 
 if __name__ == "__main__":
