@@ -237,7 +237,7 @@ $$
 L^{\mathrm{CLIP}}(\theta)
 =\hat{\mathbb{E}}_t\left[
 \min\left(\rho_t(\theta)\hat{A}_t,
-\operatorname{clip}(\rho_t(\theta),1-\epsilon,1+\epsilon)\hat{A}_t\right)
+\mathrm{clip}(\rho_t(\theta),1-\epsilon,1+\epsilon)\hat{A}_t\right)
 \right]
 $$
 
@@ -353,13 +353,13 @@ Clip 也不是投影操作，不保证更新后所有 ratio 都在区间内；�
 PPO-Clip 需要的是采样动作在旧策略下的 log-prob。采样时存下：
 
 $$
-\operatorname{old\_log\_prob}_t=\log\pi_{\theta_k}(a_t\mid s_t)
+\mathrm{old\_log\_prob}_t=\log\pi_{\theta_k}(a_t\mid s_t)
 $$
 
 更新时重新计算同一状态、同一动作的当前 log-prob：
 
 $$
-\rho_t=\exp\left(\log\pi_\theta(a_t\mid s_t)-\operatorname{old\_log\_prob}_t\right)
+\rho_t=\exp\left(\log\pi_\theta(a_t\mid s_t)-\mathrm{old\_log\_prob}_t\right)
 $$
 
 这些旧 log-prob 是不带计算图的常量。普通 Clip 和采样 KL 诊断不必保留整个旧网络；若要计算完整分布的解析 KL，则还需旧分布参数或旧网络。
@@ -395,7 +395,7 @@ GAE 和 return target 在开始内层更新前算好并固定。critic 训练时
 保留原始 $\hat{A}_t$ 构造 critic target，再得到 policy 使用的标准化权重：
 
 $$
-\tilde{A}_t=\frac{\hat{A}_t-\operatorname{mean}(\hat{A})}{\operatorname{std}(\hat{A})+\eta}
+\tilde{A}_t=\frac{\hat{A}_t-\mathrm{mean}(\hat{A})}{\mathrm{std}(\hat{A})+\eta}
 $$
 
 其中 $\eta$ 是防止除零的小常数，不是 PPO 的 $\epsilon$ 。归一化使 policy 权重的数值尺度较稳定，但减去批均值可能改变个别样本的符号，因此属于工程选择，不是有限批次下完全不改变目标的恒等变换。
@@ -449,7 +449,7 @@ actor 和 critic 可以是两个独立网络，也可以共享骨干。共享时
 
 $$
 V^{\mathrm{clip}}_\phi(s_t)=V_{\mathrm{old}}(s_t)
-+\operatorname{clip}\left(V_\phi(s_t)-V_{\mathrm{old}}(s_t),-\epsilon_v,+\epsilon_v\right)
++\mathrm{clip}\left(V_\phi(s_t)-V_{\mathrm{old}}(s_t),-\epsilon_v,+\epsilon_v\right)
 $$
 
 然后用这个预测计算 MSE。其他实现可能取“原始预测误差”和“裁剪预测误差”的较大值，二者并不等价。value 的裁剪范围有回报单位，也不能直接把概率比的 $\epsilon$ 当成同一个概念。初版先保持普通 MSE，避免同时引入多种变体。
@@ -581,7 +581,7 @@ $$
 
 ### 9.3 裁剪动作时，buffer 到底存什么
 
-SB3 普通高斯策略先采样原始动作 $u$ ，发送给环境的是合法化后的 $a=\operatorname{clip}(u,a_{\min},a_{\max})$ ，buffer 保留原始 $u$ 与其高斯 log-prob。可把 clipping 看成从潜在动作到环境动作的固定映射。
+SB3 普通高斯策略先采样原始动作 $u$ ，发送给环境的是合法化后的 $a=\mathrm{clip}(u,a_{\min},a_{\max})$ ，buffer 保留原始 $u$ 与其高斯 log-prob。可把 clipping 看成从潜在动作到环境动作的固定映射。
 
 如果把裁剪后的 $a$ 写入 buffer，却仍用未裁剪高斯的密度当作其真实执行动作密度，就混淆了两个随机变量。边界上的执行动作包含被压到边界的概率质量，不能简单套原高斯密度。
 
@@ -618,7 +618,7 @@ SB3 在设定 `target_kl` 时，若该 minibatch 的估计 KL 超过 `1.5 * targ
 SB3 记录：
 
 $$
-\operatorname{clip\_fraction}=\frac{1}{M}\sum_t\mathbf{1}[|\rho_t-1|>\epsilon]
+\mathrm{clip\_fraction}=\frac{1}{M}\sum_t\mathbf{1}[|\rho_t-1|>\epsilon]
 $$
 
 它统计所有超出 ratio 区间的样本，不区分 advantage 符号。§4 已说明：越界但变化不利的样本仍有 policy 梯度。所以不能看到 clip fraction 为 0.3，就说 30% 样本被丢弃了。
@@ -626,7 +626,7 @@ $$
 ### 10.3 critic 指标：explained variance
 
 $$
-\operatorname{EV}=1-\frac{\operatorname{Var}(\hat{R}^\lambda-V)}{\operatorname{Var}(\hat{R}^\lambda)}
+\mathrm{EV}=1-\frac{\mathrm{Var}(\hat{R}^\lambda-V)}{\mathrm{Var}(\hat{R}^\lambda)}
 $$
 
 接近 1 表示残差方差较小；接近 0 表示在这个指标上与常数预测相近；负值表示残差方差比 target 方差更大。target 方差为 0 时该指标未定义。它不反映常量偏移造成的全部误差，也不能单独证明 critic 准确。
