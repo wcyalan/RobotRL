@@ -17,7 +17,9 @@ PPO：Penalty 或 Clip + 多 epoch 更新
 
 伪代码导航：REINFORCE（§1.3）→ A2C（§1.4）→ 自然策略梯度（§3.1）→ TRPO（§3.2）→ PPO-Penalty（§3.3）→ PPO-Clip（§8.2）。共用的 GAE / return target 子过程在 §6.1，算法差异速查在 §8.4。
 
-伪代码约定：`theta` 是 actor 参数，`phi` 是 critic 参数；`theta_old` 等旧量是复制并冻结的快照；`mean` 表示对指定样本取平均。`L` 表示要最大化的目标，`loss` 表示优化器要最小化的损失。以下 actor-critic 流程采用独立参数，便于看清各自的更新；共享网络时还需考虑 §6.4 的梯度耦合。代码块描述算法步骤，具体张量实现留给手写练习。
+伪代码约定：`theta` 是 actor 参数，`phi` 是 critic 参数；`theta_old` 等旧量是复制并冻结的快照；`mean` 表示对指定样本取平均。`L` 表示要最大化的目标，`loss` 表示优化器要最小化的损失。以下 actor-critic 流程采用独立参数，便于看清各自的更新；共享网络时还需考虑 §6.4 的梯度耦合。
+
+正文以论文式 Algorithm 框展示伪代码：编号、输入输出、行号、缩进和数学符号。每张图下方保留可展开复制的文本；[生成脚本](render_ppo_algorithms.py)直接读取这些文本，生成 PNG 与 SVG，避免维护两份算法流程。具体张量实现留给手写练习。
 
 ## 1. 问题起点：方向正确，不代表可以一直沿着它走
 
@@ -57,6 +59,13 @@ KL 是分布差异，不是参数差异；它不对称，也不是严格意义�
 
 先写一个只用完整 episode 回报的版本。下面按“从初始状态出发的折扣总回报”写估计量，因此保留外层 `gamma^t`，并先在每条轨迹内求和，再按轨迹数平均。
 
+![Algorithm 1：REINFORCE](assets/ppo_algorithms/reinforce.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/reinforce.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
+
 ```text
 输入：折扣 gamma、学习率 alpha、每轮 episode 数 M
 初始化策略参数 theta
@@ -78,11 +87,20 @@ repeat:
     记录回报，随后用更新后的策略重新采样
 ```
 
+</details>
+
 这里的完整 episode 以所优化任务的终点为准。若把人为时间上限也当作回报结束点，优化的是该有限长度回报；若任务在截断后仍应继续，就要按 §7 引入 bootstrap，不能把缺失的后续回报直接当成 0。后面的 A2C / PPO 采用常见的 rollout 样本平均形式，对应 §2.3 说明的工程采样约定。
 
 ### 1.4 A2C：伪代码
 
 这一步加入 critic，并允许在 episode 尚未结束时更新。此处的 A2C 指同步采样的 n-step advantage actor-critic：用 GAE 的 `lambda=1` 得到分段 n-step 回报与 advantage；改成较小的 `lambda` 就得到使用 GAE 的版本。仅在完整 MC 回报上减去学习到的 baseline，还不包含这里的 bootstrap 机制。
+
+![Algorithm 2：A2C (n-step)](assets/ppo_algorithms/a2c.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/a2c.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
 
 ```text
 输入：并行环境数 N、每轮步数 T、gamma、actor / critic 学习率
@@ -104,6 +122,8 @@ repeat:
 
     记录回报与 value 误差，用更新后的策略收集下一批数据
 ```
+
+</details>
 
 与后面的 PPO 相比，这里每批数据只做一次 actor 更新，没有 ratio、Clip 或多 epoch 的 actor 复用。GAE 决定如何估计 advantage，PPO 决定如何使用这批 advantage 更新策略；两者是不同环节。
 
@@ -253,6 +273,13 @@ $$
 
 **自然策略梯度伪代码。** 为与后面的 TRPO 对比，使用相同的 ratio surrogate 和固定 advantage。`KL_old(theta)` 表示在旧采样状态上，对旧、新完整动作分布的 KL 取平均；可保存旧 logits 或高斯均值 / 标准差来计算。Fisher 在新旧参数相同的位置计算。
 
+![Algorithm 3：Natural Policy Gradient](assets/ppo_algorithms/natural_gradient.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/natural_gradient.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
+
 ```text
 输入：局部 KL 预算 delta > 0、damping 系数 zeta >= 0
 初始化独立的 actor theta 与 critic phi
@@ -279,6 +306,8 @@ repeat:
     记录回报和更新后的平均 KL，收集下一批数据
 ```
 
+</details>
+
 `zeta=0` 且求解精确时就是上面的解析更新；加入 damping 后，方向和缩放使用的是 $H=F+\zeta I$ ，不是未经修改的 Fisher。该版本只记录更新后的 KL，不做回溯接受检查，所以局部预算不能保证实际 KL 不超限。用共轭梯度求方向也不自动使算法变成 TRPO。
 
 ### 3.2 TRPO：沿自然梯度方向，检查真正的候选更新
@@ -302,6 +331,13 @@ $$
 标准 TRPO 更新流程不直接采用普通 Adam 的无约束 minibatch 更新；不能把这理解成 Adam 与 KL 惩罚目标在数学上不兼容。
 
 **TRPO 伪代码。** 在自然梯度候选步之后加入接受 / 拒绝逻辑。下面使用常见的阻尼求解版本；`Hvp(v)` 只返回矩阵与向量的乘积，不构造完整矩阵。`backtrack` 是步长缩减系数，避免与 PPO-Penalty 的 `beta` 混用。
+
+![Algorithm 4：TRPO](assets/ppo_algorithms/trpo.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/trpo.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
 
 ```text
 输入：KL 预算 delta、damping zeta、0 < backtrack < 1、最多尝试次数 K_ls
@@ -339,6 +375,8 @@ repeat:
     记录接受步长、KL、surrogate 改善与回报，重新采样
 ```
 
+</details>
+
 接受条件比较的是 `L(candidate) - L_old`，不能假定采样估计的 `L_old` 总是精确等于 0。有些实现还要求实际 surrogate 改善达到线性预测改善的一定比例。这里的 KL 使用候选网络的完整分布计算，但状态仍是采样状态；没有对所有状态验证约束，也没有重新跑环境来验证真实回报。[求解与线搜索见 TRPO Appendix C](https://arxiv.org/abs/1502.05477)
 
 ### 3.3 PPO-Penalty：把约束放进目标
@@ -354,6 +392,13 @@ $$
 直觉是“改进动作选择”与“远离旧策略”一起计价。原论文根据更新后的平均 KL 调整下一轮的 $\beta$ ：高于目标的 1.5 倍就加倍，低于目标除以 1.5 就减半。这是软约束，单次更新仍可能超过目标 KL。[PPO 原论文 §4](https://arxiv.org/abs/1707.06347)
 
 **PPO-Penalty 伪代码。** 下面用独立 actor / critic、固定原始 advantage 和不加 entropy bonus 的简化版本，突出 KL 惩罚的作用。`beta` 在一轮 rollout 的全部 epoch 内保持固定，结束后再为下一轮调整。
+
+![Algorithm 5：PPO-Penalty](assets/ppo_algorithms/ppo_penalty.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/ppo_penalty.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
 
 ```text
 输入：目标 KL d_target > 0、初始惩罚系数 beta > 0、epoch 数 K、minibatch 大小 M
@@ -386,6 +431,8 @@ repeat:
 
     记录 d、beta 与回报，换新数据开始下一轮
 ```
+
+</details>
 
 与 TRPO 不同，这个基本版本不会因超出目标 KL 而回滚参数，而是增大下一轮的惩罚。它也没有 PPO-Clip 的 `min / clip`；若同时加入两种机制，就应明确标成组合变体。
 
@@ -516,16 +563,16 @@ Clip 也不是投影操作，不保证更新后所有 ratio 都在区间内；�
 
 ### 5.2 不一定要维护第二份 actor 网络
 
-PPO-Clip 需要的是采样动作在旧策略下的 log-prob。采样时存下：
+PPO-Clip 需要的是采样动作在旧策略下的 log-prob。把代码中的 `old_log_prob` 记为 $\ell_t^{\mathrm{old}}$ ，采样时存下：
 
 $$
-\mathrm{old\_log\_prob}_t=\log\pi_{\theta_k}(a_t\mid s_t)
+\ell_t^{\mathrm{old}}=\log\pi_{\theta_k}(a_t\mid s_t)
 $$
 
 更新时重新计算同一状态、同一动作的当前 log-prob：
 
 $$
-\rho_t=\exp\left(\log\pi_\theta(a_t\mid s_t)-\mathrm{old\_log\_prob}_t\right)
+\rho_t=\exp\left(\log\pi_\theta(a_t\mid s_t)-\ell_t^{\mathrm{old}}\right)
 $$
 
 这些旧 log-prob 是不带计算图的常量。普通 Clip 和采样 KL 诊断不必保留整个旧网络；若要计算完整分布的解析 KL，则还需旧分布参数或旧网络。
@@ -558,6 +605,13 @@ GAE 和 return target 在开始内层更新前算好并固定。critic 训练时
 
 **共用子过程：GAE 与固定标签。** 下列所有量使用采样时的 critic 计算，不记录梯度；采用 §7 的两个 mask，不额外向 reward 加 timeout bootstrap。
 
+![Algorithm 6：GAE / Return Targets](assets/ppo_algorithms/gae.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/gae.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
+
 ```text
 子过程 GAE_固定标签(rollout, gamma, lambda):
     输入形状为 [T, N]，此时还没有展平或打乱
@@ -576,6 +630,8 @@ GAE 和 return target 在开始内层更新前算好并固定。critic 训练时
     R_target = old_value + A_raw
     返回 detach(A_raw)、detach(R_target)
 ```
+
+</details>
 
 `lambda=1` 是带尾部 bootstrap 的分段 n-step 估计；只有轨迹完整结束且没有需要 bootstrap 的尾巴时，才退化为完整 MC 回报。`lambda=0` 只保留一步 TD error。PPO 的 advantage 归一化在生成 `R_target` 之后做，不能改变这里的 critic 标签。
 
@@ -703,6 +759,13 @@ SB3 的 VecEnv 在 `info["terminal_observation"]` 保存最终 observation。对
 
 这是本项目最终要手写的主体。采用普通 value MSE、可选 entropy bonus，以及与本地 SB3 相同的 minibatch advantage 归一化和可选 KL 早停。GAE 的采样边界处理见 §6.1 / §7。
 
+![Algorithm 7：PPO-Clip](assets/ppo_algorithms/ppo_clip.png)
+
+[下载 SVG 矢量版](assets/ppo_algorithms/ppo_clip.svg)
+
+<details>
+<summary>展开可复制的伪代码文本</summary>
+
 ```text
 输入：N、T、epoch 数 K、minibatch 大小 M、gamma、lambda
       ratio 裁剪范围 epsilon、value 系数 c_v、entropy 系数 c_e
@@ -753,6 +816,8 @@ repeat:
     记录回报、KL、clip fraction、value 诊断、实际更新次数
     用更新后的策略采下一轮；episode 未结束的环境无需强制 reset
 ```
+
+</details>
 
 `min` 和 `clip` 对每个样本逐元素计算，最后才求平均。KL 早停不回滚此前已经执行的更新；`old_log_prob` 在本轮全部 epoch 内不重算。为避免最后剩下 1 个样本，可以令 batch 大小整除 $B$ ，或像 SB3 一样对单样本 minibatch 跳过 advantage 归一化。
 
@@ -840,7 +905,7 @@ SB3 在设定 `target_kl` 时，若该 minibatch 的估计 KL 超过 `1.5 * targ
 SB3 记录：
 
 $$
-\mathrm{clip\_fraction}=\frac{1}{M}\sum_t\mathbf{1}[|\rho_t-1|>\epsilon]
+\mathrm{clipfrac}=\frac{1}{M}\sum_t\mathbf{1}[|\rho_t-1|>\epsilon]
 $$
 
 它统计所有超出 ratio 区间的样本，不区分 advantage 符号。§4 已说明：越界但变化不利的样本仍有 policy 梯度。所以不能看到 clip fraction 为 0.3，就说 30% 样本被丢弃了。
