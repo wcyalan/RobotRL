@@ -2,7 +2,7 @@
 
 - [x] [RL 方法框架与策略梯度](01_policy_gradient.md) — value/policy/actor-critic 三分法、策略梯度定理、PG=加权极大似然类比、高方差与三板斧（causality/baseline/critic）、on-policy
 - [x] [λ-Return 与 GAE(λ)](02_gae.md) — 定义、在 PPO 中的角色（policy 信号 + critic target）、γ vs λ、默认值诊断
-- [x] [PPO：从策略梯度到近端策略优化](03_ppo.md) — 详细版：ratio / surrogate 推导、自然梯度与 TRPO、Clip 六情形及数值例子、旧策略与多 epoch、GAE / loss / 边界处理、完整训练流程、连续动作、诊断与 SB3 源码对照
+- [x] [PPO：从策略梯度到近端策略优化](03_ppo.md) — 详细版：ratio / surrogate 推导、自然梯度与 TRPO、Clip 六情形及数值例子、REINFORCE / A2C / 自然梯度 / TRPO / PPO-Penalty / PPO-Clip 六套伪代码、GAE / loss / 边界处理、连续动作、诊断与 SB3 源码对照
 - [ ] 特权学习：LUPI / 非对称 actor-critic / teacher-student 蒸馏 / RMA
 - [ ] 机器人奖励设计三分类（任务/塑形/正则）与 reward hacking 案例
 - [ ] sim-to-real 方法总览（DR、ADR、SysID、real2sim、残差策略、world model）

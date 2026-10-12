@@ -15,6 +15,10 @@ PPO：Penalty 或 Clip + 多 epoch 更新
 
 阅读路线：§1–3 解释为什么需要 PPO；§4 逐项拆 Clip；§5–8 连接到手写实现；§9–11 用于查错和对照 SB3。
 
+伪代码导航：REINFORCE（§1.3）→ A2C（§1.4）→ 自然策略梯度（§3.1）→ TRPO（§3.2）→ PPO-Penalty（§3.3）→ PPO-Clip（§8.2）。共用的 GAE / return target 子过程在 §6.1，算法差异速查在 §8.4。
+
+伪代码约定：`theta` 是 actor 参数，`phi` 是 critic 参数；`theta_old` 等旧量是复制并冻结的快照；`mean` 表示对指定样本取平均。`L` 表示要最大化的目标，`loss` 表示优化器要最小化的损失。以下 actor-critic 流程采用独立参数，便于看清各自的更新；共享网络时还需考虑 §6.4 的梯度耦合。代码块描述算法步骤，具体张量实现留给手写练习。
+
 ## 1. 问题起点：方向正确，不代表可以一直沿着它走
 
 ### 1.1 普通策略梯度在当前策略附近给出改进方向
@@ -48,6 +52,60 @@ D_{\mathrm{KL}}\big(\pi_{\mathrm{old}}(\cdot \mid s)\|\pi_\theta(\cdot \mid s)\b
 $$
 
 KL 是分布差异，不是参数差异；它不对称，也不是严格意义的距离。此处固定使用上式的方向，避免与不同实现中的命名混淆。
+
+### 1.3 REINFORCE：伪代码
+
+先写一个只用完整 episode 回报的版本。下面按“从初始状态出发的折扣总回报”写估计量，因此保留外层 `gamma^t`，并先在每条轨迹内求和，再按轨迹数平均。
+
+```text
+输入：折扣 gamma、学习率 alpha、每轮 episode 数 M
+初始化策略参数 theta
+
+repeat:
+    固定当前 theta，采集 M 条完整 episode
+    对每条轨迹 i，保存状态 s_t、动作 a_t、奖励 r_t
+
+    对每条轨迹，从最后一步向前计算 reward-to-go：
+        G = 0
+        for t = 最后一步 ... 0:
+            G = r_t + gamma * G
+            保存 G_t = G
+
+    用当前网络重新计算所有存储动作的 log_prob_theta(a_t | s_t)
+    loss = -(1 / M) * sum_i sum_t [gamma^t * log_prob_theta(a_t | s_t) * G_t]
+    # G_t 是固定权重，只有当前 log_prob 对 theta 求导
+    用学习率 alpha 对 loss 做一次梯度下降
+    记录回报，随后用更新后的策略重新采样
+```
+
+这里的完整 episode 以所优化任务的终点为准。若把人为时间上限也当作回报结束点，优化的是该有限长度回报；若任务在截断后仍应继续，就要按 §7 引入 bootstrap，不能把缺失的后续回报直接当成 0。后面的 A2C / PPO 采用常见的 rollout 样本平均形式，对应 §2.3 说明的工程采样约定。
+
+### 1.4 A2C：伪代码
+
+这一步加入 critic，并允许在 episode 尚未结束时更新。此处的 A2C 指同步采样的 n-step advantage actor-critic：用 GAE 的 `lambda=1` 得到分段 n-step 回报与 advantage；改成较小的 `lambda` 就得到使用 GAE 的版本。仅在完整 MC 回报上减去学习到的 baseline，还不包含这里的 bootstrap 机制。
+
+```text
+输入：并行环境数 N、每轮步数 T、gamma、actor / critic 学习率
+初始化独立的 actor theta 与 critic phi
+
+repeat:
+    在采样阶段固定 theta、phi
+    从 N 个环境各采 T 步，保存状态、动作、奖励、old_value 和边界信息
+    用采样时的 critic 计算需要的 next_value，含截断位置与 rollout 尾部
+    (A_raw, R_target) = GAE_固定标签(这批数据, gamma, lambda=1)  # 见 §6.1
+    冻结 A_raw、R_target；完成时间递推后再展平样本
+
+    用当前 actor 计算存储动作的 log_prob
+    actor_loss = -mean(log_prob * A_raw)
+    对 actor_loss 做一次梯度下降，只更新 theta
+
+    critic_loss = mean((V_phi(s) - R_target)^2)
+    对 critic_loss 做一次梯度下降，只更新 phi
+
+    记录回报与 value 误差，用更新后的策略收集下一批数据
+```
+
+与后面的 PPO 相比，这里每批数据只做一次 actor 更新，没有 ratio、Clip 或多 epoch 的 actor 复用。GAE 决定如何估计 advantage，PPO 决定如何使用这批 advantage 更新策略；两者是不同环节。
 
 ## 2. ratio 从哪里来：从真实改进量到可计算的 surrogate
 
@@ -193,6 +251,36 @@ $$
 
 实际神经网络中 $F$ 可能奇异或病态，通常需要 damping。困难在于处理 Fisher 曲率及其近似，不是“自然梯度一定要显式求一个大矩阵的逆”。
 
+**自然策略梯度伪代码。** 为与后面的 TRPO 对比，使用相同的 ratio surrogate 和固定 advantage。`KL_old(theta)` 表示在旧采样状态上，对旧、新完整动作分布的 KL 取平均；可保存旧 logits 或高斯均值 / 标准差来计算。Fisher 在新旧参数相同的位置计算。
+
+```text
+输入：局部 KL 预算 delta > 0、damping 系数 zeta >= 0
+初始化独立的 actor theta 与 critic phi
+
+repeat:
+    theta_old = 复制并冻结 theta
+    用旧策略采集 rollout，保存 old_log_prob 和旧动作分布参数
+    用采样时的 critic 计算固定 A_raw、R_target（§6.1）
+
+    定义 L(theta) = mean(exp(log_prob_theta - old_log_prob) * A_raw)
+    g = 在 theta_old 处计算 L 对 theta 的梯度
+    F = 在 theta_old 处计算 KL_old(theta) 的 Hessian
+    H = F + zeta * I
+
+    if g 非零:
+        求解 H * x = g                  # 无需显式求逆；大网络可用共轭梯度
+        q = x^T * H * x
+        if 解有效且 q > 0:
+            step = sqrt(2 * delta / q) * x
+            theta = theta_old + step   # 直接接受局部模型给出的候选更新
+    # 无有效方向时保持 theta_old
+
+    用固定 R_target 拟合 critic，只更新 phi
+    记录回报和更新后的平均 KL，收集下一批数据
+```
+
+`zeta=0` 且求解精确时就是上面的解析更新；加入 damping 后，方向和缩放使用的是 $H=F+\zeta I$ ，不是未经修改的 Fisher。该版本只记录更新后的 KL，不做回溯接受检查，所以局部预算不能保证实际 KL 不超限。用共轭梯度求方向也不自动使算法变成 TRPO。
+
 ### 3.2 TRPO：沿自然梯度方向，检查真正的候选更新
 
 实践中的 TRPO 最大化：
@@ -213,6 +301,46 @@ $$
 
 标准 TRPO 更新流程不直接采用普通 Adam 的无约束 minibatch 更新；不能把这理解成 Adam 与 KL 惩罚目标在数学上不兼容。
 
+**TRPO 伪代码。** 在自然梯度候选步之后加入接受 / 拒绝逻辑。下面使用常见的阻尼求解版本；`Hvp(v)` 只返回矩阵与向量的乘积，不构造完整矩阵。`backtrack` 是步长缩减系数，避免与 PPO-Penalty 的 `beta` 混用。
+
+```text
+输入：KL 预算 delta、damping zeta、0 < backtrack < 1、最多尝试次数 K_ls
+初始化独立的 actor theta 与 critic phi
+
+repeat:
+    theta_old = 复制并冻结 theta
+    用旧策略采 rollout，保存 old_log_prob 和旧分布参数
+    计算并冻结 A_raw、R_target（§6.1）
+
+    定义 L(theta) = mean(exp(log_prob_theta - old_log_prob) * A_raw)
+    定义 KL_old(theta) = 旧采样状态上 KL(旧动作分布 || 当前动作分布) 的均值
+    L_old = L(theta_old)
+    g = 在 theta_old 处计算 L 的梯度
+    Hvp(v) = 在 theta_old 处计算 KL_old 的 Hessian-vector product + zeta * v
+    用共轭梯度近似求解 H * x = g，只调用 Hvp(v)
+    q = x^T * Hvp(x)
+    accepted = False
+
+    if 解有效且 q > 0 且 g^T * x > 0:
+        full_step = sqrt(2 * delta / q) * x
+        for j = 0 ... K_ls-1:
+            candidate = theta_old + backtrack^j * full_step
+            # 每次都从同一个 theta_old 出发，不能在上个 candidate 上累加
+            计算 candidate 的 KL_old 和 L，仍使用同一批旧数据
+            if 两者有限 且 KL_old(candidate) <= delta 且 L(candidate) > L_old:
+                theta = candidate
+                accepted = True
+                break
+
+    if not accepted:
+        theta = theta_old              # 全部候选失败，恢复旧参数
+
+    用固定 R_target 拟合 critic，只更新 phi
+    记录接受步长、KL、surrogate 改善与回报，重新采样
+```
+
+接受条件比较的是 `L(candidate) - L_old`，不能假定采样估计的 `L_old` 总是精确等于 0。有些实现还要求实际 surrogate 改善达到线性预测改善的一定比例。这里的 KL 使用候选网络的完整分布计算，但状态仍是采样状态；没有对所有状态验证约束，也没有重新跑环境来验证真实回报。[求解与线搜索见 TRPO Appendix C](https://arxiv.org/abs/1502.05477)
+
 ### 3.3 PPO-Penalty：把约束放进目标
 
 PPO-Penalty 使用一阶优化器最大化：
@@ -225,9 +353,47 @@ $$
 
 直觉是“改进动作选择”与“远离旧策略”一起计价。原论文根据更新后的平均 KL 调整下一轮的 $\beta$ ：高于目标的 1.5 倍就加倍，低于目标除以 1.5 就减半。这是软约束，单次更新仍可能超过目标 KL。[PPO 原论文 §4](https://arxiv.org/abs/1707.06347)
 
+**PPO-Penalty 伪代码。** 下面用独立 actor / critic、固定原始 advantage 和不加 entropy bonus 的简化版本，突出 KL 惩罚的作用。`beta` 在一轮 rollout 的全部 epoch 内保持固定，结束后再为下一轮调整。
+
+```text
+输入：目标 KL d_target > 0、初始惩罚系数 beta > 0、epoch 数 K、minibatch 大小 M
+初始化独立的 actor theta 与 critic phi
+
+repeat:
+    用当前策略采 rollout，保存 old_log_prob、old_value 和旧分布参数
+    计算并冻结 A_raw、R_target（§6.1）
+    把时间和环境维展平；本轮所有更新始终使用同一个旧策略参照
+
+    for epoch = 1 ... K:
+        打乱这批数据，划分成大小为 M 的 minibatch
+        for 每个 minibatch:
+            ratio = exp(log_prob_theta(a | s) - old_log_prob)
+            kl = mean(KL(存储的旧动作分布 || 当前动作分布))
+            actor_loss = -mean(ratio * A_raw) + beta * kl
+            用一阶优化器最小化 actor_loss，更新 theta
+            # KL 项参与反向传播；只有旧分布参数被 detach
+
+            critic_loss = mean((V_phi(s) - R_target)^2)
+            最小化 critic_loss，只更新 phi
+
+    用最终 actor，在整批旧状态上重新计算平均 KL，记为 d
+    if d > 1.5 * d_target:
+        beta = 2 * beta
+    else if d < d_target / 1.5:
+        beta = beta / 2
+    else:
+        beta 保持不变
+
+    记录 d、beta 与回报，换新数据开始下一轮
+```
+
+与 TRPO 不同，这个基本版本不会因超出目标 KL 而回滚参数，而是增大下一轮的惩罚。它也没有 PPO-Clip 的 `min / clip`；若同时加入两种机制，就应明确标成组合变体。
+
 ### 3.4 PPO-Clip：不求约束问题，改变单个样本的奖励方式
 
 Clip 版本不要求显式把 KL 写进 loss，而是取消“对某个样本继续往有利方向大幅改变概率”的额外收益。它容易与 Adam、minibatch、多 epoch 配合。下面将它拆成可直接核对的分段函数。
+
+PPO-Clip 的完整伪代码集中在 §8.2；先读 §4 的目标、§6 的 loss 与 §7 的边界处理，再对照完整循环。
 
 ## 4. PPO-Clip：公式、六种情形、梯度和边界
 
@@ -390,6 +556,29 @@ $$
 
 GAE 和 return target 在开始内层更新前算好并固定。critic 训练时改变的是预测 $V_\phi(s_t)$ ，不是每个 minibatch 都跟着重算标签。本篇的固定 target 流程与 SB3 对照；重算 advantage 的变体需要单独说明，不能悄悄混入。
 
+**共用子过程：GAE 与固定标签。** 下列所有量使用采样时的 critic 计算，不记录梯度；采用 §7 的两个 mask，不额外向 reward 加 timeout bootstrap。
+
+```text
+子过程 GAE_固定标签(rollout, gamma, lambda):
+    输入形状为 [T, N]，此时还没有展平或打乱
+    old_value[t] = 采样时 V(s_t)
+    next_value[t] = 采样时 V(该 transition 真正的下一状态)
+    # next_value 不能误用自动 reset 后的新一局 observation
+    b[t] = 0 若真正终止，否则为 1
+    c[t] = 0 若真正终止或发生外部截断，否则为 1
+
+    gae_next = 每个环境一个 0           # rollout 之外不递推，但允许 value bootstrap
+    for t = T-1 ... 0:
+        td = reward[t] + gamma * b[t] * next_value[t] - old_value[t]
+        A_raw[t] = td + gamma * lambda * c[t] * gae_next
+        gae_next = A_raw[t]
+
+    R_target = old_value + A_raw
+    返回 detach(A_raw)、detach(R_target)
+```
+
+`lambda=1` 是带尾部 bootstrap 的分段 n-step 估计；只有轨迹完整结束且没有需要 bootstrap 的尾巴时，才退化为完整 MC 回报。`lambda=0` 只保留一步 TD error。PPO 的 advantage 归一化在生成 `R_target` 之后做，不能改变这里的 critic 标签。
+
 ### 6.2 advantage 归一化只用于 policy 权重
 
 保留原始 $\hat{A}_t$ 构造 critic target，再得到 policy 使用的标准化权重：
@@ -510,9 +699,14 @@ SB3 的 VecEnv 在 `info["terminal_observation"]` 保存最终 observation。对
 
 还需保存必要的尾部 value 和截断最终 observation，具体存法由 buffer 设计决定。神经网络输入一般是 observation；本篇为便于推导记成 $s$ ，不意味着部分可观测任务也自动满足 MDP 假设。
 
-### 8.2 伪代码只描述数据流，算法实现留给自己写
+### 8.2 PPO-Clip：完整伪代码
+
+这是本项目最终要手写的主体。采用普通 value MSE、可选 entropy bonus，以及与本地 SB3 相同的 minibatch advantage 归一化和可选 KL 早停。GAE 的采样边界处理见 §6.1 / §7。
 
 ```text
+输入：N、T、epoch 数 K、minibatch 大小 M、gamma、lambda
+      ratio 裁剪范围 epsilon、value 系数 c_v、entropy 系数 c_e
+      可选 target_kl、全局梯度范数上限 max_grad_norm
 初始化 actor theta、critic phi 和环境
 
 repeat:
@@ -527,25 +721,40 @@ repeat:
 
     # 标签阶段：先沿时间维计算，再展平
     计算每个环境尾部与截断位置需要的 bootstrap value
-    从后往前计算原始 GAE advantage
-    return_target = old_value + 原始 advantage
-    冻结旧 log-prob、旧 value、advantage、return_target
+    (A_raw, R_target) = GAE_固定标签(rollout, gamma, lambda)
+    冻结 old_log_prob、old_value、A_raw、R_target
     把 [T, N, ...] 展平为 [B, ...]
 
     # 优化阶段：不与环境交互
+    stop_update = False
     repeat K 个 epoch：
         重新打乱 B 个样本的索引
         遍历不重叠 minibatch：
             用当前网络评估存储 action 的 log-prob、value、entropy
-            按约定归一化 policy 使用的 advantage
-            ratio = exp(current_log_prob - old_log_prob)
-            计算负的 clipped surrogate、value MSE、负的 entropy
-            监控 KL；达到阈值时可停止本轮优化
+            A_policy = (A_raw - mean(A_raw)) / (std(A_raw) + 1e-8)
+            # 上式只对当前 minibatch 计算，minibatch 大小需大于 1
+            log_ratio = current_log_prob - old_log_prob
+            ratio = exp(log_ratio)
+            unclipped = ratio * A_policy
+            clipped = clip(ratio, 1-epsilon, 1+epsilon) * A_policy
+            policy_loss = -mean(min(unclipped, clipped))
+            value_loss = mean((current_value - R_target)^2)
+            loss = policy_loss + c_v * value_loss - c_e * mean(entropy)
+
+            approx_kl = mean(exp(log_ratio) - 1 - log_ratio)
+            if target_kl 已设置 且 approx_kl > 1.5 * target_kl:
+                stop_update = True
+                break                  # 当前 minibatch 不执行 optimizer step
+
             清梯度 → 反向传播 → 全局梯度裁剪 → optimizer step
+        if stop_update:
+            break                      # 同时退出 epoch 循环
 
     记录回报、KL、clip fraction、value 诊断、实际更新次数
     用更新后的策略采下一轮；episode 未结束的环境无需强制 reset
 ```
+
+`min` 和 `clip` 对每个样本逐元素计算，最后才求平均。KL 早停不回滚此前已经执行的更新；`old_log_prob` 在本轮全部 epoch 内不重算。为避免最后剩下 1 个样本，可以令 batch 大小整除 $B$ ，或像 SB3 一样对单样本 minibatch 跳过 advantage 归一化。
 
 ### 8.3 rollout、epoch、minibatch、环境步数怎么换算
 
@@ -554,6 +763,19 @@ repeat:
 这 640 次梯度更新没有新增环境交互。不同实现都叫“update”的量可能分别指一轮 rollout、一个 epoch 或一次 optimizer step，记录实验时必须写清。
 
 并行环境的 `n_steps` 常指**每个环境**的步数。因此增加环境数而保持 `n_steps` 不变，会同时增大 batch；它不只是把相同实验跑得更快。`DummyVecEnv` 在一个进程中依次调用环境，是否换 `SubprocVecEnv` 应取决于环境开销和实际速度。
+
+### 8.4 把六套伪代码放在一起看
+
+| 算法 | actor 每批数据如何更新 | 主要新增机制 | 更新后是否接受检查 |
+|---|---|---|---|
+| REINFORCE | 完整 episode 的 MC policy gradient，一次更新 | reward-to-go | 无 |
+| A2C | rollout 的 advantage policy gradient，一次更新 | critic 与 n-step bootstrap；可换 GAE | 无 |
+| 自然策略梯度 | 沿 Fisher 校正方向做一次更新 | 分布几何与局部 KL 预算 | 本文版本直接接受候选步 |
+| TRPO | 自然梯度候选步 + 回溯 | 高效求方向、KL 与 surrogate 检查 | 有，失败恢复旧 actor |
+| PPO-Penalty | 同批数据多 epoch minibatch | ratio surrogate + 自适应 KL 惩罚 | 基本版本不回滚，下一轮调整 beta |
+| PPO-Clip | 同批数据多 epoch minibatch | ratio surrogate + min / clip | 可选 KL 早停，不回滚已完成更新 |
+
+GAE 是生成训练标签的子过程，可服务于不同策略更新算法。共轭梯度是求线性方程的数值子过程，也可用于自然梯度；算法差别应看整个采样、优化、接受与重新采样流程。
 
 ## 9. 从 CartPole 到 HalfCheetah：动作分布与形状检查
 
