@@ -10,7 +10,7 @@
 - [x] SB3 PPO 训 CartPole 满分：**500.0 ± 0.0**，40,363 步提前收敛（`phase0_setup/02_sb3_ppo_cartpole.py`，曲线 `experiments/phase0_sb3_ppo/curve.png`，加 `--watch` 观看策略）
 
 ### 第 1 周（10.13–10.19）：手写 REINFORCE → A2C + GAE
-- [ ] REINFORCE（策略梯度定理落地），CartPole 收敛到 ≥475
+- [x] REINFORCE（策略梯度定理落地）：2026-10-13 单次 seed=0 运行，182,228 步后确定性评估 20 局 **500.0 ± 0.0**；中途存在回落，跨训练 seed 稳定性待验证。[实验记录](experiments/phase1_reinforce/20261013_original_log/README.md)（原次权重未保存；后续运行已支持自动保存模型）
 - [ ] 加 baseline（V 网络）→ advantage actor-critic，对比训练曲线方差
 - [ ] 加 GAE(λ)：λ=0 / 0.95 各 2 seed 对照即可
 - [ ] **里程碑**：自己的 A2C 在 CartPole 到 500

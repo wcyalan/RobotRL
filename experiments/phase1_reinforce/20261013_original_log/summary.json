@@ -1,0 +1,35 @@
+{
+  "source": "User-pasted console output; observations are not a rerun.",
+  "date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "available_updates": [
+    1,
+    200
+  ],
+  "missing_updates": [],
+  "initial_evaluation_in_attachment": true,
+  "final_training_steps": 182228,
+  "final_eval_mean": 500.0,
+  "final_eval_std": 0.0,
+  "first_observed_full_score": {
+    "update": 120,
+    "steps": 50565
+  },
+  "checkpoint_saved": false,
+  "checkpoint_note": "Original process exited without model saving; original weights cannot be recovered from logs.",
+  "config_basis": "Current source inspected after user run; no config file was captured during the original run.",
+  "config": {
+    "env": "CartPole-v1",
+    "seed": 0,
+    "gamma": 0.99,
+    "episodes_per_update": 8,
+    "updates": 200,
+    "learning_rate": 0.0003,
+    "network": "4-64-64-2 Tanh",
+    "eval_episodes": 20,
+    "eval_seed_start": 10000
+  },
+  "source_log_sha256": "5cdb34b88f5c2667af3bcfb7e7bde7e1e8075c94a354d5aa175641ca8d381c3e",
+  "git_head_at_archival": "20e410bfc88c9691a44d7d5b46ba8e7c95a7b210",
+  "source_note": "Learning scripts were untracked at original run; archival git HEAD is not an original training-code commit."
+}

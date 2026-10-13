@@ -1,0 +1,222 @@
+(base) PS C:\Users\wcyal\Desktop\RobotRL> .\.venv\Scripts\python.exe .\phase1_ppo\reinforce.py
+初始评估: 9.4 ± 0.7
+update=  1, steps=   134, mean_return=  16.75, loss=    99.016
+update=  2, steps=   290, mean_return=  19.50, loss=   130.568
+update=  3, steps=   423, mean_return=  16.62, loss=   102.014
+update=  4, steps=   562, mean_return=  17.38, loss=   123.031
+update=  5, steps=   718, mean_return=  19.50, loss=   137.665
+update=  6, steps=   882, mean_return=  20.50, loss=   147.756
+update=  7, steps=  1030, mean_return=  18.50, loss=   118.877
+update=  8, steps=  1204, mean_return=  21.75, loss=   154.856
+update=  9, steps=  1350, mean_return=  18.25, loss=   114.988
+update= 10, steps=  1562, mean_return=  26.50, loss=   251.010
+独立评估: 13.2 ± 1.4
+update= 11, steps=  1725, mean_return=  20.38, loss=   141.268
+update= 12, steps=  1940, mean_return=  26.88, loss=   247.233
+update= 13, steps=  2130, mean_return=  23.75, loss=   208.182
+update= 14, steps=  2330, mean_return=  25.00, loss=   219.417
+update= 15, steps=  2627, mean_return=  37.12, loss=   488.745
+update= 16, steps=  2833, mean_return=  25.75, loss=   215.055
+update= 17, steps=  3028, mean_return=  24.38, loss=   202.175
+update= 18, steps=  3231, mean_return=  25.38, loss=   283.522
+update= 19, steps=  3417, mean_return=  23.25, loss=   175.854
+update= 20, steps=  3647, mean_return=  28.75, loss=   273.989
+独立评估: 111.3 ± 70.6
+update= 21, steps=  3866, mean_return=  27.38, loss=   268.617
+update= 22, steps=  4076, mean_return=  26.25, loss=   240.261
+update= 23, steps=  4375, mean_return=  37.38, loss=   422.956
+update= 24, steps=  4578, mean_return=  25.38, loss=   208.988
+update= 25, steps=  4801, mean_return=  27.88, loss=   268.339
+update= 26, steps=  5058, mean_return=  32.12, loss=   337.819
+update= 27, steps=  5281, mean_return=  27.88, loss=   256.506
+update= 28, steps=  5517, mean_return=  29.50, loss=   301.734
+update= 29, steps=  5803, mean_return=  35.75, loss=   397.742
+update= 30, steps=  6076, mean_return=  34.12, loss=   364.609
+独立评估: 60.5 ± 14.5
+update= 31, steps=  6295, mean_return=  27.38, loss=   237.747
+update= 32, steps=  6538, mean_return=  30.38, loss=   335.312
+update= 33, steps=  6741, mean_return=  25.38, loss=   211.477
+update= 34, steps=  6903, mean_return=  20.25, loss=   141.204
+update= 35, steps=  7300, mean_return=  49.62, loss=   700.295
+update= 36, steps=  7533, mean_return=  29.12, loss=   290.902
+update= 37, steps=  7810, mean_return=  34.62, loss=   364.931
+update= 38, steps=  8185, mean_return=  46.88, loss=   611.601
+update= 39, steps=  8372, mean_return=  23.38, loss=   178.969
+update= 40, steps=  8615, mean_return=  30.38, loss=   313.184
+独立评估: 67.8 ± 14.5
+update= 41, steps=  8899, mean_return=  35.50, loss=   385.030
+update= 42, steps=  9227, mean_return=  41.00, loss=   495.365
+update= 43, steps=  9563, mean_return=  42.00, loss=   504.129
+update= 44, steps=  9871, mean_return=  38.50, loss=   413.123
+update= 45, steps= 10101, mean_return=  28.75, loss=   254.887
+update= 46, steps= 10361, mean_return=  32.50, loss=   313.365
+update= 47, steps= 10647, mean_return=  35.75, loss=   370.877
+update= 48, steps= 10960, mean_return=  39.12, loss=   474.939
+update= 49, steps= 11305, mean_return=  43.12, loss=   512.188
+update= 50, steps= 11583, mean_return=  34.75, loss=   354.983
+独立评估: 151.8 ± 61.7
+update= 51, steps= 11880, mean_return=  37.12, loss=   401.408
+update= 52, steps= 12191, mean_return=  38.88, loss=   405.577
+update= 53, steps= 12451, mean_return=  32.50, loss=   320.280
+update= 54, steps= 12842, mean_return=  48.88, loss=   645.071
+update= 55, steps= 13089, mean_return=  30.88, loss=   271.996
+update= 56, steps= 13338, mean_return=  31.12, loss=   283.127
+update= 57, steps= 13681, mean_return=  42.88, loss=   476.052
+update= 58, steps= 14028, mean_return=  43.38, loss=   488.327
+update= 59, steps= 14492, mean_return=  58.00, loss=   811.514
+update= 60, steps= 14861, mean_return=  46.12, loss=   575.814
+独立评估: 115.9 ± 49.1
+update= 61, steps= 15210, mean_return=  43.62, loss=   552.778
+update= 62, steps= 15646, mean_return=  54.50, loss=   715.453
+update= 63, steps= 16129, mean_return=  60.38, loss=   831.531
+update= 64, steps= 16503, mean_return=  46.75, loss=   547.531
+update= 65, steps= 16847, mean_return=  43.00, loss=   479.828
+update= 66, steps= 17278, mean_return=  53.88, loss=   699.519
+update= 67, steps= 17650, mean_return=  46.50, loss=   565.694
+update= 68, steps= 18189, mean_return=  67.38, loss=  1002.350
+update= 69, steps= 18547, mean_return=  44.75, loss=   498.334
+update= 70, steps= 19141, mean_return=  74.25, loss=  1127.193
+独立评估: 173.4 ± 79.2
+update= 71, steps= 19377, mean_return=  29.50, loss=   265.492
+update= 72, steps= 19694, mean_return=  39.62, loss=   422.189
+update= 73, steps= 20129, mean_return=  54.38, loss=   707.910
+update= 74, steps= 20600, mean_return=  58.88, loss=   815.524
+update= 75, steps= 21180, mean_return=  72.50, loss=  1069.943
+update= 76, steps= 21697, mean_return=  64.62, loss=   966.340
+update= 77, steps= 22101, mean_return=  50.50, loss=   643.770
+update= 78, steps= 22555, mean_return=  56.75, loss=   751.289
+update= 79, steps= 23009, mean_return=  56.75, loss=   760.056
+update= 80, steps= 23397, mean_return=  48.50, loss=   578.567
+独立评估: 192.2 ± 81.9
+update= 81, steps= 23896, mean_return=  62.38, loss=   840.070
+update= 82, steps= 24292, mean_return=  49.50, loss=   598.505
+update= 83, steps= 24786, mean_return=  61.75, loss=   862.643
+update= 84, steps= 25540, mean_return=  94.25, loss=  1454.444
+update= 85, steps= 26073, mean_return=  66.62, loss=   958.284
+update= 86, steps= 26536, mean_return=  57.88, loss=   751.408
+update= 87, steps= 27045, mean_return=  63.62, loss=   909.721
+update= 88, steps= 27526, mean_return=  60.12, loss=   818.542
+update= 89, steps= 28007, mean_return=  60.12, loss=   826.984
+update= 90, steps= 28443, mean_return=  54.50, loss=   725.894
+独立评估: 241.6 ± 96.1
+update= 91, steps= 28917, mean_return=  59.25, loss=   779.455
+update= 92, steps= 29497, mean_return=  72.50, loss=  1043.176
+update= 93, steps= 30210, mean_return=  89.12, loss=  1427.174
+update= 94, steps= 30720, mean_return=  63.75, loss=   863.366
+update= 95, steps= 31194, mean_return=  59.25, loss=   805.921
+update= 96, steps= 31681, mean_return=  60.88, loss=   792.843
+update= 97, steps= 32294, mean_return=  76.62, loss=  1130.783
+update= 98, steps= 32894, mean_return=  75.00, loss=  1123.377
+update= 99, steps= 33397, mean_return=  62.88, loss=   859.440
+update=100, steps= 34309, mean_return= 114.00, loss=  1897.302
+独立评估: 225.9 ± 83.6
+update=101, steps= 34798, mean_return=  61.12, loss=   798.895
+update=102, steps= 35250, mean_return=  56.50, loss=   740.325
+update=103, steps= 35777, mean_return=  65.88, loss=   940.571
+update=104, steps= 36429, mean_return=  81.50, loss=  1229.541
+update=105, steps= 37168, mean_return=  92.38, loss=  1477.633
+update=106, steps= 37728, mean_return=  70.00, loss=   971.902
+update=107, steps= 38437, mean_return=  88.62, loss=  1368.338
+update=108, steps= 39217, mean_return=  97.50, loss=  1547.244
+update=109, steps= 39987, mean_return=  96.25, loss=  1496.130
+update=110, steps= 40696, mean_return=  88.62, loss=  1315.586
+独立评估: 345.8 ± 101.2
+update=111, steps= 41538, mean_return= 105.25, loss=  1673.073
+update=112, steps= 42714, mean_return= 147.00, loss=  2485.340
+update=113, steps= 43467, mean_return=  94.12, loss=  1488.959
+update=114, steps= 44239, mean_return=  96.50, loss=  1481.762
+update=115, steps= 44981, mean_return=  92.75, loss=  1426.300
+update=116, steps= 46212, mean_return= 153.88, loss=  2497.211
+update=117, steps= 47260, mean_return= 131.00, loss=  2098.972
+update=118, steps= 48296, mean_return= 129.50, loss=  2099.181
+update=119, steps= 49559, mean_return= 157.88, loss=  2468.591
+update=120, steps= 50565, mean_return= 125.75, loss=  2059.238
+独立评估: 500.0 ± 0.0
+update=121, steps= 51845, mean_return= 160.00, loss=  2579.729
+update=122, steps= 52775, mean_return= 116.25, loss=  1891.458
+update=123, steps= 53608, mean_return= 104.12, loss=  1669.359
+update=124, steps= 54618, mean_return= 126.25, loss=  2106.972
+update=125, steps= 56202, mean_return= 198.00, loss=  3060.327
+update=126, steps= 57410, mean_return= 151.00, loss=  2471.272
+update=127, steps= 58837, mean_return= 178.38, loss=  3096.198
+update=128, steps= 60051, mean_return= 151.75, loss=  2511.421
+update=129, steps= 61499, mean_return= 181.00, loss=  2955.070
+update=130, steps= 62663, mean_return= 145.50, loss=  2374.394
+独立评估: 487.9 ± 27.5
+update=131, steps= 64088, mean_return= 178.12, loss=  2769.578
+update=132, steps= 65390, mean_return= 162.75, loss=  2673.255
+update=133, steps= 66846, mean_return= 182.00, loss=  2836.835
+update=134, steps= 68135, mean_return= 161.12, loss=  2659.216
+update=135, steps= 69711, mean_return= 197.00, loss=  3092.641
+update=136, steps= 70628, mean_return= 114.62, loss=  1890.406
+update=137, steps= 71836, mean_return= 151.00, loss=  2515.374
+update=138, steps= 73157, mean_return= 165.12, loss=  2618.700
+update=139, steps= 74280, mean_return= 140.38, loss=  2151.823
+update=140, steps= 76347, mean_return= 258.38, loss=  3875.521
+独立评估: 296.9 ± 47.3
+update=141, steps= 77921, mean_return= 196.75, loss=  3120.188
+update=142, steps= 79250, mean_return= 166.12, loss=  2564.373
+update=143, steps= 80595, mean_return= 168.12, loss=  2843.789
+update=144, steps= 81802, mean_return= 150.88, loss=  2524.528
+update=145, steps= 82939, mean_return= 142.12, loss=  2279.013
+update=146, steps= 84022, mean_return= 135.38, loss=  2210.085
+update=147, steps= 85469, mean_return= 180.88, loss=  2932.271
+update=148, steps= 87340, mean_return= 233.88, loss=  3604.681
+update=149, steps= 89133, mean_return= 224.12, loss=  3310.688
+update=150, steps= 90749, mean_return= 202.00, loss=  3241.862
+独立评估: 477.9 ± 48.2
+update=151, steps= 91924, mean_return= 146.88, loss=  2481.846
+update=152, steps= 94327, mean_return= 300.38, loss=  4267.851
+update=153, steps= 96379, mean_return= 256.50, loss=  3914.753
+update=154, steps= 98420, mean_return= 255.12, loss=  3785.232
+update=155, steps=100448, mean_return= 253.50, loss=  3727.532
+update=156, steps=102073, mean_return= 203.12, loss=  3297.047
+update=157, steps=103521, mean_return= 181.00, loss=  3101.754
+update=158, steps=105328, mean_return= 225.88, loss=  3576.348
+update=159, steps=107111, mean_return= 222.88, loss=  3436.603
+update=160, steps=108653, mean_return= 192.75, loss=  2911.825
+独立评估: 343.5 ± 79.9
+update=161, steps=109974, mean_return= 165.12, loss=  2683.238
+update=162, steps=111676, mean_return= 212.75, loss=  3336.282
+update=163, steps=113326, mean_return= 206.25, loss=  3290.135
+update=164, steps=114605, mean_return= 159.88, loss=  2571.954
+update=165, steps=116881, mean_return= 284.50, loss=  3850.202
+update=166, steps=118428, mean_return= 193.38, loss=  3160.960
+update=167, steps=120505, mean_return= 259.62, loss=  3742.620
+update=168, steps=122277, mean_return= 221.50, loss=  3357.914
+update=169, steps=124619, mean_return= 292.75, loss=  4283.903
+update=170, steps=126515, mean_return= 237.00, loss=  3763.498
+独立评估: 438.2 ± 66.1
+update=171, steps=128238, mean_return= 215.38, loss=  3299.405
+update=172, steps=129833, mean_return= 199.38, loss=  3232.641
+update=173, steps=131876, mean_return= 255.38, loss=  3785.785
+update=174, steps=133297, mean_return= 177.62, loss=  2976.149
+update=175, steps=134836, mean_return= 192.38, loss=  3198.338
+update=176, steps=136407, mean_return= 196.38, loss=  2947.444
+update=177, steps=137908, mean_return= 187.62, loss=  3000.536
+update=178, steps=139376, mean_return= 183.50, loss=  2958.136
+update=179, steps=140623, mean_return= 155.88, loss=  2608.827
+update=180, steps=142347, mean_return= 215.50, loss=  3398.500
+独立评估: 236.4 ± 21.0
+update=181, steps=143965, mean_return= 202.25, loss=  3203.372
+update=182, steps=145695, mean_return= 216.25, loss=  3302.704
+update=183, steps=147558, mean_return= 232.88, loss=  3601.210
+update=184, steps=149183, mean_return= 203.12, loss=  3112.796
+update=185, steps=151041, mean_return= 232.25, loss=  3405.419
+update=186, steps=152942, mean_return= 237.62, loss=  3659.152
+update=187, steps=155252, mean_return= 288.75, loss=  4234.871
+update=188, steps=156996, mean_return= 218.00, loss=  3425.277
+update=189, steps=158882, mean_return= 235.75, loss=  3862.711
+update=190, steps=160622, mean_return= 217.50, loss=  3450.109
+独立评估: 493.4 ± 21.5
+update=191, steps=162103, mean_return= 185.12, loss=  2947.757
+update=192, steps=164212, mean_return= 263.62, loss=  3965.597
+update=193, steps=166590, mean_return= 297.25, loss=  4347.585
+update=194, steps=169150, mean_return= 320.00, loss=  4231.074
+update=195, steps=171115, mean_return= 245.62, loss=  3490.050
+update=196, steps=173248, mean_return= 266.62, loss=  3634.640
+update=197, steps=175980, mean_return= 341.50, loss=  4300.719
+update=198, steps=177683, mean_return= 212.88, loss=  3336.787
+update=199, steps=180055, mean_return= 296.50, loss=  4345.381
+update=200, steps=182228, mean_return= 271.62, loss=  3698.960
+独立评估: 500.0 ± 0.0
