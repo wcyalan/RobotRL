@@ -10,7 +10,7 @@
 - [x] SB3 PPO 训 CartPole 满分：**500.0 ± 0.0**，40,363 步提前收敛（`phase0_setup/02_sb3_ppo_cartpole.py`，曲线 `experiments/phase0_sb3_ppo/curve.png`，加 `--watch` 观看策略）
 
 ### 第 1 周（10.13–10.19）：手写 REINFORCE → A2C + GAE
-- [x] REINFORCE（策略梯度定理落地）：2026-10-13 单次 seed=0 运行，182,228 步后确定性评估 20 局 **500.0 ± 0.0**；中途存在回落，跨训练 seed 稳定性待验证。[实验记录](experiments/phase1_reinforce/20261013_original_log/README.md)（原次权重未保存；后续运行已支持自动保存模型）
+- [x] REINFORCE（策略梯度定理落地）：2026-10-13 单次 seed=0 运行，182,228 步后确定性评估 20 局 **500.0 ± 0.0**；中途存在回落，跨训练 seed 稳定性待验证。[实验记录](experiments/phase1_reinforce/run_001/README.md)（原次权重未保存；后续运行已支持自动保存模型）
 - [ ] 加 baseline（V 网络）→ advantage actor-critic，对比训练曲线方差
   - 2026-10-13：已完成 Monte Carlo baseline 过渡版及 200 次更新；最佳模型新种子评估 **475.6 ± 41.7**，actor/critic 与两个优化器均已保存。[实验记录](experiments/phase1_baseline/README.md)。n-step bootstrap 与多 seed 方差比较待完成。
   - 2026-10-13：已接入固定 128 步 rollout 与 n-step bootstrap，完成 25,600 步训练；最佳模型新种子评估 **482.3 ± 36.6**。[实验记录](experiments/phase1_nstep/README.md)。多 seed 比较与稳定达到 500 待完成。

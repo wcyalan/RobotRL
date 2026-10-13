@@ -5,7 +5,7 @@ import hashlib
 import json
 import platform
 import subprocess
-from datetime import datetime
+import re
 from pathlib import Path
 
 import gymnasium as gym
@@ -53,8 +53,18 @@ def plot_metrics(rows, destination):
 class RunRecorder:
     def __init__(self, config, output_root=None):
         base = Path(output_root) if output_root else ROOT / "experiments" / "phase1_reinforce"
-        self.path = base / datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        self.path.mkdir(parents=True, exist_ok=False)
+        base.mkdir(parents=True, exist_ok=True)
+        numbers = [int(match.group(1)) for path in base.iterdir()
+                   if (match := re.fullmatch(r"run_(\d+)", path.name))]
+        number = max(numbers, default=0) + 1
+        # mkdir is atomic: concurrent starts cannot overwrite the same run.
+        while True:
+            self.path = base / f"run_{number:03d}"
+            try:
+                self.path.mkdir()
+                break
+            except FileExistsError:
+                number += 1
         self.config = config
         self.rows = []
         self.best_mean = -float("inf")

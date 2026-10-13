@@ -1,6 +1,6 @@
 # REINFORCE 实验记录
 
-- [2026-10-13 初次训练日志](20261013_original_log/README.md)：用户原始运行的日志与曲线；原次模型未保存。
+- [2026-10-13 初次训练日志](run_001/README.md)：用户原始运行的日志与曲线；原次模型未保存。
 
 ## 新训练自动保存
 
@@ -10,7 +10,7 @@
 .\.venv\Scripts\python.exe .\phase1_ppo\reinforce.py
 ```
 
-每次运行创建独立时间戳目录，避免覆盖旧实验，保存：
+每次运行在本分类下按 `run_001`、`run_002` 顺序创建目录，接着已有最大编号递增，避免覆盖旧实验。`run_001` 是初次日志归档，`run_002` 是首次保存模型的重跑。保存：
 
 - `config.json`：配置、依赖版本、Git 状态和源码 SHA-256。
 - `source/`：实际运行的源码快照。
@@ -24,7 +24,7 @@
 加载评估（将路径替换为终端输出目录中的模型路径）：
 
 ```powershell
-.\.venv\Scripts\python.exe .\phase1_ppo\evaluate.py "experiments/phase1_reinforce/时间戳/best.pt" --episodes 20 --seed-start 20000
+.\.venv\Scripts\python.exe .\phase1_ppo\evaluate.py "experiments/phase1_reinforce/run_002/best.pt" --episodes 20 --seed-start 20000
 ```
 
 添加 `--render` 可观看。新训练仍然从随机初始化开始，不会自动加载旧模型。
