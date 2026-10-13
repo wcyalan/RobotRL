@@ -17,11 +17,13 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
-FIELDS = ["update", "steps", "train_mean", "loss", "eval_mean", "eval_std"]
+FIELDS = ["update", "steps", "train_mean", "loss", "critic_loss", "eval_mean", "eval_std"]
 
 
 def plot_metrics(rows, destination):
-    fig, axes = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
+    critic = [r for r in rows if r.get("critic_loss") not in (None, "")]
+    panels = 3 if critic else 2
+    fig, axes = plt.subplots(panels, 1, figsize=(8, 3.5 * panels), sharex=True)
     train = [r for r in rows if r.get("train_mean") not in (None, "")]
     evaluation = [r for r in rows if r.get("eval_mean") not in (None, "")]
     axes[0].plot([r["steps"] for r in train], [r["train_mean"] for r in train],
@@ -37,8 +39,11 @@ def plot_metrics(rows, destination):
     axes[0].set_ylabel("Undiscounted episode return")
     axes[0].legend(fontsize=8)
     axes[1].plot([r["steps"] for r in train], [r["loss"] for r in train])
-    axes[1].set_ylabel("REINFORCE surrogate loss")
-    axes[1].set_xlabel("Training environment steps (evaluation excluded)")
+    axes[1].set_ylabel("Actor surrogate loss")
+    if critic:
+        axes[2].plot([r["steps"] for r in critic], [r["critic_loss"] for r in critic])
+        axes[2].set_ylabel("Critic MSE (changing batches)")
+    axes[-1].set_xlabel("Training environment steps (evaluation excluded)")
     fig.tight_layout()
     fig.savefig(destination, dpi=160)
     plt.close(fig)
@@ -71,7 +76,7 @@ class RunRecorder:
         snapshots = self.path / "source"
         snapshots.mkdir()
         metadata["source_sha256"] = {}
-        for name in ("networks.py", "reinforce.py", "evaluate.py", "experiment_io.py"):
+        for name in ("networks.py", "reinforce.py", "actor_critic.py", "evaluate.py", "experiment_io.py"):
             data = (Path(__file__).parent / name).read_bytes()
             (snapshots / name).write_bytes(data)
             metadata["source_sha256"][name] = hashlib.sha256(data).hexdigest()
@@ -83,8 +88,12 @@ class RunRecorder:
         (self.path / name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n",
                                      encoding="utf-8")
 
-    def record(self, policy, optimizer, update, steps, train_mean=None, loss=None, evaluation=None):
+    def record(self, policy, optimizer, update, steps, train_mean=None, loss=None, evaluation=None,
+               *, value_net=None, critic_optimizer=None, critic_loss=None):
+        if (value_net is None) != (critic_optimizer is None):
+            raise ValueError("value_net and critic_optimizer must be provided together")
         row = dict(update=update, steps=steps, train_mean=train_mean, loss=loss,
+                   critic_loss=critic_loss,
                    eval_mean=evaluation[0] if evaluation else None,
                    eval_std=evaluation[1] if evaluation else None)
         self.rows.append(row)
@@ -99,6 +108,9 @@ class RunRecorder:
             "update": update, "steps": steps, "config": self.config,
             "last_evaluation": self.last_eval,
         }
+        if value_net is not None:
+            checkpoint["value_state_dict"] = value_net.state_dict()
+            checkpoint["critic_optimizer_state_dict"] = critic_optimizer.state_dict()
         # 同目录临时文件替换，避免中断写入破坏已有 checkpoint。
         self._checkpoint("last.pt", checkpoint)
         if evaluation is not None and evaluation[0] > self.best_mean:

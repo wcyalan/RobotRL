@@ -23,7 +23,24 @@ class PolicyNetwork(nn.Module):
         logits = self.net(obs)
         return logits
 
-    
+
+class ValueNetwork(nn.Module):
+    def __init__(self):
+        super().__init__()
+
+        self.net = nn.Sequential(
+            nn.Linear(4, 64),
+            nn.Tanh(),
+            nn.Linear(64, 64),
+            nn.Tanh(),
+            nn.Linear(64, 1),
+        )
+
+    def forward(self, obs):
+        values = self.net(obs).squeeze(-1)
+        return values
+
+
 if __name__ == "__main__":
     policy = PolicyNetwork()
 
@@ -39,3 +56,22 @@ if __name__ == "__main__":
     print("log_probs:", log_probs.shape)
     print("probability sums:", dist.probs.sum(dim=-1))
     print("log_probs requires_grad:", log_probs.requires_grad)
+
+    value_net = ValueNetwork()
+
+    obs = torch.zeros(8, 4)
+    values = value_net(obs)
+
+    print("values shape:", values.shape)
+    print("values requires_grad:", values.requires_grad)
+
+    assert values.shape == (8,)
+    assert values.requires_grad
+    assert torch.isfinite(values).all()
+
+    # 检查只有一个样本的批次。
+    single_batch = torch.zeros(1, 4)
+    single_value = value_net(single_batch)
+
+    print("single batch shape:", single_value.shape)
+    assert single_value.shape == (1,)

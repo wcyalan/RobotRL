@@ -1,0 +1,33 @@
+{
+  "algorithm": "REINFORCE + learned Monte Carlo baseline (no bootstrap)",
+  "env": "CartPole-v1",
+  "seed": 0,
+  "gamma": 0.99,
+  "episodes_per_update": 8,
+  "num_updates": 200,
+  "actor_learning_rate": 0.0003,
+  "critic_learning_rate": 0.001,
+  "actor_updates_per_batch": 1,
+  "critic_updates_per_batch": 1,
+  "eval_every": 10,
+  "eval_episodes": 20,
+  "eval_seed_start": 10000,
+  "actor_network": "4-64-64-2 Tanh",
+  "critic_network": "4-64-64-1 Tanh",
+  "tail_return": "zero at termination or time limit",
+  "versions": {
+    "python": "3.12.5",
+    "torch": "2.14.1+cpu",
+    "gymnasium": "1.4.0",
+    "numpy": "2.5.3"
+  },
+  "git_head": "913649c001e28807c36cb34f9620770fe79056e4",
+  "working_tree_status": " M phase1_ppo/actor_critic.py\n M phase1_ppo/evaluate.py\n M phase1_ppo/experiment_io.py\n M phase1_ppo/networks.py\n?? experiments/phase1_reinforce/20261013_153445_589022/\n",
+  "source_sha256": {
+    "networks.py": "3a3fc97f6898f2ad98315cfb023e2248780ca26fd5190e056f42c721fa51f117",
+    "reinforce.py": "4b962c07de784c94467b3f727f7c98065090310fe4d0465cc0b38f56c26563cf",
+    "actor_critic.py": "55676efc05d70428f61a3d8fb1c373f1901f266ed8a551fe9ad19385e01d3b8e",
+    "evaluate.py": "737a646a900c0ea366154c6feb70cadc5a008e6d3e29592b2b0fb8d83390124f",
+    "experiment_io.py": "6d011b8d9e9d9be416cc842e292047dff381ea0f43a5960239eca427b9d94f99"
+  }
+}

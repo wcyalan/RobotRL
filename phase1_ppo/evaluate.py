@@ -53,7 +53,7 @@ if __name__ == "__main__":
     import argparse
     from networks import PolicyNetwork
 
-    parser = argparse.ArgumentParser(description="Evaluate a saved REINFORCE policy")
+    parser = argparse.ArgumentParser(description="Evaluate a saved CartPole policy")
     parser.add_argument("checkpoint")
     parser.add_argument("--episodes", type=int, default=20)
     parser.add_argument("--seed-start", type=int, default=20000)
