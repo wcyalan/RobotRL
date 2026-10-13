@@ -27,7 +27,7 @@ def plot_metrics(rows, destination):
     train = [r for r in rows if r.get("train_mean") not in (None, "")]
     evaluation = [r for r in rows if r.get("eval_mean") not in (None, "")]
     axes[0].plot([r["steps"] for r in train], [r["train_mean"] for r in train],
-                 label="Stochastic training: batch mean", alpha=0.7)
+                 label="Training: completed-episode mean", alpha=0.7)
     axes[0].plot([r["steps"] for r in evaluation], [r["eval_mean"] for r in evaluation],
                  "o-", label="Deterministic evaluation: mean")
     if evaluation:
@@ -38,7 +38,8 @@ def plot_metrics(rows, destination):
     axes[0].axhline(500, color="gray", linestyle="--", linewidth=0.8)
     axes[0].set_ylabel("Undiscounted episode return")
     axes[0].legend(fontsize=8)
-    axes[1].plot([r["steps"] for r in train], [r["loss"] for r in train])
+    actor = [r for r in rows if r.get("loss") not in (None, "")]
+    axes[1].plot([r["steps"] for r in actor], [r["loss"] for r in actor])
     axes[1].set_ylabel("Actor surrogate loss")
     if critic:
         axes[2].plot([r["steps"] for r in critic], [r["critic_loss"] for r in critic])
