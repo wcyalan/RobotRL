@@ -44,7 +44,7 @@ $$
 | 监督学习极大似然 | 全 1（每个标签同等对待） | $L = -\mathrm{mean}\\log p(y \mid x)$ |
 | 策略梯度 | **回报**（好轨迹的动权重高，差的为负） | $L = -\mathrm{mean}\left[ \log \pi(a \mid s) \cdot R \right]$ |
 
-CS285 的总结：PG **只是把 trial-and-error（试错学习）形式化**——"good stuff is made more likely bad stuff is made less likely"。第 2 周手写时会发现代码就是极大似然训练改一下权重（slides 里有并排伪代码对照）。
+CS285 的总结：PG **只是把 trial-and-error（试错学习）形式化**——"good stuff is made more likely bad stuff is made less likely"。手写时会发现代码就是极大似然训练改一下权重（slides 里有并排伪代码对照）。
 
 ## 4. 高方差问题的本质：credit assignment 的噪声
 

@@ -1,44 +1,98 @@
 # RobotRL — 机器人强化学习学习仓库
 
-从零到 sim-to-real 的学习主线：手写 PPO → 训练双足机器人行走（带 Domain Randomization）→ 特权学习 mini 实验。
+学习主线：手写 PPO → Isaac Lab Go2 仿真训练 → Domain Randomization 与鲁棒性评估 → 策略导出和部署准备。真机测试为可选扩展；没有真机也可以完成本轮学习。
 
-## 学习计划与进度（2026-10-13 周一开工，11-07 前完成）
+## 学习计划与进度（2026-10-13 至 11-07；10-14 修订）
+
+将原第 1、2 周合并为一周，利用已经完成的 REINFORCE、baseline 和固定 rollout 工作，尽早进入机器人实操。日期是目标安排，算法正确性检查和实际训练结果决定是否进入下一步；连续控制调试可占用第 2 周前两天。11-07 前的核心成果是一个可复现的机器人仿真项目。
+
+| 时间 | 核心任务 | 交付成果 |
+|---|---|---|
+| 第 1 周：10.13–10.19 | GAE、手写 PPO、连续动作与最小对照 | PPO 代码、检查脚本、CartPole 曲线、HalfCheetah 对照 |
+| 第 2 周：10.20–10.26 | Isaac Lab 环境与 Go2 平地行走 | 自己训练的 checkpoint、回放视频、任务配置说明 |
+| 第 3 周：10.27–11.02 | 修改任务、域随机化与独立评估 | 无 DR / 有 DR 对照、鲁棒性结果与失败案例 |
+| 第 4 周：11.03–11.07 | 策略导出、独立推理验证、项目整理 | 推理接口、评估报告、复现说明；特权学习选做 |
+
+### 算力与环境安排
+
+- 本地继续使用现有 `.venv` 完成手写算法和 MuJoCo 调试。当前 PyTorch 是 CPU 版。
+- 已确认有远程 GPU，具体 GPU 型号、显存、驱动、操作系统、内存和磁盘空间待提供。第 1 周内完成配置核对，第 2 周开始前确定 Isaac Lab 安装方案。
+- 本机 RTX 4060 Laptop GPU 为 8 GB 显存，驱动 566.07。核对时官方 Isaac Lab 安装文档列出 32 GB RAM、16 GB VRAM，并推荐 Windows 驱动 580.88；本机不作为完整机器人训练的默认平台。远程 GPU 也需确认 Isaac Sim 兼容性，不能仅凭显存容量判断。
+- Isaac Lab 使用独立环境，按选定稳定发布版的兼容表固定 Isaac Lab、Isaac Sim、Python、PyTorch 和驱动组合。先通过兼容性检查及最小场景，再训练；训练采用 headless，回放时再渲染，并根据实测显存增加并行环境数。
+- 如果远程环境暂时不可用，先推进本地 PPO / MuJoCo 实验，Isaac Lab 实操顺延；环境未跑通时不标记该阶段完成。
+
+官方依据（2026-10-14 核对）：[安装与系统要求](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html)、[Isaac Sim 硬件要求与兼容性检查](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/requirements.html)。执行安装时使用所选版本对应的文档。
 
 ### 阶段 0：工具链跑通 — 2026-10-08 完成
 - [x] 安装 `gymnasium[mujoco]` / `mujoco` / `stable-baselines3` / `torch`（仓库内 `.venv`：torch 2.14.1+cpu / gymnasium 1.4.0 / mujoco 3.15.0 / sb3 2.9.0，清华镜像源）
 - [x] 随机策略 CartPole：10 局平均 **30.3 ± 18.2**（`phase0_setup/01_random_cartpole.py`，加 `--render` 弹窗观看）
 - [x] SB3 PPO 训 CartPole 满分：**500.0 ± 0.0**，40,363 步提前收敛（`phase0_setup/02_sb3_ppo_cartpole.py`，曲线 `experiments/phase0_sb3_ppo/curve.png`，加 `--watch` 观看策略）
 
-### 第 1 周（10.13–10.19）：手写 REINFORCE → A2C + GAE
+### 第 1 周（10.13–10.19）：完成 GAE → PPO → 连续控制
+
+已完成的基础：
+
 - [x] REINFORCE（策略梯度定理落地）：2026-10-13 单次 seed=0 运行，182,228 步后确定性评估 20 局 **500.0 ± 0.0**；中途存在回落，跨训练 seed 稳定性待验证。[实验记录](experiments/phase1_reinforce/run_001/README.md)（原次权重未保存；后续运行已支持自动保存模型）
-- [ ] 加 baseline（V 网络）→ advantage actor-critic，对比训练曲线方差
-  - 2026-10-13：已完成 Monte Carlo baseline 过渡版及 200 次更新；最佳模型新种子评估 **475.6 ± 41.7**，actor/critic 与两个优化器均已保存。[实验记录](experiments/phase1_baseline/README.md)。n-step bootstrap 与多 seed 方差比较待完成。
-  - 2026-10-13：已接入固定 128 步 rollout 与 n-step bootstrap，完成 25,600 步训练；最佳模型新种子评估 **482.3 ± 36.6**。[实验记录](experiments/phase1_nstep/README.md)。多 seed 比较与稳定达到 500 待完成。
-- [ ] 加 GAE(λ)：λ=0 / 0.95 各 2 seed 对照即可
-- [ ] **里程碑**：自己的 A2C 在 CartPole 到 500
+- [x] Monte Carlo baseline：200 次更新，最佳模型新评估种子 **475.6 ± 41.7**；保存 actor、critic 和两个优化器。[实验记录](experiments/phase1_baseline/README.md)
+- [x] 固定 128 步 rollout、n-step bootstrap、冻结 return / advantage 并接入更新：25,600 步训练，最佳模型新评估种子 **482.3 ± 36.6**。[实验记录](experiments/phase1_nstep/README.md)
 
-### 第 2 周（10.20–10.26）：完整 PPO + HalfCheetah 验收
-- [ ] ratio clipping + 多 epoch minibatch → PPO
-- [ ] 向量化采样（DummyVecEnv 起步 → SubprocVecEnv）
-- [ ] obs 归一化 + advantage 归一化，对照 *37 Implementation Details* 清单查漏
-- [ ] **验收**：HalfCheetah 1M 步 ≥ SB3 同预算的 80%（达不到先 diff SB3 源码再调）
+剩余工作按顺序推进，每项理解并检查通过后再加下一项：
 
-### 第 3 周（10.27–11.02）：Walker2d + Domain Randomization
-- [ ] 用自己的 PPO 训 Walker2d 到 3000+
-- [ ] MJCF 最小改动练习：改 torso 质量、加一个 sensor
-- [ ] DR 实验：质量 ±20% / 摩擦 [0.5, 1.5] vs 确定性训练，各 2 seed，在 3 组未见参数上评估
-- [ ] **里程碑**：robustness 对比图 + DR 策略行走视频
+1. [ ] **GAE**：实现反向递推；手算检查 λ=0、λ=1、真正终止、时间截断与 rollout 边界；return target 与 advantage 在更新前冻结。
+2. [ ] **最小稳定性对照**：λ=0 / 0.95，各训练 seed=0 / 1，使用相同环境步预算、评估协议和其余配置。保存每条曲线；两个 seed 用于初步比较，不作可靠统计结论。
+3. [ ] **PPO-Clip**：冻结旧 log-prob，加 ratio、clip、多 epoch、minibatch；检查更新前 ratio≈1、裁剪分支、梯度隔离，并记录 approximate KL、clip fraction、entropy 和 value loss。
+4. [ ] **CartPole 验收**：每个训练 seed 用固定 20 局评估跟踪；目标为连续 3 次平均回报 ≥475，最终 checkpoint 再用另一组 20 局评估确认 ≥475。500 为挑战目标；若未达到，记录实际结果并检查问题，不把单次 500 当作稳定收敛。
+5. [ ] **连续动作与采样**：高斯策略、联合 log-prob、动作边界处理；先同步向量环境，再按性能需要增加子进程；正确处理自动 reset 的末状态。加入 advantage / observation 归一化，保存并冻结评估时的观测统计量。
+6. [ ] **HalfCheetah 对照**：先做短训练验证，再让手写 PPO 与 SB3 各跑 1M 环境步，初步使用相同的 2 个训练 seed。对齐环境版本、评估方式和预处理，明确其余配置差异。原“达到 SB3 的 80%”保留为挑战目标（SB3 平均回报为正时才使用比例），基础验收看实现检查、学习曲线和独立评估证据；未达标先定位差异。
 
-### 第 4 周（11.03–11.07，短周）：特权学习 mini 实验（纯 MuJoCo，不装 Isaac Lab）
-- [ ] teacher：obs 拼接特权信息（真实质量/摩擦）训练
-- [ ] student：仅普通 obs，DAgger 式蒸馏 teacher
-- [ ] **里程碑**：跨参数评估满足 teacher ≥ 普通 PPO ≥ student 的排序
-- [ ] 选读半天：Isaac Lab Go2 tutorial / MuJoCo Playground 浏览器 demo（认知性了解）
+建议节奏：10.14 GAE，10.15 最小对照，10.16–17 PPO 与 CartPole，10.18–19 连续动作与 HalfCheetah。训练可在代码学习期间运行；HalfCheetah 调试超时则顺延到第 2 周前两天，优先保留正确性检查，暂缓子进程优化和大规模调参。
 
-### 相对十周版砍掉的内容（防自欺清单）
-- 阶段 4 全部分叉（操作 / 视觉 / 真机）→ 后续再加
-- Isaac Lab 动手实操 → 特权学习实验改在 MuJoCo 里做（概念不损失，省去服务器环境搭建）
-- 多 seed 统计、λ 详尽扫描 → 各保留最小规模（2 seed / 2 配置）
+### 第 2 周（10.20–10.26）：Isaac Lab 上手与 Go2 平地行走
+
+目标：能从环境配置解释机器人如何接收动作、获得奖励和结束回合，并独立完成训练与回放。
+
+1. [ ] 在远程机器建立独立环境，记录版本和安装命令；跑通最小场景、官方 Cartpole 的训练 / 保存 / 加载 / 回放。
+2. [ ] 阅读一个 manager-based 任务：梳理 scene、observations、actions、commands、rewards、terminations、events。记录每个观测量的来源、坐标系和单位。
+3. [ ] 使用官方 `Isaac-Velocity-Flat-Unitree-Go2-v0` 及其支持的 RSL-RL PPO 配置训练，先小规模 smoke test，再扩大并行数。第 1 周的手写 PPO 用来理解更新流程，第一轮机器人训练使用官方配套实现。
+4. [ ] 跟踪“策略输出 → action scale / offset → 关节目标 → 执行器 / PD → 物理步”的实际配置；记录 physics dt、decimation、控制频率和关节顺序。
+5. [ ] 完成一次自己的 Go2 训练，加载 checkpoint 回放前进、转向和停止指令，保存视频与配置。记录速度跟踪误差和跌倒情况；不能仅凭总奖励判定已经学会行走。
+
+验收：从保存配置重建环境并加载自己的模型；说明至少一个奖励项、一个终止条件及动作映射。预训练模型可用于排查环境，但不替代自己的训练结果。任务与后端以安装版本的[官方环境列表](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)为准。
+
+### 第 3 周（10.27–11.02）：任务修改、域随机化与鲁棒性
+
+目标：在同一 Go2 任务上做可解释的对照，理解训练环境与测试环境不同会发生什么。
+
+1. [ ] 先审计官方配置已启用的随机化、噪声、推力和 curriculum；复制配置建立明确的无 DR / 有 DR 两组，避免把已有 DR 的默认配置误当基线。
+2. [ ] 先修改一个速度指令范围或奖励权重，观察行为与分项奖励；保存成功及失败视频，检查滑步、摔倒等现象。
+3. [ ] 最小 DR 实验只改质量与摩擦：质量可从标称值的 0.8–1.2 倍、摩擦系数从 0.5–1.5 起步，先核对模型与接触参数是否适用。每组 2 个训练 seed，匹配总环境交互步数和其余训练设置。
+4. [ ] 训练前固定评估表：标称参数、至少 3 组训练中未固定使用的参数组合，包含范围内组合和范围外压力测试；另设固定推力测试。所有策略使用相同指令、初始状态种子和每条件至少 20 个回合。
+5. [ ] 分别报告速度跟踪误差、跌倒率、回合长度和回报；按训练 seed 展示结果，不将一个模型的 20 局当成 20 个独立训练 seed。解释 DR 改善或损害了哪些条件。
+
+验收：无 DR / 有 DR 的配置差异、曲线、评估表和视频齐全。是否改善由结果决定；观察到退化也要保留。此阶段验证的是仿真中的鲁棒性，真机迁移效果仍待测试。
+
+### 第 4 周（11.03–11.07，短周）：部署准备与项目收尾
+
+核心任务：
+
+1. [ ] 按所用训练后端支持的格式导出策略，连同 observation normalization 等推理必需信息保存。
+2. [ ] 编写推理接口说明：观测顺序、单位、坐标系、历史窗口、动作顺序、缩放、关节限位、控制频率和 reset 状态。
+3. [ ] 对一批相同输入检查导出前后动作一致性；随后在独立推理循环中回放同一仿真任务，确认数值一致之外的闭环行为也正常。
+4. [ ] 整理环境安装、训练、评估、导出、回放的复现步骤；汇总失败案例、算力成本和后续待验证事项，形成最终报告。
+
+选做（核心任务完成且有余量时，只选一个）：
+
+- **特权学习 mini 实验**：先区分“critic 有特权观测、actor 无特权观测”和“teacher actor 有特权观测”。若做蒸馏，明确 teacher / student 各自输入，先监督拟合 teacher 动作，再按需要做 DAgger；与普通 PPO 在相同测试条件下比较，不预设 teacher、普通 PPO、student 的性能排序。
+- **sim-to-sim**：将同一机器人策略转到另一个物理引擎，核对模型、观测与执行器映射。只训练另一个引擎中的不同机器人不算策略迁移。
+
+验收：形成“训练 → 保存 → 加载 → 独立评估 → 导出 → 推理回放”的完整链路。没有真机时，以此作为本轮完成条件；项目结论写“完成仿真验证与部署准备”。
+
+### 可选扩展与延期顺序
+
+- Walker2d 3000+、MJCF 质量 / sensor 练习作为 MuJoCo 扩展，取消原来的必做要求，将时间用于 Isaac Lab 实操。
+- 粗糙地形、观测延迟、执行器随机化、更多训练 seed、特权蒸馏和 sim-to-sim 后续逐项增加。
+- 真机测试独立安排：取得硬件与测试条件后再完成接口适配、动作限幅、急停和低风险试运行；本轮不依赖机器人实物。
+- 时间不足时依次推迟：大规模调参 / 子进程优化 → 特权学习 / sim-to-sim → 粗糙地形与额外 DR 维度。保留算法检查、一个 Go2 任务、最小 DR 对照和保存 / 加载验证；基础环境或训练仍未完成则调整日期并如实记录。
 
 ## 目录结构
 
@@ -47,8 +101,10 @@
 | `notes/` | 理论笔记（策略梯度定理、GAE、特权学习、奖励设计、sim-to-real 总览）|
 | `phase0_setup/` | 阶段 0 工具链验证脚本 |
 | `phase1_ppo/` | 阶段 1 手写算法代码 |
-| `phase2_walker/` | 阶段 2 Walker2d + DR 实验代码 |
+| `phase2_walker/` | 保留的 Walker2d 选做练习目录 |
 | `experiments/` | 实验记录：config + 曲线 + 结论 |
+
+进入 Isaac Lab 阶段时再创建 `phase3_isaac_lab/`，保存任务配置、启动入口、评估与导出脚本；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验仍按类别使用 `run_001`、`run_002` 顺序编号。
 
 ## 约定
 

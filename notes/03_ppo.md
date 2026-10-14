@@ -731,7 +731,7 @@ advantage 归一化、observation 归一化、reward / return 归一化解决的
 
 最小检查点：更新前 ratio 约为 1；四个数值例子的分支与梯度方向正确；真正终止不 bootstrap、外部截断正确 bootstrap；loss 向量形状正确；旧量和 target 没有梯度；模型确实在 optimizer step 后发生变化。
 
-阶段验收仍按仓库计划：第 1 周把自己的 actor-critic 做到 CartPole 目标，第 2 周补完整 PPO，并在 HalfCheetah 1M 环境步预算下与 SB3 比较。比较时保存 seed、环境与依赖版本、网络、预处理、配置、对应 commit、原始回报曲线和评估方式；环境步预算相同不表示梯度计算预算相同。
+阶段验收以[仓库学习计划](../README.md)为准：原前两周已合并，第 1 周完成 GAE、PPO 与 CartPole 验收，并推进 HalfCheetah 1M 环境步预算下与 SB3 的比较；后续进入 Isaac Lab 机器人实操。比较时保存 seed、环境与依赖版本、网络、预处理、配置、对应 commit、原始回报曲线和评估方式；环境步预算相同不表示梯度计算预算相同。
 
 ## 12. 常见疑问与参考资料
 
