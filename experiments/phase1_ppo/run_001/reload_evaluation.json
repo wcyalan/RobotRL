@@ -1,0 +1,23 @@
+{
+  "seed_start": 20000,
+  "episodes": 20,
+  "action_selection": "argmax",
+  "training_seed": 0,
+  "three_consecutive_evaluations_ge475": true,
+  "checkpoints": {
+    "best": {
+      "update": 50,
+      "steps": 6400,
+      "mean": 500.0,
+      "std": 0.0,
+      "sha256": "5357aefafb5066e5ec5c178a085943002dcb98406181a5e5b572f50d7c872503"
+    },
+    "last": {
+      "update": 200,
+      "steps": 25600,
+      "mean": 496.8,
+      "std": 10.44317959244214,
+      "sha256": "0578bf68fd4710acaa127220296c1e51b4bf753c6f1335e620ce5e702c758266"
+    }
+  }
+}

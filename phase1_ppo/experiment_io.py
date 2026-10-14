@@ -17,7 +17,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
-FIELDS = ["update", "steps", "train_mean", "loss", "critic_loss", "eval_mean", "eval_std"]
+FIELDS = [
+    "update", "steps", "train_mean", "loss", "critic_loss", "eval_mean", "eval_std",
+    "approx_kl", "clip_fraction", "entropy",
+]
 
 
 def plot_metrics(rows, destination):
@@ -87,7 +90,10 @@ class RunRecorder:
         snapshots = self.path / "source"
         snapshots.mkdir()
         metadata["source_sha256"] = {}
-        for name in ("networks.py", "reinforce.py", "actor_critic.py", "evaluate.py", "experiment_io.py"):
+        for name in (
+            "networks.py", "reinforce.py", "actor_critic.py", "ppo.py",
+            "evaluate.py", "experiment_io.py",
+        ):
             data = (Path(__file__).parent / name).read_bytes()
             (snapshots / name).write_bytes(data)
             metadata["source_sha256"][name] = hashlib.sha256(data).hexdigest()
@@ -100,13 +106,16 @@ class RunRecorder:
                                      encoding="utf-8")
 
     def record(self, policy, optimizer, update, steps, train_mean=None, loss=None, evaluation=None,
-               *, value_net=None, critic_optimizer=None, critic_loss=None):
+               *, value_net=None, critic_optimizer=None, critic_loss=None, diagnostics=None):
         if (value_net is None) != (critic_optimizer is None):
             raise ValueError("value_net and critic_optimizer must be provided together")
         row = dict(update=update, steps=steps, train_mean=train_mean, loss=loss,
                    critic_loss=critic_loss,
                    eval_mean=evaluation[0] if evaluation else None,
                    eval_std=evaluation[1] if evaluation else None)
+        diagnostics = diagnostics or {}
+        for name in ("approx_kl", "clip_fraction", "entropy"):
+            row[name] = diagnostics.get(name)
         self.rows.append(row)
         with (self.path / "metrics.csv").open("a", encoding="utf-8", newline="") as stream:
             csv.DictWriter(stream, fieldnames=FIELDS).writerow(row)

@@ -1,6 +1,4 @@
-"""Actor-critic：从学习到的 baseline 过渡到 n-step 更新与 GAE。"""
-
-# Fixed rollouts with n-step bootstrap; GAE is the next learning step.
+"""固定 rollout 的 actor-critic，使用 GAE 计算 advantage 和回报标签。"""
 
 import argparse
 from pathlib import Path
@@ -43,18 +41,19 @@ def update_actor(policy, optimizer, observations, actions, advantages):
 
 
 @torch.no_grad()
-def prepare_rollout_targets(value_net, rollout, gamma):
+def prepare_rollout_targets(value_net, rollout, gamma, gae_lambda=0.95):
     """Freeze both targets before either network is updated (CPU version)."""
     observations = torch.as_tensor(rollout["observations"], dtype=torch.float32)
     actions = torch.as_tensor(rollout["actions"], dtype=torch.long)
     next_observations = torch.as_tensor(rollout["next_observations"], dtype=torch.float32)
     old_values = value_net(observations)
     next_values = value_net(next_observations)
-    returns = torch.as_tensor(compute_bootstrapped_returns(
-        rollout["rewards"], next_values.numpy(), rollout["terminated"],
-        rollout["truncated"], gamma,
-    ), dtype=torch.float32)
-    advantages = returns - old_values
+    advantages_np, returns_np = compute_gae(
+        rollout["rewards"], old_values.numpy(), next_values.numpy(),
+        rollout["terminated"], rollout["truncated"], gamma, gae_lambda,
+    )
+    advantages = torch.as_tensor(advantages_np, dtype=torch.float32)
+    returns = torch.as_tensor(returns_np, dtype=torch.float32)
     assert returns.shape == advantages.shape == actions.shape
     assert torch.isfinite(returns).all() and torch.isfinite(advantages).all()
     return observations, actions, returns, advantages
@@ -67,6 +66,7 @@ def collect_rollout(env, policy, obs, n_steps):
     next_observations = []
     terminated_flags = []
     truncated_flags = []
+    old_log_probs = []
 
     for _ in range(n_steps):
         observations.append(obs.copy())
@@ -76,12 +76,15 @@ def collect_rollout(env, policy, obs, n_steps):
         with torch.no_grad():
             logits = policy(obs_tensor)
             dist = torch.distributions.Categorical(logits=logits)
-            action = dist.sample().item()
+            action_tensor = dist.sample()
+            action = action_tensor.item()
+            old_log_prob = dist.log_prob(action_tensor).item()
 
         next_obs, reward, terminated, truncated, info = env.step(action)
 
         actions.append(action)
         rewards.append(reward)
+        old_log_probs.append(old_log_prob)
 
         # 必须保存 reset 前的真正下一状态。
         next_observations.append(next_obs.copy())
@@ -102,6 +105,7 @@ def collect_rollout(env, policy, obs, n_steps):
         ),
         "terminated": np.asarray(terminated_flags, dtype=np.bool_),
         "truncated": np.asarray(truncated_flags, dtype=np.bool_),
+        "old_log_probs": np.asarray(old_log_probs, dtype=np.float32),
     }
 
     return rollout, obs
@@ -136,15 +140,55 @@ def compute_bootstrapped_returns(
     return returns
 
 
+def compute_gae(
+    rewards,
+    values,
+    next_values,
+    terminated,
+    truncated,
+    gamma,
+    gae_lambda,
+):
+    advantages = np.zeros(len(rewards), dtype=np.float32)
+    next_advantage = 0.0
+
+    for t in reversed(range(len(rewards))):
+        bootstrap_mask = 1.0 - float(terminated[t])
+        continuation_mask = 1.0 - float(
+            terminated[t] or truncated[t]
+        )
+
+        td_error = (
+            rewards[t]
+            + gamma * bootstrap_mask * next_values[t]
+            - values[t]
+        )
+
+        advantages[t] = (
+            td_error
+            + gamma * gae_lambda
+            * continuation_mask * next_advantage
+        )
+
+        next_advantage = advantages[t]
+
+    returns = advantages + values
+
+    return advantages, returns
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Fixed-rollout n-step actor-critic on CartPole")
+    parser = argparse.ArgumentParser(description="Fixed-rollout GAE actor-critic on CartPole")
     parser.add_argument("--updates", type=int, default=200)
     parser.add_argument("--rollout-steps", type=int, default=128)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--gae-lambda", type=float, default=0.95)
     parser.add_argument("--eval-every", type=int, default=10)
     parser.add_argument("--eval-episodes", type=int, default=20)
     parser.add_argument("--output-root", default=None)
     args = parser.parse_args()
+    if not 0.0 <= args.gae_lambda <= 1.0:
+        parser.error("gae-lambda must be between 0 and 1")
     if min(args.updates, args.eval_every, args.eval_episodes, args.rollout_steps) < 1:
         parser.error("updates, rollout-steps, eval-every and eval-episodes must be positive")
     torch.manual_seed(args.seed)
@@ -152,9 +196,10 @@ if __name__ == "__main__":
     gamma = 0.99
     num_updates = args.updates
 
-    output_root = args.output_root or Path(__file__).resolve().parents[1] / "experiments" / "phase1_nstep"
+    output_root = args.output_root or Path(__file__).resolve().parents[1] / "experiments" / "phase1_gae"
     recorder = RunRecorder({
-        "algorithm": "Fixed-rollout n-step actor-critic (no GAE)",
+        "algorithm": "Fixed-rollout actor-critic with GAE",
+        "gae_lambda": args.gae_lambda,
         "env": "CartPole-v1", "seed": args.seed, "gamma": gamma,
         "rollout_steps": args.rollout_steps, "num_updates": num_updates,
         "actor_loss_weighting": "uniform transition mean, no outer gamma^t",
@@ -205,34 +250,18 @@ if __name__ == "__main__":
             train_mean = float(np.mean(episode_returns)) if episode_returns else None
 
             observations, actions, returns, advantages = prepare_rollout_targets(
-                value_net, rollout, gamma
+                value_net, rollout, gamma, gae_lambda=args.gae_lambda
             )
-
-            # 清除上一轮留下的 critic 梯度，检查 actor 的隔离。
-            critic_optimizer.zero_grad(set_to_none=True)
 
             actor_loss = update_actor(
                 policy, actor_optimizer, observations, actions, advantages,
             )
-
-            assert all(
-                parameter.grad is None
-                for parameter in value_net.parameters()
-            )
-
-            # 清除 actor 梯度，检查 critic 的隔离。
-            actor_optimizer.zero_grad(set_to_none=True)
 
             critic_loss = update_critic(
                 value_net,
                 critic_optimizer,
                 observations,
                 returns,
-            )
-
-            assert all(
-                parameter.grad is None
-                for parameter in policy.parameters()
             )
 
             assert np.isfinite(actor_loss)

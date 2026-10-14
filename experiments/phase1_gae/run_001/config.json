@@ -1,0 +1,36 @@
+{
+  "algorithm": "Fixed-rollout actor-critic with GAE",
+  "gae_lambda": 0.95,
+  "env": "CartPole-v1",
+  "seed": 0,
+  "gamma": 0.99,
+  "rollout_steps": 128,
+  "num_updates": 200,
+  "actor_loss_weighting": "uniform transition mean, no outer gamma^t",
+  "train_mean_definition": "full episodes completed within this rollout; blank if none",
+  "actor_learning_rate": 0.0003,
+  "critic_learning_rate": 0.001,
+  "actor_updates_per_batch": 1,
+  "critic_updates_per_batch": 1,
+  "eval_every": 10,
+  "eval_episodes": 20,
+  "eval_seed_start": 10000,
+  "actor_network": "4-64-64-2 Tanh",
+  "critic_network": "4-64-64-1 Tanh",
+  "tail_return": "zero at termination; bootstrap at truncation or rollout end",
+  "versions": {
+    "python": "3.12.5",
+    "torch": "2.14.1+cpu",
+    "gymnasium": "1.4.0",
+    "numpy": "2.5.3"
+  },
+  "git_head": "24c3ffed5afdacd5fef99f91b378d138757bc650",
+  "working_tree_status": " M phase1_ppo/actor_critic.py\n M phase1_ppo/check_rollout.py\n?? awesome-virtual-cell/\n?? phase1_ppo/check_gae.py\n",
+  "source_sha256": {
+    "networks.py": "0d1b73257782202d566008975a6b6d057e01c2342fb66752706358613051578e",
+    "reinforce.py": "4b962c07de784c94467b3f727f7c98065090310fe4d0465cc0b38f56c26563cf",
+    "actor_critic.py": "4f28d510a21647961b6c3b6e9618a96eb27149ae82c720b0fc1b9a4c90380d6a",
+    "evaluate.py": "737a646a900c0ea366154c6feb70cadc5a008e6d3e29592b2b0fb8d83390124f",
+    "experiment_io.py": "405a7e99f185cc450cfa1b57a1e9d22f6d79ffa40eae1a1f75fb35b4e4e91e79"
+  }
+}

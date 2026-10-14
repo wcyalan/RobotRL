@@ -26,12 +26,12 @@
 - [x] Monte Carlo baseline：200 次更新，最佳模型新评估种子 **475.6 ± 41.7**；保存 actor、critic 和两个优化器。[实验记录](experiments/phase1_baseline/README.md)
 - [x] 固定 128 步 rollout、n-step bootstrap、冻结 return / advantage 并接入更新：25,600 步训练，最佳模型新评估种子 **482.3 ± 36.6**。[实验记录](experiments/phase1_nstep/README.md)
 
-剩余工作按顺序推进，每项理解并检查通过后再加下一项：
+阶段进度（2026-10-15 更新），每项理解并检查通过后再加下一项：
 
-1. [ ] **GAE**：实现反向递推；手算检查 λ=0、λ=1、真正终止、时间截断与 rollout 边界；return target 与 advantage 在更新前冻结。
+1. [x] **GAE**：实现反向递推；已验证 λ=0、λ=1、真正终止、时间截断与 rollout 边界；return target 与 advantage 在更新前冻结。λ=0.95 的 seed=0 / 1 已完成，见[实验记录](experiments/phase1_gae/README.md)。
 2. [ ] **最小稳定性对照**：λ=0 / 0.95，各训练 seed=0 / 1，使用相同环境步预算、评估协议和其余配置。保存每条曲线；两个 seed 用于初步比较，不作可靠统计结论。
-3. [ ] **PPO-Clip**：冻结旧 log-prob，加 ratio、clip、多 epoch、minibatch；检查更新前 ratio≈1、裁剪分支、梯度隔离，并记录 approximate KL、clip fraction、entropy 和 value loss。
-4. [ ] **CartPole 验收**：每个训练 seed 用固定 20 局评估跟踪；目标为连续 3 次平均回报 ≥475，最终 checkpoint 再用另一组 20 局评估确认 ≥475。500 为挑战目标；若未达到，记录实际结果并检查问题，不把单次 500 当作稳定收敛。
+3. [x] **PPO-Clip**：冻结旧 log-prob，加 ratio、clip、多 epoch、minibatch；已验证更新前 ratio≈1、裁剪分支、梯度和固定标签，并记录 approximate KL、clip fraction、entropy 和 value loss。
+4. [x] **CartPole 验收**：PPO seed=0 / 1 各训练 25,600 步，均出现连续 3 次评估平均回报 ≥475；最终 checkpoint 新种子 20 局评估分别为 **496.8 ± 10.4 / 500.0 ± 0.0**，两组最佳模型均为 **500.0 ± 0.0**。两个训练 seed 为初步复现，详见[实验记录](experiments/phase1_ppo/README.md)。
 5. [ ] **连续动作与采样**：高斯策略、联合 log-prob、动作边界处理；先同步向量环境，再按性能需要增加子进程；正确处理自动 reset 的末状态。加入 advantage / observation 归一化，保存并冻结评估时的观测统计量。
 6. [ ] **HalfCheetah 对照**：先做短训练验证，再让手写 PPO 与 SB3 各跑 1M 环境步，初步使用相同的 2 个训练 seed。对齐环境版本、评估方式和预处理，明确其余配置差异。原“达到 SB3 的 80%”保留为挑战目标（SB3 平均回报为正时才使用比例），基础验收看实现检查、学习曲线和独立评估证据；未达标先定位差异。
 
