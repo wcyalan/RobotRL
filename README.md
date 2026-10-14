@@ -13,16 +13,6 @@
 | 第 3 周：10.27–11.02 | 修改任务、域随机化与独立评估 | 无 DR / 有 DR 对照、鲁棒性结果与失败案例 |
 | 第 4 周：11.03–11.07 | 策略导出、独立推理验证、项目整理 | 推理接口、评估报告、复现说明；特权学习选做 |
 
-### 算力与环境安排
-
-- 本地继续使用现有 `.venv` 完成手写算法和 MuJoCo 调试。当前 PyTorch 是 CPU 版。
-- 已确认有远程 GPU，具体 GPU 型号、显存、驱动、操作系统、内存和磁盘空间待提供。第 1 周内完成配置核对，第 2 周开始前确定 Isaac Lab 安装方案。
-- 本机 RTX 4060 Laptop GPU 为 8 GB 显存，驱动 566.07。核对时官方 Isaac Lab 安装文档列出 32 GB RAM、16 GB VRAM，并推荐 Windows 驱动 580.88；本机不作为完整机器人训练的默认平台。远程 GPU 也需确认 Isaac Sim 兼容性，不能仅凭显存容量判断。
-- Isaac Lab 使用独立环境，按选定稳定发布版的兼容表固定 Isaac Lab、Isaac Sim、Python、PyTorch 和驱动组合。先通过兼容性检查及最小场景，再训练；训练采用 headless，回放时再渲染，并根据实测显存增加并行环境数。
-- 如果远程环境暂时不可用，先推进本地 PPO / MuJoCo 实验，Isaac Lab 实操顺延；环境未跑通时不标记该阶段完成。
-
-官方依据（2026-10-14 核对）：[安装与系统要求](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html)、[Isaac Sim 硬件要求与兼容性检查](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/requirements.html)。执行安装时使用所选版本对应的文档。
-
 ### 阶段 0：工具链跑通 — 2026-10-08 完成
 - [x] 安装 `gymnasium[mujoco]` / `mujoco` / `stable-baselines3` / `torch`（仓库内 `.venv`：torch 2.14.1+cpu / gymnasium 1.4.0 / mujoco 3.15.0 / sb3 2.9.0，清华镜像源）
 - [x] 随机策略 CartPole：10 局平均 **30.3 ± 18.2**（`phase0_setup/01_random_cartpole.py`，加 `--render` 弹窗观看）
