@@ -4,7 +4,7 @@ import json
 import hashlib
 import statistics
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 out = ROOT/'experiments/phase2_go2_robustness/run_004'
 rows=[]
 for seed,run in [(0,'run_002'),(1,'run_003'),(42,'run_001')]:

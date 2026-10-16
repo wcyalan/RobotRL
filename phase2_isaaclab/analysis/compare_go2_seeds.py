@@ -5,7 +5,7 @@ import json
 import re
 import statistics
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 base = ROOT / 'experiments/phase2_go2_baseline'
 rows = []
 reference = {}

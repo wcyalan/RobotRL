@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 source_dir="$PWD"
-root=/robotrl/phase2_go2_mass_friction
+root=/robotrl/experiments/phase2_go2_mass_friction
 test ! -e "$root/run_001"
 test ! -e "$root/run_002"
 test ! -e "$root/run_003"

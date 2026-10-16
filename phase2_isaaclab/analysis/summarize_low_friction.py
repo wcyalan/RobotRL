@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 import hashlib
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 base = root/'experiments/phase2_go2_robustness'
 out = base/'run_003'
 rows=[]

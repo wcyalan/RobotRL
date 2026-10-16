@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
-out=/robotrl/phase2_go2_robustness/run_004
+out=/robotrl/experiments/phase2_go2_robustness/run_004
 mkdir -p "$out"
 cp evaluate_go2.py action_delay.py evaluate_delay.sh train_baseline.yaml "$out/"
 cd "$out"
-for pair in '0 /robotrl/phase2_go2_baseline/run_002' '1 /robotrl/phase2_go2_baseline/run_003' '42 /robotrl/run_010'; do
+for pair in '0 /robotrl/experiments/phase2_go2_baseline/run_002' '1 /robotrl/experiments/phase2_go2_baseline/run_003' '42 /robotrl/experiments/phase2_go2_baseline/run_001'; do
     read -r seed source <<< "$pair"
     model=$(find "$source/logs" -name model_299.pt -print -quit)
     test -n "$model"

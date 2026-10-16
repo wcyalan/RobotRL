@@ -1,0 +1,19 @@
+{
+  "local_source_files_moved": 26,
+  "task_profiles_checked": 11,
+  "remote_source_files_verified": 30,
+  "remote_directories_moved": 29,
+  "remote_files_hash_verified": 659,
+  "remote_integrity_passed": true,
+  "models_and_experiment_snapshots_modified": false,
+  "new_mass_friction_context_files": 5,
+  "checks": [
+    "Python AST",
+    "minimal profile imports and optional evaluator dependencies",
+    "maintained Markdown link targets",
+    "all remote Bash scripts bash -n",
+    "remote code SHA256 equality",
+    "remote Python 3.8 minimal context build"
+  ],
+  "limitations": "No new GPU training; current jobs retain historical fixed output guards. Historical snapshots retain original absolute paths; use migration manifest."
+}

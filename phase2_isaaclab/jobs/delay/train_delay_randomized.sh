@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 source_dir="$PWD"
-out=/robotrl/phase2_go2_delay_training/run_001
+out=/robotrl/experiments/phase2_go2_delay_training/run_001
 test ! -e "$out/training.log"
 mkdir -p "$out/smoke"
 cp train_delay_randomized.py verify_delay_training.py random_action_delay.py action_delay.py evaluate_go2.py train_delay_randomized.sh train_baseline.yaml "$out/"

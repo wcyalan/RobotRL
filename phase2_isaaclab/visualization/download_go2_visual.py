@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
 
-root = Path(__file__).resolve().parents[1] / 'assets' / 'unitree_go2'
+root = Path(__file__).resolve().parents[2] / 'assets' / 'unitree_go2'
 root.mkdir(parents=True, exist_ok=True)
 base = 'https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_go2/'
 def fetch(name):

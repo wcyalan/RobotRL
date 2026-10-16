@@ -120,7 +120,7 @@
 | [`phase2_isaaclab/`](phase2_isaaclab/README.md) | Go2 训练、独立评估、鲁棒性测试和视频回放 |
 | `experiments/` | 实验记录：config + 曲线 + 结论 |
 
-Isaac Lab 代码统一维护在 `phase2_isaaclab/`，远程任务入口与配置分别位于 `jobs/`、`configs/`；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验按类别使用 `run_001`、`run_002` 顺序编号。人形阶段开始时再创建 `humanoid_isaaclab/` 及独立实验目录；路线阶段编号与历史代码目录编号不强制一致，Go2 原目录保持不变。
+Isaac Lab 代码统一维护在 `phase2_isaaclab/`，训练、评估、分析和渲染分别位于 `training/`、`evaluation/`、`analysis/`、`visualization/`；远程任务入口与配置位于 `jobs/`、`configs/`，通过 `prepare_context.py --job` 按需打包；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验按类别使用 `run_001`、`run_002` 顺序编号。人形阶段开始时再创建 `humanoid_isaaclab/` 及独立实验目录；路线阶段编号与历史代码目录编号不强制一致，Go2 原目录保持不变。
 
 ## 约定
 

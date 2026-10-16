@@ -10,7 +10,7 @@ import mujoco
 import imageio.v2 as imageio
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 parser = argparse.ArgumentParser()
 parser.add_argument('--run', default='run_001')
 parser.add_argument('--input', default='forward_299.json')

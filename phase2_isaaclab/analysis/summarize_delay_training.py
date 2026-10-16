@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 out = ROOT / 'experiments/phase2_go2_delay_training/run_001'
 baseline = ROOT / 'experiments/phase2_go2_robustness/run_004'
 assert (out / 'completed.txt').read_text().strip() == 'ROBOTRL_DELAY_TRAINING_PASSED'

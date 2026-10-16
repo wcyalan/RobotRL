@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-out=/robotrl/phase2_go2_mass_friction/smoke_001
+out=/robotrl/experiments/phase2_go2_mass_friction/smoke_001
 test ! -e "$out"
 mkdir -p "$out"
 cp train_mass_friction.py friction_audit.py smoke_mass_friction.sh train_baseline.yaml "$out/"

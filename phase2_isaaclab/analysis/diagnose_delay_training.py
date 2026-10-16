@@ -4,7 +4,7 @@ import math
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 out = ROOT/'experiments/phase2_go2_delay_training/run_001'
 chunks = re.split(r'Learning iteration ', (out/'training.log').read_text(encoding='utf-8'))[1:]
 assert len(chunks) == 300
