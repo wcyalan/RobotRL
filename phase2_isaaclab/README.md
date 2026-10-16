@@ -2,6 +2,8 @@
 
 使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端和 RSL-RL PPO。训练结果在 `experiments/phase2_go2_baseline/`，鲁棒性评估在 `experiments/phase2_go2_robustness/`。本目录只维护当前代码、任务入口和环境记录。
 
+学习笔记：[Go2 任务配置](../notes/go2_task_config.md) · [Go2 控制链路](../notes/go2_control_pipeline.md)。笔记附实际配置及证据哈希，本页负责代码与执行入口。
+
 ## 代码结构
 
 当前主线为[质量与摩擦 DR 配对实验](../experiments/phase2_go2_mass_friction/README.md)。延迟实验属于保留的可选扩展，不再追加训练。

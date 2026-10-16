@@ -48,9 +48,9 @@
 
 1. [x] **远程 Go2 环境链路**：固定 kitless 镜像、Newton/MuJoCo Warp 后端，完成最小场景、短训练、保存、加载和轨迹回放；见[环境记录](phase2_isaaclab/reports/remote_validation.json)与[代码说明](phase2_isaaclab/README.md)。
    - [ ] **原计划 Cartpole 练习**：未见该远程环境中完整训练/回放证据；当前链路验证实际使用 Go2，不将其记为 Cartpole 已完成。
-2. [ ] **部分完成：任务配置梳理**。已审计随机化、奖励和终止配置；完整的逐项观测来源、坐标系和单位说明仍待整理。原要求：阅读一个 manager-based 任务：梳理 scene、observations、actions、commands、rewards、terminations、events。记录每个观测量的来源、坐标系和单位。
+2. [x] **任务配置梳理**：已按实际基线配置整理 scene、48 维 observations、actions、commands、rewards、terminations、events 和 curriculum，注明观测来源、坐标系、单位、噪声及后端摩擦差异。见 [Go2 任务配置笔记](notes/go2_task_config.md)。
 3. [x] **官方 Go2 PPO 训练**：当前固定镜像实际任务 ID 为 `Isaac-Velocity-Flat-UnitreeGo2`，使用配套 RSL-RL PPO；短训练通过后完成 4096 环境、300 轮、seed=0/1/42 三组训练。见[基线报告](experiments/phase2_go2_baseline/README.md)。
-4. [ ] **部分完成：控制链路**。实际配置和关节映射已保留，完整接口说明尚未整理；仍需跟踪“策略输出 → action scale / offset → 关节目标 → 执行器 / PD → 物理步”的实际配置；记录 physics dt、decimation、控制频率和关节顺序。
+4. [x] **控制链路说明**：已整理 12 维关节顺序、默认姿态、动作缩放、PD 数值例子、执行器配置和 50 Hz 策略/200 Hz 物理步的关系，区分配置限制与 Newton 后端执行机制。见 [Go2 控制链路笔记](notes/go2_control_pipeline.md)；实际部署的力矩约束与独立闭环验证仍属于阶段 4。
 5. [ ] **部分完成：Go2 行为验收**。自己的 checkpoint、独立随机指令/固定前进评估、20 秒前进视频与失败回放已完成；转向和停止的专项回放及指标仍待补齐。现有随机指令评估不能替代这两项专项验收。
 
 验收：从保存配置重建环境并加载自己的模型；说明至少一个奖励项、一个终止条件及动作映射。预训练模型可用于排查环境，但不替代自己的训练结果。任务与后端以安装版本的[官方环境列表](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)为准。
