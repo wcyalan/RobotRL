@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-16",
+  "task_id": "ed2624c3-a2e4-4c89-bdc2-9336ae16698b",
+  "setup_attempt": {
+    "task_id": "3fe64eb1-99d5-4354-96e9-af3b7d035b54",
+    "status": "failed before training; fixed seed capture before framework argv rewriting"
+  },
+  "status": "completed; both training runs and all evaluations passed; one final-policy episode terminated early",
+  "runs": [
+    {
+      "run": "run_002",
+      "seed": 0
+    },
+    {
+      "run": "run_003",
+      "seed": 1
+    }
+  ],
+  "remote_root": "/labdata2/congyuwang/RobotRL_kitless/phase2_go2_baseline",
+  "reference_run": "run_001",
+  "reference_seed": 42,
+  "num_envs": 4096,
+  "iterations": 300,
+  "steps_per_environment_per_iteration": 24,
+  "steps_per_run": 29491200,
+  "evaluation": "Initial and final checkpoints; 16 episodes each for random commands and fixed forward command 0.5 m/s; evaluation seed 10000.",
+  "execution": "One allocated GPU, sequential seeds; no reward, PPO or termination changes.",
+  "comparison": "comparison_001.json"
+}

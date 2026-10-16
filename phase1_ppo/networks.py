@@ -23,13 +23,17 @@ class PolicyNetwork(nn.Module):
         logits = self.net(obs)
         return logits
 
+    def get_distribution(self, observations):
+        logits = self(observations)
+        return torch.distributions.Categorical(logits=logits)
+
 
 class ValueNetwork(nn.Module):
-    def __init__(self):
+    def __init__(self, obs_dim=4):
         super().__init__()
 
         self.net = nn.Sequential(
-            nn.Linear(4, 64),
+            nn.Linear(obs_dim, 64),
             nn.Tanh(),
             nn.Linear(64, 64),
             nn.Tanh(),
@@ -37,8 +41,39 @@ class ValueNetwork(nn.Module):
         )
 
     def forward(self, obs):
-        values = self.net(obs).squeeze(-1)
-        return values
+        return self.net(obs).squeeze(-1)
+
+
+class GaussianPolicyNetwork(nn.Module):
+    def __init__(self, obs_dim, action_dim):
+        super().__init__()
+
+        # 根据状态，预测各动作维度的均值。
+        self.mean_net = nn.Sequential(
+            nn.Linear(obs_dim, 64),
+            nn.Tanh(),
+            nn.Linear(64, 64),
+            nn.Tanh(),
+            nn.Linear(64, action_dim),
+        )
+
+        # 每个动作维度有一个可学习的 log 标准差。
+        self.log_std = nn.Parameter(torch.zeros(action_dim))
+
+    def forward(self, observations):
+        mean = self.mean_net(observations)
+
+        std = self.log_std.exp().expand_as(mean)
+
+        return mean, std
+
+    def get_distribution(self, observations):
+        mean, std = self(observations)
+
+        return torch.distributions.Independent(
+            torch.distributions.Normal(mean, std),
+            1,
+        )
 
 
 if __name__ == "__main__":

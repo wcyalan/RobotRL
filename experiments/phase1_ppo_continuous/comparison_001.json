@@ -1,0 +1,123 @@
+{
+  "training_protocol": {
+    "fresh_training": true,
+    "training_seeds": [
+      0,
+      1
+    ],
+    "steps_per_seed": 1024000,
+    "rollout_steps": 1024,
+    "minibatch_size": 64,
+    "update_epochs": 4,
+    "eval_every": 50,
+    "training_eval_episodes": 5,
+    "OMP_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "note": "Two full runs retained; preliminary 102400-step run archived in archives/experiment_cleanup_001."
+  },
+  "test_protocol": {
+    "seeds": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019
+    ],
+    "action": "clipped Gaussian mean",
+    "observation_normalization": "checkpoint statistics frozen",
+    "std": "population standard deviation over 20 episodes",
+    "inverted_definition": "cos(torso pitch) < 0; time fraction, not contact detection",
+    "selection": "best selected on training evaluations, not on these 20 test episodes"
+  },
+  "replay_source_sha256": "f807ee7aaa3a948782b87b922c5d868551f9c8bb2ae61dd0f9fbb1da28afd4cc",
+  "results": [
+    {
+      "run": "run_001",
+      "training_seed": 0,
+      "total_training_steps": 1024000,
+      "checkpoint": "best.pt",
+      "checkpoint_update": 950,
+      "checkpoint_sha256": "708889dd3c187a2327ba759f0adf3d01eb4c4deeb132e80452da2aa7e35c93c8",
+      "return_mean": 4793.244106413163,
+      "return_std": 1293.7817226322634,
+      "inverted_episode_count": 2,
+      "inverted_time_fraction": 0.0965,
+      "mean_x_velocity": 5.27433155083593,
+      "action_clipped_fraction": 0.6832916666666666,
+      "evaluation_file": "experiments/phase1_ppo_continuous/run_001/replay_001/replay_summary.json",
+      "finite_training_metrics": true
+    },
+    {
+      "run": "run_001",
+      "training_seed": 0,
+      "total_training_steps": 1024000,
+      "checkpoint": "last.pt",
+      "checkpoint_update": 1000,
+      "checkpoint_sha256": "442a74e187bd15c99c70159191e66fffdceef568e08477861a84e2229d21b69e",
+      "return_mean": 4931.237018718124,
+      "return_std": 1314.1965205977756,
+      "inverted_episode_count": 2,
+      "inverted_time_fraction": 0.09595000000000001,
+      "mean_x_velocity": 5.439190408491642,
+      "action_clipped_fraction": 0.7091083333333333,
+      "evaluation_file": "experiments/phase1_ppo_continuous/run_001/replay_002/replay_summary.json",
+      "finite_training_metrics": true
+    },
+    {
+      "run": "run_002",
+      "training_seed": 1,
+      "total_training_steps": 1024000,
+      "checkpoint": "best.pt",
+      "checkpoint_update": 950,
+      "checkpoint_sha256": "cc9e67bd69b8ba97d3c34ac543d77cb2da8ff4f59fa2c944d04be4de95faab3d",
+      "return_mean": 4792.526462941303,
+      "return_std": 99.05223748165663,
+      "inverted_episode_count": 0,
+      "inverted_time_fraction": 0.0,
+      "mean_x_velocity": 5.31139699314578,
+      "action_clipped_fraction": 0.7783500000000001,
+      "evaluation_file": "experiments/phase1_ppo_continuous/run_002/replay_001/replay_summary.json",
+      "finite_training_metrics": true
+    },
+    {
+      "run": "run_002",
+      "training_seed": 1,
+      "total_training_steps": 1024000,
+      "checkpoint": "last.pt",
+      "checkpoint_update": 1000,
+      "checkpoint_sha256": "ec8ba4ad23653562ccc582fe673b8bb4fd1dc5290ddb482eb40a52d1f0de93f5",
+      "return_mean": 4807.241116192024,
+      "return_std": 86.33448072976742,
+      "inverted_episode_count": 0,
+      "inverted_time_fraction": 0.0,
+      "mean_x_velocity": 5.33040036755709,
+      "action_clipped_fraction": 0.7878666666666667,
+      "evaluation_file": "experiments/phase1_ppo_continuous/run_002/replay_002/replay_summary.json",
+      "finite_training_metrics": true
+    }
+  ],
+  "visual_review": {
+    "run_001": "Best checkpoint: sampled frames of episode 1 upright; episode 2 (seed 20001) inverted at steps 100, 300, 600, 900.",
+    "run_002": "Best checkpoint: sampled frames of both episodes upright at steps 100, 300, 600, 900. This is not a physical gait/contact quality guarantee.",
+    "video_directory": [
+      "experiments/phase1_ppo_continuous/run_001/replay_003",
+      "experiments/phase1_ppo_continuous/run_002/replay_003"
+    ]
+  },
+  "conclusion": "Longer training improves reward and posture. Seed 1 is more consistent on these 20 evaluation initial states; seed 0 still flips in 2/20 episodes. Two training seeds do not establish general reliability."
+}

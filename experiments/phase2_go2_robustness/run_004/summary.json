@@ -1,0 +1,124 @@
+{
+  "status": "completed",
+  "checkpoint_hashes_verified": true,
+  "first_eight_steps_delay_verified": true,
+  "results": [
+    {
+      "seed": 0,
+      "delay_ms": 0,
+      "speed": 0.5233942866325378,
+      "xy_error": 0.053174376487731934,
+      "height": 0.2744245231151581,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 0,
+      "delay_ms": 20,
+      "speed": 0.49855586886405945,
+      "xy_error": 0.08760081231594086,
+      "height": 0.2633935213088989,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 0,
+      "delay_ms": 40,
+      "speed": 0.4395790696144104,
+      "xy_error": 0.1400243043899536,
+      "height": 0.24840466678142548,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 1,
+      "delay_ms": 0,
+      "speed": 0.5171767473220825,
+      "xy_error": 0.054365500807762146,
+      "height": 0.22125563025474548,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 1,
+      "delay_ms": 20,
+      "speed": 0.49280959367752075,
+      "xy_error": 0.0886010006070137,
+      "height": 0.2165849804878235,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 1,
+      "delay_ms": 40,
+      "speed": 0.44487661123275757,
+      "xy_error": 0.13786810636520386,
+      "height": 0.21156616508960724,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 42,
+      "delay_ms": 0,
+      "speed": 0.5095422863960266,
+      "xy_error": 0.04893318563699722,
+      "height": 0.2314232587814331,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 42,
+      "delay_ms": 20,
+      "speed": 0.44635847210884094,
+      "xy_error": 0.11223972588777542,
+      "height": 0.2231259047985077,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    },
+    {
+      "seed": 42,
+      "delay_ms": 40,
+      "speed": 0.3874380886554718,
+      "xy_error": 0.16877900063991547,
+      "height": 0.2156343162059784,
+      "terminated": 0,
+      "timed_out": 16,
+      "mean_length_seconds": 20.0
+    }
+  ],
+  "aggregate": [
+    {
+      "delay_ms": 0,
+      "speed": 0.5167044401168823,
+      "xy_error": 0.052157687644163765,
+      "height": 0.24236780405044556,
+      "terminated": 0,
+      "episodes": 48
+    },
+    {
+      "delay_ms": 20,
+      "speed": 0.4792413115501404,
+      "xy_error": 0.09614717960357666,
+      "height": 0.23436813553174338,
+      "terminated": 0,
+      "episodes": 48
+    },
+    {
+      "delay_ms": 40,
+      "speed": 0.42396458983421326,
+      "xy_error": 0.14889047046502432,
+      "height": 0.22520171602567038,
+      "terminated": 0,
+      "episodes": 48
+    }
+  ],
+  "limitations": "One evaluation seed; only added command delay tested, not sensor latency. Applied previous-action observation; zero queue at reset. No direct foot-slip or real-world validation."
+}

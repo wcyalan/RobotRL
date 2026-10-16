@@ -1,0 +1,332 @@
+[INFO]: Parsing configuration from: isaaclab_tasks.core.velocity.config.go2.flat_env_cfg:UnitreeGo2FlatEnvCfg
+[INFO]: Parsing configuration from: isaaclab_tasks.core.velocity.config.go2.agents.rsl_rl_ppo_cfg:UnitreeGo2FlatPPORunnerCfg
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 10000
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+Visual material specified for ground plane but no diffuse color found. Preserving the ground plane's authored material.
+I: Initializing Version 2.72.3-release.7151+gl.5390bed9
+I: Client ID: E39RNPQ4
+I: Not using Hub: Hub not found
+I: Successfully created S3 provider for https://omniverse-content-production.s3-us-west-2.amazonaws.com
+I: Using CloudFront http://dcb18d6mfegct.cloudfront.net/, List = No
+Serving remote assets from the local cache under '/tmp'. Each copy is checked against the server before use; delete the directory to force a full re-download.
+/workspace/isaaclab/source/isaaclab_newton/isaaclab_newton/cloner/replicate.py:141: FutureWarning: Newton shape color replacement is enabled; this workaround will be deprecated in a future release.
+  replace_newton_builder_shape_colors(builder, stage)
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_2) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_3) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_4) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_2) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_3) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_4) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+/workspace/isaaclab/source/isaaclab_newton/isaaclab_newton/cloner/newton_clone_utils.py:158: FutureWarning: Newton shape color replacement is enabled; this workaround will be deprecated in a future release.
+  replace_newton_builder_shape_colors(builder, stage)
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_2) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_3) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_4) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_2) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_3) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/base/visuals/mesh_0/material_4) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/FR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RL_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_hip/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_thigh/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_0) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_calf/visuals/mesh_0/material_1) but MaterialBindingAPI is not applied on the prim
+Warning: in BindingsAtPrim at line 669 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/materialBindingAPI.cpp -- Found material bindings on prim at path (/World/envs/env_0/Robot/RR_foot/visuals/mesh_0) but MaterialBindingAPI is not applied on the prim
+[INFO]: Time taken for scene creation Last: 4.343433 s, Mean: 4.343433 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 16
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+Finalize builder took: Last: 0.437804 s, Mean: 0.437804 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.089904 s, Mean: 0.089904 s, Std: 0.000000 s, N: 1
+/opt/isaaclab-venv/lib/python3.12/site-packages/newton/_src/solvers/mujoco/solver_mujoco.py:3759: UserWarning: [WARNING] Value for njmax is changed from 65 to 68 following an MjWarp requirement.
+  self._convert_to_mjc(
+Initialize solver took: Last: 5.051997 s, Mean: 5.051997 s, Std: 0.000000 s, N: 1
+[WARNING] [NewtonVisualizer] No display found (DISPLAY is unset); the Newton viewer runs headless via EGL and no window will open. Run from a session with a display (or set DISPLAY, e.g. 'export DISPLAY=:0') to see the viewer.
+Warning: Could not get MSAA config, falling back to non-AA.
+[INFO]: Time taken for simulation start Last: 11.298095 s, Mean: 11.298095 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 10.080147 s, Mean: 10.080147 s, Std: 0.000000 s, N: 1
+The velocity command has the 'ranges.heading' attribute set to '(-3.141592653589793, 3.141592653589793)' but the heading command is not active. Consider setting the flag for the heading command to True.
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------------+
+|              Active Command Terms              |
++-------+---------------+------------------------+
+| Index | Name          |          Type          |
++-------+---------------+------------------------+
+|   0   | base_velocity | UniformVelocityCommand |
++-------+---------------+------------------------+
+
+[INFO] Event Manager:  <EventManager> contains 3 active terms.
++---------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+----------------------------+
+|  Index   | Name                       |
++----------+----------------------------+
+|    0     | physics_material           |
+|    1     | add_base_mass              |
+|    2     | base_com                   |
++----------+----------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++-------+-----------------------------+
+| Index | Name                        |
++-------+-----------------------------+
+|   0   | base_external_force_torque  |
+|   1   | reset_base                  |
+|   2   | reset_robot_joints          |
++-------+-----------------------------+
++----------------------------------------------+
+|    Active Event Terms in Mode: 'interval'    |
++-------+------------+-------------------------+
+| Index | Name       | Interval time range (s) |
++-------+------------+-------------------------+
+|   0   | push_robot |       (10.0, 15.0)      |
++-------+------------+-------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++-----------------------+
+| Active Recorder Terms |
++------------+----------+
+|   Index    | Name     |
++------------+----------+
++------------+----------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 12) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          12 |
++-------+-----------+-------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (48,)) |
++-----------+----------------------------------+-------------+
+|   Index   | Name                             |    Shape    |
++-----------+----------------------------------+-------------+
+|     0     | base_lin_vel                     |     (3,)    |
+|     1     | base_ang_vel                     |     (3,)    |
+|     2     | projected_gravity                |     (3,)    |
+|     3     | velocity_commands                |     (3,)    |
+|     4     | joint_pos                        |    (12,)    |
+|     5     | joint_vel                        |    (12,)    |
+|     6     | actions                          |    (12,)    |
++-----------+----------------------------------+-------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | base_contact |  False   |
++-------+--------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+----------------------+----------+
+| Index | Name                 |   Weight |
++-------+----------------------+----------+
+|   0   | track_lin_vel_xy_exp |      1.5 |
+|   1   | track_ang_vel_z_exp  |     0.75 |
+|   2   | lin_vel_z_l2         |     -2.0 |
+|   3   | ang_vel_xy_l2        |    -0.05 |
+|   4   | dof_torques_l2       |  -0.0002 |
+|   5   | dof_acc_l2           | -2.5e-07 |
+|   6   | action_rate_l2       |    -0.01 |
+|   7   | feet_air_time        |     0.25 |
+|   8   | flat_orientation_l2  |     -2.5 |
+|   9   | dof_pos_limits       |      0.0 |
++-------+----------------------+----------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++-------------------------+
+| Active Curriculum Terms |
++-------------+-----------+
+|    Index    | Name      |
++-------------+-----------+
++-------------+-----------+
+
+/workspace/isaaclab/source/isaaclab/isaaclab/envs/mdp/events.py:964: UserWarning: In Newton, body com pose always has unit quaternion. Consider using body_com_pos_b instead.Querying this property requires appending a unit quaternion to the position which is expensive.
+  self.default_com = self.asset.data.body_com_pose_b.torch.clone()
+[INFO]: Completed setting up the environment...
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): Identity()
+  (distribution): GaussianDistribution()
+  (mlp): MLP(
+    (0): Linear(in_features=48, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=128, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=12, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): Identity()
+  (mlp): MLP(
+    (0): Linear(in_features=48, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=128, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+ROBOTRL_EVALUATION_PASSED {'checkpoint': 'logs/rsl_rl/unitree_go2_flat/2026-10-16_06-14-33/model_0.pt', 'sha256': '39b9051706fac2b424d5605ac9ca586397b27dd72a9fa3207d1b539bdbc9fa8c', 'forward_speed_command_m_s': 0.5, 'step_dt': 0.02, 'eval_seed': 10000, 'return_mean': 21.723777770996094, 'return_std': 5.699264049530029, 'mean_length_seconds': 19.010000228881836, 'termination_rate': 0.0625, 'time_out_rate': 0.9375, 'mean_xy_velocity_error_m_s': 0.5024018883705139, 'mean_yaw_velocity_error_rad_s': 0.08215616643428802, 'protocol': 'Deterministic policy; training task randomization/noise retained except an explicit fixed-command override when forward_speed_command_m_s is set; first complete episode per lane. Velocity errors sampled before stepping, averaged per episode then across episodes.', 'termination_note': 'Task non-timeout termination is base_contact (proxy for falling, not visual posture inspection).', 'settled_diagnostics': {'exclude_first_seconds': 1.0, 'episodes_with_samples': 16, 'per_episode': [{'forward_speed_m_s': -0.003881513373926282, 'xy_speed_m_s': 0.016077838838100433, 'root_height_m': 0.22895567119121552, 'upright_cosine': 0.9672563672065735}, {'forward_speed_m_s': 0.003057279158383608, 'xy_speed_m_s': 0.02572033368051052, 'root_height_m': 0.2679821848869324, 'upright_cosine': 0.9982288479804993}, {'forward_speed_m_s': 0.003442138433456421, 'xy_speed_m_s': 0.01566275581717491, 'root_height_m': 0.25326767563819885, 'upright_cosine': 0.9981428980827332}, {'forward_speed_m_s': 0.0017707220977172256, 'xy_speed_m_s': 0.026678813621401787, 'root_height_m': 0.2589860260486603, 'upright_cosine': 0.9977033138275146}, {'forward_speed_m_s': 0.0018502195598557591, 'xy_speed_m_s': 0.029112594202160835, 'root_height_m': 0.2626207768917084, 'upright_cosine': 0.9950913190841675}, {'forward_speed_m_s': 0.00317754247225821, 'xy_speed_m_s': 0.025078263133764267, 'root_height_m': 0.2560872733592987, 'upright_cosine': 0.9991167783737183}, {'forward_speed_m_s': 0.0013573231408372521, 'xy_speed_m_s': 0.019463667646050453, 'root_height_m': 0.25341472029685974, 'upright_cosine': 0.9970085024833679}, {'forward_speed_m_s': -8.276805601781234e-05, 'xy_speed_m_s': 0.012068058364093304, 'root_height_m': 0.2275950014591217, 'upright_cosine': 0.9516097903251648}, {'forward_speed_m_s': 0.0026287706568837166, 'xy_speed_m_s': 0.013797012157738209, 'root_height_m': 0.25665050745010376, 'upright_cosine': 0.9949011206626892}, {'forward_speed_m_s': -0.009967388585209846, 'xy_speed_m_s': 0.15841379761695862, 'root_height_m': 0.2047274112701416, 'upright_cosine': 0.5450048446655273}, {'forward_speed_m_s': 0.0008031731704249978, 'xy_speed_m_s': 0.020313190296292305, 'root_height_m': 0.26651978492736816, 'upright_cosine': 0.9981498122215271}, {'forward_speed_m_s': 0.009326882660388947, 'xy_speed_m_s': 0.019064856693148613, 'root_height_m': 0.25326448678970337, 'upright_cosine': 0.9956329464912415}, {'forward_speed_m_s': -8.261134644271806e-05, 'xy_speed_m_s': 0.021918896585702896, 'root_height_m': 0.2614946961402893, 'upright_cosine': 0.9980120658874512}, {'forward_speed_m_s': 0.004848290700465441, 'xy_speed_m_s': 0.031613267958164215, 'root_height_m': 0.25930070877075195, 'upright_cosine': 0.9953007698059082}, {'forward_speed_m_s': 0.0021903684828430414, 'xy_speed_m_s': 0.01581963151693344, 'root_height_m': 0.2618122696876526, 'upright_cosine': 0.9964585900306702}, {'forward_speed_m_s': 0.001662207068875432, 'xy_speed_m_s': 0.02212999202311039, 'root_height_m': 0.26261815428733826, 'upright_cosine': 0.9961354732513428}], 'forward_speed_m_s': 0.0013812897959724069, 'xy_speed_m_s': 0.02955831028521061, 'root_height_m': 0.25220608711242676, 'upright_cosine': 0.9639846086502075}}

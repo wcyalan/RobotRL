@@ -2,7 +2,17 @@
 
 学习主线：手写 PPO → Isaac Lab Go2 仿真训练 → Domain Randomization 与鲁棒性评估 → 策略导出和部署准备。真机测试为可选扩展；没有真机也可以完成本轮学习。
 
+实验结果统一入口：[实验索引](experiments/README.md)。各算法独立连续编号；失败和短测试记录已压缩归档。
+
 ## 学习计划与进度（2026-10-13 至 11-07；10-14 修订）
+
+### 当前成果（2026-10-16 更新）
+
+- 连续动作手写 PPO、SB3 对照及回放代码已归档，详见[实验索引](experiments/README.md)。
+- Go2 官方基线已完成 seed=0、1、42 的训练与独立评估，见[多 seed 结果](experiments/phase2_go2_baseline/README.md)。
+- 已完成质量、摩擦和动作延迟压力测试；延迟随机化的单 seed 负结果作为可选扩展保留，不追加训练。
+- 当前主线是[质量与摩擦 DR 配对实验](experiments/phase2_go2_mass_friction/README.md)：短训练与固定扰动检查通过，四组正式训练/评估任务已启动，尚未形成完整对照结论。
+- 仓库保留源码、配置、指标和报告；模型权重、视频及归档 ZIP 留在本地，不随 Git 上传。部分历史报告中的模型、视频或备份链接因此需要本地实验目录才能打开。
 
 将原第 1、2 周合并为一周，利用已经完成的 REINFORCE、baseline 和固定 rollout 工作，尽早进入机器人实操。日期是目标安排，算法正确性检查和实际训练结果决定是否进入下一步；连续控制调试可占用第 2 周前两天。11-07 前的核心成果是一个可复现的机器人仿真项目。
 
@@ -16,7 +26,7 @@
 ### 阶段 0：工具链跑通 — 2026-10-08 完成
 - [x] 安装 `gymnasium[mujoco]` / `mujoco` / `stable-baselines3` / `torch`（仓库内 `.venv`：torch 2.14.1+cpu / gymnasium 1.4.0 / mujoco 3.15.0 / sb3 2.9.0，清华镜像源）
 - [x] 随机策略 CartPole：10 局平均 **30.3 ± 18.2**（`phase0_setup/01_random_cartpole.py`，加 `--render` 弹窗观看）
-- [x] SB3 PPO 训 CartPole 满分：**500.0 ± 0.0**，40,363 步提前收敛（`phase0_setup/02_sb3_ppo_cartpole.py`，曲线 `experiments/phase0_sb3_ppo/curve.png`，加 `--watch` 观看策略）
+- [x] SB3 PPO 训 CartPole 满分：**500.0 ± 0.0**，40,363 步提前收敛（`phase0_setup/02_sb3_ppo_cartpole.py`，曲线 `experiments/phase0_sb3_ppo/run_001/curve.png`，加 `--watch` 观看策略）
 
 ### 第 1 周（10.13–10.19）：完成 GAE → PPO → 连续控制
 
@@ -53,6 +63,8 @@
 
 目标：在同一 Go2 任务上做可解释的对照，理解训练环境与测试环境不同会发生什么。
 
+当前执行：[质量与摩擦最小 DR 对照协议](experiments/phase2_go2_mass_friction/README.md)。延迟测试与延迟随机化训练归入可选扩展，现有结果保留，暂停追加训练。已有官方基线不能直接标为“无 DR”；正式配对训练需另建固定物理参数组。
+
 1. [ ] 先审计官方配置已启用的随机化、噪声、推力和 curriculum；复制配置建立明确的无 DR / 有 DR 两组，避免把已有 DR 的默认配置误当基线。
 2. [ ] 先修改一个速度指令范围或奖励权重，观察行为与分项奖励；保存成功及失败视频，检查滑步、摔倒等现象。
 3. [ ] 最小 DR 实验只改质量与摩擦：质量可从标称值的 0.8–1.2 倍、摩擦系数从 0.5–1.5 起步，先核对模型与接触参数是否适用。每组 2 个训练 seed，匹配总环境交互步数和其余训练设置。
@@ -79,7 +91,7 @@
 
 ### 可选扩展与延期顺序
 
-- Walker2d 3000+、MJCF 质量 / sensor 练习作为 MuJoCo 扩展，取消原来的必做要求，将时间用于 Isaac Lab 实操。
+- 后续以 Isaac Lab Go2 实操为主，暂不安排额外 MuJoCo 任务。
 - 粗糙地形、观测延迟、执行器随机化、更多训练 seed、特权蒸馏和 sim-to-sim 后续逐项增加。
 - 真机测试独立安排：取得硬件与测试条件后再完成接口适配、动作限幅、急停和低风险试运行；本轮不依赖机器人实物。
 - 时间不足时依次推迟：大规模调参 / 子进程优化 → 特权学习 / sim-to-sim → 粗糙地形与额外 DR 维度。保留算法检查、一个 Go2 任务、最小 DR 对照和保存 / 加载验证；基础环境或训练仍未完成则调整日期并如实记录。
@@ -91,10 +103,10 @@
 | `notes/` | 理论笔记（策略梯度定理、GAE、特权学习、奖励设计、sim-to-real 总览）|
 | `phase0_setup/` | 阶段 0 工具链验证脚本 |
 | `phase1_ppo/` | 阶段 1 手写算法代码 |
-| `phase2_walker/` | 保留的 Walker2d 选做练习目录 |
+| [`phase2_isaaclab/`](phase2_isaaclab/README.md) | Go2 训练、独立评估、鲁棒性测试和视频回放 |
 | `experiments/` | 实验记录：config + 曲线 + 结论 |
 
-进入 Isaac Lab 阶段时再创建 `phase3_isaac_lab/`，保存任务配置、启动入口、评估与导出脚本；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验仍按类别使用 `run_001`、`run_002` 顺序编号。
+Isaac Lab 代码统一维护在 `phase2_isaaclab/`，远程任务入口与配置分别位于 `jobs/`、`configs/`；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验按类别使用 `run_001`、`run_002` 顺序编号。
 
 ## 约定
 

@@ -1,0 +1,142 @@
+"""Independent first-episode evaluation, without renderer or parameter updates."""
+import argparse
+import hashlib
+import json
+import importlib.metadata
+from pathlib import Path
+import warp as wp
+
+wp.config.enable_backward = False
+import torch
+import gymnasium as gym
+from rsl_rl.runners import OnPolicyRunner
+from isaaclab.app import launch_simulation
+from isaaclab_rl.entrypoints.simple_agents import _parse_args
+from isaaclab_rl.rsl_rl import RslRlVecEnvWrapper, handle_deprecated_rsl_rl_cfg
+from isaaclab_tasks.utils import resolve_task_config
+
+parser = argparse.ArgumentParser(add_help=False)
+parser.add_argument('--model', required=True)
+parser.add_argument('--output', required=True)
+parser.add_argument('--eval_seed', type=int, default=10000)
+parser.add_argument('--forward_speed', type=float, default=None,
+                    help='Controlled diagnostic: fixed body-frame forward speed, zero lateral/yaw command.')
+opts, remainder = parser.parse_known_args()
+args = _parse_args(remainder, 'zero')
+cfg, agent = resolve_task_config(args.task, 'rsl_rl_cfg_entry_point')
+agent = handle_deprecated_rsl_rl_cfg(agent, importlib.metadata.version('rsl-rl-lib'))
+cfg.scene.num_envs = args.num_envs or 16
+cfg.seed = opts.eval_seed
+if opts.forward_speed is not None:
+    command_cfg = cfg.commands.base_velocity
+    command_cfg.heading_command = False
+    command_cfg.rel_heading_envs = 0.0
+    command_cfg.rel_standing_envs = 0.0
+    command_cfg.resampling_time_range = (1000.0, 1000.0)
+    command_cfg.ranges.lin_vel_x = (opts.forward_speed, opts.forward_speed)
+    command_cfg.ranges.lin_vel_y = (0.0, 0.0)
+    command_cfg.ranges.ang_vel_z = (0.0, 0.0)
+agent.seed = opts.eval_seed
+args.device = cfg.sim.device
+torch.manual_seed(opts.eval_seed)
+with launch_simulation(cfg, args):
+    raw = gym.make(args.task, cfg=cfg)
+    env = RslRlVecEnvWrapper(raw, clip_actions=agent.clip_actions)
+    try:
+        runner = OnPolicyRunner(env, agent.to_dict(), log_dir=None, device=agent.device)
+        runner.load(opts.model)
+        policy = runner.get_inference_policy(device=raw.unwrapped.device)
+        base = raw.unwrapped
+        n, device = base.num_envs, base.device
+        # Runner construction/loading must not alter evaluation RNG initialization.
+        raw.reset(seed=opts.eval_seed)
+        obs = env.get_observations()
+        active = torch.ones(n, dtype=torch.bool, device=device)
+        returns = torch.zeros(n, device=device)
+        lengths = torch.zeros(n, dtype=torch.long, device=device)
+        xy_error = torch.zeros(n, device=device)
+        yaw_error = torch.zeros(n, device=device)
+        diagnostics = {k: torch.zeros(n, device=device) for k in
+                       ['forward_speed_m_s', 'xy_speed_m_s', 'root_height_m', 'upright_cosine']}
+        diagnostic_steps = torch.zeros(n, device=device)
+        ended = torch.zeros(n, dtype=torch.bool, device=device)
+        timed_out = torch.zeros_like(ended)
+        trajectory = []
+        with torch.inference_mode():
+            for _ in range(base.max_episode_length + 2):
+                robot = base.scene['robot']
+                command = base.command_manager.get_command('base_velocity')
+                linear = robot.data.root_lin_vel_b.torch
+                angular = robot.data.root_ang_vel_b.torch
+                xy = torch.linalg.vector_norm(linear[:, :2] - command[:, :2], dim=1)
+                yaw = (angular[:, 2] - command[:, 2]).abs()
+                assert torch.isfinite(xy).all() and torch.isfinite(yaw).all()
+                if opts.forward_speed is not None:
+                    expected = torch.tensor([opts.forward_speed, 0.0, 0.0], device=device)
+                    assert torch.allclose(command[active], expected.expand_as(command[active]), atol=1e-6)
+                q = robot.data.root_quat_w.torch
+                measured = {'forward_speed_m_s': linear[:, 0],
+                            'xy_speed_m_s': torch.linalg.vector_norm(linear[:, :2], dim=1),
+                            'root_height_m': robot.data.root_pos_w.torch[:, 2],
+                            'upright_cosine': 1 - 2 * (q[:, 0]**2 + q[:, 1]**2)}
+                # Exclude the first second of spawn settling from posture/speed diagnostics.
+                settled = active & (lengths * base.step_dt >= 1.0)
+                diagnostic_steps += settled
+                for key, value in measured.items():
+                    assert torch.isfinite(value).all()
+                    diagnostics[key] += value * settled
+                xy_error += xy * active
+                yaw_error += yaw * active
+                if active[0]:
+                    trajectory.append({'position': robot.data.root_pos_w.torch[0].cpu().tolist(),
+                                       'quaternion_xyzw': robot.data.root_quat_w.torch[0].cpu().tolist(),
+                                       'body_linear_velocity': linear[0].cpu().tolist(),
+                                       'joint_positions': robot.data.joint_pos.torch[0].cpu().tolist(),
+                                       'command': command[0].cpu().tolist()})
+                actions = policy(obs)
+                assert torch.isfinite(actions).all()
+                if agent.clip_actions is not None:
+                    actions = actions.clamp(-agent.clip_actions, agent.clip_actions)
+                observation, reward, terminated, truncated, _ = raw.step(actions)
+                assert torch.isfinite(reward).all()
+                assert all(torch.isfinite(v).all() for v in observation.values())
+                returns += reward * active
+                lengths += active.long()
+                ended |= terminated & active
+                timed_out |= truncated & active
+                active &= ~(terminated | truncated)
+                obs = env.get_observations()
+                if not active.any():
+                    break
+        assert not active.any(), 'Incomplete episodes: do not report censored episodes as full episodes'
+        rows = [{'env_index': i, 'return': returns[i].item(),
+                 'length_steps': lengths[i].item(), 'length_seconds': lengths[i].item()*base.step_dt,
+                 'terminated': ended[i].item(), 'time_out': timed_out[i].item(),
+                 'mean_xy_velocity_error_m_s': (xy_error[i]/lengths[i]).item(),
+                 'mean_yaw_velocity_error_rad_s': (yaw_error[i]/lengths[i]).item()} for i in range(n)]
+        report = {'checkpoint': opts.model, 'sha256': hashlib.sha256(Path(opts.model).read_bytes()).hexdigest(),
+                  'forward_speed_command_m_s': opts.forward_speed,
+                  'step_dt': base.step_dt,
+                  'eval_seed': opts.eval_seed, 'episodes': rows,
+                  'return_mean': returns.mean().item(), 'return_std': returns.std(unbiased=False).item(),
+                  'mean_length_seconds': (lengths.float().mean()*base.step_dt).item(),
+                  'termination_rate': ended.float().mean().item(),
+                  'time_out_rate': timed_out.float().mean().item(),
+                  'mean_xy_velocity_error_m_s': (xy_error/lengths).mean().item(),
+                  'mean_yaw_velocity_error_rad_s': (yaw_error/lengths).mean().item(),
+                  'protocol': 'Deterministic policy; training task randomization/noise retained except an explicit fixed-command override when forward_speed_command_m_s is set; first complete episode per lane. Velocity errors sampled before stepping, averaged per episode then across episodes.',
+                  'termination_note': 'Task non-timeout termination is base_contact (proxy for falling, not visual posture inspection).',
+                  'trajectory_env_0': trajectory}
+        report['settled_diagnostics'] = {
+            'exclude_first_seconds': 1.0,
+            'episodes_with_samples': int((diagnostic_steps > 0).sum().item()),
+            'per_episode': [{k: (v[i]/diagnostic_steps[i]).item() if diagnostic_steps[i] > 0 else None
+                             for k, v in diagnostics.items()} for i in range(n)]}
+        for key, value in diagnostics.items():
+            valid = diagnostic_steps > 0
+            report['settled_diagnostics'][key] = ((value[valid]/diagnostic_steps[valid]).mean().item()
+                                                  if valid.any() else None)
+        Path(opts.output).write_text(json.dumps(report, indent=2))
+        print('ROBOTRL_EVALUATION_PASSED', {k:v for k,v in report.items() if k not in ['episodes','trajectory_env_0']}, flush=True)
+    finally:
+        env.close()

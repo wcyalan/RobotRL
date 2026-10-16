@@ -1,0 +1,37 @@
+{
+  "task_id": "edfbc3ec-efb6-4af3-8695-7c776076bbe8",
+  "status": "fixed impulse gate verified; run_001 training observed in progress; subsequent runs queued in same task",
+  "runs": {
+    "run_001": {
+      "group": "fixed",
+      "seed": 0
+    },
+    "run_002": {
+      "group": "fixed",
+      "seed": 1
+    },
+    "run_003": {
+      "group": "randomized",
+      "seed": 0
+    },
+    "run_004": {
+      "group": "randomized",
+      "seed": 1
+    }
+  },
+  "remote_root": "/labdata2/congyuwang/RobotRL_kitless/phase2_go2_mass_friction",
+  "eval_seed": 30000,
+  "episodes_per_condition": 32,
+  "conditions": [
+    "nominal",
+    "light_low",
+    "heavy_high",
+    "heavy_low",
+    "nominal_push"
+  ],
+  "fixed_push_gate": {
+    "passed": true,
+    "recipients": 31,
+    "total_episodes": 32
+  }
+}

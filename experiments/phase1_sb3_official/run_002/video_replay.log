@@ -1,0 +1,2 @@
+{"seed": 20000, "return": 1378.5316235840694, "steps": 1000, "terminated": false, "truncated": true, "x_displacement": 85.02826094119065, "mean_x_velocity": 1.700565218823813, "action_clipped_fraction": 0.346, "torso_pitch_range_radians": [-0.18657026556546025, 3.828838011909463], "torso_height_range": [0.10544275694702443, 0.9312552850084762], "torso_inverted_fraction": 0.973}
+Replay saved: C:\Users\wcyal\Desktop\RobotRL\experiments\phase1_sb3_official\run_002\replay_003

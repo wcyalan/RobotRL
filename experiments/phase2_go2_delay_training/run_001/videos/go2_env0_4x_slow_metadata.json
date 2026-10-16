@@ -1,0 +1,28 @@
+{
+  "video": "go2_env0_4x_slow.mp4",
+  "frames": 508,
+  "fps": 50.0,
+  "duration_seconds": 10.16,
+  "resolution": [
+    960,
+    540
+  ],
+  "source_sha256": "aa7afca97a6747aa316012f8c524f82b4744fa74f06122d53e7f61fe5b8d0e2c",
+  "joint_order": [
+    "FL_hip_joint",
+    "FL_thigh_joint",
+    "FL_calf_joint",
+    "FR_hip_joint",
+    "FR_thigh_joint",
+    "FR_calf_joint",
+    "RL_hip_joint",
+    "RL_thigh_joint",
+    "RL_calf_joint",
+    "RR_hip_joint",
+    "RR_thigh_joint",
+    "RR_calf_joint"
+  ],
+  "quaternion_conversion": "recorded xyzw to MuJoCo wxyz",
+  "method": "Recorded poses only; mj_forward for visual kinematics, no mj_step. Menagerie Go2 visual model, not original Isaac renderer or a new simulation.",
+  "visual_model_source": "https://github.com/google-deepmind/mujoco_menagerie/tree/main/unitree_go2"
+}

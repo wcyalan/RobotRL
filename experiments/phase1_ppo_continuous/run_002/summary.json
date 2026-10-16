@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "last_completed_update": 1000,
+  "best_eval_mean": 4723.131143042522,
+  "best_update": 950,
+  "best_steps": 972800,
+  "last_evaluation": {
+    "update": 1000,
+    "steps": 1024000,
+    "mean": 4651.739817783322,
+    "std": 91.46240316547282
+  },
+  "checkpoint_note": "Model/optimizer snapshots; exact environment/RNG resume is not implemented."
+}

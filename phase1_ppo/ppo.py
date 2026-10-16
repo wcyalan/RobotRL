@@ -26,8 +26,7 @@ def compute_ppo_actor_loss(
     clip_coef=0.2,
 ):
     # 当前策略对这批历史动作的 log-prob。
-    logits = policy(observations)
-    dist = torch.distributions.Categorical(logits=logits)
+    dist = policy.get_distribution(observations)
     new_log_probs = dist.log_prob(actions)
 
     # 旧概率和优势在本批数据的所有更新中保持固定。
@@ -143,8 +142,7 @@ def compute_ppo_diagnostics(
     old_log_probs,
     clip_coef=0.2,
 ):
-    logits = policy(observations)
-    dist = torch.distributions.Categorical(logits=logits)
+    dist = policy.get_distribution(observations)
 
     new_log_probs = dist.log_prob(actions)
     log_ratio = new_log_probs - old_log_probs

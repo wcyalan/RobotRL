@@ -1,0 +1,20 @@
+更新（2026-10-15）：已通过 Isaac Lab kit-less + Newton 完成 4 个 Go2 环境的 200 步测试，无需 graphics。以下保留为未来图像渲染/完整 Isaac Sim 路线的问题记录，目前无需转发或请求修改集群。
+
+管理员您好，我准备通过 Determined 运行 Isaac Sim / Isaac Lab（Go2，无界面仿真），目前单卡 CUDA 验证通过，但 GPU 图形驱动能力未暴露。
+
+验证环境：Determined client/master 0.38.1；资源池 64c128t_512_4090；RTX 4090 24 GB；驱动 610.43.02。
+探测镜像：harbor.lins.lab/library/dense-lar:v1.1。
+任务：819c8e1e-bfdb-4045-b23f-c31b38191a9b，已正常结束。
+
+任务 YAML 设置 NVIDIA_DRIVER_CAPABILITIES=all，det command config 也确认该配置存在，但容器内实际为 compute,utility；有 Vulkan loader，却没有 NVIDIA Vulkan ICD，未找到 EGL 库。CUDA 矩阵运算正常。
+
+检查同版本上游源码发现，agent/internal/containers/spec.go 的 cudaDeviceRequests 固定请求：
+Capabilities: [][]string{{"gpu", "compute", "utility"}}
+https://github.com/determined-ai/determined/blob/v0.38.1/agent/internal/containers/spec.go#L85
+Docker NVIDIA device handler 会根据此设备请求追加 NVIDIA_DRIVER_CAPABILITIES：
+https://github.com/moby/moby/blob/v27.0.3/daemon/nvidia_linux.go#L44
+这与本次现象一致；尚未独立检查集群实际部署的 agent 二进制是否有定制。
+
+请帮助确认是否已有支持 Vulkan / NVIDIA graphics 的调度资源池或启动方式；如没有，能否为此类任务提供包含 graphics 能力的 GPU 容器分配方式，继续保留调度器分配的 GPU UUID 隔离？YAML 的 add_capabilities 对应 Linux CapAdd，不能代替 NVIDIA graphics。
+
+修复后我们会复测 NVIDIA Vulkan 设备枚举、无界面 Isaac Sim 启动和少量 Go2 环境。当前未修改集群配置，未绕过调度器占用 GPU，也未开始安装大型 Isaac 镜像。

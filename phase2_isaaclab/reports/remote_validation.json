@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "status": "kitless_pipeline_working_locomotion_not_learned",
+  "training_smoke": {
+    "date": "2026-10-16",
+    "timezone": "Asia/Shanghai",
+    "task_id": "d925cc4c-4160-44a5-ab43-f9042a675bab",
+    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_smoke/run_002",
+    "remote_directory": "/labdata2/congyuwang/RobotRL_kitless/run_002",
+    "num_envs": 64,
+    "iterations_completed": 10,
+    "total_environment_steps": 15360,
+    "validation_steps": 100,
+    "validation_time_limit_resets": 40,
+    "observations_and_rewards_finite": true,
+    "explicit_reset_passed": true,
+    "checkpoints_finite_and_loadable": true,
+    "independent_evaluation_performed": false,
+    "exit_code": 0,
+    "note": "Smoke test of RSL-RL PPO training and saving on Newton, not proof of learned walking. run_001 validation passed but training failed on PyTorch cache username lookup; fixed with task-specific cache directories."
+  },
+  "kitless_probe": {
+    "task_id": "9895ab07-e1c2-425f-a82a-4c42a17d2bef",
+    "image_tag": "nvcr.io/nvidia/isaac-lab:3.0.0-rc1-kitless",
+    "image_digest": "sha256:d5c31452ae21d0cb040b7195b3a66e202b2d2a6ac389719a04528f6cd93e7d3b",
+    "backend": "newton_mjwarp",
+    "task": "Isaac-Velocity-Flat-UnitreeGo2",
+    "num_envs": 4,
+    "vector_environment_steps": 200,
+    "action_mode": "zero_agent",
+    "observation_shape": [
+      4,
+      48
+    ],
+    "action_shape": [
+      4,
+      12
+    ],
+    "driver_capabilities": "compute,utility",
+    "torch": "2.11.0+cu128",
+    "warp_lang": "1.16.0",
+    "newton": "1.5.2",
+    "exit_code": 0,
+    "pass_marker_found": true,
+    "log": "kitless_probe_success.log",
+    "cluster_configuration_modified": false,
+    "training_tested": false,
+    "rendering_tested": false,
+    "interpretation": "Pure physics Go2 simulation works without graphics on this image/backend. Zero-action stepping does not validate learned locomotion, reward quality, numerical robustness, or RTX/Isaac Sim compatibility."
+  },
+  "ssh_and_determined_auth": "passed",
+  "storage": {
+    "labdata2_available_approx": "20 TB",
+    "usage_percent": 76
+  },
+  "resource_pool": "64c128t_512_4090",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "vram_mib": 24564,
+  "driver": "610.43.02",
+  "cuda_matmul_passed": true,
+  "visible_gpu_count": 1,
+  "probe_image": "harbor.lins.lab/library/dense-lar:v1.1",
+  "container_os": "Ubuntu 20.04.6",
+  "container_python": "3.10.14",
+  "container_torch": "2.1.1+cu118",
+  "isaacsim_installed_in_probe_image": false,
+  "isaaclab_installed_in_probe_image": false,
+  "graphics_probe": {
+    "requested_driver_capabilities": "all",
+    "request_present_in_determined_task_config": true,
+    "observed_driver_capabilities": "compute,utility",
+    "nvidia_vulkan_icd_found_in_standard_paths": false,
+    "egl_library_found": false,
+    "vulkan_loader_found": true,
+    "isaac_startup_tested": false,
+    "conclusion": "Graphics exposure blocked in the tested scheduler path. Determined v0.38.1 upstream agent requests only gpu,compute,utility; Docker's NVIDIA device handler appends capabilities from this request. This explains the observed compute,utility despite YAML all. Installed agent binary was not independently inspected. CUDA alone is not Isaac Sim validation.",
+    "diagnosis": {
+      "determined_client_and_master_version": "0.38.1",
+      "upstream_source": "https://github.com/determined-ai/determined/blob/v0.38.1/agent/internal/containers/spec.go#L85",
+      "cuda_device_request_capabilities": [
+        "gpu",
+        "compute",
+        "utility"
+      ],
+      "docker_reference": "https://github.com/moby/moby/blob/v27.0.3/daemon/nvidia_linux.go#L44",
+      "image_entrypoint_checked": "/container/bin/scrape_libs.sh does not set NVIDIA_DRIVER_CAPABILITIES",
+      "user_config_override_found": false,
+      "add_capabilities_is_not_solution": "Maps to Linux HostConfig.CapAdd, not NVIDIA DeviceRequests capabilities.",
+      "admin_action": "Provide a scheduler-supported graphics-capable GPU allocation (including graphics in NVIDIA device request) while preserving assigned GPU UUID isolation, then rerun Vulkan and Isaac startup validation.",
+      "cluster_configuration_modified": false
+    }
+  },
+  "task_ids": [
+    "6c799c1a-b3c2-42c3-ae40-d158cb223485",
+    "819c8e1e-bfdb-4045-b23f-c31b38191a9b"
+  ],
+  "both_tasks_exited_successfully": true,
+  "active_probe_tasks": 0,
+  "next_steps": [
+    "Complete the pinned image's official Go2 flat baseline without training-size, PPO, reward, termination or actuator overrides.",
+    "Evaluate initial and final checkpoints with random commands and a fixed 0.5 m/s forward command, including speed and posture metrics.",
+    "Decide further diagnosis from full-baseline evidence before considering task variants."
+  ],
+  "official_baseline": {
+    "date": "2026-10-16",
+    "task_id": "e48e42d3-5970-4885-b2e8-5df93dbd9d8b",
+    "remote_directory": "/labdata2/congyuwang/RobotRL_kitless/run_010",
+    "status": "completed; training and four evaluations passed; allocation exited zero",
+    "configuration": "Runtime defaults will be recorded in official_defaults.json; only Newton backend and local official asset location are selected.",
+    "local_directory": "experiments\\phase2_go2_baseline\\run_001",
+    "training_seconds": 148.27,
+    "num_envs": 4096,
+    "iterations": 300,
+    "total_steps": 29491200,
+    "seed": 42,
+    "evaluations": {
+      "random_0": {
+        "return_mean": 7.871583938598633,
+        "return_std": 7.003087997436523,
+        "termination_rate": 0.0625,
+        "mean_xy_velocity_error_m_s": 0.6950557827949524,
+        "mean_yaw_velocity_error_rad_s": 0.7397230863571167
+      },
+      "random_299": {
+        "return_mean": 40.41449737548828,
+        "return_std": 0.9569870233535767,
+        "termination_rate": 0.0,
+        "mean_xy_velocity_error_m_s": 0.06284603476524353,
+        "mean_yaw_velocity_error_rad_s": 0.08904403448104858
+      }
+    }
+  },
+  "latest_pilot": {
+    "date": "2026-10-16",
+    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_pilot/run_004",
+    "summary": "comparison.json",
+    "task_id": "56c2cbe1-0270-4ecb-a125-0a08258180da",
+    "steps": 1228800,
+    "final_return_mean": 11.050334930419922,
+    "final_base_contact_termination_rate": 0.0,
+    "evaluation_episodes": 16,
+    "walking_quality_accepted": false
+  },
+  "latest_diagnostic": {
+    "date": "2026-10-16",
+    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_diagnostic/run_005",
+    "task_id": "2b91d62b-c125-4567-bb2c-2fbc96ec7ed2",
+    "fixed_forward_command_m_s": 0.5,
+    "final_mean_forward_speed_m_s": 7.163771078921854e-05,
+    "final_mean_root_height_m": 0.10513822734355927,
+    "episodes": 16,
+    "conclusion": "Final deterministic policy is nearly stationary at low root height; no visual posture proof. Zero base-contact terminations does not establish successful locomotion."
+  },
+  "latest_control_diagnostic": {
+    "date": "2026-10-16",
+    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_control/run_009",
+    "action_mapping_passed": true,
+    "base_contact_sensor_responds": true,
+    "policy_head_calf_support_detected": true,
+    "capacity_overflow_in_confirmatory_run": false
+  },
+  "local_cleanup_manifest": "archives/experiment_cleanup_001/manifest.json",
+  "multi_seed_baseline": {
+    "status": "completed",
+    "seeds": [
+      42,
+      0,
+      1
+    ],
+    "comparison": "experiments/phase2_go2_baseline/comparison_001.json",
+    "config_diff": "seed and log directory only",
+    "caveat": "seed 1 fixed-forward evaluation terminated 1/16 episodes at 2.02 seconds; robustness not established"
+  }
+}

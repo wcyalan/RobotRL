@@ -1,0 +1,32 @@
+{
+  "task_id": "f9c99467-e9a7-4362-bf52-dfb38259324d",
+  "status": "completed; smoke and training audits passed; three fixed-delay evaluations verified",
+  "seed": 42,
+  "training": {
+    "num_envs": 4096,
+    "iterations": 300,
+    "steps": 29491200
+  },
+  "smoke": {
+    "num_envs": 64,
+    "iterations": 3,
+    "gate": "Nonzero wrapper steps; all delay bins sampled; trace independently verified before full training."
+  },
+  "change": "Uniform per-episode command delay of 0, 1 or 2 policy steps, sampled independently for each environment; buffer cleared at reset.",
+  "delay_rng_seed": 73042,
+  "unchanged": "Official PPO, rewards, terminations, task randomizations and model architecture; official training CLI called with a Gym wrapper.",
+  "observations": "Previous-action observations reflect applied actions. Policy log probabilities belong to newly issued commands. No additional delay observation or history encoder.",
+  "evaluation": {
+    "seed": 20000,
+    "scenario": "nominal",
+    "forward_speed": 0.5,
+    "episodes_per_delay": 16,
+    "delay_steps": [
+      0,
+      1,
+      2
+    ]
+  },
+  "comparison": "experiments/phase2_go2_robustness/run_004/seed_42_delay_*.json",
+  "limitation": "Single-seed initial intervention experiment; evaluation seed reused from diagnosis, so results are development comparisons, not untouched final tests."
+}

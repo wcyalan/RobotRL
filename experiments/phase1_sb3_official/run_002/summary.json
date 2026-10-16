@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "steps": 1024000,
+  "best_eval_mean": 1465.8926853117923,
+  "best_steps": 870400,
+  "elapsed_seconds": 678.9947212000006,
+  "checkpoint_note": "Standard SB3 zip; no normalization state required."
+}

@@ -1,0 +1,28 @@
+description: congyuwang-RobotRL-Go2-training-smoke
+environment:
+  image: nvcr.io/nvidia/isaac-lab@sha256:d5c31452ae21d0cb040b7195b3a66e202b2d2a6ac389719a04528f6cd93e7d3b
+  environment_variables:
+    # Determined 0.38 installs its bootstrap wheel with pip --user.
+    # Use the container's system Python for bootstrap; retain the venv for simulation.
+    - DET_PYTHON_EXECUTABLE=/usr/bin/python3
+    - PYTHONPATH=/opt/isaaclab-venv/lib/python3.12/site-packages
+    - PIP_BREAK_SYSTEM_PACKAGES=1
+    - XDG_CACHE_HOME=/robotrl/cache
+    - TORCHINDUCTOR_CACHE_DIR=/robotrl/cache/torchinductor
+    - TRITON_CACHE_DIR=/robotrl/cache/triton
+    - XDG_CONFIG_HOME=/tmp/robotrl-config
+    - PYTHONUNBUFFERED=1
+    - PIP_VERBOSE=2
+    - PIP_DEFAULT_TIMEOUT=15
+    - PIP_RETRIES=1
+    - PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+    - OMP_NUM_THREADS=2
+    - MKL_NUM_THREADS=2
+resources:
+  slots: 1
+  resource_pool: 64c128t_512_4090
+  shm_size: 4G
+
+bind_mounts:
+  - host_path: /labdata2/congyuwang/RobotRL_kitless
+    container_path: /robotrl

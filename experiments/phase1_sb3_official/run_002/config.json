@@ -1,0 +1,65 @@
+{
+  "algorithm": "SB3 PPO official constructor defaults",
+  "env": "HalfCheetah-v5",
+  "seed": 1,
+  "steps": 1024000,
+  "rollout_steps": 2048,
+  "observation_normalization": false,
+  "reward_normalization": false,
+  "evaluation_action": "clipped Gaussian mean",
+  "eval_seed_start": 10000,
+  "eval_every_steps": 51200,
+  "eval_episodes": 5,
+  "torch_threads": 1,
+  "device": "cpu",
+  "n_envs": 1,
+  "versions": {
+    "sb3": "2.9.0",
+    "gymnasium": "1.4.0",
+    "mujoco": "3.15.0",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.3"
+  },
+  "hyperparameters": {
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "normalize_advantage": true,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "target_kl": null,
+    "use_sde": false
+  },
+  "clip_range": 0.2,
+  "clip_range_vf": null,
+  "net_arch": {
+    "pi": [
+      64,
+      64
+    ],
+    "vf": [
+      64,
+      64
+    ]
+  },
+  "activation": "<class 'torch.nn.modules.activation.Tanh'>",
+  "ortho_init": true,
+  "optimizer": "<class 'torch.optim.adam.Adam'>",
+  "optimizer_eps": 1e-05,
+  "source_sha256": {
+    "actor_critic.py": "3265ef9c56702eeaa52c3c65f5e06beccaf9b1419c0b53b058e8cf757b5ffce7",
+    "evaluate.py": "737a646a900c0ea366154c6feb70cadc5a008e6d3e29592b2b0fb8d83390124f",
+    "experiment_io.py": "766b865c3e7e428bdc0242ca37ffc818726aff60771dc806f4b251c062fb21ba",
+    "networks.py": "30ecf38a423a6bd84fb224bc2d20d759754d06ef6026225dc3c69d7dadef3d77",
+    "ppo.py": "92faa433de9cf4fd922691386406b517130d100fc50a32eca099d2a7c4f1f146",
+    "ppo_continuous.py": "faac4e57e18ad2bd34480e2edff0d8ce1839a3b6568cdf6f0931e46ce80a0347",
+    "reinforce.py": "4b962c07de784c94467b3f727f7c98065090310fe4d0465cc0b38f56c26563cf",
+    "replay_continuous.py": "3cec52efbca4e28657e27636ffd5f89cb2c385047c82f871655681c63c9182a0",
+    "sb3_continuous.py": "48edc08988012276858ebb5715ea03844a3ee3ce0cbeaf67e179bc8c138a1fd3",
+    "sb3_official.py": "ec6809af5d5c68de79382dbd15333acf2873496ebb98b35be2e0bf0ea24b5e39"
+  }
+}

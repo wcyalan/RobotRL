@@ -1,0 +1,114 @@
+{
+  "configuration_check": "Agent and environment YAMLs identical except seed and log directory.",
+  "steps_per_run": 29491200,
+  "evaluation_seed": 10000,
+  "episodes_per_policy_per_condition": 16,
+  "limitations": [
+    "Three training seeds only; no real-robot validation.",
+    "Random-command evaluation shares initialization seed, not guaranteed identical full trajectories.",
+    "Video contains env 0 only; failed env 11 trajectory was not saved.",
+    "Velocity and posture diagnostics exclude first second; episode return and velocity errors do not."
+  ],
+  "random_return_across_seed_mean": 40.340249379475914,
+  "random_return_across_seed_population_std": 0.07867736568399711,
+  "results": [
+    {
+      "run": "run_001",
+      "seed": 42,
+      "training_seconds": 148.27,
+      "random": {
+        "return_mean": 40.41449737548828,
+        "return_std": 0.9569870233535767,
+        "mean_xy_velocity_error_m_s": 0.06284603476524353,
+        "mean_yaw_velocity_error_rad_s": 0.08904403448104858,
+        "termination_rate": 0.0,
+        "mean_length_seconds": 20.0,
+        "forward_speed_m_s": -0.06524360179901123,
+        "root_height_m": 0.2558143436908722,
+        "upright_cosine": 0.9990454316139221,
+        "terminated_episodes": []
+      },
+      "forward": {
+        "return_mean": 41.145484924316406,
+        "return_std": 0.2649131417274475,
+        "mean_xy_velocity_error_m_s": 0.05177544057369232,
+        "mean_yaw_velocity_error_rad_s": 0.07357201725244522,
+        "termination_rate": 0.0,
+        "mean_length_seconds": 20.0,
+        "forward_speed_m_s": 0.5107426643371582,
+        "root_height_m": 0.23136302828788757,
+        "upright_cosine": 0.9990185499191284,
+        "terminated_episodes": []
+      }
+    },
+    {
+      "run": "run_002",
+      "seed": 0,
+      "training_seconds": 155.0,
+      "random": {
+        "return_mean": 40.37489318847656,
+        "return_std": 0.9889993667602539,
+        "mean_xy_velocity_error_m_s": 0.06746341288089752,
+        "mean_yaw_velocity_error_rad_s": 0.0894528329372406,
+        "termination_rate": 0.0,
+        "mean_length_seconds": 20.0,
+        "forward_speed_m_s": -0.05751071870326996,
+        "root_height_m": 0.27298152446746826,
+        "upright_cosine": 0.9985347986221313,
+        "terminated_episodes": []
+      },
+      "forward": {
+        "return_mean": 41.22340393066406,
+        "return_std": 0.2197561413049698,
+        "mean_xy_velocity_error_m_s": 0.05556846782565117,
+        "mean_yaw_velocity_error_rad_s": 0.07258984446525574,
+        "termination_rate": 0.0,
+        "mean_length_seconds": 20.0,
+        "forward_speed_m_s": 0.5200172066688538,
+        "root_height_m": 0.2730415463447571,
+        "upright_cosine": 0.998522937297821,
+        "terminated_episodes": []
+      }
+    },
+    {
+      "run": "run_003",
+      "seed": 1,
+      "training_seconds": 147.21,
+      "random": {
+        "return_mean": 40.23135757446289,
+        "return_std": 1.0228774547576904,
+        "mean_xy_velocity_error_m_s": 0.06904298067092896,
+        "mean_yaw_velocity_error_rad_s": 0.09131553024053574,
+        "termination_rate": 0.0,
+        "mean_length_seconds": 20.0,
+        "forward_speed_m_s": -0.06471659243106842,
+        "root_height_m": 0.2476634383201599,
+        "upright_cosine": 0.9989140033721924,
+        "terminated_episodes": []
+      },
+      "forward": {
+        "return_mean": 38.31247329711914,
+        "return_std": 10.299973487854004,
+        "mean_xy_velocity_error_m_s": 0.0892370194196701,
+        "mean_yaw_velocity_error_rad_s": 0.10154281556606293,
+        "termination_rate": 0.0625,
+        "mean_length_seconds": 18.876249313354492,
+        "forward_speed_m_s": 0.4819932281970978,
+        "root_height_m": 0.2171892523765564,
+        "upright_cosine": 0.9230746030807495,
+        "terminated_episodes": [
+          {
+            "env_index": 11,
+            "return": -1.5630854368209839,
+            "length_steps": 101,
+            "length_seconds": 2.02,
+            "terminated": true,
+            "time_out": false,
+            "mean_xy_velocity_error_m_s": 0.5754556059837341,
+            "mean_yaw_velocity_error_rad_s": 0.40561917424201965
+          }
+        ]
+      }
+    }
+  ]
+}

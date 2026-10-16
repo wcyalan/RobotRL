@@ -38,7 +38,6 @@ def plot_metrics(rows, destination):
         stds = np.array([r["eval_std"] for r in evaluation])
         axes[0].fill_between([r["steps"] for r in evaluation], means - stds,
                              means + stds, alpha=0.15, label="Evaluation +/- 1 std")
-    axes[0].axhline(500, color="gray", linestyle="--", linewidth=0.8)
     axes[0].set_ylabel("Undiscounted episode return")
     axes[0].legend(fontsize=8)
     actor = [r for r in rows if r.get("loss") not in (None, "")]
@@ -91,7 +90,7 @@ class RunRecorder:
         snapshots.mkdir()
         metadata["source_sha256"] = {}
         for name in (
-            "networks.py", "reinforce.py", "actor_critic.py", "ppo.py",
+            "networks.py", "reinforce.py", "actor_critic.py", "ppo.py", "ppo_continuous.py",
             "evaluate.py", "experiment_io.py",
         ):
             data = (Path(__file__).parent / name).read_bytes()
@@ -106,7 +105,8 @@ class RunRecorder:
                                      encoding="utf-8")
 
     def record(self, policy, optimizer, update, steps, train_mean=None, loss=None, evaluation=None,
-               *, value_net=None, critic_optimizer=None, critic_loss=None, diagnostics=None):
+               *, value_net=None, critic_optimizer=None, critic_loss=None, diagnostics=None,
+               observation_normalizer_state=None):
         if (value_net is None) != (critic_optimizer is None):
             raise ValueError("value_net and critic_optimizer must be provided together")
         row = dict(update=update, steps=steps, train_mean=train_mean, loss=loss,
@@ -131,6 +131,8 @@ class RunRecorder:
         if value_net is not None:
             checkpoint["value_state_dict"] = value_net.state_dict()
             checkpoint["critic_optimizer_state_dict"] = critic_optimizer.state_dict()
+        if observation_normalizer_state is not None:
+            checkpoint["observation_normalizer_state"] = observation_normalizer_state
         # 同目录临时文件替换，避免中断写入破坏已有 checkpoint。
         self._checkpoint("last.pt", checkpoint)
         if evaluation is not None and evaluation[0] > self.best_mean:

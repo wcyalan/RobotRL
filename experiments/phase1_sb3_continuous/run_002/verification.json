@@ -1,0 +1,17 @@
+{
+  "status": "verified",
+  "steps": 1024000,
+  "training_seed": 1,
+  "resumed": false,
+  "best_equals_last": true,
+  "metrics_rows": 1001,
+  "training_metrics_finite": true,
+  "independent_evaluation": {
+    "episodes": 20,
+    "seed_start": 20000,
+    "mean": 1350.263245072562,
+    "std": 409.0341150321234,
+    "inverted_episodes": 20,
+    "inverted_time_fraction": 0.93435
+  }
+}

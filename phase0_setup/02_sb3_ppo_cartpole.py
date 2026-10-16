@@ -2,8 +2,8 @@
 
 用现成的 stable-baselines3 PPO 把 CartPole-v1 训到满分，作为阶段 1 手写
 PPO 的性能基准。达到 500 分自动停止。产物：
-    experiments/phase0_sb3_ppo/ppo_cartpole.zip   训好的模型（本地保留，不进 git）
-    experiments/phase0_sb3_ppo/curve.png          训练曲线（进 git）
+    experiments/phase0_sb3_ppo/run_001/ppo_cartpole.zip   训好的模型（本地保留，不进 git）
+    experiments/phase0_sb3_ppo/run_001/curve.png          训练曲线（进 git）
 
 用法:
     python 02_sb3_ppo_cartpole.py                # 训练 + 评估 + 存曲线
@@ -23,7 +23,7 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
 
 HERE = Path(__file__).resolve().parent
-OUT_DIR = HERE.parent / "experiments" / "phase0_sb3_ppo"
+OUT_DIR = HERE.parent / "experiments" / "phase0_sb3_ppo" / "run_001"
 TOTAL_TIMESTEPS_DEFAULT = 200_000
 SUCCESS_WINDOW = 20
 

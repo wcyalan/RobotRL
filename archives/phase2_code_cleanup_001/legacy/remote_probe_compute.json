@@ -1,0 +1,37 @@
+{
+  "task_id": "6c799c1a-b3c2-42c3-ae40-d158cb223485",
+  "status": "exited_successfully",
+  "result": {
+    "hostname": "918f226992fa",
+    "python": "3.10.14",
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.6 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.6 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n",
+    "gpu": {
+      "code": 0,
+      "stdout": "name, driver_version, memory.total [MiB]\nNVIDIA GeForce RTX 4090, 610.43.02, 24564 MiB\n",
+      "stderr": ""
+    },
+    "driver_capabilities": "compute,utility",
+    "vulkan_library": "libvulkan.so.1",
+    "egl_library": null,
+    "vulkan_icds": [
+      "/usr/share/vulkan/icd.d/intel_icd.x86_64.json",
+      "/usr/share/vulkan/icd.d/lvp_icd.x86_64.json",
+      "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json"
+    ],
+    "shared_memory": {
+      "code": 0,
+      "stdout": "Filesystem      Size  Used Avail Use% Mounted on\nshm             4.0G     0  4.0G   0% /dev/shm\n",
+      "stderr": ""
+    },
+    "packages": {
+      "torch": "2.1.1+cu118",
+      "isaacsim": null,
+      "isaaclab": null,
+      "rsl-rl-lib": null
+    },
+    "cuda_available": true,
+    "torch_cuda_version": "11.8",
+    "cuda_matmul_passed": true,
+    "visible_gpus": 1
+  }
+}

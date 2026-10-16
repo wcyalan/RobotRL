@@ -1,0 +1,2022 @@
+Output directory: C:\Users\wcyal\Desktop\RobotRL\experiments\phase1_ppo_continuous\run_003
+��ʼ����: -69.5 �� 3.8
+approx_kl=0.015180, clip_fraction=0.237, entropy=8.504
+update=  1, steps=  1024, mean_return=-352.87, actor_loss=-0.027, critic_loss=34.496
+approx_kl=0.007425, clip_fraction=0.098, entropy=8.494
+update=  2, steps=  2048, mean_return=-382.72, actor_loss=-0.013, critic_loss=49.860
+approx_kl=0.008393, clip_fraction=0.124, entropy=8.487
+update=  3, steps=  3072, mean_return=-209.28, actor_loss=-0.014, critic_loss=41.516
+approx_kl=0.009493, clip_fraction=0.142, entropy=8.489
+update=  4, steps=  4096, mean_return=-162.22, actor_loss=-0.014, critic_loss=29.295
+approx_kl=0.012434, clip_fraction=0.167, entropy=8.490
+update=  5, steps=  5120, mean_return=-291.35, actor_loss=-0.017, critic_loss=33.944
+approx_kl=0.010470, clip_fraction=0.150, entropy=8.484
+update=  6, steps=  6144, mean_return=-357.46, actor_loss=-0.018, critic_loss=17.875
+approx_kl=0.013749, clip_fraction=0.203, entropy=8.487
+update=  7, steps=  7168, mean_return=-388.65, actor_loss=-0.019, critic_loss=12.857
+approx_kl=0.012617, clip_fraction=0.186, entropy=8.476
+update=  8, steps=  8192, mean_return=-329.61, actor_loss=-0.018, critic_loss=17.110
+approx_kl=0.010446, clip_fraction=0.150, entropy=8.473
+update=  9, steps=  9216, mean_return=-290.12, actor_loss=-0.016, critic_loss=37.506
+approx_kl=0.012385, clip_fraction=0.196, entropy=8.467
+update= 10, steps= 10240, mean_return=-421.95, actor_loss=-0.017, critic_loss=21.478
+approx_kl=0.013294, clip_fraction=0.198, entropy=8.473
+update= 11, steps= 11264, mean_return=-367.11, actor_loss=-0.019, critic_loss=24.516
+approx_kl=0.010594, clip_fraction=0.161, entropy=8.469
+update= 12, steps= 12288, mean_return=-426.61, actor_loss=-0.016, critic_loss=21.165
+approx_kl=0.010414, clip_fraction=0.157, entropy=8.484
+update= 13, steps= 13312, mean_return=-310.93, actor_loss=-0.017, critic_loss=9.625
+approx_kl=0.013698, clip_fraction=0.201, entropy=8.486
+update= 14, steps= 14336, mean_return=-314.68, actor_loss=-0.020, critic_loss=9.633
+approx_kl=0.012639, clip_fraction=0.188, entropy=8.476
+update= 15, steps= 15360, mean_return=-241.89, actor_loss=-0.019, critic_loss=45.268
+approx_kl=0.011999, clip_fraction=0.195, entropy=8.462
+update= 16, steps= 16384, mean_return=-380.88, actor_loss=-0.016, critic_loss=10.308
+approx_kl=0.014343, clip_fraction=0.231, entropy=8.462
+update= 17, steps= 17408, mean_return=-327.60, actor_loss=-0.021, critic_loss=13.041
+approx_kl=0.011536, clip_fraction=0.166, entropy=8.467
+update= 18, steps= 18432, mean_return=-353.77, actor_loss=-0.017, critic_loss=7.905
+approx_kl=0.010706, clip_fraction=0.164, entropy=8.451
+update= 19, steps= 19456, mean_return=-342.01, actor_loss=-0.020, critic_loss=16.007
+approx_kl=0.012612, clip_fraction=0.189, entropy=8.461
+update= 20, steps= 20480, mean_return=-290.14, actor_loss=-0.017, critic_loss=27.167
+approx_kl=0.011960, clip_fraction=0.181, entropy=8.469
+update= 21, steps= 21504, mean_return=-180.62, actor_loss=-0.014, critic_loss=19.566
+approx_kl=0.012086, clip_fraction=0.196, entropy=8.477
+update= 22, steps= 22528, mean_return=-116.23, actor_loss=-0.018, critic_loss=14.174
+approx_kl=0.014407, clip_fraction=0.224, entropy=8.473
+update= 23, steps= 23552, mean_return=-260.86, actor_loss=-0.019, critic_loss=26.605
+approx_kl=0.012702, clip_fraction=0.200, entropy=8.462
+update= 24, steps= 24576, mean_return=-333.51, actor_loss=-0.015, critic_loss=19.887
+approx_kl=0.013671, clip_fraction=0.222, entropy=8.446
+update= 25, steps= 25600, mean_return=-154.16, actor_loss=-0.019, critic_loss=20.663
+approx_kl=0.013726, clip_fraction=0.223, entropy=8.429
+update= 26, steps= 26624, mean_return=-207.44, actor_loss=-0.021, critic_loss=14.338
+approx_kl=0.015195, clip_fraction=0.221, entropy=8.421
+update= 27, steps= 27648, mean_return=-234.50, actor_loss=-0.022, critic_loss=18.622
+approx_kl=0.011135, clip_fraction=0.176, entropy=8.403
+update= 28, steps= 28672, mean_return=-405.28, actor_loss=-0.018, critic_loss=44.789
+approx_kl=0.016871, clip_fraction=0.252, entropy=8.386
+update= 29, steps= 29696, mean_return=-267.65, actor_loss=-0.020, critic_loss=31.038
+approx_kl=0.013986, clip_fraction=0.205, entropy=8.395
+update= 30, steps= 30720, mean_return=-49.51, actor_loss=-0.019, critic_loss=38.361
+approx_kl=0.012661, clip_fraction=0.198, entropy=8.388
+update= 31, steps= 31744, mean_return=-122.97, actor_loss=-0.017, critic_loss=29.148
+approx_kl=0.015464, clip_fraction=0.250, entropy=8.380
+update= 32, steps= 32768, mean_return=-206.65, actor_loss=-0.020, critic_loss=42.798
+approx_kl=0.013702, clip_fraction=0.217, entropy=8.385
+update= 33, steps= 33792, mean_return=-107.73, actor_loss=-0.021, critic_loss=22.177
+approx_kl=0.012636, clip_fraction=0.193, entropy=8.376
+update= 34, steps= 34816, mean_return=-211.41, actor_loss=-0.017, critic_loss=7.324
+approx_kl=0.013981, clip_fraction=0.221, entropy=8.377
+update= 35, steps= 35840, mean_return=-178.69, actor_loss=-0.018, critic_loss=32.065
+approx_kl=0.014108, clip_fraction=0.222, entropy=8.376
+update= 36, steps= 36864, mean_return=-228.81, actor_loss=-0.021, critic_loss=7.739
+approx_kl=0.013826, clip_fraction=0.209, entropy=8.362
+update= 37, steps= 37888, mean_return=-212.19, actor_loss=-0.017, critic_loss=5.146
+approx_kl=0.013664, clip_fraction=0.226, entropy=8.362
+update= 38, steps= 38912, mean_return=-225.85, actor_loss=-0.018, critic_loss=23.227
+approx_kl=0.016030, clip_fraction=0.266, entropy=8.354
+update= 39, steps= 39936, mean_return=-54.37, actor_loss=-0.019, critic_loss=30.328
+approx_kl=0.016467, clip_fraction=0.245, entropy=8.361
+update= 40, steps= 40960, mean_return=-110.90, actor_loss=-0.021, critic_loss=25.792
+approx_kl=0.014073, clip_fraction=0.207, entropy=8.361
+update= 41, steps= 41984, mean_return=-122.81, actor_loss=-0.019, critic_loss=19.962
+approx_kl=0.016814, clip_fraction=0.247, entropy=8.365
+update= 42, steps= 43008, mean_return=-34.82, actor_loss=-0.022, critic_loss=28.954
+approx_kl=0.012311, clip_fraction=0.190, entropy=8.360
+update= 43, steps= 44032, mean_return=87.63, actor_loss=-0.014, critic_loss=31.936
+approx_kl=0.015793, clip_fraction=0.239, entropy=8.356
+update= 44, steps= 45056, mean_return=-153.97, actor_loss=-0.019, critic_loss=37.221
+approx_kl=0.012563, clip_fraction=0.201, entropy=8.341
+update= 45, steps= 46080, mean_return=-0.29, actor_loss=-0.017, critic_loss=27.092
+approx_kl=0.011746, clip_fraction=0.176, entropy=8.351
+update= 46, steps= 47104, mean_return=-41.83, actor_loss=-0.014, critic_loss=29.787
+approx_kl=0.017901, clip_fraction=0.270, entropy=8.340
+update= 47, steps= 48128, mean_return=-33.71, actor_loss=-0.022, critic_loss=26.782
+approx_kl=0.013831, clip_fraction=0.189, entropy=8.328
+update= 48, steps= 49152, mean_return=-169.73, actor_loss=-0.017, critic_loss=29.484
+approx_kl=0.011384, clip_fraction=0.175, entropy=8.335
+update= 49, steps= 50176, mean_return=127.97, actor_loss=-0.016, critic_loss=46.777
+approx_kl=0.011585, clip_fraction=0.177, entropy=8.324
+update= 50, steps= 51200, mean_return=84.25, actor_loss=-0.017, critic_loss=41.060
+��������: -22.8 �� 3.1
+approx_kl=0.010915, clip_fraction=0.166, entropy=8.304
+update= 51, steps= 52224, mean_return=11.63, actor_loss=-0.015, critic_loss=31.817
+approx_kl=0.014715, clip_fraction=0.226, entropy=8.290
+update= 52, steps= 53248, mean_return=45.45, actor_loss=-0.018, critic_loss=30.846
+approx_kl=0.013869, clip_fraction=0.228, entropy=8.268
+update= 53, steps= 54272, mean_return=-8.19, actor_loss=-0.018, critic_loss=34.188
+approx_kl=0.012972, clip_fraction=0.201, entropy=8.275
+update= 54, steps= 55296, mean_return=-101.38, actor_loss=-0.018, critic_loss=28.678
+approx_kl=0.012468, clip_fraction=0.186, entropy=8.265
+update= 55, steps= 56320, mean_return=67.66, actor_loss=-0.017, critic_loss=26.595
+approx_kl=0.011197, clip_fraction=0.170, entropy=8.252
+update= 56, steps= 57344, mean_return=-44.59, actor_loss=-0.017, critic_loss=15.162
+approx_kl=0.017962, clip_fraction=0.254, entropy=8.237
+update= 57, steps= 58368, mean_return=24.84, actor_loss=-0.021, critic_loss=27.951
+approx_kl=0.013585, clip_fraction=0.198, entropy=8.210
+update= 58, steps= 59392, mean_return=-13.65, actor_loss=-0.019, critic_loss=53.168
+approx_kl=0.010469, clip_fraction=0.162, entropy=8.192
+update= 59, steps= 60416, mean_return=26.41, actor_loss=-0.015, critic_loss=42.752
+approx_kl=0.013075, clip_fraction=0.210, entropy=8.178
+update= 60, steps= 61440, mean_return=57.08, actor_loss=-0.017, critic_loss=31.991
+approx_kl=0.013235, clip_fraction=0.205, entropy=8.175
+update= 61, steps= 62464, mean_return=141.30, actor_loss=-0.020, critic_loss=40.351
+approx_kl=0.014113, clip_fraction=0.223, entropy=8.182
+update= 62, steps= 63488, mean_return=219.61, actor_loss=-0.021, critic_loss=25.123
+approx_kl=0.013343, clip_fraction=0.186, entropy=8.183
+update= 63, steps= 64512, mean_return=32.44, actor_loss=-0.017, critic_loss=53.447
+approx_kl=0.013279, clip_fraction=0.188, entropy=8.175
+update= 64, steps= 65536, mean_return=184.41, actor_loss=-0.019, critic_loss=70.807
+approx_kl=0.011853, clip_fraction=0.188, entropy=8.189
+update= 65, steps= 66560, mean_return=354.45, actor_loss=-0.016, critic_loss=55.878
+approx_kl=0.014094, clip_fraction=0.228, entropy=8.174
+update= 66, steps= 67584, mean_return=166.99, actor_loss=-0.025, critic_loss=49.288
+approx_kl=0.014838, clip_fraction=0.225, entropy=8.161
+update= 67, steps= 68608, mean_return=331.94, actor_loss=-0.018, critic_loss=35.547
+approx_kl=0.016480, clip_fraction=0.245, entropy=8.156
+update= 68, steps= 69632, mean_return=183.87, actor_loss=-0.019, critic_loss=30.425
+approx_kl=0.012400, clip_fraction=0.189, entropy=8.165
+update= 69, steps= 70656, mean_return=400.82, actor_loss=-0.018, critic_loss=46.409
+approx_kl=0.015143, clip_fraction=0.234, entropy=8.156
+update= 70, steps= 71680, mean_return=-286.23, actor_loss=-0.020, critic_loss=57.156
+approx_kl=0.013166, clip_fraction=0.195, entropy=8.143
+update= 71, steps= 72704, mean_return=300.97, actor_loss=-0.018, critic_loss=39.633
+approx_kl=0.014885, clip_fraction=0.210, entropy=8.131
+update= 72, steps= 73728, mean_return=148.12, actor_loss=-0.023, critic_loss=28.868
+approx_kl=0.012814, clip_fraction=0.206, entropy=8.109
+update= 73, steps= 74752, mean_return=5.49, actor_loss=-0.018, critic_loss=32.835
+approx_kl=0.019138, clip_fraction=0.288, entropy=8.088
+update= 74, steps= 75776, mean_return=362.93, actor_loss=-0.024, critic_loss=42.029
+approx_kl=0.017263, clip_fraction=0.268, entropy=8.080
+update= 75, steps= 76800, mean_return=418.21, actor_loss=-0.021, critic_loss=31.753
+approx_kl=0.014787, clip_fraction=0.217, entropy=8.063
+update= 76, steps= 77824, mean_return=-132.11, actor_loss=-0.020, critic_loss=49.851
+approx_kl=0.017643, clip_fraction=0.261, entropy=8.057
+update= 77, steps= 78848, mean_return=437.38, actor_loss=-0.020, critic_loss=44.296
+approx_kl=0.014374, clip_fraction=0.231, entropy=8.035
+update= 78, steps= 79872, mean_return=305.44, actor_loss=-0.019, critic_loss=45.131
+approx_kl=0.014604, clip_fraction=0.226, entropy=8.026
+update= 79, steps= 80896, mean_return=591.75, actor_loss=-0.019, critic_loss=41.731
+approx_kl=0.017518, clip_fraction=0.253, entropy=8.006
+update= 80, steps= 81920, mean_return=624.06, actor_loss=-0.024, critic_loss=30.371
+approx_kl=0.016813, clip_fraction=0.266, entropy=7.992
+update= 81, steps= 82944, mean_return=495.58, actor_loss=-0.027, critic_loss=54.365
+approx_kl=0.011054, clip_fraction=0.167, entropy=7.978
+update= 82, steps= 83968, mean_return=-6.06, actor_loss=-0.017, critic_loss=49.386
+approx_kl=0.016151, clip_fraction=0.238, entropy=7.971
+update= 83, steps= 84992, mean_return=514.59, actor_loss=-0.020, critic_loss=53.899
+approx_kl=0.012162, clip_fraction=0.192, entropy=7.954
+update= 84, steps= 86016, mean_return=745.43, actor_loss=-0.016, critic_loss=45.990
+approx_kl=0.014494, clip_fraction=0.225, entropy=7.935
+update= 85, steps= 87040, mean_return=173.38, actor_loss=-0.025, critic_loss=40.298
+approx_kl=0.015886, clip_fraction=0.246, entropy=7.916
+update= 86, steps= 88064, mean_return=228.36, actor_loss=-0.019, critic_loss=51.177
+approx_kl=0.014355, clip_fraction=0.220, entropy=7.913
+update= 87, steps= 89088, mean_return=273.06, actor_loss=-0.018, critic_loss=47.141
+approx_kl=0.013777, clip_fraction=0.203, entropy=7.898
+update= 88, steps= 90112, mean_return=760.49, actor_loss=-0.016, critic_loss=52.886
+approx_kl=0.011749, clip_fraction=0.176, entropy=7.899
+update= 89, steps= 91136, mean_return=619.68, actor_loss=-0.015, critic_loss=56.981
+approx_kl=0.013951, clip_fraction=0.208, entropy=7.893
+update= 90, steps= 92160, mean_return=684.74, actor_loss=-0.016, critic_loss=50.681
+approx_kl=0.016092, clip_fraction=0.240, entropy=7.892
+update= 91, steps= 93184, mean_return=930.58, actor_loss=-0.016, critic_loss=47.444
+approx_kl=0.014627, clip_fraction=0.214, entropy=7.896
+update= 92, steps= 94208, mean_return=745.08, actor_loss=-0.020, critic_loss=52.736
+approx_kl=0.013181, clip_fraction=0.196, entropy=7.893
+update= 93, steps= 95232, mean_return=682.27, actor_loss=-0.016, critic_loss=48.513
+approx_kl=0.012015, clip_fraction=0.182, entropy=7.879
+update= 94, steps= 96256, mean_return=358.57, actor_loss=-0.015, critic_loss=43.562
+approx_kl=0.013616, clip_fraction=0.213, entropy=7.861
+update= 95, steps= 97280, mean_return=841.17, actor_loss=-0.018, critic_loss=45.538
+approx_kl=0.014527, clip_fraction=0.234, entropy=7.861
+update= 96, steps= 98304, mean_return=786.33, actor_loss=-0.018, critic_loss=77.473
+approx_kl=0.014766, clip_fraction=0.229, entropy=7.855
+update= 97, steps= 99328, mean_return=818.31, actor_loss=-0.018, critic_loss=96.927
+approx_kl=0.016663, clip_fraction=0.243, entropy=7.852
+update= 98, steps=100352, mean_return=853.97, actor_loss=-0.021, critic_loss=79.169
+approx_kl=0.011502, clip_fraction=0.169, entropy=7.833
+update= 99, steps=101376, mean_return=870.77, actor_loss=-0.013, critic_loss=63.557
+approx_kl=0.012630, clip_fraction=0.189, entropy=7.821
+update=100, steps=102400, mean_return=919.60, actor_loss=-0.018, critic_loss=58.042
+��������: 2303.8 �� 13.1
+approx_kl=0.010738, clip_fraction=0.149, entropy=7.811
+update=101, steps=103424, mean_return=1089.41, actor_loss=-0.016, critic_loss=77.387
+approx_kl=0.012348, clip_fraction=0.193, entropy=7.812
+update=102, steps=104448, mean_return=989.05, actor_loss=-0.014, critic_loss=61.306
+approx_kl=0.013118, clip_fraction=0.208, entropy=7.796
+update=103, steps=105472, mean_return=872.70, actor_loss=-0.017, critic_loss=43.762
+approx_kl=0.010681, clip_fraction=0.179, entropy=7.780
+update=104, steps=106496, mean_return=1039.30, actor_loss=-0.013, critic_loss=72.897
+approx_kl=0.012298, clip_fraction=0.198, entropy=7.765
+update=105, steps=107520, mean_return=1138.91, actor_loss=-0.013, critic_loss=59.923
+approx_kl=0.015043, clip_fraction=0.229, entropy=7.734
+update=106, steps=108544, mean_return=1160.67, actor_loss=-0.019, critic_loss=59.052
+approx_kl=0.012346, clip_fraction=0.199, entropy=7.731
+update=107, steps=109568, mean_return=986.54, actor_loss=-0.016, critic_loss=57.750
+approx_kl=0.012343, clip_fraction=0.185, entropy=7.731
+update=108, steps=110592, mean_return=640.83, actor_loss=-0.018, critic_loss=45.555
+approx_kl=0.011021, clip_fraction=0.163, entropy=7.721
+update=109, steps=111616, mean_return=1159.67, actor_loss=-0.012, critic_loss=66.164
+approx_kl=0.012135, clip_fraction=0.177, entropy=7.709
+update=110, steps=112640, mean_return=919.23, actor_loss=-0.017, critic_loss=65.712
+approx_kl=0.013459, clip_fraction=0.213, entropy=7.706
+update=111, steps=113664, mean_return=1148.96, actor_loss=-0.020, critic_loss=70.523
+approx_kl=0.012384, clip_fraction=0.194, entropy=7.692
+update=112, steps=114688, mean_return=1216.82, actor_loss=-0.016, critic_loss=45.906
+approx_kl=0.013066, clip_fraction=0.202, entropy=7.672
+update=113, steps=115712, mean_return=1230.16, actor_loss=-0.016, critic_loss=56.135
+approx_kl=0.010993, clip_fraction=0.186, entropy=7.656
+update=114, steps=116736, mean_return=1603.95, actor_loss=-0.015, critic_loss=83.941
+approx_kl=0.011258, clip_fraction=0.179, entropy=7.651
+update=115, steps=117760, mean_return=983.76, actor_loss=-0.016, critic_loss=74.969
+approx_kl=0.012398, clip_fraction=0.182, entropy=7.635
+update=116, steps=118784, mean_return=1276.04, actor_loss=-0.013, critic_loss=65.499
+approx_kl=0.014955, clip_fraction=0.231, entropy=7.618
+update=117, steps=119808, mean_return=1370.42, actor_loss=-0.016, critic_loss=71.118
+approx_kl=0.013490, clip_fraction=0.218, entropy=7.586
+update=118, steps=120832, mean_return=1364.95, actor_loss=-0.017, critic_loss=72.151
+approx_kl=0.010646, clip_fraction=0.161, entropy=7.560
+update=119, steps=121856, mean_return=1406.87, actor_loss=-0.010, critic_loss=46.650
+approx_kl=0.016254, clip_fraction=0.229, entropy=7.534
+update=120, steps=122880, mean_return=1207.29, actor_loss=-0.018, critic_loss=65.330
+approx_kl=0.016639, clip_fraction=0.256, entropy=7.531
+update=121, steps=123904, mean_return=363.12, actor_loss=-0.016, critic_loss=75.873
+approx_kl=0.009035, clip_fraction=0.122, entropy=7.513
+update=122, steps=124928, mean_return=1095.15, actor_loss=-0.006, critic_loss=109.172
+approx_kl=0.016617, clip_fraction=0.248, entropy=7.511
+update=123, steps=125952, mean_return=-350.01, actor_loss=-0.019, critic_loss=142.894
+approx_kl=0.012816, clip_fraction=0.205, entropy=7.519
+update=124, steps=126976, mean_return=1456.67, actor_loss=-0.015, critic_loss=65.318
+approx_kl=0.013797, clip_fraction=0.213, entropy=7.510
+update=125, steps=128000, mean_return=1414.78, actor_loss=-0.019, critic_loss=57.848
+approx_kl=0.011673, clip_fraction=0.180, entropy=7.501
+update=126, steps=129024, mean_return=1535.39, actor_loss=-0.013, critic_loss=52.600
+approx_kl=0.013465, clip_fraction=0.208, entropy=7.490
+update=127, steps=130048, mean_return=1728.63, actor_loss=-0.016, critic_loss=83.929
+approx_kl=0.015819, clip_fraction=0.244, entropy=7.498
+update=128, steps=131072, mean_return=511.92, actor_loss=-0.018, critic_loss=85.258
+approx_kl=0.014551, clip_fraction=0.215, entropy=7.478
+update=129, steps=132096, mean_return=1362.84, actor_loss=-0.014, critic_loss=78.133
+approx_kl=0.013625, clip_fraction=0.196, entropy=7.479
+update=130, steps=133120, mean_return=1451.00, actor_loss=-0.013, critic_loss=71.178
+approx_kl=0.012291, clip_fraction=0.188, entropy=7.469
+update=131, steps=134144, mean_return=1346.19, actor_loss=-0.014, critic_loss=69.963
+approx_kl=0.014750, clip_fraction=0.225, entropy=7.467
+update=132, steps=135168, mean_return=1367.47, actor_loss=-0.016, critic_loss=51.146
+approx_kl=0.014204, clip_fraction=0.217, entropy=7.457
+update=133, steps=136192, mean_return=1313.05, actor_loss=-0.019, critic_loss=67.838
+approx_kl=0.009582, clip_fraction=0.134, entropy=7.467
+update=134, steps=137216, mean_return=1518.76, actor_loss=-0.012, critic_loss=52.659
+approx_kl=0.012972, clip_fraction=0.190, entropy=7.455
+update=135, steps=138240, mean_return=1445.48, actor_loss=-0.014, critic_loss=50.630
+approx_kl=0.012456, clip_fraction=0.207, entropy=7.441
+update=136, steps=139264, mean_return=1339.62, actor_loss=-0.016, critic_loss=48.618
+approx_kl=0.014854, clip_fraction=0.226, entropy=7.438
+update=137, steps=140288, mean_return=1541.87, actor_loss=-0.019, critic_loss=85.176
+approx_kl=0.015622, clip_fraction=0.250, entropy=7.428
+update=138, steps=141312, mean_return=1730.96, actor_loss=-0.016, critic_loss=77.482
+approx_kl=0.013852, clip_fraction=0.217, entropy=7.418
+update=139, steps=142336, mean_return=1407.99, actor_loss=-0.017, critic_loss=65.840
+approx_kl=0.013684, clip_fraction=0.206, entropy=7.401
+update=140, steps=143360, mean_return=1592.10, actor_loss=-0.014, critic_loss=55.729
+approx_kl=0.014752, clip_fraction=0.225, entropy=7.383
+update=141, steps=144384, mean_return=1663.62, actor_loss=-0.017, critic_loss=90.652
+approx_kl=0.011530, clip_fraction=0.166, entropy=7.368
+update=142, steps=145408, mean_return=1334.27, actor_loss=-0.013, critic_loss=67.748
+approx_kl=0.015456, clip_fraction=0.237, entropy=7.336
+update=143, steps=146432, mean_return=1731.68, actor_loss=-0.017, critic_loss=53.532
+approx_kl=0.011939, clip_fraction=0.182, entropy=7.327
+update=144, steps=147456, mean_return=1595.64, actor_loss=-0.016, critic_loss=85.836
+approx_kl=0.011514, clip_fraction=0.174, entropy=7.308
+update=145, steps=148480, mean_return=835.80, actor_loss=-0.019, critic_loss=65.659
+approx_kl=0.010885, clip_fraction=0.160, entropy=7.290
+update=146, steps=149504, mean_return=1751.08, actor_loss=-0.011, critic_loss=109.577
+approx_kl=0.014149, clip_fraction=0.217, entropy=7.268
+update=147, steps=150528, mean_return=1646.88, actor_loss=-0.017, critic_loss=71.074
+approx_kl=0.012630, clip_fraction=0.168, entropy=7.252
+update=148, steps=151552, mean_return=1579.02, actor_loss=-0.018, critic_loss=121.039
+approx_kl=0.014543, clip_fraction=0.212, entropy=7.227
+update=149, steps=152576, mean_return=1875.51, actor_loss=-0.013, critic_loss=55.539
+approx_kl=0.012127, clip_fraction=0.186, entropy=7.215
+update=150, steps=153600, mean_return=1832.14, actor_loss=-0.017, critic_loss=113.968
+��������: 2841.4 �� 142.8
+approx_kl=0.019493, clip_fraction=0.268, entropy=7.199
+update=151, steps=154624, mean_return=1620.00, actor_loss=-0.023, critic_loss=99.405
+approx_kl=0.012432, clip_fraction=0.178, entropy=7.206
+update=152, steps=155648, mean_return=1844.78, actor_loss=-0.014, critic_loss=69.625
+approx_kl=0.011527, clip_fraction=0.151, entropy=7.181
+update=153, steps=156672, mean_return=1873.37, actor_loss=-0.012, critic_loss=105.395
+approx_kl=0.015323, clip_fraction=0.240, entropy=7.159
+update=154, steps=157696, mean_return=1694.91, actor_loss=-0.014, critic_loss=94.725
+approx_kl=0.013066, clip_fraction=0.199, entropy=7.134
+update=155, steps=158720, mean_return=1893.88, actor_loss=-0.014, critic_loss=73.653
+approx_kl=0.011644, clip_fraction=0.168, entropy=7.119
+update=156, steps=159744, mean_return=1964.94, actor_loss=-0.013, critic_loss=79.386
+approx_kl=0.016742, clip_fraction=0.260, entropy=7.120
+update=157, steps=160768, mean_return=1863.74, actor_loss=-0.012, critic_loss=142.633
+approx_kl=0.010867, clip_fraction=0.149, entropy=7.105
+update=158, steps=161792, mean_return=1384.05, actor_loss=-0.014, critic_loss=135.818
+approx_kl=0.011415, clip_fraction=0.170, entropy=7.089
+update=159, steps=162816, mean_return=1722.06, actor_loss=-0.016, critic_loss=78.925
+approx_kl=0.015261, clip_fraction=0.225, entropy=7.070
+update=160, steps=163840, mean_return=1880.53, actor_loss=-0.017, critic_loss=162.715
+approx_kl=0.015150, clip_fraction=0.229, entropy=7.067
+update=161, steps=164864, mean_return=798.58, actor_loss=-0.016, critic_loss=64.533
+approx_kl=0.011629, clip_fraction=0.177, entropy=7.048
+update=162, steps=165888, mean_return=1959.07, actor_loss=-0.010, critic_loss=77.850
+approx_kl=0.011000, clip_fraction=0.175, entropy=7.036
+update=163, steps=166912, mean_return=2175.64, actor_loss=-0.010, critic_loss=79.631
+approx_kl=0.013442, clip_fraction=0.194, entropy=7.038
+update=164, steps=167936, mean_return=2081.46, actor_loss=-0.015, critic_loss=105.200
+approx_kl=0.014984, clip_fraction=0.207, entropy=7.022
+update=165, steps=168960, mean_return=1883.71, actor_loss=-0.015, critic_loss=111.838
+approx_kl=0.013709, clip_fraction=0.216, entropy=7.012
+update=166, steps=169984, mean_return=786.05, actor_loss=-0.013, critic_loss=127.417
+approx_kl=0.013570, clip_fraction=0.213, entropy=6.983
+update=167, steps=171008, mean_return=1906.78, actor_loss=-0.013, critic_loss=120.426
+approx_kl=0.015192, clip_fraction=0.215, entropy=6.984
+update=168, steps=172032, mean_return=1879.42, actor_loss=-0.012, critic_loss=172.701
+approx_kl=0.012114, clip_fraction=0.181, entropy=6.988
+update=169, steps=173056, mean_return=2097.97, actor_loss=-0.015, critic_loss=142.691
+approx_kl=0.015671, clip_fraction=0.229, entropy=6.972
+update=170, steps=174080, mean_return=1992.30, actor_loss=-0.013, critic_loss=129.633
+approx_kl=0.011182, clip_fraction=0.166, entropy=6.967
+update=171, steps=175104, mean_return=2149.73, actor_loss=-0.013, critic_loss=90.196
+approx_kl=0.010934, clip_fraction=0.173, entropy=6.955
+update=172, steps=176128, mean_return=2246.49, actor_loss=-0.010, critic_loss=86.163
+approx_kl=0.009682, clip_fraction=0.141, entropy=6.941
+update=173, steps=177152, mean_return=2188.31, actor_loss=-0.011, critic_loss=69.625
+approx_kl=0.010066, clip_fraction=0.146, entropy=6.928
+update=174, steps=178176, mean_return=2054.43, actor_loss=-0.010, critic_loss=92.028
+approx_kl=0.009313, clip_fraction=0.139, entropy=6.920
+update=175, steps=179200, mean_return=2068.12, actor_loss=-0.014, critic_loss=58.726
+approx_kl=0.011878, clip_fraction=0.170, entropy=6.906
+update=176, steps=180224, mean_return=1973.55, actor_loss=-0.011, critic_loss=125.713
+approx_kl=0.012747, clip_fraction=0.193, entropy=6.891
+update=177, steps=181248, mean_return=2174.54, actor_loss=-0.011, critic_loss=80.849
+approx_kl=0.013935, clip_fraction=0.192, entropy=6.879
+update=178, steps=182272, mean_return=1966.42, actor_loss=-0.013, critic_loss=74.509
+approx_kl=0.017282, clip_fraction=0.235, entropy=6.871
+update=179, steps=183296, mean_return=1792.71, actor_loss=-0.016, critic_loss=173.202
+approx_kl=0.011223, clip_fraction=0.163, entropy=6.868
+update=180, steps=184320, mean_return=2177.99, actor_loss=-0.010, critic_loss=58.484
+approx_kl=0.008182, clip_fraction=0.110, entropy=6.847
+update=181, steps=185344, mean_return=2038.70, actor_loss=-0.009, critic_loss=62.111
+approx_kl=0.011836, clip_fraction=0.186, entropy=6.839
+update=182, steps=186368, mean_return=2187.82, actor_loss=-0.014, critic_loss=63.409
+approx_kl=0.013724, clip_fraction=0.198, entropy=6.818
+update=183, steps=187392, mean_return=1943.35, actor_loss=-0.017, critic_loss=158.521
+approx_kl=0.017264, clip_fraction=0.255, entropy=6.799
+update=184, steps=188416, mean_return=2261.45, actor_loss=-0.013, critic_loss=87.367
+approx_kl=0.011144, clip_fraction=0.175, entropy=6.784
+update=185, steps=189440, mean_return=2071.10, actor_loss=-0.012, critic_loss=122.649
+approx_kl=0.011356, clip_fraction=0.177, entropy=6.768
+update=186, steps=190464, mean_return=2196.95, actor_loss=-0.009, critic_loss=117.715
+approx_kl=0.016922, clip_fraction=0.250, entropy=6.761
+update=187, steps=191488, mean_return=2106.75, actor_loss=-0.019, critic_loss=137.337
+approx_kl=0.013795, clip_fraction=0.217, entropy=6.766
+update=188, steps=192512, mean_return=2424.45, actor_loss=-0.016, critic_loss=119.624
+approx_kl=0.009134, clip_fraction=0.132, entropy=6.756
+update=189, steps=193536, mean_return=2193.33, actor_loss=-0.011, critic_loss=129.763
+approx_kl=0.014983, clip_fraction=0.219, entropy=6.757
+update=190, steps=194560, mean_return=2159.54, actor_loss=-0.013, critic_loss=134.355
+approx_kl=0.013879, clip_fraction=0.209, entropy=6.738
+update=191, steps=195584, mean_return=476.11, actor_loss=-0.014, critic_loss=52.173
+approx_kl=0.011902, clip_fraction=0.172, entropy=6.727
+update=192, steps=196608, mean_return=2284.07, actor_loss=-0.010, critic_loss=104.208
+approx_kl=0.013032, clip_fraction=0.184, entropy=6.717
+update=193, steps=197632, mean_return=2350.05, actor_loss=-0.011, critic_loss=65.032
+approx_kl=0.017189, clip_fraction=0.262, entropy=6.697
+update=194, steps=198656, mean_return=2280.28, actor_loss=-0.018, critic_loss=106.194
+approx_kl=0.008947, clip_fraction=0.133, entropy=6.689
+update=195, steps=199680, mean_return=2174.17, actor_loss=-0.008, critic_loss=105.419
+approx_kl=0.011885, clip_fraction=0.184, entropy=6.670
+update=196, steps=200704, mean_return=2420.64, actor_loss=-0.015, critic_loss=141.781
+approx_kl=0.015393, clip_fraction=0.240, entropy=6.651
+update=197, steps=201728, mean_return=1056.83, actor_loss=-0.014, critic_loss=61.872
+approx_kl=0.019426, clip_fraction=0.273, entropy=6.645
+update=198, steps=202752, mean_return=2530.38, actor_loss=-0.019, critic_loss=101.331
+approx_kl=0.014096, clip_fraction=0.211, entropy=6.615
+update=199, steps=203776, mean_return=577.08, actor_loss=-0.017, critic_loss=71.167
+approx_kl=0.013854, clip_fraction=0.225, entropy=6.592
+update=200, steps=204800, mean_return=2365.89, actor_loss=-0.010, critic_loss=105.138
+��������: 3303.2 �� 152.9
+approx_kl=0.014098, clip_fraction=0.205, entropy=6.567
+update=201, steps=205824, mean_return=2570.70, actor_loss=-0.016, critic_loss=94.474
+approx_kl=0.018434, clip_fraction=0.270, entropy=6.556
+update=202, steps=206848, mean_return=2717.15, actor_loss=-0.017, critic_loss=66.624
+approx_kl=0.013620, clip_fraction=0.223, entropy=6.561
+update=203, steps=207872, mean_return=2463.81, actor_loss=-0.015, critic_loss=160.802
+approx_kl=0.012313, clip_fraction=0.172, entropy=6.568
+update=204, steps=208896, mean_return=1964.95, actor_loss=-0.015, critic_loss=75.653
+approx_kl=0.009711, clip_fraction=0.143, entropy=6.554
+update=205, steps=209920, mean_return=2527.68, actor_loss=-0.013, critic_loss=92.848
+approx_kl=0.010757, clip_fraction=0.157, entropy=6.536
+update=206, steps=210944, mean_return=2611.21, actor_loss=-0.012, critic_loss=95.600
+approx_kl=0.009582, clip_fraction=0.138, entropy=6.521
+update=207, steps=211968, mean_return=2530.44, actor_loss=-0.012, critic_loss=57.643
+approx_kl=0.011695, clip_fraction=0.146, entropy=6.522
+update=208, steps=212992, mean_return=2725.23, actor_loss=-0.005, critic_loss=90.675
+approx_kl=0.013398, clip_fraction=0.201, entropy=6.528
+update=209, steps=214016, mean_return=2725.95, actor_loss=-0.008, critic_loss=56.950
+approx_kl=0.010708, clip_fraction=0.159, entropy=6.523
+update=210, steps=215040, mean_return=847.05, actor_loss=-0.013, critic_loss=121.789
+approx_kl=0.010251, clip_fraction=0.147, entropy=6.519
+update=211, steps=216064, mean_return=2676.39, actor_loss=-0.011, critic_loss=113.790
+approx_kl=0.013867, clip_fraction=0.182, entropy=6.497
+update=212, steps=217088, mean_return=2531.54, actor_loss=-0.013, critic_loss=82.439
+approx_kl=0.014828, clip_fraction=0.221, entropy=6.495
+update=213, steps=218112, mean_return=2122.66, actor_loss=-0.018, critic_loss=239.510
+approx_kl=0.011667, clip_fraction=0.169, entropy=6.481
+update=214, steps=219136, mean_return=2774.06, actor_loss=-0.010, critic_loss=132.207
+approx_kl=0.011976, clip_fraction=0.180, entropy=6.468
+update=215, steps=220160, mean_return=2377.33, actor_loss=-0.007, critic_loss=89.125
+approx_kl=0.011012, clip_fraction=0.164, entropy=6.467
+update=216, steps=221184, mean_return=2623.74, actor_loss=-0.007, critic_loss=91.336
+approx_kl=0.015280, clip_fraction=0.229, entropy=6.461
+update=217, steps=222208, mean_return=2357.00, actor_loss=-0.011, critic_loss=78.199
+approx_kl=0.015468, clip_fraction=0.239, entropy=6.449
+update=218, steps=223232, mean_return=2727.24, actor_loss=-0.011, critic_loss=87.616
+approx_kl=0.014661, clip_fraction=0.221, entropy=6.450
+update=219, steps=224256, mean_return=2740.57, actor_loss=-0.015, critic_loss=98.222
+approx_kl=0.017529, clip_fraction=0.257, entropy=6.445
+update=220, steps=225280, mean_return=2792.51, actor_loss=-0.015, critic_loss=72.819
+approx_kl=0.014022, clip_fraction=0.221, entropy=6.445
+update=221, steps=226304, mean_return=2424.02, actor_loss=-0.012, critic_loss=100.273
+approx_kl=0.011145, clip_fraction=0.174, entropy=6.442
+update=222, steps=227328, mean_return=2809.05, actor_loss=-0.013, critic_loss=67.383
+approx_kl=0.009418, clip_fraction=0.123, entropy=6.422
+update=223, steps=228352, mean_return=2919.30, actor_loss=-0.006, critic_loss=61.958
+approx_kl=0.009525, clip_fraction=0.122, entropy=6.413
+update=224, steps=229376, mean_return=2642.64, actor_loss=-0.009, critic_loss=104.493
+approx_kl=0.011721, clip_fraction=0.174, entropy=6.385
+update=225, steps=230400, mean_return=2642.91, actor_loss=-0.009, critic_loss=102.577
+approx_kl=0.015116, clip_fraction=0.233, entropy=6.382
+update=226, steps=231424, mean_return=2660.39, actor_loss=-0.012, critic_loss=86.421
+approx_kl=0.011768, clip_fraction=0.185, entropy=6.370
+update=227, steps=232448, mean_return=2634.76, actor_loss=-0.013, critic_loss=102.630
+approx_kl=0.009664, clip_fraction=0.128, entropy=6.362
+update=228, steps=233472, mean_return=2654.17, actor_loss=-0.009, critic_loss=75.013
+approx_kl=0.017955, clip_fraction=0.259, entropy=6.351
+update=229, steps=234496, mean_return=2921.10, actor_loss=-0.015, critic_loss=82.618
+approx_kl=0.014483, clip_fraction=0.229, entropy=6.323
+update=230, steps=235520, mean_return=2759.15, actor_loss=-0.010, critic_loss=76.353
+approx_kl=0.012887, clip_fraction=0.198, entropy=6.308
+update=231, steps=236544, mean_return=2780.20, actor_loss=-0.013, critic_loss=91.790
+approx_kl=0.013770, clip_fraction=0.214, entropy=6.295
+update=232, steps=237568, mean_return=2706.68, actor_loss=-0.013, critic_loss=126.833
+approx_kl=0.009612, clip_fraction=0.138, entropy=6.290
+update=233, steps=238592, mean_return=2644.21, actor_loss=-0.011, critic_loss=92.522
+approx_kl=0.015053, clip_fraction=0.229, entropy=6.281
+update=234, steps=239616, mean_return=2786.31, actor_loss=-0.015, critic_loss=247.809
+approx_kl=0.015645, clip_fraction=0.236, entropy=6.273
+update=235, steps=240640, mean_return=1512.43, actor_loss=-0.008, critic_loss=56.709
+approx_kl=0.021078, clip_fraction=0.256, entropy=6.273
+update=236, steps=241664, mean_return=2941.14, actor_loss=-0.013, critic_loss=252.389
+approx_kl=0.013555, clip_fraction=0.199, entropy=6.263
+update=237, steps=242688, mean_return=1304.47, actor_loss=-0.013, critic_loss=81.127
+approx_kl=0.010779, clip_fraction=0.150, entropy=6.265
+update=238, steps=243712, mean_return=2642.42, actor_loss=-0.011, critic_loss=74.679
+approx_kl=0.012313, clip_fraction=0.182, entropy=6.276
+update=239, steps=244736, mean_return=2500.58, actor_loss=-0.012, critic_loss=154.141
+approx_kl=0.012593, clip_fraction=0.185, entropy=6.264
+update=240, steps=245760, mean_return=2516.40, actor_loss=-0.010, critic_loss=148.649
+approx_kl=0.012004, clip_fraction=0.182, entropy=6.250
+update=241, steps=246784, mean_return=2929.13, actor_loss=-0.019, critic_loss=133.004
+approx_kl=0.010771, clip_fraction=0.158, entropy=6.228
+update=242, steps=247808, mean_return=2986.32, actor_loss=-0.004, critic_loss=127.635
+approx_kl=0.012862, clip_fraction=0.198, entropy=6.232
+update=243, steps=248832, mean_return=2566.20, actor_loss=-0.011, critic_loss=281.405
+approx_kl=0.015858, clip_fraction=0.228, entropy=6.239
+update=244, steps=249856, mean_return=1493.98, actor_loss=-0.012, critic_loss=188.217
+approx_kl=0.011382, clip_fraction=0.167, entropy=6.220
+update=245, steps=250880, mean_return=2469.73, actor_loss=-0.013, critic_loss=93.570
+approx_kl=0.011004, clip_fraction=0.157, entropy=6.211
+update=246, steps=251904, mean_return=2717.23, actor_loss=-0.007, critic_loss=70.138
+approx_kl=0.013221, clip_fraction=0.185, entropy=6.203
+update=247, steps=252928, mean_return=2806.74, actor_loss=-0.014, critic_loss=115.672
+approx_kl=0.014445, clip_fraction=0.215, entropy=6.187
+update=248, steps=253952, mean_return=2626.71, actor_loss=-0.011, critic_loss=85.733
+approx_kl=0.018253, clip_fraction=0.272, entropy=6.171
+update=249, steps=254976, mean_return=2935.72, actor_loss=-0.017, critic_loss=103.072
+approx_kl=0.012292, clip_fraction=0.187, entropy=6.152
+update=250, steps=256000, mean_return=2750.16, actor_loss=-0.011, critic_loss=123.392
+��������: 3259.5 �� 81.9
+approx_kl=0.010656, clip_fraction=0.152, entropy=6.145
+update=251, steps=257024, mean_return=2864.81, actor_loss=-0.012, critic_loss=113.146
+approx_kl=0.014701, clip_fraction=0.217, entropy=6.127
+update=252, steps=258048, mean_return=2661.99, actor_loss=-0.011, critic_loss=109.649
+approx_kl=0.016385, clip_fraction=0.229, entropy=6.122
+update=253, steps=259072, mean_return=2610.51, actor_loss=-0.014, critic_loss=128.373
+approx_kl=0.011746, clip_fraction=0.174, entropy=6.108
+update=254, steps=260096, mean_return=2835.05, actor_loss=-0.010, critic_loss=88.791
+approx_kl=0.010664, clip_fraction=0.158, entropy=6.110
+update=255, steps=261120, mean_return=2780.41, actor_loss=-0.011, critic_loss=72.161
+approx_kl=0.011126, clip_fraction=0.149, entropy=6.106
+update=256, steps=262144, mean_return=2977.85, actor_loss=-0.013, critic_loss=136.104
+approx_kl=0.014620, clip_fraction=0.205, entropy=6.084
+update=257, steps=263168, mean_return=2812.29, actor_loss=-0.012, critic_loss=149.029
+approx_kl=0.015700, clip_fraction=0.239, entropy=6.071
+update=258, steps=264192, mean_return=2682.51, actor_loss=-0.011, critic_loss=110.996
+approx_kl=0.015045, clip_fraction=0.221, entropy=6.065
+update=259, steps=265216, mean_return=2794.85, actor_loss=-0.010, critic_loss=76.475
+approx_kl=0.016517, clip_fraction=0.204, entropy=6.046
+update=260, steps=266240, mean_return=3075.68, actor_loss=-0.007, critic_loss=83.989
+approx_kl=0.013384, clip_fraction=0.209, entropy=6.032
+update=261, steps=267264, mean_return=2798.16, actor_loss=-0.011, critic_loss=110.040
+approx_kl=0.011439, clip_fraction=0.162, entropy=6.006
+update=262, steps=268288, mean_return=2658.89, actor_loss=-0.012, critic_loss=128.014
+approx_kl=0.015185, clip_fraction=0.215, entropy=6.009
+update=263, steps=269312, mean_return=1720.91, actor_loss=-0.013, critic_loss=255.046
+approx_kl=0.012551, clip_fraction=0.195, entropy=6.010
+update=264, steps=270336, mean_return=2854.67, actor_loss=-0.009, critic_loss=120.149
+approx_kl=0.014580, clip_fraction=0.217, entropy=5.998
+update=265, steps=271360, mean_return=2654.14, actor_loss=-0.013, critic_loss=98.278
+approx_kl=0.013057, clip_fraction=0.192, entropy=5.987
+update=266, steps=272384, mean_return=2808.41, actor_loss=-0.015, critic_loss=92.691
+approx_kl=0.012041, clip_fraction=0.190, entropy=5.986
+update=267, steps=273408, mean_return=3050.01, actor_loss=-0.013, critic_loss=112.568
+approx_kl=0.013471, clip_fraction=0.203, entropy=5.978
+update=268, steps=274432, mean_return=3133.07, actor_loss=-0.013, critic_loss=126.444
+approx_kl=0.012568, clip_fraction=0.193, entropy=5.984
+update=269, steps=275456, mean_return=2636.43, actor_loss=-0.011, critic_loss=127.895
+approx_kl=0.022764, clip_fraction=0.320, entropy=5.982
+update=270, steps=276480, mean_return=1624.26, actor_loss=-0.014, critic_loss=228.784
+approx_kl=0.019394, clip_fraction=0.290, entropy=5.986
+update=271, steps=277504, mean_return=3006.72, actor_loss=-0.018, critic_loss=198.857
+approx_kl=0.020356, clip_fraction=0.229, entropy=5.980
+update=272, steps=278528, mean_return=2518.90, actor_loss=-0.013, critic_loss=186.205
+approx_kl=0.015350, clip_fraction=0.239, entropy=5.980
+update=273, steps=279552, mean_return=3008.43, actor_loss=-0.015, critic_loss=171.546
+approx_kl=0.018893, clip_fraction=0.274, entropy=5.973
+update=274, steps=280576, mean_return=2299.08, actor_loss=-0.013, critic_loss=307.880
+approx_kl=0.012441, clip_fraction=0.191, entropy=5.970
+update=275, steps=281600, mean_return=2903.26, actor_loss=-0.010, critic_loss=119.785
+approx_kl=0.015846, clip_fraction=0.218, entropy=5.973
+update=276, steps=282624, mean_return=3062.68, actor_loss=-0.016, critic_loss=89.459
+approx_kl=0.013444, clip_fraction=0.203, entropy=5.966
+update=277, steps=283648, mean_return=2661.03, actor_loss=-0.010, critic_loss=76.508
+approx_kl=0.014109, clip_fraction=0.216, entropy=5.951
+update=278, steps=284672, mean_return=3079.55, actor_loss=-0.008, critic_loss=157.373
+approx_kl=0.014347, clip_fraction=0.221, entropy=5.932
+update=279, steps=285696, mean_return=2850.94, actor_loss=-0.009, critic_loss=61.766
+approx_kl=0.021513, clip_fraction=0.305, entropy=5.912
+update=280, steps=286720, mean_return=3188.58, actor_loss=-0.017, critic_loss=131.214
+approx_kl=0.014273, clip_fraction=0.229, entropy=5.907
+update=281, steps=287744, mean_return=2981.32, actor_loss=-0.013, critic_loss=190.992
+approx_kl=0.012993, clip_fraction=0.186, entropy=5.889
+update=282, steps=288768, mean_return=872.40, actor_loss=-0.014, critic_loss=76.459
+approx_kl=0.017757, clip_fraction=0.267, entropy=5.867
+update=283, steps=289792, mean_return=2969.13, actor_loss=-0.009, critic_loss=176.724
+approx_kl=0.009880, clip_fraction=0.157, entropy=5.851
+update=284, steps=290816, mean_return=3053.89, actor_loss=-0.010, critic_loss=96.353
+approx_kl=0.013850, clip_fraction=0.209, entropy=5.832
+update=285, steps=291840, mean_return=3036.54, actor_loss=-0.014, critic_loss=101.023
+approx_kl=0.012764, clip_fraction=0.188, entropy=5.829
+update=286, steps=292864, mean_return=2601.96, actor_loss=-0.017, critic_loss=70.832
+approx_kl=0.014586, clip_fraction=0.205, entropy=5.826
+update=287, steps=293888, mean_return=2998.79, actor_loss=-0.014, critic_loss=120.666
+approx_kl=0.014882, clip_fraction=0.224, entropy=5.816
+update=288, steps=294912, mean_return=2671.27, actor_loss=-0.011, critic_loss=121.335
+approx_kl=0.013725, clip_fraction=0.199, entropy=5.808
+update=289, steps=295936, mean_return=3279.43, actor_loss=-0.007, critic_loss=134.100
+approx_kl=0.013490, clip_fraction=0.198, entropy=5.801
+update=290, steps=296960, mean_return=2988.37, actor_loss=-0.009, critic_loss=119.352
+approx_kl=0.015976, clip_fraction=0.212, entropy=5.791
+update=291, steps=297984, mean_return=3059.84, actor_loss=-0.015, critic_loss=130.732
+approx_kl=0.013082, clip_fraction=0.209, entropy=5.775
+update=292, steps=299008, mean_return=3184.70, actor_loss=-0.007, critic_loss=69.264
+approx_kl=0.011615, clip_fraction=0.187, entropy=5.748
+update=293, steps=300032, mean_return=3233.08, actor_loss=-0.006, critic_loss=105.167
+approx_kl=0.014387, clip_fraction=0.209, entropy=5.717
+update=294, steps=301056, mean_return=3087.61, actor_loss=-0.008, critic_loss=90.843
+approx_kl=0.015493, clip_fraction=0.231, entropy=5.711
+update=295, steps=302080, mean_return=3072.78, actor_loss=-0.007, critic_loss=76.496
+approx_kl=0.019613, clip_fraction=0.277, entropy=5.706
+update=296, steps=303104, mean_return=3142.80, actor_loss=-0.008, critic_loss=70.392
+approx_kl=0.013523, clip_fraction=0.192, entropy=5.696
+update=297, steps=304128, mean_return=3252.29, actor_loss=-0.011, critic_loss=62.553
+approx_kl=0.013503, clip_fraction=0.198, entropy=5.688
+update=298, steps=305152, mean_return=3109.27, actor_loss=-0.010, critic_loss=85.838
+approx_kl=0.018780, clip_fraction=0.292, entropy=5.689
+update=299, steps=306176, mean_return=2990.23, actor_loss=-0.015, critic_loss=72.323
+approx_kl=0.013173, clip_fraction=0.207, entropy=5.685
+update=300, steps=307200, mean_return=3134.20, actor_loss=-0.007, critic_loss=66.571
+��������: 3514.8 �� 52.4
+approx_kl=0.017846, clip_fraction=0.250, entropy=5.672
+update=301, steps=308224, mean_return=3050.21, actor_loss=-0.013, critic_loss=71.932
+approx_kl=0.011475, clip_fraction=0.161, entropy=5.659
+update=302, steps=309248, mean_return=3335.68, actor_loss=-0.008, critic_loss=57.785
+approx_kl=0.014046, clip_fraction=0.213, entropy=5.649
+update=303, steps=310272, mean_return=3261.54, actor_loss=-0.010, critic_loss=71.429
+approx_kl=0.010079, clip_fraction=0.147, entropy=5.639
+update=304, steps=311296, mean_return=3098.95, actor_loss=-0.007, critic_loss=98.659
+approx_kl=0.011153, clip_fraction=0.188, entropy=5.619
+update=305, steps=312320, mean_return=3470.05, actor_loss=-0.009, critic_loss=125.135
+approx_kl=0.013339, clip_fraction=0.193, entropy=5.610
+update=306, steps=313344, mean_return=2955.89, actor_loss=-0.012, critic_loss=101.295
+approx_kl=0.016877, clip_fraction=0.245, entropy=5.613
+update=307, steps=314368, mean_return=1615.62, actor_loss=-0.008, critic_loss=211.560
+approx_kl=0.009802, clip_fraction=0.142, entropy=5.611
+update=308, steps=315392, mean_return=2941.65, actor_loss=-0.007, critic_loss=121.425
+approx_kl=0.016110, clip_fraction=0.234, entropy=5.586
+update=309, steps=316416, mean_return=3121.32, actor_loss=-0.015, critic_loss=108.939
+approx_kl=0.024437, clip_fraction=0.340, entropy=5.558
+update=310, steps=317440, mean_return=3191.57, actor_loss=-0.012, critic_loss=120.284
+approx_kl=0.011649, clip_fraction=0.163, entropy=5.547
+update=311, steps=318464, mean_return=2948.54, actor_loss=-0.010, critic_loss=93.129
+approx_kl=0.018051, clip_fraction=0.257, entropy=5.546
+update=312, steps=319488, mean_return=3534.87, actor_loss=-0.013, critic_loss=75.935
+approx_kl=0.017491, clip_fraction=0.262, entropy=5.540
+update=313, steps=320512, mean_return=3332.25, actor_loss=-0.013, critic_loss=96.258
+approx_kl=0.019528, clip_fraction=0.293, entropy=5.524
+update=314, steps=321536, mean_return=3059.59, actor_loss=-0.014, critic_loss=103.757
+approx_kl=0.015157, clip_fraction=0.207, entropy=5.534
+update=315, steps=322560, mean_return=3405.03, actor_loss=-0.010, critic_loss=215.836
+approx_kl=0.010866, clip_fraction=0.166, entropy=5.511
+update=316, steps=323584, mean_return=671.18, actor_loss=-0.013, critic_loss=42.452
+approx_kl=0.023569, clip_fraction=0.311, entropy=5.509
+update=317, steps=324608, mean_return=3431.42, actor_loss=-0.018, critic_loss=285.899
+approx_kl=0.021465, clip_fraction=0.314, entropy=5.510
+update=318, steps=325632, mean_return=3369.55, actor_loss=-0.019, critic_loss=118.036
+approx_kl=0.017622, clip_fraction=0.254, entropy=5.514
+update=319, steps=326656, mean_return=3112.99, actor_loss=-0.008, critic_loss=109.785
+approx_kl=0.017621, clip_fraction=0.245, entropy=5.508
+update=320, steps=327680, mean_return=3668.91, actor_loss=-0.007, critic_loss=129.413
+approx_kl=0.022572, clip_fraction=0.279, entropy=5.508
+update=321, steps=328704, mean_return=3114.30, actor_loss=-0.010, critic_loss=97.165
+approx_kl=0.014674, clip_fraction=0.210, entropy=5.508
+update=322, steps=329728, mean_return=3205.79, actor_loss=-0.015, critic_loss=106.939
+approx_kl=0.011829, clip_fraction=0.185, entropy=5.513
+update=323, steps=330752, mean_return=3312.21, actor_loss=-0.010, critic_loss=75.614
+approx_kl=0.021690, clip_fraction=0.300, entropy=5.499
+update=324, steps=331776, mean_return=3304.01, actor_loss=-0.015, critic_loss=72.377
+approx_kl=0.014921, clip_fraction=0.228, entropy=5.485
+update=325, steps=332800, mean_return=3285.95, actor_loss=-0.013, critic_loss=115.585
+approx_kl=0.016798, clip_fraction=0.257, entropy=5.463
+update=326, steps=333824, mean_return=3008.68, actor_loss=-0.012, critic_loss=90.605
+approx_kl=0.012431, clip_fraction=0.183, entropy=5.469
+update=327, steps=334848, mean_return=3292.74, actor_loss=-0.010, critic_loss=79.608
+approx_kl=0.013974, clip_fraction=0.209, entropy=5.444
+update=328, steps=335872, mean_return=3512.11, actor_loss=-0.018, critic_loss=94.533
+approx_kl=0.017968, clip_fraction=0.265, entropy=5.425
+update=329, steps=336896, mean_return=3234.76, actor_loss=-0.013, critic_loss=80.109
+approx_kl=0.024572, clip_fraction=0.356, entropy=5.420
+update=330, steps=337920, mean_return=3456.87, actor_loss=-0.011, critic_loss=67.859
+approx_kl=0.017561, clip_fraction=0.259, entropy=5.415
+update=331, steps=338944, mean_return=3349.50, actor_loss=-0.012, critic_loss=334.236
+approx_kl=0.013934, clip_fraction=0.200, entropy=5.407
+update=332, steps=339968, mean_return=2645.55, actor_loss=-0.009, critic_loss=110.614
+approx_kl=0.009996, clip_fraction=0.151, entropy=5.407
+update=333, steps=340992, mean_return=3217.79, actor_loss=-0.008, critic_loss=67.910
+approx_kl=0.009563, clip_fraction=0.133, entropy=5.405
+update=334, steps=342016, mean_return=3331.10, actor_loss=-0.009, critic_loss=102.370
+approx_kl=0.015450, clip_fraction=0.238, entropy=5.402
+update=335, steps=343040, mean_return=3190.08, actor_loss=-0.010, critic_loss=97.583
+approx_kl=0.012954, clip_fraction=0.206, entropy=5.390
+update=336, steps=344064, mean_return=3259.58, actor_loss=-0.013, critic_loss=105.053
+approx_kl=0.023085, clip_fraction=0.336, entropy=5.368
+update=337, steps=345088, mean_return=3474.25, actor_loss=-0.017, critic_loss=94.711
+approx_kl=0.016166, clip_fraction=0.243, entropy=5.354
+update=338, steps=346112, mean_return=3412.23, actor_loss=-0.015, critic_loss=99.229
+approx_kl=0.016092, clip_fraction=0.240, entropy=5.356
+update=339, steps=347136, mean_return=3052.81, actor_loss=-0.012, critic_loss=135.825
+approx_kl=0.019882, clip_fraction=0.283, entropy=5.354
+update=340, steps=348160, mean_return=3410.06, actor_loss=-0.013, critic_loss=111.018
+approx_kl=0.013209, clip_fraction=0.201, entropy=5.338
+update=341, steps=349184, mean_return=3441.48, actor_loss=-0.008, critic_loss=178.148
+approx_kl=0.020171, clip_fraction=0.287, entropy=5.330
+update=342, steps=350208, mean_return=3308.82, actor_loss=-0.014, critic_loss=138.972
+approx_kl=0.013755, clip_fraction=0.198, entropy=5.337
+update=343, steps=351232, mean_return=1557.10, actor_loss=-0.016, critic_loss=232.951
+approx_kl=0.022550, clip_fraction=0.307, entropy=5.328
+update=344, steps=352256, mean_return=2872.22, actor_loss=-0.009, critic_loss=156.218
+approx_kl=0.012043, clip_fraction=0.161, entropy=5.302
+update=345, steps=353280, mean_return=3176.52, actor_loss=-0.015, critic_loss=88.682
+approx_kl=0.017262, clip_fraction=0.250, entropy=5.285
+update=346, steps=354304, mean_return=2951.43, actor_loss=-0.010, critic_loss=109.159
+approx_kl=0.019564, clip_fraction=0.304, entropy=5.290
+update=347, steps=355328, mean_return=3243.71, actor_loss=-0.017, critic_loss=75.657
+approx_kl=0.016292, clip_fraction=0.241, entropy=5.266
+update=348, steps=356352, mean_return=3211.36, actor_loss=-0.008, critic_loss=91.830
+approx_kl=0.014354, clip_fraction=0.201, entropy=5.260
+update=349, steps=357376, mean_return=3278.06, actor_loss=-0.006, critic_loss=90.885
+approx_kl=0.024872, clip_fraction=0.338, entropy=5.258
+update=350, steps=358400, mean_return=3150.51, actor_loss=-0.016, critic_loss=109.572
+��������: 3914.6 �� 151.5
+approx_kl=0.014495, clip_fraction=0.200, entropy=5.248
+update=351, steps=359424, mean_return=3573.88, actor_loss=-0.008, critic_loss=75.169
+approx_kl=0.020805, clip_fraction=0.290, entropy=5.243
+update=352, steps=360448, mean_return=3485.30, actor_loss=-0.012, critic_loss=81.054
+approx_kl=0.011462, clip_fraction=0.165, entropy=5.230
+update=353, steps=361472, mean_return=3471.19, actor_loss=-0.005, critic_loss=59.110
+approx_kl=0.011801, clip_fraction=0.181, entropy=5.218
+update=354, steps=362496, mean_return=3278.63, actor_loss=-0.009, critic_loss=76.433
+approx_kl=0.013542, clip_fraction=0.205, entropy=5.201
+update=355, steps=363520, mean_return=3419.56, actor_loss=-0.012, critic_loss=78.416
+approx_kl=0.014683, clip_fraction=0.229, entropy=5.180
+update=356, steps=364544, mean_return=3406.94, actor_loss=-0.012, critic_loss=57.976
+approx_kl=0.014486, clip_fraction=0.213, entropy=5.179
+update=357, steps=365568, mean_return=3309.57, actor_loss=-0.009, critic_loss=81.262
+approx_kl=0.018166, clip_fraction=0.299, entropy=5.160
+update=358, steps=366592, mean_return=3145.03, actor_loss=-0.012, critic_loss=70.391
+approx_kl=0.020889, clip_fraction=0.313, entropy=5.155
+update=359, steps=367616, mean_return=3384.87, actor_loss=-0.011, critic_loss=200.701
+approx_kl=0.016123, clip_fraction=0.238, entropy=5.154
+update=360, steps=368640, mean_return=1158.60, actor_loss=-0.015, critic_loss=79.267
+approx_kl=0.023116, clip_fraction=0.332, entropy=5.140
+update=361, steps=369664, mean_return=3357.34, actor_loss=-0.012, critic_loss=61.068
+approx_kl=0.029056, clip_fraction=0.365, entropy=5.122
+update=362, steps=370688, mean_return=3354.99, actor_loss=-0.009, critic_loss=92.731
+approx_kl=0.015344, clip_fraction=0.244, entropy=5.116
+update=363, steps=371712, mean_return=3509.00, actor_loss=-0.007, critic_loss=73.835
+approx_kl=0.015715, clip_fraction=0.231, entropy=5.107
+update=364, steps=372736, mean_return=3484.89, actor_loss=-0.010, critic_loss=271.767
+approx_kl=0.011002, clip_fraction=0.157, entropy=5.107
+update=365, steps=373760, mean_return=3153.38, actor_loss=-0.011, critic_loss=109.047
+approx_kl=0.012655, clip_fraction=0.197, entropy=5.099
+update=366, steps=374784, mean_return=3418.19, actor_loss=-0.013, critic_loss=111.199
+approx_kl=0.015562, clip_fraction=0.226, entropy=5.104
+update=367, steps=375808, mean_return=3539.51, actor_loss=-0.008, critic_loss=70.386
+approx_kl=0.020220, clip_fraction=0.271, entropy=5.105
+update=368, steps=376832, mean_return=3579.99, actor_loss=-0.010, critic_loss=104.530
+approx_kl=0.015508, clip_fraction=0.228, entropy=5.093
+update=369, steps=377856, mean_return=3400.74, actor_loss=-0.007, critic_loss=93.369
+approx_kl=0.013191, clip_fraction=0.175, entropy=5.100
+update=370, steps=378880, mean_return=3492.89, actor_loss=-0.003, critic_loss=96.443
+approx_kl=0.020211, clip_fraction=0.236, entropy=5.078
+update=371, steps=379904, mean_return=3444.04, actor_loss=-0.011, critic_loss=82.330
+approx_kl=0.015850, clip_fraction=0.221, entropy=5.053
+update=372, steps=380928, mean_return=3303.19, actor_loss=-0.007, critic_loss=78.103
+approx_kl=0.021531, clip_fraction=0.299, entropy=5.050
+update=373, steps=381952, mean_return=3217.68, actor_loss=-0.013, critic_loss=217.620
+approx_kl=0.012581, clip_fraction=0.184, entropy=5.037
+update=374, steps=382976, mean_return=2674.84, actor_loss=-0.011, critic_loss=76.656
+approx_kl=0.015377, clip_fraction=0.212, entropy=5.021
+update=375, steps=384000, mean_return=3546.83, actor_loss=-0.008, critic_loss=42.610
+approx_kl=0.017654, clip_fraction=0.259, entropy=5.012
+update=376, steps=385024, mean_return=3334.98, actor_loss=-0.007, critic_loss=80.457
+approx_kl=0.018178, clip_fraction=0.253, entropy=5.013
+update=377, steps=386048, mean_return=3551.04, actor_loss=-0.010, critic_loss=78.260
+approx_kl=0.023922, clip_fraction=0.338, entropy=5.004
+update=378, steps=387072, mean_return=3435.14, actor_loss=-0.008, critic_loss=65.196
+approx_kl=0.018312, clip_fraction=0.238, entropy=4.983
+update=379, steps=388096, mean_return=3473.92, actor_loss=-0.001, critic_loss=77.789
+approx_kl=0.022054, clip_fraction=0.315, entropy=4.984
+update=380, steps=389120, mean_return=3590.27, actor_loss=-0.010, critic_loss=74.097
+approx_kl=0.014346, clip_fraction=0.221, entropy=4.970
+update=381, steps=390144, mean_return=3336.35, actor_loss=-0.011, critic_loss=58.846
+approx_kl=0.013784, clip_fraction=0.223, entropy=4.956
+update=382, steps=391168, mean_return=3488.93, actor_loss=-0.005, critic_loss=55.564
+approx_kl=0.024898, clip_fraction=0.344, entropy=4.939
+update=383, steps=392192, mean_return=3425.59, actor_loss=-0.007, critic_loss=80.849
+approx_kl=0.016163, clip_fraction=0.253, entropy=4.934
+update=384, steps=393216, mean_return=3550.28, actor_loss=-0.007, critic_loss=104.330
+approx_kl=0.016048, clip_fraction=0.234, entropy=4.926
+update=385, steps=394240, mean_return=3600.42, actor_loss=-0.004, critic_loss=56.574
+approx_kl=0.019649, clip_fraction=0.262, entropy=4.919
+update=386, steps=395264, mean_return=3540.40, actor_loss=-0.007, critic_loss=67.237
+approx_kl=0.020065, clip_fraction=0.291, entropy=4.902
+update=387, steps=396288, mean_return=3530.09, actor_loss=-0.010, critic_loss=46.267
+approx_kl=0.009492, clip_fraction=0.130, entropy=4.895
+update=388, steps=397312, mean_return=3776.98, actor_loss=-0.007, critic_loss=69.673
+approx_kl=0.018285, clip_fraction=0.267, entropy=4.886
+update=389, steps=398336, mean_return=3726.91, actor_loss=-0.010, critic_loss=41.740
+approx_kl=0.013498, clip_fraction=0.209, entropy=4.877
+update=390, steps=399360, mean_return=3602.90, actor_loss=-0.009, critic_loss=94.972
+approx_kl=0.016720, clip_fraction=0.231, entropy=4.878
+update=391, steps=400384, mean_return=3637.99, actor_loss=-0.010, critic_loss=88.195
+approx_kl=0.013052, clip_fraction=0.172, entropy=4.861
+update=392, steps=401408, mean_return=3707.13, actor_loss=-0.002, critic_loss=60.929
+approx_kl=0.018067, clip_fraction=0.243, entropy=4.850
+update=393, steps=402432, mean_return=3690.26, actor_loss=-0.011, critic_loss=80.844
+approx_kl=0.010271, clip_fraction=0.147, entropy=4.837
+update=394, steps=403456, mean_return=3527.62, actor_loss=-0.008, critic_loss=99.771
+approx_kl=0.014992, clip_fraction=0.226, entropy=4.820
+update=395, steps=404480, mean_return=3736.32, actor_loss=-0.010, critic_loss=67.582
+approx_kl=0.017453, clip_fraction=0.242, entropy=4.824
+update=396, steps=405504, mean_return=3578.49, actor_loss=-0.003, critic_loss=88.114
+approx_kl=0.014912, clip_fraction=0.217, entropy=4.804
+update=397, steps=406528, mean_return=3696.95, actor_loss=-0.008, critic_loss=70.982
+approx_kl=0.016587, clip_fraction=0.245, entropy=4.799
+update=398, steps=407552, mean_return=3471.57, actor_loss=-0.005, critic_loss=65.477
+approx_kl=0.018744, clip_fraction=0.272, entropy=4.803
+update=399, steps=408576, mean_return=3348.86, actor_loss=-0.019, critic_loss=93.780
+approx_kl=0.017752, clip_fraction=0.255, entropy=4.785
+update=400, steps=409600, mean_return=3562.62, actor_loss=-0.006, critic_loss=74.656
+��������: 4174.3 �� 59.9
+approx_kl=0.016136, clip_fraction=0.232, entropy=4.786
+update=401, steps=410624, mean_return=3863.82, actor_loss=-0.007, critic_loss=62.364
+approx_kl=0.015691, clip_fraction=0.235, entropy=4.785
+update=402, steps=411648, mean_return=3667.15, actor_loss=-0.008, critic_loss=75.904
+approx_kl=0.010311, clip_fraction=0.146, entropy=4.784
+update=403, steps=412672, mean_return=3569.25, actor_loss=-0.005, critic_loss=57.353
+approx_kl=0.012275, clip_fraction=0.179, entropy=4.769
+update=404, steps=413696, mean_return=3543.79, actor_loss=-0.006, critic_loss=70.655
+approx_kl=0.010434, clip_fraction=0.134, entropy=4.759
+update=405, steps=414720, mean_return=3784.42, actor_loss=-0.006, critic_loss=65.316
+approx_kl=0.017384, clip_fraction=0.237, entropy=4.770
+update=406, steps=415744, mean_return=2777.18, actor_loss=-0.009, critic_loss=409.370
+approx_kl=0.017787, clip_fraction=0.270, entropy=4.760
+update=407, steps=416768, mean_return=3806.68, actor_loss=-0.012, critic_loss=331.482
+approx_kl=0.020550, clip_fraction=0.295, entropy=4.743
+update=408, steps=417792, mean_return=2470.79, actor_loss=-0.017, critic_loss=65.134
+approx_kl=0.026330, clip_fraction=0.344, entropy=4.726
+update=409, steps=418816, mean_return=3733.65, actor_loss=-0.013, critic_loss=587.261
+approx_kl=0.016301, clip_fraction=0.233, entropy=4.712
+update=410, steps=419840, mean_return=1744.11, actor_loss=-0.014, critic_loss=119.678
+approx_kl=0.014846, clip_fraction=0.235, entropy=4.709
+update=411, steps=420864, mean_return=3773.19, actor_loss=-0.015, critic_loss=95.249
+approx_kl=0.014866, clip_fraction=0.209, entropy=4.699
+update=412, steps=421888, mean_return=3378.93, actor_loss=-0.007, critic_loss=88.758
+approx_kl=0.018317, clip_fraction=0.268, entropy=4.698
+update=413, steps=422912, mean_return=3629.34, actor_loss=-0.011, critic_loss=145.406
+approx_kl=0.020677, clip_fraction=0.281, entropy=4.695
+update=414, steps=423936, mean_return=3656.89, actor_loss=-0.020, critic_loss=67.784
+approx_kl=0.017697, clip_fraction=0.262, entropy=4.689
+update=415, steps=424960, mean_return=3879.69, actor_loss=-0.009, critic_loss=88.888
+approx_kl=0.020891, clip_fraction=0.283, entropy=4.686
+update=416, steps=425984, mean_return=3500.79, actor_loss=-0.008, critic_loss=356.033
+approx_kl=0.018965, clip_fraction=0.263, entropy=4.676
+update=417, steps=427008, mean_return=1602.88, actor_loss=-0.012, critic_loss=488.566
+approx_kl=0.012346, clip_fraction=0.185, entropy=4.650
+update=418, steps=428032, mean_return=3651.45, actor_loss=-0.007, critic_loss=96.702
+approx_kl=0.020881, clip_fraction=0.279, entropy=4.652
+update=419, steps=429056, mean_return=885.36, actor_loss=-0.014, critic_loss=383.272
+approx_kl=0.020642, clip_fraction=0.239, entropy=4.647
+update=420, steps=430080, mean_return=3704.30, actor_loss=-0.010, critic_loss=135.853
+approx_kl=0.013068, clip_fraction=0.184, entropy=4.625
+update=421, steps=431104, mean_return=3700.66, actor_loss=-0.003, critic_loss=65.182
+approx_kl=0.037651, clip_fraction=0.388, entropy=4.632
+update=422, steps=432128, mean_return=3665.30, actor_loss=-0.008, critic_loss=60.101
+approx_kl=0.015462, clip_fraction=0.228, entropy=4.626
+update=423, steps=433152, mean_return=3588.26, actor_loss=-0.005, critic_loss=79.812
+approx_kl=0.019105, clip_fraction=0.280, entropy=4.607
+update=424, steps=434176, mean_return=3677.84, actor_loss=-0.007, critic_loss=78.241
+approx_kl=0.019931, clip_fraction=0.229, entropy=4.596
+update=425, steps=435200, mean_return=3607.97, actor_loss=0.001, critic_loss=69.790
+approx_kl=0.017339, clip_fraction=0.231, entropy=4.593
+update=426, steps=436224, mean_return=3731.06, actor_loss=-0.006, critic_loss=53.649
+approx_kl=0.016801, clip_fraction=0.241, entropy=4.582
+update=427, steps=437248, mean_return=3664.78, actor_loss=-0.009, critic_loss=64.833
+approx_kl=0.026349, clip_fraction=0.309, entropy=4.580
+update=428, steps=438272, mean_return=3741.53, actor_loss=-0.014, critic_loss=84.277
+approx_kl=0.026349, clip_fraction=0.323, entropy=4.585
+update=429, steps=439296, mean_return=3634.57, actor_loss=-0.005, critic_loss=54.151
+approx_kl=0.018898, clip_fraction=0.258, entropy=4.584
+update=430, steps=440320, mean_return=3992.43, actor_loss=0.000, critic_loss=47.243
+approx_kl=0.016032, clip_fraction=0.229, entropy=4.582
+update=431, steps=441344, mean_return=3596.11, actor_loss=-0.012, critic_loss=72.155
+approx_kl=0.018860, clip_fraction=0.272, entropy=4.566
+update=432, steps=442368, mean_return=3630.40, actor_loss=-0.006, critic_loss=73.318
+approx_kl=0.012990, clip_fraction=0.201, entropy=4.562
+update=433, steps=443392, mean_return=3650.76, actor_loss=-0.012, critic_loss=67.007
+approx_kl=0.025126, clip_fraction=0.325, entropy=4.550
+update=434, steps=444416, mean_return=3546.23, actor_loss=-0.002, critic_loss=68.040
+approx_kl=0.014497, clip_fraction=0.207, entropy=4.557
+update=435, steps=445440, mean_return=3778.58, actor_loss=-0.004, critic_loss=241.214
+approx_kl=0.016489, clip_fraction=0.242, entropy=4.550
+update=436, steps=446464, mean_return=1656.58, actor_loss=-0.012, critic_loss=45.764
+approx_kl=0.019636, clip_fraction=0.291, entropy=4.544
+update=437, steps=447488, mean_return=3481.95, actor_loss=-0.013, critic_loss=433.391
+approx_kl=0.019395, clip_fraction=0.283, entropy=4.538
+update=438, steps=448512, mean_return=1070.35, actor_loss=-0.009, critic_loss=56.964
+approx_kl=0.030372, clip_fraction=0.363, entropy=4.536
+update=439, steps=449536, mean_return=3702.67, actor_loss=-0.011, critic_loss=60.982
+approx_kl=0.018171, clip_fraction=0.251, entropy=4.524
+update=440, steps=450560, mean_return=3719.01, actor_loss=-0.004, critic_loss=64.743
+approx_kl=0.030856, clip_fraction=0.369, entropy=4.525
+update=441, steps=451584, mean_return=3742.28, actor_loss=-0.012, critic_loss=106.142
+approx_kl=0.015985, clip_fraction=0.236, entropy=4.515
+update=442, steps=452608, mean_return=3946.77, actor_loss=-0.010, critic_loss=85.149
+approx_kl=0.012601, clip_fraction=0.195, entropy=4.517
+update=443, steps=453632, mean_return=3811.27, actor_loss=-0.003, critic_loss=93.362
+approx_kl=0.028589, clip_fraction=0.349, entropy=4.514
+update=444, steps=454656, mean_return=3605.89, actor_loss=-0.007, critic_loss=69.121
+approx_kl=0.028369, clip_fraction=0.371, entropy=4.515
+update=445, steps=455680, mean_return=3776.21, actor_loss=-0.014, critic_loss=614.684
+approx_kl=0.014995, clip_fraction=0.206, entropy=4.497
+update=446, steps=456704, mean_return=1877.53, actor_loss=-0.015, critic_loss=74.291
+approx_kl=0.019206, clip_fraction=0.225, entropy=4.487
+update=447, steps=457728, mean_return=3641.29, actor_loss=-0.008, critic_loss=51.371
+approx_kl=0.023267, clip_fraction=0.306, entropy=4.467
+update=448, steps=458752, mean_return=3786.53, actor_loss=-0.003, critic_loss=45.072
+approx_kl=0.017436, clip_fraction=0.260, entropy=4.487
+update=449, steps=459776, mean_return=3799.00, actor_loss=-0.014, critic_loss=63.493
+approx_kl=0.013315, clip_fraction=0.193, entropy=4.485
+update=450, steps=460800, mean_return=3730.62, actor_loss=-0.010, critic_loss=44.644
+��������: 4129.7 �� 92.2
+approx_kl=0.017512, clip_fraction=0.268, entropy=4.473
+update=451, steps=461824, mean_return=3692.01, actor_loss=-0.007, critic_loss=29.510
+approx_kl=0.020478, clip_fraction=0.270, entropy=4.467
+update=452, steps=462848, mean_return=3658.39, actor_loss=-0.015, critic_loss=231.700
+approx_kl=0.014410, clip_fraction=0.197, entropy=4.458
+update=453, steps=463872, mean_return=3642.67, actor_loss=-0.008, critic_loss=41.670
+approx_kl=0.017634, clip_fraction=0.257, entropy=4.458
+update=454, steps=464896, mean_return=3689.03, actor_loss=-0.010, critic_loss=69.108
+approx_kl=0.018438, clip_fraction=0.252, entropy=4.450
+update=455, steps=465920, mean_return=3766.02, actor_loss=-0.008, critic_loss=67.738
+approx_kl=0.019042, clip_fraction=0.261, entropy=4.438
+update=456, steps=466944, mean_return=3764.75, actor_loss=-0.012, critic_loss=69.452
+approx_kl=0.014180, clip_fraction=0.217, entropy=4.440
+update=457, steps=467968, mean_return=3632.25, actor_loss=-0.004, critic_loss=59.635
+approx_kl=0.022538, clip_fraction=0.287, entropy=4.438
+update=458, steps=468992, mean_return=3821.46, actor_loss=-0.007, critic_loss=93.208
+approx_kl=0.017481, clip_fraction=0.236, entropy=4.432
+update=459, steps=470016, mean_return=3567.77, actor_loss=-0.006, critic_loss=88.300
+approx_kl=0.027927, clip_fraction=0.364, entropy=4.429
+update=460, steps=471040, mean_return=2730.02, actor_loss=-0.009, critic_loss=490.680
+approx_kl=0.034002, clip_fraction=0.379, entropy=4.423
+update=461, steps=472064, mean_return=3683.51, actor_loss=-0.007, critic_loss=230.756
+approx_kl=0.024781, clip_fraction=0.282, entropy=4.422
+update=462, steps=473088, mean_return=3489.19, actor_loss=-0.008, critic_loss=112.211
+approx_kl=0.020026, clip_fraction=0.248, entropy=4.402
+update=463, steps=474112, mean_return=3345.64, actor_loss=-0.008, critic_loss=168.538
+approx_kl=0.020816, clip_fraction=0.259, entropy=4.383
+update=464, steps=475136, mean_return=3496.00, actor_loss=-0.014, critic_loss=127.146
+approx_kl=0.049693, clip_fraction=0.444, entropy=4.378
+update=465, steps=476160, mean_return=3360.64, actor_loss=-0.008, critic_loss=131.963
+approx_kl=0.026709, clip_fraction=0.353, entropy=4.370
+update=466, steps=477184, mean_return=3540.48, actor_loss=-0.014, critic_loss=152.266
+approx_kl=0.022604, clip_fraction=0.315, entropy=4.368
+update=467, steps=478208, mean_return=3729.77, actor_loss=-0.006, critic_loss=107.919
+approx_kl=0.027569, clip_fraction=0.348, entropy=4.373
+update=468, steps=479232, mean_return=3647.09, actor_loss=-0.005, critic_loss=136.455
+approx_kl=0.013008, clip_fraction=0.201, entropy=4.359
+update=469, steps=480256, mean_return=3721.17, actor_loss=-0.006, critic_loss=77.818
+approx_kl=0.014431, clip_fraction=0.181, entropy=4.353
+update=470, steps=481280, mean_return=3791.20, actor_loss=-0.006, critic_loss=58.493
+approx_kl=0.016204, clip_fraction=0.242, entropy=4.346
+update=471, steps=482304, mean_return=2295.18, actor_loss=-0.015, critic_loss=364.325
+approx_kl=0.020454, clip_fraction=0.271, entropy=4.331
+update=472, steps=483328, mean_return=3623.34, actor_loss=-0.004, critic_loss=48.856
+approx_kl=0.024068, clip_fraction=0.283, entropy=4.333
+update=473, steps=484352, mean_return=3929.02, actor_loss=-0.008, critic_loss=50.491
+approx_kl=0.012168, clip_fraction=0.168, entropy=4.323
+update=474, steps=485376, mean_return=3958.43, actor_loss=-0.010, critic_loss=47.986
+approx_kl=0.022915, clip_fraction=0.313, entropy=4.319
+update=475, steps=486400, mean_return=3710.90, actor_loss=-0.016, critic_loss=32.612
+approx_kl=0.018582, clip_fraction=0.276, entropy=4.319
+update=476, steps=487424, mean_return=3612.00, actor_loss=-0.015, critic_loss=73.918
+approx_kl=0.019189, clip_fraction=0.263, entropy=4.318
+update=477, steps=488448, mean_return=4006.19, actor_loss=-0.008, critic_loss=44.887
+approx_kl=0.027108, clip_fraction=0.315, entropy=4.322
+update=478, steps=489472, mean_return=3854.89, actor_loss=-0.010, critic_loss=49.989
+approx_kl=0.019326, clip_fraction=0.262, entropy=4.319
+update=479, steps=490496, mean_return=3978.15, actor_loss=-0.017, critic_loss=45.170
+approx_kl=0.015831, clip_fraction=0.243, entropy=4.330
+update=480, steps=491520, mean_return=3795.57, actor_loss=-0.008, critic_loss=41.598
+approx_kl=0.014991, clip_fraction=0.227, entropy=4.328
+update=481, steps=492544, mean_return=3764.48, actor_loss=-0.011, critic_loss=60.706
+approx_kl=0.020128, clip_fraction=0.270, entropy=4.333
+update=482, steps=493568, mean_return=3619.36, actor_loss=-0.006, critic_loss=89.009
+approx_kl=0.026071, clip_fraction=0.362, entropy=4.320
+update=483, steps=494592, mean_return=3554.67, actor_loss=-0.008, critic_loss=47.146
+approx_kl=0.017888, clip_fraction=0.283, entropy=4.313
+update=484, steps=495616, mean_return=3904.21, actor_loss=-0.008, critic_loss=51.071
+approx_kl=0.019293, clip_fraction=0.229, entropy=4.314
+update=485, steps=496640, mean_return=3724.78, actor_loss=-0.003, critic_loss=97.114
+approx_kl=0.024685, clip_fraction=0.320, entropy=4.308
+update=486, steps=497664, mean_return=4019.66, actor_loss=-0.007, critic_loss=57.627
+approx_kl=0.024612, clip_fraction=0.312, entropy=4.298
+update=487, steps=498688, mean_return=4161.79, actor_loss=-0.002, critic_loss=82.186
+approx_kl=0.015261, clip_fraction=0.232, entropy=4.292
+update=488, steps=499712, mean_return=3607.12, actor_loss=-0.003, critic_loss=88.690
+approx_kl=0.026269, clip_fraction=0.336, entropy=4.280
+update=489, steps=500736, mean_return=3774.58, actor_loss=-0.008, critic_loss=54.250
+approx_kl=0.013091, clip_fraction=0.195, entropy=4.284
+update=490, steps=501760, mean_return=3751.81, actor_loss=-0.008, critic_loss=83.449
+approx_kl=0.016881, clip_fraction=0.256, entropy=4.285
+update=491, steps=502784, mean_return=3791.50, actor_loss=-0.013, critic_loss=358.201
+approx_kl=0.013726, clip_fraction=0.205, entropy=4.278
+update=492, steps=503808, mean_return=2546.03, actor_loss=-0.010, critic_loss=128.351
+approx_kl=0.024138, clip_fraction=0.316, entropy=4.283
+update=493, steps=504832, mean_return=3828.59, actor_loss=-0.008, critic_loss=50.601
+approx_kl=0.017017, clip_fraction=0.231, entropy=4.280
+update=494, steps=505856, mean_return=3798.57, actor_loss=-0.011, critic_loss=87.324
+approx_kl=0.018211, clip_fraction=0.273, entropy=4.276
+update=495, steps=506880, mean_return=3690.89, actor_loss=-0.013, critic_loss=76.956
+approx_kl=0.027300, clip_fraction=0.374, entropy=4.273
+update=496, steps=507904, mean_return=3659.19, actor_loss=-0.011, critic_loss=74.915
+approx_kl=0.013367, clip_fraction=0.187, entropy=4.282
+update=497, steps=508928, mean_return=3654.03, actor_loss=-0.006, critic_loss=88.195
+approx_kl=0.023518, clip_fraction=0.301, entropy=4.303
+update=498, steps=509952, mean_return=3953.87, actor_loss=-0.012, critic_loss=61.654
+approx_kl=0.015110, clip_fraction=0.215, entropy=4.305
+update=499, steps=510976, mean_return=3904.68, actor_loss=-0.005, critic_loss=100.000
+approx_kl=0.015841, clip_fraction=0.229, entropy=4.305
+update=500, steps=512000, mean_return=3668.89, actor_loss=-0.011, critic_loss=95.656
+��������: 4288.7 �� 74.3
+approx_kl=0.016959, clip_fraction=0.229, entropy=4.290
+update=501, steps=513024, mean_return=3683.29, actor_loss=-0.012, critic_loss=65.295
+approx_kl=0.025846, clip_fraction=0.332, entropy=4.291
+update=502, steps=514048, mean_return=3559.30, actor_loss=-0.018, critic_loss=400.836
+approx_kl=0.017859, clip_fraction=0.267, entropy=4.295
+update=503, steps=515072, mean_return=3847.20, actor_loss=0.001, critic_loss=102.848
+approx_kl=0.013106, clip_fraction=0.174, entropy=4.278
+update=504, steps=516096, mean_return=3912.06, actor_loss=-0.001, critic_loss=50.676
+approx_kl=0.014037, clip_fraction=0.201, entropy=4.266
+update=505, steps=517120, mean_return=3880.94, actor_loss=-0.012, critic_loss=52.574
+approx_kl=0.014627, clip_fraction=0.222, entropy=4.278
+update=506, steps=518144, mean_return=4022.33, actor_loss=-0.009, critic_loss=49.514
+approx_kl=0.021819, clip_fraction=0.312, entropy=4.272
+update=507, steps=519168, mean_return=3762.16, actor_loss=-0.004, critic_loss=89.559
+approx_kl=0.015320, clip_fraction=0.229, entropy=4.275
+update=508, steps=520192, mean_return=3773.83, actor_loss=-0.014, critic_loss=77.805
+approx_kl=0.021592, clip_fraction=0.278, entropy=4.264
+update=509, steps=521216, mean_return=3790.81, actor_loss=-0.010, critic_loss=103.702
+approx_kl=0.013855, clip_fraction=0.197, entropy=4.243
+update=510, steps=522240, mean_return=3710.93, actor_loss=-0.007, critic_loss=73.444
+approx_kl=0.010647, clip_fraction=0.163, entropy=4.236
+update=511, steps=523264, mean_return=3928.54, actor_loss=-0.006, critic_loss=66.465
+approx_kl=0.018121, clip_fraction=0.260, entropy=4.233
+update=512, steps=524288, mean_return=3650.21, actor_loss=-0.007, critic_loss=99.351
+approx_kl=0.017960, clip_fraction=0.234, entropy=4.223
+update=513, steps=525312, mean_return=3710.97, actor_loss=-0.012, critic_loss=87.862
+approx_kl=0.023347, clip_fraction=0.302, entropy=4.206
+update=514, steps=526336, mean_return=3907.97, actor_loss=-0.004, critic_loss=52.453
+approx_kl=0.025244, clip_fraction=0.343, entropy=4.182
+update=515, steps=527360, mean_return=3868.37, actor_loss=-0.011, critic_loss=76.983
+approx_kl=0.016845, clip_fraction=0.213, entropy=4.190
+update=516, steps=528384, mean_return=3673.80, actor_loss=-0.008, critic_loss=97.184
+approx_kl=0.016276, clip_fraction=0.238, entropy=4.169
+update=517, steps=529408, mean_return=3758.11, actor_loss=-0.006, critic_loss=77.076
+approx_kl=0.014737, clip_fraction=0.223, entropy=4.151
+update=518, steps=530432, mean_return=3962.93, actor_loss=-0.005, critic_loss=63.718
+approx_kl=0.020437, clip_fraction=0.291, entropy=4.136
+update=519, steps=531456, mean_return=3954.21, actor_loss=-0.003, critic_loss=73.450
+approx_kl=0.015251, clip_fraction=0.224, entropy=4.128
+update=520, steps=532480, mean_return=4079.43, actor_loss=-0.007, critic_loss=60.656
+approx_kl=0.024901, clip_fraction=0.303, entropy=4.119
+update=521, steps=533504, mean_return=3464.28, actor_loss=-0.012, critic_loss=434.506
+approx_kl=0.032301, clip_fraction=0.358, entropy=4.119
+update=522, steps=534528, mean_return=3977.63, actor_loss=-0.012, critic_loss=76.300
+approx_kl=0.019197, clip_fraction=0.226, entropy=4.091
+update=523, steps=535552, mean_return=3861.60, actor_loss=0.001, critic_loss=45.277
+approx_kl=0.023079, clip_fraction=0.306, entropy=4.094
+update=524, steps=536576, mean_return=3842.41, actor_loss=-0.008, critic_loss=675.269
+approx_kl=0.028113, clip_fraction=0.351, entropy=4.094
+update=525, steps=537600, mean_return=1550.36, actor_loss=-0.010, critic_loss=74.820
+approx_kl=0.027223, clip_fraction=0.318, entropy=4.086
+update=526, steps=538624, mean_return=3936.17, actor_loss=-0.009, critic_loss=42.272
+approx_kl=0.017658, clip_fraction=0.224, entropy=4.079
+update=527, steps=539648, mean_return=4104.89, actor_loss=-0.000, critic_loss=47.430
+approx_kl=0.018060, clip_fraction=0.256, entropy=4.058
+update=528, steps=540672, mean_return=3922.47, actor_loss=-0.010, critic_loss=193.954
+approx_kl=0.035448, clip_fraction=0.398, entropy=4.058
+update=529, steps=541696, mean_return=3999.06, actor_loss=0.005, critic_loss=134.950
+approx_kl=0.018001, clip_fraction=0.255, entropy=4.051
+update=530, steps=542720, mean_return=3708.57, actor_loss=0.005, critic_loss=54.132
+approx_kl=0.021351, clip_fraction=0.310, entropy=4.068
+update=531, steps=543744, mean_return=4006.40, actor_loss=-0.007, critic_loss=63.080
+approx_kl=0.016539, clip_fraction=0.261, entropy=4.059
+update=532, steps=544768, mean_return=3932.18, actor_loss=-0.001, critic_loss=57.487
+approx_kl=0.016973, clip_fraction=0.246, entropy=4.059
+update=533, steps=545792, mean_return=3936.90, actor_loss=-0.009, critic_loss=488.654
+approx_kl=0.028682, clip_fraction=0.355, entropy=4.055
+update=534, steps=546816, mean_return=2053.21, actor_loss=-0.013, critic_loss=134.678
+approx_kl=0.023465, clip_fraction=0.294, entropy=4.048
+update=535, steps=547840, mean_return=3632.34, actor_loss=-0.012, critic_loss=88.500
+approx_kl=0.018801, clip_fraction=0.271, entropy=4.027
+update=536, steps=548864, mean_return=3798.98, actor_loss=-0.015, critic_loss=54.766
+approx_kl=0.024644, clip_fraction=0.324, entropy=4.009
+update=537, steps=549888, mean_return=4023.13, actor_loss=-0.008, critic_loss=51.434
+approx_kl=0.019871, clip_fraction=0.246, entropy=4.003
+update=538, steps=550912, mean_return=3824.49, actor_loss=-0.002, critic_loss=56.593
+approx_kl=0.025875, clip_fraction=0.313, entropy=4.001
+update=539, steps=551936, mean_return=3953.95, actor_loss=-0.002, critic_loss=44.615
+approx_kl=0.019345, clip_fraction=0.270, entropy=3.979
+update=540, steps=552960, mean_return=4014.68, actor_loss=-0.006, critic_loss=56.467
+approx_kl=0.017891, clip_fraction=0.262, entropy=3.974
+update=541, steps=553984, mean_return=4119.95, actor_loss=0.000, critic_loss=43.642
+approx_kl=0.013294, clip_fraction=0.168, entropy=3.976
+update=542, steps=555008, mean_return=3961.57, actor_loss=-0.001, critic_loss=73.802
+approx_kl=0.014711, clip_fraction=0.216, entropy=3.983
+update=543, steps=556032, mean_return=3858.55, actor_loss=-0.005, critic_loss=85.164
+approx_kl=0.018038, clip_fraction=0.259, entropy=3.970
+update=544, steps=557056, mean_return=3718.94, actor_loss=-0.010, critic_loss=98.430
+approx_kl=0.016344, clip_fraction=0.239, entropy=3.947
+update=545, steps=558080, mean_return=3767.39, actor_loss=-0.005, critic_loss=90.089
+approx_kl=0.026702, clip_fraction=0.354, entropy=3.944
+update=546, steps=559104, mean_return=3802.75, actor_loss=-0.004, critic_loss=85.498
+approx_kl=0.017820, clip_fraction=0.263, entropy=3.949
+update=547, steps=560128, mean_return=3832.83, actor_loss=-0.001, critic_loss=58.788
+approx_kl=0.013375, clip_fraction=0.193, entropy=3.923
+update=548, steps=561152, mean_return=3936.57, actor_loss=-0.006, critic_loss=81.409
+approx_kl=0.022970, clip_fraction=0.255, entropy=3.916
+update=549, steps=562176, mean_return=1973.34, actor_loss=-0.010, critic_loss=580.430
+approx_kl=0.024577, clip_fraction=0.301, entropy=3.912
+update=550, steps=563200, mean_return=3836.37, actor_loss=-0.009, critic_loss=160.500
+��������: 4236.8 �� 123.4
+approx_kl=0.016973, clip_fraction=0.250, entropy=3.910
+update=551, steps=564224, mean_return=3896.72, actor_loss=-0.013, critic_loss=298.322
+approx_kl=0.017556, clip_fraction=0.251, entropy=3.909
+update=552, steps=565248, mean_return=3795.60, actor_loss=-0.014, critic_loss=235.015
+approx_kl=0.027515, clip_fraction=0.303, entropy=3.900
+update=553, steps=566272, mean_return=3980.09, actor_loss=-0.012, critic_loss=435.910
+approx_kl=0.040405, clip_fraction=0.443, entropy=3.900
+update=554, steps=567296, mean_return=743.09, actor_loss=0.002, critic_loss=25.013
+approx_kl=0.017169, clip_fraction=0.263, entropy=3.898
+update=555, steps=568320, mean_return=3898.49, actor_loss=-0.006, critic_loss=87.595
+approx_kl=0.016671, clip_fraction=0.246, entropy=3.898
+update=556, steps=569344, mean_return=4116.72, actor_loss=-0.008, critic_loss=51.958
+approx_kl=0.019530, clip_fraction=0.244, entropy=3.879
+update=557, steps=570368, mean_return=3796.89, actor_loss=-0.015, critic_loss=57.942
+approx_kl=0.024131, clip_fraction=0.320, entropy=3.871
+update=558, steps=571392, mean_return=3652.70, actor_loss=-0.007, critic_loss=171.744
+approx_kl=0.017007, clip_fraction=0.271, entropy=3.860
+update=559, steps=572416, mean_return=4049.99, actor_loss=-0.007, critic_loss=61.102
+approx_kl=0.017341, clip_fraction=0.231, entropy=3.872
+update=560, steps=573440, mean_return=3917.92, actor_loss=-0.005, critic_loss=91.464
+approx_kl=0.024582, clip_fraction=0.330, entropy=3.874
+update=561, steps=574464, mean_return=3927.73, actor_loss=-0.001, critic_loss=74.372
+approx_kl=0.026779, clip_fraction=0.347, entropy=3.882
+update=562, steps=575488, mean_return=3836.68, actor_loss=-0.003, critic_loss=54.028
+approx_kl=0.029636, clip_fraction=0.321, entropy=3.869
+update=563, steps=576512, mean_return=3979.91, actor_loss=-0.004, critic_loss=73.273
+approx_kl=0.022885, clip_fraction=0.314, entropy=3.861
+update=564, steps=577536, mean_return=3640.40, actor_loss=-0.009, critic_loss=61.859
+approx_kl=0.032440, clip_fraction=0.380, entropy=3.869
+update=565, steps=578560, mean_return=3911.19, actor_loss=-0.011, critic_loss=87.704
+approx_kl=0.014723, clip_fraction=0.214, entropy=3.876
+update=566, steps=579584, mean_return=3747.27, actor_loss=-0.000, critic_loss=51.707
+approx_kl=0.014818, clip_fraction=0.216, entropy=3.887
+update=567, steps=580608, mean_return=4005.21, actor_loss=-0.008, critic_loss=44.243
+approx_kl=0.018014, clip_fraction=0.247, entropy=3.886
+update=568, steps=581632, mean_return=3903.98, actor_loss=-0.007, critic_loss=78.639
+approx_kl=0.025959, clip_fraction=0.351, entropy=3.877
+update=569, steps=582656, mean_return=3925.74, actor_loss=-0.006, critic_loss=45.249
+approx_kl=0.029740, clip_fraction=0.374, entropy=3.877
+update=570, steps=583680, mean_return=3800.95, actor_loss=-0.008, critic_loss=49.470
+approx_kl=0.017484, clip_fraction=0.243, entropy=3.868
+update=571, steps=584704, mean_return=3657.68, actor_loss=-0.004, critic_loss=60.981
+approx_kl=0.012697, clip_fraction=0.200, entropy=3.860
+update=572, steps=585728, mean_return=3775.49, actor_loss=-0.004, critic_loss=66.799
+approx_kl=0.020996, clip_fraction=0.289, entropy=3.856
+update=573, steps=586752, mean_return=3866.11, actor_loss=-0.010, critic_loss=48.233
+approx_kl=0.026768, clip_fraction=0.312, entropy=3.841
+update=574, steps=587776, mean_return=4058.14, actor_loss=-0.002, critic_loss=74.811
+approx_kl=0.022011, clip_fraction=0.312, entropy=3.830
+update=575, steps=588800, mean_return=3818.78, actor_loss=-0.012, critic_loss=87.788
+approx_kl=0.029564, clip_fraction=0.340, entropy=3.834
+update=576, steps=589824, mean_return=3465.18, actor_loss=-0.013, critic_loss=154.226
+approx_kl=0.016786, clip_fraction=0.232, entropy=3.814
+update=577, steps=590848, mean_return=3784.20, actor_loss=-0.009, critic_loss=72.278
+approx_kl=0.013347, clip_fraction=0.193, entropy=3.802
+update=578, steps=591872, mean_return=3791.19, actor_loss=-0.003, critic_loss=91.989
+approx_kl=0.020286, clip_fraction=0.295, entropy=3.800
+update=579, steps=592896, mean_return=4126.31, actor_loss=-0.000, critic_loss=66.965
+approx_kl=0.031531, clip_fraction=0.382, entropy=3.790
+update=580, steps=593920, mean_return=3859.67, actor_loss=-0.007, critic_loss=51.587
+approx_kl=0.033990, clip_fraction=0.404, entropy=3.775
+update=581, steps=594944, mean_return=4010.72, actor_loss=-0.007, critic_loss=93.858
+approx_kl=0.016803, clip_fraction=0.225, entropy=3.773
+update=582, steps=595968, mean_return=3779.87, actor_loss=-0.007, critic_loss=60.013
+approx_kl=0.017715, clip_fraction=0.250, entropy=3.767
+update=583, steps=596992, mean_return=3716.88, actor_loss=-0.004, critic_loss=65.315
+approx_kl=0.022815, clip_fraction=0.317, entropy=3.752
+update=584, steps=598016, mean_return=3885.54, actor_loss=-0.007, critic_loss=87.614
+approx_kl=0.028409, clip_fraction=0.322, entropy=3.751
+update=585, steps=599040, mean_return=3801.48, actor_loss=0.000, critic_loss=82.862
+approx_kl=0.030376, clip_fraction=0.365, entropy=3.731
+update=586, steps=600064, mean_return=3854.04, actor_loss=-0.007, critic_loss=84.519
+approx_kl=0.012788, clip_fraction=0.187, entropy=3.729
+update=587, steps=601088, mean_return=3896.65, actor_loss=-0.003, critic_loss=51.529
+approx_kl=0.024704, clip_fraction=0.321, entropy=3.748
+update=588, steps=602112, mean_return=3845.01, actor_loss=-0.001, critic_loss=60.535
+approx_kl=0.018358, clip_fraction=0.260, entropy=3.748
+update=589, steps=603136, mean_return=3868.12, actor_loss=-0.013, critic_loss=84.699
+approx_kl=0.019370, clip_fraction=0.255, entropy=3.740
+update=590, steps=604160, mean_return=3795.21, actor_loss=-0.012, critic_loss=68.640
+approx_kl=0.026486, clip_fraction=0.345, entropy=3.740
+update=591, steps=605184, mean_return=3792.92, actor_loss=-0.005, critic_loss=72.357
+approx_kl=0.023337, clip_fraction=0.333, entropy=3.729
+update=592, steps=606208, mean_return=3841.68, actor_loss=-0.007, critic_loss=73.014
+approx_kl=0.015170, clip_fraction=0.230, entropy=3.726
+update=593, steps=607232, mean_return=3791.59, actor_loss=-0.004, critic_loss=55.081
+approx_kl=0.017194, clip_fraction=0.235, entropy=3.715
+update=594, steps=608256, mean_return=3898.94, actor_loss=-0.010, critic_loss=39.431
+approx_kl=0.018128, clip_fraction=0.242, entropy=3.707
+update=595, steps=609280, mean_return=3874.26, actor_loss=-0.009, critic_loss=61.777
+approx_kl=0.049794, clip_fraction=0.422, entropy=3.709
+update=596, steps=610304, mean_return=3853.60, actor_loss=-0.002, critic_loss=75.426
+approx_kl=0.015676, clip_fraction=0.212, entropy=3.708
+update=597, steps=611328, mean_return=3817.87, actor_loss=-0.005, critic_loss=51.233
+approx_kl=0.013684, clip_fraction=0.203, entropy=3.704
+update=598, steps=612352, mean_return=3754.27, actor_loss=-0.006, critic_loss=35.885
+approx_kl=0.016411, clip_fraction=0.244, entropy=3.696
+update=599, steps=613376, mean_return=3877.96, actor_loss=-0.011, critic_loss=46.972
+approx_kl=0.019638, clip_fraction=0.236, entropy=3.689
+update=600, steps=614400, mean_return=3917.47, actor_loss=-0.000, critic_loss=54.753
+��������: 4176.7 �� 62.0
+approx_kl=0.013504, clip_fraction=0.195, entropy=3.677
+update=601, steps=615424, mean_return=3811.41, actor_loss=-0.007, critic_loss=38.577
+approx_kl=0.023205, clip_fraction=0.333, entropy=3.676
+update=602, steps=616448, mean_return=4017.35, actor_loss=-0.013, critic_loss=41.497
+approx_kl=0.034403, clip_fraction=0.393, entropy=3.670
+update=603, steps=617472, mean_return=3946.95, actor_loss=-0.004, critic_loss=39.226
+approx_kl=0.027642, clip_fraction=0.377, entropy=3.664
+update=604, steps=618496, mean_return=3962.92, actor_loss=-0.016, critic_loss=30.449
+approx_kl=0.016111, clip_fraction=0.215, entropy=3.668
+update=605, steps=619520, mean_return=3964.84, actor_loss=-0.007, critic_loss=49.787
+approx_kl=0.018657, clip_fraction=0.264, entropy=3.661
+update=606, steps=620544, mean_return=3867.11, actor_loss=-0.004, critic_loss=84.820
+approx_kl=0.023913, clip_fraction=0.334, entropy=3.656
+update=607, steps=621568, mean_return=3936.50, actor_loss=-0.013, critic_loss=69.060
+approx_kl=0.018166, clip_fraction=0.259, entropy=3.654
+update=608, steps=622592, mean_return=3835.43, actor_loss=-0.005, critic_loss=65.899
+approx_kl=0.016526, clip_fraction=0.243, entropy=3.654
+update=609, steps=623616, mean_return=3964.94, actor_loss=-0.006, critic_loss=48.038
+approx_kl=0.020669, clip_fraction=0.290, entropy=3.645
+update=610, steps=624640, mean_return=3854.21, actor_loss=-0.005, critic_loss=79.202
+approx_kl=0.018567, clip_fraction=0.251, entropy=3.617
+update=611, steps=625664, mean_return=3652.90, actor_loss=-0.005, critic_loss=77.731
+approx_kl=0.016015, clip_fraction=0.238, entropy=3.610
+update=612, steps=626688, mean_return=4036.22, actor_loss=-0.009, critic_loss=80.917
+approx_kl=0.020969, clip_fraction=0.290, entropy=3.613
+update=613, steps=627712, mean_return=3638.92, actor_loss=-0.002, critic_loss=77.577
+approx_kl=0.019658, clip_fraction=0.249, entropy=3.622
+update=614, steps=628736, mean_return=3861.49, actor_loss=-0.005, critic_loss=57.835
+approx_kl=0.022932, clip_fraction=0.258, entropy=3.617
+update=615, steps=629760, mean_return=4166.04, actor_loss=-0.001, critic_loss=74.664
+approx_kl=0.019305, clip_fraction=0.264, entropy=3.608
+update=616, steps=630784, mean_return=3835.50, actor_loss=-0.007, critic_loss=81.738
+approx_kl=0.017224, clip_fraction=0.251, entropy=3.597
+update=617, steps=631808, mean_return=3861.17, actor_loss=-0.006, critic_loss=68.319
+approx_kl=0.019499, clip_fraction=0.279, entropy=3.603
+update=618, steps=632832, mean_return=3889.12, actor_loss=-0.003, critic_loss=80.456
+approx_kl=0.020748, clip_fraction=0.265, entropy=3.592
+update=619, steps=633856, mean_return=3857.36, actor_loss=-0.006, critic_loss=56.938
+approx_kl=0.024084, clip_fraction=0.325, entropy=3.593
+update=620, steps=634880, mean_return=3912.30, actor_loss=-0.005, critic_loss=30.807
+approx_kl=0.023353, clip_fraction=0.318, entropy=3.574
+update=621, steps=635904, mean_return=3951.79, actor_loss=-0.003, critic_loss=26.097
+approx_kl=0.013764, clip_fraction=0.186, entropy=3.573
+update=622, steps=636928, mean_return=3848.92, actor_loss=0.001, critic_loss=35.367
+approx_kl=0.025411, clip_fraction=0.327, entropy=3.576
+update=623, steps=637952, mean_return=4117.73, actor_loss=-0.006, critic_loss=42.217
+approx_kl=0.018115, clip_fraction=0.238, entropy=3.560
+update=624, steps=638976, mean_return=4017.54, actor_loss=-0.006, critic_loss=60.161
+approx_kl=0.039346, clip_fraction=0.362, entropy=3.555
+update=625, steps=640000, mean_return=3742.10, actor_loss=-0.007, critic_loss=308.159
+approx_kl=0.020575, clip_fraction=0.293, entropy=3.539
+update=626, steps=641024, mean_return=3800.55, actor_loss=-0.014, critic_loss=63.156
+approx_kl=0.045147, clip_fraction=0.423, entropy=3.526
+update=627, steps=642048, mean_return=4109.47, actor_loss=-0.005, critic_loss=66.864
+approx_kl=0.023355, clip_fraction=0.314, entropy=3.529
+update=628, steps=643072, mean_return=4064.19, actor_loss=-0.004, critic_loss=189.956
+approx_kl=0.019118, clip_fraction=0.259, entropy=3.530
+update=629, steps=644096, mean_return=3822.10, actor_loss=-0.009, critic_loss=91.405
+approx_kl=0.026318, clip_fraction=0.356, entropy=3.515
+update=630, steps=645120, mean_return=3978.40, actor_loss=-0.008, critic_loss=91.483
+approx_kl=0.017623, clip_fraction=0.272, entropy=3.520
+update=631, steps=646144, mean_return=4034.12, actor_loss=-0.009, critic_loss=50.478
+approx_kl=0.017340, clip_fraction=0.258, entropy=3.519
+update=632, steps=647168, mean_return=4055.81, actor_loss=-0.006, critic_loss=57.940
+approx_kl=0.019880, clip_fraction=0.271, entropy=3.509
+update=633, steps=648192, mean_return=4040.70, actor_loss=-0.007, critic_loss=85.031
+approx_kl=0.017502, clip_fraction=0.247, entropy=3.511
+update=634, steps=649216, mean_return=3654.53, actor_loss=-0.008, critic_loss=118.811
+approx_kl=0.022312, clip_fraction=0.309, entropy=3.505
+update=635, steps=650240, mean_return=3947.38, actor_loss=-0.005, critic_loss=76.475
+approx_kl=0.016884, clip_fraction=0.250, entropy=3.500
+update=636, steps=651264, mean_return=4088.35, actor_loss=-0.004, critic_loss=47.633
+approx_kl=0.016784, clip_fraction=0.243, entropy=3.486
+update=637, steps=652288, mean_return=4034.45, actor_loss=-0.005, critic_loss=50.979
+approx_kl=0.024620, clip_fraction=0.354, entropy=3.483
+update=638, steps=653312, mean_return=4169.86, actor_loss=-0.014, critic_loss=54.203
+approx_kl=0.013048, clip_fraction=0.195, entropy=3.494
+update=639, steps=654336, mean_return=4046.02, actor_loss=-0.002, critic_loss=45.297
+approx_kl=0.037330, clip_fraction=0.387, entropy=3.492
+update=640, steps=655360, mean_return=4080.92, actor_loss=-0.009, critic_loss=62.386
+approx_kl=0.033009, clip_fraction=0.355, entropy=3.474
+update=641, steps=656384, mean_return=4029.85, actor_loss=-0.000, critic_loss=65.801
+approx_kl=0.016204, clip_fraction=0.228, entropy=3.456
+update=642, steps=657408, mean_return=3962.22, actor_loss=-0.007, critic_loss=39.163
+approx_kl=0.023184, clip_fraction=0.289, entropy=3.439
+update=643, steps=658432, mean_return=4069.97, actor_loss=-0.005, critic_loss=64.180
+approx_kl=0.021962, clip_fraction=0.309, entropy=3.441
+update=644, steps=659456, mean_return=4183.14, actor_loss=-0.009, critic_loss=45.250
+approx_kl=0.022225, clip_fraction=0.311, entropy=3.430
+update=645, steps=660480, mean_return=4205.82, actor_loss=0.001, critic_loss=45.009
+approx_kl=0.020418, clip_fraction=0.265, entropy=3.433
+update=646, steps=661504, mean_return=4154.47, actor_loss=0.002, critic_loss=74.272
+approx_kl=0.022134, clip_fraction=0.297, entropy=3.423
+update=647, steps=662528, mean_return=3823.97, actor_loss=-0.009, critic_loss=72.663
+approx_kl=0.021948, clip_fraction=0.290, entropy=3.401
+update=648, steps=663552, mean_return=4257.60, actor_loss=0.012, critic_loss=52.060
+approx_kl=0.031918, clip_fraction=0.387, entropy=3.398
+update=649, steps=664576, mean_return=4206.19, actor_loss=-0.002, critic_loss=32.485
+approx_kl=0.027826, clip_fraction=0.333, entropy=3.393
+update=650, steps=665600, mean_return=4183.88, actor_loss=-0.013, critic_loss=54.678
+��������: 3800.7 �� 1333.9
+approx_kl=0.026861, clip_fraction=0.345, entropy=3.403
+update=651, steps=666624, mean_return=4153.49, actor_loss=-0.009, critic_loss=47.620
+approx_kl=0.016682, clip_fraction=0.236, entropy=3.406
+update=652, steps=667648, mean_return=3926.65, actor_loss=-0.011, critic_loss=72.199
+approx_kl=0.017048, clip_fraction=0.260, entropy=3.391
+update=653, steps=668672, mean_return=4258.10, actor_loss=-0.009, critic_loss=71.728
+approx_kl=0.023756, clip_fraction=0.312, entropy=3.398
+update=654, steps=669696, mean_return=3120.14, actor_loss=-0.009, critic_loss=558.216
+approx_kl=0.015411, clip_fraction=0.211, entropy=3.393
+update=655, steps=670720, mean_return=4135.40, actor_loss=-0.008, critic_loss=53.870
+approx_kl=0.025042, clip_fraction=0.265, entropy=3.397
+update=656, steps=671744, mean_return=4186.21, actor_loss=-0.010, critic_loss=563.826
+approx_kl=0.027235, clip_fraction=0.352, entropy=3.390
+update=657, steps=672768, mean_return=228.88, actor_loss=-0.012, critic_loss=200.500
+approx_kl=0.020727, clip_fraction=0.318, entropy=3.377
+update=658, steps=673792, mean_return=3828.15, actor_loss=-0.007, critic_loss=82.481
+approx_kl=0.026769, clip_fraction=0.377, entropy=3.371
+update=659, steps=674816, mean_return=4159.32, actor_loss=-0.001, critic_loss=61.973
+approx_kl=0.028974, clip_fraction=0.335, entropy=3.370
+update=660, steps=675840, mean_return=4152.10, actor_loss=-0.005, critic_loss=42.307
+approx_kl=0.034789, clip_fraction=0.376, entropy=3.374
+update=661, steps=676864, mean_return=4289.14, actor_loss=-0.015, critic_loss=45.190
+approx_kl=0.024491, clip_fraction=0.322, entropy=3.371
+update=662, steps=677888, mean_return=3919.55, actor_loss=-0.017, critic_loss=101.964
+approx_kl=0.011431, clip_fraction=0.166, entropy=3.369
+update=663, steps=678912, mean_return=4102.18, actor_loss=-0.008, critic_loss=55.457
+approx_kl=0.024119, clip_fraction=0.310, entropy=3.365
+update=664, steps=679936, mean_return=4181.12, actor_loss=-0.009, critic_loss=92.349
+approx_kl=0.020065, clip_fraction=0.255, entropy=3.366
+update=665, steps=680960, mean_return=4048.08, actor_loss=0.000, critic_loss=100.097
+approx_kl=0.030757, clip_fraction=0.295, entropy=3.367
+update=666, steps=681984, mean_return=4003.26, actor_loss=-0.004, critic_loss=42.652
+approx_kl=0.038620, clip_fraction=0.383, entropy=3.371
+update=667, steps=683008, mean_return=3975.54, actor_loss=-0.013, critic_loss=100.080
+approx_kl=0.016241, clip_fraction=0.231, entropy=3.374
+update=668, steps=684032, mean_return=4227.51, actor_loss=-0.004, critic_loss=41.671
+approx_kl=0.024342, clip_fraction=0.315, entropy=3.358
+update=669, steps=685056, mean_return=3593.30, actor_loss=-0.004, critic_loss=147.309
+approx_kl=0.033276, clip_fraction=0.383, entropy=3.361
+update=670, steps=686080, mean_return=2307.46, actor_loss=-0.011, critic_loss=439.346
+approx_kl=0.016325, clip_fraction=0.227, entropy=3.366
+update=671, steps=687104, mean_return=3958.85, actor_loss=-0.001, critic_loss=92.323
+approx_kl=0.028657, clip_fraction=0.343, entropy=3.370
+update=672, steps=688128, mean_return=3927.84, actor_loss=-0.010, critic_loss=62.990
+approx_kl=0.026135, clip_fraction=0.318, entropy=3.351
+update=673, steps=689152, mean_return=4034.49, actor_loss=-0.002, critic_loss=66.167
+approx_kl=0.024599, clip_fraction=0.310, entropy=3.331
+update=674, steps=690176, mean_return=4091.72, actor_loss=-0.003, critic_loss=60.402
+approx_kl=0.034343, clip_fraction=0.359, entropy=3.316
+update=675, steps=691200, mean_return=4205.28, actor_loss=-0.010, critic_loss=58.758
+approx_kl=0.032962, clip_fraction=0.392, entropy=3.311
+update=676, steps=692224, mean_return=4328.70, actor_loss=-0.004, critic_loss=67.152
+approx_kl=0.024374, clip_fraction=0.320, entropy=3.300
+update=677, steps=693248, mean_return=4065.14, actor_loss=-0.013, critic_loss=78.917
+approx_kl=0.030743, clip_fraction=0.332, entropy=3.292
+update=678, steps=694272, mean_return=3751.66, actor_loss=-0.014, critic_loss=412.424
+approx_kl=0.021226, clip_fraction=0.300, entropy=3.284
+update=679, steps=695296, mean_return=3989.02, actor_loss=-0.010, critic_loss=53.655
+approx_kl=0.022658, clip_fraction=0.255, entropy=3.278
+update=680, steps=696320, mean_return=1523.13, actor_loss=-0.015, critic_loss=171.970
+approx_kl=0.016665, clip_fraction=0.216, entropy=3.291
+update=681, steps=697344, mean_return=4135.34, actor_loss=-0.008, critic_loss=53.689
+approx_kl=0.029297, clip_fraction=0.345, entropy=3.284
+update=682, steps=698368, mean_return=4131.06, actor_loss=-0.017, critic_loss=452.268
+approx_kl=0.026746, clip_fraction=0.336, entropy=3.280
+update=683, steps=699392, mean_return=3882.64, actor_loss=-0.017, critic_loss=149.718
+approx_kl=0.024676, clip_fraction=0.298, entropy=3.281
+update=684, steps=700416, mean_return=4254.50, actor_loss=-0.008, critic_loss=71.625
+approx_kl=0.024209, clip_fraction=0.320, entropy=3.277
+update=685, steps=701440, mean_return=4063.68, actor_loss=-0.006, critic_loss=402.571
+approx_kl=0.031052, clip_fraction=0.315, entropy=3.280
+update=686, steps=702464, mean_return=565.17, actor_loss=-0.010, critic_loss=299.029
+approx_kl=0.018387, clip_fraction=0.252, entropy=3.285
+update=687, steps=703488, mean_return=599.40, actor_loss=-0.009, critic_loss=193.971
+approx_kl=0.025510, clip_fraction=0.347, entropy=3.282
+update=688, steps=704512, mean_return=4021.88, actor_loss=-0.012, critic_loss=590.268
+approx_kl=0.022558, clip_fraction=0.307, entropy=3.293
+update=689, steps=705536, mean_return=1192.05, actor_loss=-0.011, critic_loss=46.887
+approx_kl=0.020118, clip_fraction=0.250, entropy=3.287
+update=690, steps=706560, mean_return=4117.33, actor_loss=-0.008, critic_loss=134.273
+approx_kl=0.017565, clip_fraction=0.271, entropy=3.294
+update=691, steps=707584, mean_return=4096.68, actor_loss=-0.002, critic_loss=40.680
+approx_kl=0.025525, clip_fraction=0.312, entropy=3.281
+update=692, steps=708608, mean_return=4165.61, actor_loss=-0.001, critic_loss=82.125
+approx_kl=0.027097, clip_fraction=0.339, entropy=3.261
+update=693, steps=709632, mean_return=4203.89, actor_loss=-0.008, critic_loss=58.281
+approx_kl=0.022451, clip_fraction=0.294, entropy=3.276
+update=694, steps=710656, mean_return=3994.88, actor_loss=0.000, critic_loss=39.293
+approx_kl=0.021129, clip_fraction=0.285, entropy=3.277
+update=695, steps=711680, mean_return=4102.55, actor_loss=-0.010, critic_loss=66.998
+approx_kl=0.035200, clip_fraction=0.404, entropy=3.278
+update=696, steps=712704, mean_return=4198.14, actor_loss=-0.016, critic_loss=42.591
+approx_kl=0.022439, clip_fraction=0.269, entropy=3.275
+update=697, steps=713728, mean_return=4083.90, actor_loss=0.007, critic_loss=51.526
+approx_kl=0.023187, clip_fraction=0.311, entropy=3.274
+update=698, steps=714752, mean_return=3896.73, actor_loss=-0.007, critic_loss=58.281
+approx_kl=0.009190, clip_fraction=0.125, entropy=3.264
+update=699, steps=715776, mean_return=4062.91, actor_loss=0.005, critic_loss=40.885
+approx_kl=0.027878, clip_fraction=0.304, entropy=3.265
+update=700, steps=716800, mean_return=4127.25, actor_loss=-0.009, critic_loss=255.755
+��������: 4456.1 �� 97.5
+approx_kl=0.022785, clip_fraction=0.291, entropy=3.255
+update=701, steps=717824, mean_return=1883.11, actor_loss=-0.005, critic_loss=61.092
+approx_kl=0.037481, clip_fraction=0.362, entropy=3.245
+update=702, steps=718848, mean_return=4246.60, actor_loss=-0.007, critic_loss=149.132
+approx_kl=0.047269, clip_fraction=0.448, entropy=3.232
+update=703, steps=719872, mean_return=4105.40, actor_loss=-0.010, critic_loss=94.893
+approx_kl=0.022566, clip_fraction=0.307, entropy=3.235
+update=704, steps=720896, mean_return=4071.46, actor_loss=-0.008, critic_loss=43.458
+approx_kl=0.021247, clip_fraction=0.278, entropy=3.226
+update=705, steps=721920, mean_return=4173.82, actor_loss=-0.003, critic_loss=57.313
+approx_kl=0.038931, clip_fraction=0.405, entropy=3.194
+update=706, steps=722944, mean_return=4172.77, actor_loss=-0.007, critic_loss=58.748
+approx_kl=0.020211, clip_fraction=0.272, entropy=3.175
+update=707, steps=723968, mean_return=4064.29, actor_loss=-0.012, critic_loss=58.931
+approx_kl=0.014131, clip_fraction=0.211, entropy=3.166
+update=708, steps=724992, mean_return=4079.87, actor_loss=-0.006, critic_loss=54.501
+approx_kl=0.028577, clip_fraction=0.314, entropy=3.171
+update=709, steps=726016, mean_return=4038.76, actor_loss=-0.003, critic_loss=50.909
+approx_kl=0.032283, clip_fraction=0.347, entropy=3.174
+update=710, steps=727040, mean_return=4028.86, actor_loss=-0.005, critic_loss=45.180
+approx_kl=0.019062, clip_fraction=0.224, entropy=3.175
+update=711, steps=728064, mean_return=498.14, actor_loss=-0.012, critic_loss=579.020
+approx_kl=0.022391, clip_fraction=0.305, entropy=3.187
+update=712, steps=729088, mean_return=3744.64, actor_loss=-0.010, critic_loss=304.102
+approx_kl=0.020607, clip_fraction=0.296, entropy=3.192
+update=713, steps=730112, mean_return=3772.03, actor_loss=-0.009, critic_loss=98.353
+approx_kl=0.020257, clip_fraction=0.250, entropy=3.185
+update=714, steps=731136, mean_return=4000.43, actor_loss=-0.015, critic_loss=106.646
+approx_kl=0.030129, clip_fraction=0.294, entropy=3.183
+update=715, steps=732160, mean_return=285.28, actor_loss=-0.012, critic_loss=99.300
+approx_kl=0.018526, clip_fraction=0.255, entropy=3.182
+update=716, steps=733184, mean_return=4105.67, actor_loss=-0.010, critic_loss=93.133
+approx_kl=0.011791, clip_fraction=0.175, entropy=3.184
+update=717, steps=734208, mean_return=4002.62, actor_loss=-0.004, critic_loss=60.387
+approx_kl=0.024965, clip_fraction=0.322, entropy=3.181
+update=718, steps=735232, mean_return=4133.40, actor_loss=-0.010, critic_loss=45.069
+approx_kl=0.029771, clip_fraction=0.314, entropy=3.150
+update=719, steps=736256, mean_return=4024.54, actor_loss=-0.003, critic_loss=62.085
+approx_kl=0.021158, clip_fraction=0.301, entropy=3.138
+update=720, steps=737280, mean_return=4063.21, actor_loss=-0.007, critic_loss=51.462
+approx_kl=0.011796, clip_fraction=0.145, entropy=3.130
+update=721, steps=738304, mean_return=4109.91, actor_loss=0.010, critic_loss=56.490
+approx_kl=0.044977, clip_fraction=0.387, entropy=3.129
+update=722, steps=739328, mean_return=4101.34, actor_loss=-0.002, critic_loss=43.339
+approx_kl=0.018386, clip_fraction=0.256, entropy=3.126
+update=723, steps=740352, mean_return=4439.88, actor_loss=-0.008, critic_loss=67.355
+approx_kl=0.031807, clip_fraction=0.381, entropy=3.115
+update=724, steps=741376, mean_return=4342.41, actor_loss=-0.007, critic_loss=53.953
+approx_kl=0.023136, clip_fraction=0.295, entropy=3.109
+update=725, steps=742400, mean_return=3977.93, actor_loss=-0.008, critic_loss=104.794
+approx_kl=0.021895, clip_fraction=0.276, entropy=3.111
+update=726, steps=743424, mean_return=4072.86, actor_loss=-0.009, critic_loss=107.356
+approx_kl=0.023399, clip_fraction=0.294, entropy=3.119
+update=727, steps=744448, mean_return=4235.65, actor_loss=-0.010, critic_loss=551.048
+approx_kl=0.028451, clip_fraction=0.346, entropy=3.113
+update=728, steps=745472, mean_return=774.27, actor_loss=-0.005, critic_loss=39.227
+approx_kl=0.041401, clip_fraction=0.416, entropy=3.100
+update=729, steps=746496, mean_return=4336.95, actor_loss=-0.015, critic_loss=730.946
+approx_kl=0.028289, clip_fraction=0.354, entropy=3.089
+update=730, steps=747520, mean_return=579.16, actor_loss=0.003, critic_loss=28.970
+approx_kl=0.020102, clip_fraction=0.284, entropy=3.075
+update=731, steps=748544, mean_return=4310.54, actor_loss=-0.007, critic_loss=205.349
+approx_kl=0.022020, clip_fraction=0.299, entropy=3.085
+update=732, steps=749568, mean_return=3877.65, actor_loss=-0.006, critic_loss=129.460
+approx_kl=0.018806, clip_fraction=0.271, entropy=3.077
+update=733, steps=750592, mean_return=4048.07, actor_loss=-0.003, critic_loss=36.727
+approx_kl=0.021736, clip_fraction=0.270, entropy=3.068
+update=734, steps=751616, mean_return=4126.61, actor_loss=-0.007, critic_loss=86.813
+approx_kl=0.015453, clip_fraction=0.225, entropy=3.048
+update=735, steps=752640, mean_return=3972.70, actor_loss=-0.006, critic_loss=56.103
+approx_kl=0.012580, clip_fraction=0.184, entropy=3.033
+update=736, steps=753664, mean_return=4318.02, actor_loss=-0.001, critic_loss=82.238
+approx_kl=0.020590, clip_fraction=0.302, entropy=3.037
+update=737, steps=754688, mean_return=4346.49, actor_loss=-0.011, critic_loss=98.440
+approx_kl=0.021834, clip_fraction=0.302, entropy=3.032
+update=738, steps=755712, mean_return=4126.85, actor_loss=-0.002, critic_loss=52.559
+approx_kl=0.026887, clip_fraction=0.303, entropy=3.022
+update=739, steps=756736, mean_return=4233.55, actor_loss=0.000, critic_loss=66.833
+approx_kl=0.031036, clip_fraction=0.383, entropy=3.023
+update=740, steps=757760, mean_return=4022.84, actor_loss=-0.007, critic_loss=92.960
+approx_kl=0.029498, clip_fraction=0.354, entropy=3.021
+update=741, steps=758784, mean_return=4017.36, actor_loss=-0.002, critic_loss=638.610
+approx_kl=0.029075, clip_fraction=0.314, entropy=3.011
+update=742, steps=759808, mean_return=2829.75, actor_loss=-0.014, critic_loss=58.873
+approx_kl=0.027268, clip_fraction=0.354, entropy=2.997
+update=743, steps=760832, mean_return=4259.28, actor_loss=-0.009, critic_loss=151.822
+approx_kl=0.023620, clip_fraction=0.304, entropy=2.993
+update=744, steps=761856, mean_return=4164.82, actor_loss=-0.005, critic_loss=67.337
+approx_kl=0.023682, clip_fraction=0.321, entropy=2.973
+update=745, steps=762880, mean_return=4069.57, actor_loss=-0.001, critic_loss=68.681
+approx_kl=0.027424, clip_fraction=0.363, entropy=2.969
+update=746, steps=763904, mean_return=4282.20, actor_loss=-0.004, critic_loss=50.022
+approx_kl=0.024610, clip_fraction=0.305, entropy=2.963
+update=747, steps=764928, mean_return=4151.14, actor_loss=-0.017, critic_loss=547.418
+approx_kl=0.019309, clip_fraction=0.250, entropy=2.950
+update=748, steps=765952, mean_return=1472.03, actor_loss=-0.005, critic_loss=92.496
+approx_kl=0.029981, clip_fraction=0.380, entropy=2.957
+update=749, steps=766976, mean_return=4056.18, actor_loss=-0.007, critic_loss=361.367
+approx_kl=0.021677, clip_fraction=0.286, entropy=2.940
+update=750, steps=768000, mean_return=4193.08, actor_loss=0.003, critic_loss=114.396
+��������: 3404.9 �� 1430.7
+approx_kl=0.018522, clip_fraction=0.267, entropy=2.907
+update=751, steps=769024, mean_return=4349.22, actor_loss=-0.006, critic_loss=107.417
+approx_kl=0.032604, clip_fraction=0.347, entropy=2.901
+update=752, steps=770048, mean_return=4116.93, actor_loss=-0.001, critic_loss=83.854
+approx_kl=0.019951, clip_fraction=0.251, entropy=2.896
+update=753, steps=771072, mean_return=4296.53, actor_loss=-0.007, critic_loss=170.441
+approx_kl=0.018475, clip_fraction=0.267, entropy=2.881
+update=754, steps=772096, mean_return=3793.41, actor_loss=-0.002, critic_loss=169.769
+approx_kl=0.023073, clip_fraction=0.300, entropy=2.885
+update=755, steps=773120, mean_return=4040.99, actor_loss=-0.010, critic_loss=106.459
+approx_kl=0.023127, clip_fraction=0.308, entropy=2.878
+update=756, steps=774144, mean_return=3799.58, actor_loss=-0.008, critic_loss=135.525
+approx_kl=0.025818, clip_fraction=0.315, entropy=2.875
+update=757, steps=775168, mean_return=4205.54, actor_loss=-0.007, critic_loss=103.265
+approx_kl=0.016910, clip_fraction=0.239, entropy=2.862
+update=758, steps=776192, mean_return=4140.81, actor_loss=-0.007, critic_loss=68.297
+approx_kl=0.017191, clip_fraction=0.229, entropy=2.871
+update=759, steps=777216, mean_return=4220.16, actor_loss=-0.008, critic_loss=95.694
+approx_kl=0.022854, clip_fraction=0.289, entropy=2.884
+update=760, steps=778240, mean_return=4143.80, actor_loss=-0.002, critic_loss=71.923
+approx_kl=0.040490, clip_fraction=0.396, entropy=2.887
+update=761, steps=779264, mean_return=4349.80, actor_loss=-0.004, critic_loss=42.127
+approx_kl=0.025856, clip_fraction=0.325, entropy=2.911
+update=762, steps=780288, mean_return=4166.41, actor_loss=-0.010, critic_loss=57.934
+approx_kl=0.024721, clip_fraction=0.312, entropy=2.918
+update=763, steps=781312, mean_return=4253.30, actor_loss=-0.006, critic_loss=53.951
+approx_kl=0.025701, clip_fraction=0.328, entropy=2.915
+update=764, steps=782336, mean_return=4200.24, actor_loss=-0.008, critic_loss=73.473
+approx_kl=0.032613, clip_fraction=0.372, entropy=2.911
+update=765, steps=783360, mean_return=4093.69, actor_loss=-0.004, critic_loss=84.956
+approx_kl=0.018610, clip_fraction=0.264, entropy=2.914
+update=766, steps=784384, mean_return=4072.34, actor_loss=-0.007, critic_loss=54.778
+approx_kl=0.014592, clip_fraction=0.198, entropy=2.911
+update=767, steps=785408, mean_return=4105.19, actor_loss=-0.005, critic_loss=87.962
+approx_kl=0.039426, clip_fraction=0.366, entropy=2.918
+update=768, steps=786432, mean_return=2991.67, actor_loss=-0.010, critic_loss=552.450
+approx_kl=0.015673, clip_fraction=0.195, entropy=2.923
+update=769, steps=787456, mean_return=4150.78, actor_loss=-0.003, critic_loss=84.549
+approx_kl=0.020781, clip_fraction=0.297, entropy=2.932
+update=770, steps=788480, mean_return=4218.23, actor_loss=-0.013, critic_loss=383.030
+approx_kl=0.024022, clip_fraction=0.297, entropy=2.922
+update=771, steps=789504, mean_return=1097.86, actor_loss=-0.010, critic_loss=239.954
+approx_kl=0.025548, clip_fraction=0.354, entropy=2.914
+update=772, steps=790528, mean_return=4028.89, actor_loss=-0.013, critic_loss=60.619
+approx_kl=0.019136, clip_fraction=0.281, entropy=2.900
+update=773, steps=791552, mean_return=4157.36, actor_loss=-0.005, critic_loss=78.194
+approx_kl=0.026447, clip_fraction=0.345, entropy=2.895
+update=774, steps=792576, mean_return=4025.61, actor_loss=-0.013, critic_loss=124.149
+approx_kl=0.024642, clip_fraction=0.331, entropy=2.893
+update=775, steps=793600, mean_return=4309.54, actor_loss=-0.002, critic_loss=65.238
+approx_kl=0.019564, clip_fraction=0.243, entropy=2.887
+update=776, steps=794624, mean_return=4215.96, actor_loss=0.003, critic_loss=43.206
+approx_kl=0.047262, clip_fraction=0.401, entropy=2.880
+update=777, steps=795648, mean_return=4188.33, actor_loss=-0.012, critic_loss=38.595
+approx_kl=0.017782, clip_fraction=0.256, entropy=2.877
+update=778, steps=796672, mean_return=4457.67, actor_loss=-0.006, critic_loss=52.571
+approx_kl=0.021158, clip_fraction=0.280, entropy=2.872
+update=779, steps=797696, mean_return=4145.20, actor_loss=-0.009, critic_loss=75.370
+approx_kl=0.022625, clip_fraction=0.237, entropy=2.866
+update=780, steps=798720, mean_return=4101.52, actor_loss=-0.015, critic_loss=546.307
+approx_kl=0.027457, clip_fraction=0.299, entropy=2.865
+update=781, steps=799744, mean_return=2220.05, actor_loss=-0.012, critic_loss=533.367
+approx_kl=0.024869, clip_fraction=0.307, entropy=2.870
+update=782, steps=800768, mean_return=706.96, actor_loss=-0.015, critic_loss=162.631
+approx_kl=0.020763, clip_fraction=0.292, entropy=2.863
+update=783, steps=801792, mean_return=4244.24, actor_loss=-0.006, critic_loss=61.397
+approx_kl=0.022913, clip_fraction=0.323, entropy=2.854
+update=784, steps=802816, mean_return=4190.38, actor_loss=-0.006, critic_loss=74.225
+approx_kl=0.026676, clip_fraction=0.306, entropy=2.852
+update=785, steps=803840, mean_return=4088.64, actor_loss=-0.015, critic_loss=69.919
+approx_kl=0.025403, clip_fraction=0.336, entropy=2.836
+update=786, steps=804864, mean_return=4072.57, actor_loss=-0.008, critic_loss=48.222
+approx_kl=0.014471, clip_fraction=0.205, entropy=2.831
+update=787, steps=805888, mean_return=4319.95, actor_loss=-0.005, critic_loss=65.220
+approx_kl=0.016212, clip_fraction=0.229, entropy=2.833
+update=788, steps=806912, mean_return=4204.46, actor_loss=-0.002, critic_loss=109.078
+approx_kl=0.021768, clip_fraction=0.284, entropy=2.836
+update=789, steps=807936, mean_return=4177.34, actor_loss=-0.009, critic_loss=61.342
+approx_kl=0.026238, clip_fraction=0.338, entropy=2.839
+update=790, steps=808960, mean_return=4229.41, actor_loss=-0.016, critic_loss=98.951
+approx_kl=0.018588, clip_fraction=0.262, entropy=2.847
+update=791, steps=809984, mean_return=4214.90, actor_loss=-0.001, critic_loss=46.453
+approx_kl=0.020344, clip_fraction=0.265, entropy=2.839
+update=792, steps=811008, mean_return=4158.41, actor_loss=-0.006, critic_loss=80.289
+approx_kl=0.032970, clip_fraction=0.375, entropy=2.823
+update=793, steps=812032, mean_return=4017.70, actor_loss=-0.017, critic_loss=162.613
+approx_kl=0.022180, clip_fraction=0.275, entropy=2.802
+update=794, steps=813056, mean_return=4202.64, actor_loss=-0.003, critic_loss=38.985
+approx_kl=0.017886, clip_fraction=0.259, entropy=2.789
+update=795, steps=814080, mean_return=4135.82, actor_loss=-0.005, critic_loss=33.387
+approx_kl=0.023907, clip_fraction=0.334, entropy=2.778
+update=796, steps=815104, mean_return=4139.80, actor_loss=-0.010, critic_loss=63.428
+approx_kl=0.022128, clip_fraction=0.296, entropy=2.770
+update=797, steps=816128, mean_return=4141.33, actor_loss=-0.005, critic_loss=48.865
+approx_kl=0.035075, clip_fraction=0.392, entropy=2.766
+update=798, steps=817152, mean_return=4100.90, actor_loss=-0.010, critic_loss=57.646
+approx_kl=0.018596, clip_fraction=0.254, entropy=2.764
+update=799, steps=818176, mean_return=4264.24, actor_loss=-0.006, critic_loss=37.293
+approx_kl=0.021006, clip_fraction=0.285, entropy=2.748
+update=800, steps=819200, mean_return=4191.79, actor_loss=-0.001, critic_loss=54.669
+��������: 4461.5 �� 53.2
+approx_kl=0.034315, clip_fraction=0.414, entropy=2.738
+update=801, steps=820224, mean_return=4264.24, actor_loss=0.009, critic_loss=52.290
+approx_kl=0.023105, clip_fraction=0.278, entropy=2.736
+update=802, steps=821248, mean_return=2362.46, actor_loss=-0.017, critic_loss=492.879
+approx_kl=0.015750, clip_fraction=0.230, entropy=2.716
+update=803, steps=822272, mean_return=4065.68, actor_loss=-0.006, critic_loss=42.227
+approx_kl=0.049675, clip_fraction=0.398, entropy=2.725
+update=804, steps=823296, mean_return=1710.79, actor_loss=0.009, critic_loss=539.980
+approx_kl=0.055262, clip_fraction=0.417, entropy=2.721
+update=805, steps=824320, mean_return=4043.38, actor_loss=-0.009, critic_loss=333.596
+approx_kl=0.021252, clip_fraction=0.305, entropy=2.726
+update=806, steps=825344, mean_return=4000.40, actor_loss=-0.011, critic_loss=34.131
+approx_kl=0.023993, clip_fraction=0.241, entropy=2.732
+update=807, steps=826368, mean_return=4072.30, actor_loss=-0.011, critic_loss=49.943
+approx_kl=0.023543, clip_fraction=0.283, entropy=2.716
+update=808, steps=827392, mean_return=3997.25, actor_loss=-0.007, critic_loss=34.094
+approx_kl=0.022252, clip_fraction=0.321, entropy=2.705
+update=809, steps=828416, mean_return=4023.17, actor_loss=-0.009, critic_loss=38.935
+approx_kl=0.028929, clip_fraction=0.337, entropy=2.698
+update=810, steps=829440, mean_return=3257.13, actor_loss=-0.017, critic_loss=452.873
+approx_kl=0.022917, clip_fraction=0.316, entropy=2.695
+update=811, steps=830464, mean_return=3907.73, actor_loss=-0.015, critic_loss=136.961
+approx_kl=0.021637, clip_fraction=0.284, entropy=2.685
+update=812, steps=831488, mean_return=4254.12, actor_loss=-0.004, critic_loss=44.635
+approx_kl=0.019656, clip_fraction=0.276, entropy=2.683
+update=813, steps=832512, mean_return=4188.39, actor_loss=-0.004, critic_loss=49.432
+approx_kl=0.024887, clip_fraction=0.330, entropy=2.675
+update=814, steps=833536, mean_return=4059.73, actor_loss=-0.007, critic_loss=62.357
+approx_kl=0.035647, clip_fraction=0.385, entropy=2.666
+update=815, steps=834560, mean_return=4134.42, actor_loss=0.006, critic_loss=134.142
+approx_kl=0.018225, clip_fraction=0.278, entropy=2.652
+update=816, steps=835584, mean_return=4175.63, actor_loss=-0.008, critic_loss=44.299
+approx_kl=0.020148, clip_fraction=0.281, entropy=2.640
+update=817, steps=836608, mean_return=4300.93, actor_loss=-0.003, critic_loss=43.784
+approx_kl=0.024468, clip_fraction=0.340, entropy=2.636
+update=818, steps=837632, mean_return=4192.54, actor_loss=-0.008, critic_loss=58.797
+approx_kl=0.038699, clip_fraction=0.415, entropy=2.636
+update=819, steps=838656, mean_return=4205.17, actor_loss=-0.013, critic_loss=124.268
+approx_kl=0.023177, clip_fraction=0.276, entropy=2.637
+update=820, steps=839680, mean_return=4234.28, actor_loss=-0.012, critic_loss=63.629
+approx_kl=0.018185, clip_fraction=0.242, entropy=2.620
+update=821, steps=840704, mean_return=4274.03, actor_loss=-0.007, critic_loss=55.081
+approx_kl=0.021469, clip_fraction=0.285, entropy=2.612
+update=822, steps=841728, mean_return=4423.79, actor_loss=-0.009, critic_loss=472.831
+approx_kl=0.029332, clip_fraction=0.323, entropy=2.618
+update=823, steps=842752, mean_return=46.35, actor_loss=-0.011, critic_loss=837.920
+approx_kl=0.040498, clip_fraction=0.426, entropy=2.609
+update=824, steps=843776, mean_return=2398.44, actor_loss=-0.012, critic_loss=119.414
+approx_kl=0.022205, clip_fraction=0.287, entropy=2.600
+update=825, steps=844800, mean_return=4356.11, actor_loss=-0.003, critic_loss=34.861
+approx_kl=0.041566, clip_fraction=0.424, entropy=2.594
+update=826, steps=845824, mean_return=4320.05, actor_loss=-0.012, critic_loss=58.303
+approx_kl=0.027941, clip_fraction=0.372, entropy=2.595
+update=827, steps=846848, mean_return=4383.31, actor_loss=-0.009, critic_loss=60.438
+approx_kl=0.073877, clip_fraction=0.505, entropy=2.603
+update=828, steps=847872, mean_return=4270.91, actor_loss=-0.007, critic_loss=821.459
+approx_kl=0.018597, clip_fraction=0.251, entropy=2.596
+update=829, steps=848896, mean_return=2099.28, actor_loss=-0.007, critic_loss=41.556
+approx_kl=0.034792, clip_fraction=0.292, entropy=2.593
+update=830, steps=849920, mean_return=4291.02, actor_loss=-0.014, critic_loss=552.714
+approx_kl=0.023317, clip_fraction=0.289, entropy=2.583
+update=831, steps=850944, mean_return=805.27, actor_loss=-0.008, critic_loss=40.864
+approx_kl=0.029977, clip_fraction=0.322, entropy=2.584
+update=832, steps=851968, mean_return=4025.90, actor_loss=-0.005, critic_loss=37.285
+approx_kl=0.030527, clip_fraction=0.375, entropy=2.576
+update=833, steps=852992, mean_return=3963.54, actor_loss=-0.005, critic_loss=44.501
+approx_kl=0.014471, clip_fraction=0.204, entropy=2.575
+update=834, steps=854016, mean_return=4065.64, actor_loss=-0.006, critic_loss=53.184
+approx_kl=0.017936, clip_fraction=0.239, entropy=2.573
+update=835, steps=855040, mean_return=4052.75, actor_loss=-0.008, critic_loss=61.146
+approx_kl=0.032625, clip_fraction=0.353, entropy=2.572
+update=836, steps=856064, mean_return=1897.26, actor_loss=-0.004, critic_loss=726.025
+approx_kl=0.021340, clip_fraction=0.298, entropy=2.572
+update=837, steps=857088, mean_return=4044.54, actor_loss=-0.010, critic_loss=201.994
+approx_kl=0.022767, clip_fraction=0.329, entropy=2.571
+update=838, steps=858112, mean_return=4098.03, actor_loss=-0.002, critic_loss=67.044
+approx_kl=0.020853, clip_fraction=0.268, entropy=2.564
+update=839, steps=859136, mean_return=4374.23, actor_loss=-0.008, critic_loss=121.456
+approx_kl=0.031040, clip_fraction=0.351, entropy=2.561
+update=840, steps=860160, mean_return=4139.36, actor_loss=-0.001, critic_loss=53.454
+approx_kl=0.025089, clip_fraction=0.314, entropy=2.541
+update=841, steps=861184, mean_return=4325.51, actor_loss=-0.006, critic_loss=64.371
+approx_kl=0.014548, clip_fraction=0.229, entropy=2.536
+update=842, steps=862208, mean_return=4245.58, actor_loss=-0.001, critic_loss=63.072
+approx_kl=0.035596, clip_fraction=0.388, entropy=2.525
+update=843, steps=863232, mean_return=4160.94, actor_loss=0.000, critic_loss=74.093
+approx_kl=0.018983, clip_fraction=0.284, entropy=2.517
+update=844, steps=864256, mean_return=4256.49, actor_loss=-0.010, critic_loss=55.196
+approx_kl=0.019724, clip_fraction=0.264, entropy=2.529
+update=845, steps=865280, mean_return=4180.12, actor_loss=-0.007, critic_loss=91.193
+approx_kl=0.015701, clip_fraction=0.216, entropy=2.540
+update=846, steps=866304, mean_return=4320.36, actor_loss=0.001, critic_loss=77.601
+approx_kl=0.020162, clip_fraction=0.255, entropy=2.535
+update=847, steps=867328, mean_return=4321.72, actor_loss=-0.008, critic_loss=58.409
+approx_kl=0.025976, clip_fraction=0.321, entropy=2.539
+update=848, steps=868352, mean_return=4291.11, actor_loss=-0.010, critic_loss=38.131
+approx_kl=0.020087, clip_fraction=0.271, entropy=2.538
+update=849, steps=869376, mean_return=4144.38, actor_loss=-0.005, critic_loss=76.002
+approx_kl=0.037707, clip_fraction=0.392, entropy=2.534
+update=850, steps=870400, mean_return=4436.41, actor_loss=-0.005, critic_loss=63.107
+��������: 4545.8 �� 173.5
+approx_kl=0.025857, clip_fraction=0.312, entropy=2.521
+update=851, steps=871424, mean_return=4351.76, actor_loss=-0.006, critic_loss=48.292
+approx_kl=0.028850, clip_fraction=0.399, entropy=2.512
+update=852, steps=872448, mean_return=4298.40, actor_loss=-0.008, critic_loss=88.008
+approx_kl=0.021472, clip_fraction=0.330, entropy=2.507
+update=853, steps=873472, mean_return=4512.32, actor_loss=-0.006, critic_loss=56.512
+approx_kl=0.018438, clip_fraction=0.206, entropy=2.505
+update=854, steps=874496, mean_return=4239.01, actor_loss=-0.007, critic_loss=61.724
+approx_kl=0.020334, clip_fraction=0.273, entropy=2.495
+update=855, steps=875520, mean_return=4280.57, actor_loss=-0.006, critic_loss=48.002
+approx_kl=0.020350, clip_fraction=0.271, entropy=2.480
+update=856, steps=876544, mean_return=4589.29, actor_loss=-0.004, critic_loss=69.638
+approx_kl=0.022870, clip_fraction=0.249, entropy=2.472
+update=857, steps=877568, mean_return=4082.46, actor_loss=-0.015, critic_loss=826.987
+approx_kl=0.019157, clip_fraction=0.258, entropy=2.448
+update=858, steps=878592, mean_return=4098.43, actor_loss=-0.008, critic_loss=139.422
+approx_kl=0.032459, clip_fraction=0.383, entropy=2.459
+update=859, steps=879616, mean_return=4334.40, actor_loss=-0.012, critic_loss=307.045
+approx_kl=0.033810, clip_fraction=0.388, entropy=2.478
+update=860, steps=880640, mean_return=4089.70, actor_loss=-0.009, critic_loss=119.116
+approx_kl=0.021997, clip_fraction=0.307, entropy=2.487
+update=861, steps=881664, mean_return=4316.59, actor_loss=-0.002, critic_loss=57.285
+approx_kl=0.027348, clip_fraction=0.335, entropy=2.476
+update=862, steps=882688, mean_return=4443.97, actor_loss=-0.009, critic_loss=49.167
+approx_kl=0.044886, clip_fraction=0.430, entropy=2.474
+update=863, steps=883712, mean_return=4391.26, actor_loss=-0.002, critic_loss=574.120
+approx_kl=0.020058, clip_fraction=0.277, entropy=2.472
+update=864, steps=884736, mean_return=2833.58, actor_loss=-0.003, critic_loss=39.113
+approx_kl=0.016501, clip_fraction=0.222, entropy=2.477
+update=865, steps=885760, mean_return=4417.35, actor_loss=-0.006, critic_loss=42.267
+approx_kl=0.025499, clip_fraction=0.318, entropy=2.481
+update=866, steps=886784, mean_return=4332.85, actor_loss=-0.002, critic_loss=56.046
+approx_kl=0.026058, clip_fraction=0.309, entropy=2.479
+update=867, steps=887808, mean_return=4207.15, actor_loss=-0.014, critic_loss=59.636
+approx_kl=0.021468, clip_fraction=0.262, entropy=2.493
+update=868, steps=888832, mean_return=4127.85, actor_loss=-0.002, critic_loss=52.925
+approx_kl=0.033716, clip_fraction=0.345, entropy=2.495
+update=869, steps=889856, mean_return=4220.19, actor_loss=-0.006, critic_loss=42.213
+approx_kl=0.017992, clip_fraction=0.251, entropy=2.478
+update=870, steps=890880, mean_return=4379.75, actor_loss=-0.000, critic_loss=46.568
+approx_kl=0.034092, clip_fraction=0.349, entropy=2.461
+update=871, steps=891904, mean_return=4078.79, actor_loss=-0.011, critic_loss=63.806
+approx_kl=0.027373, clip_fraction=0.325, entropy=2.446
+update=872, steps=892928, mean_return=4450.77, actor_loss=-0.002, critic_loss=43.975
+approx_kl=0.020530, clip_fraction=0.301, entropy=2.437
+update=873, steps=893952, mean_return=4517.78, actor_loss=-0.003, critic_loss=57.121
+approx_kl=0.019240, clip_fraction=0.265, entropy=2.437
+update=874, steps=894976, mean_return=4391.34, actor_loss=-0.010, critic_loss=100.872
+approx_kl=0.019512, clip_fraction=0.229, entropy=2.442
+update=875, steps=896000, mean_return=3806.38, actor_loss=-0.015, critic_loss=276.618
+approx_kl=0.032632, clip_fraction=0.299, entropy=2.438
+update=876, steps=897024, mean_return=1739.77, actor_loss=-0.015, critic_loss=547.497
+approx_kl=0.039039, clip_fraction=0.405, entropy=2.442
+update=877, steps=898048, mean_return=4155.33, actor_loss=-0.009, critic_loss=346.768
+approx_kl=0.027200, clip_fraction=0.326, entropy=2.424
+update=878, steps=899072, mean_return=4262.31, actor_loss=-0.008, critic_loss=61.962
+approx_kl=0.054197, clip_fraction=0.366, entropy=2.418
+update=879, steps=900096, mean_return=1459.49, actor_loss=-0.012, critic_loss=484.278
+approx_kl=0.027405, clip_fraction=0.358, entropy=2.421
+update=880, steps=901120, mean_return=4204.00, actor_loss=-0.001, critic_loss=70.071
+approx_kl=0.039673, clip_fraction=0.413, entropy=2.422
+update=881, steps=902144, mean_return=3931.14, actor_loss=-0.006, critic_loss=167.263
+approx_kl=0.025208, clip_fraction=0.292, entropy=2.423
+update=882, steps=903168, mean_return=4187.93, actor_loss=-0.014, critic_loss=45.117
+approx_kl=0.028155, clip_fraction=0.355, entropy=2.416
+update=883, steps=904192, mean_return=4080.28, actor_loss=-0.000, critic_loss=46.865
+approx_kl=0.021554, clip_fraction=0.292, entropy=2.415
+update=884, steps=905216, mean_return=4294.53, actor_loss=-0.006, critic_loss=48.461
+approx_kl=0.034021, clip_fraction=0.345, entropy=2.420
+update=885, steps=906240, mean_return=4022.02, actor_loss=0.005, critic_loss=62.235
+approx_kl=0.017551, clip_fraction=0.243, entropy=2.418
+update=886, steps=907264, mean_return=4081.30, actor_loss=-0.006, critic_loss=54.913
+approx_kl=0.020666, clip_fraction=0.232, entropy=2.418
+update=887, steps=908288, mean_return=4410.65, actor_loss=-0.007, critic_loss=47.411
+approx_kl=0.021430, clip_fraction=0.303, entropy=2.418
+update=888, steps=909312, mean_return=4312.66, actor_loss=-0.005, critic_loss=56.608
+approx_kl=0.019634, clip_fraction=0.265, entropy=2.415
+update=889, steps=910336, mean_return=4135.66, actor_loss=-0.004, critic_loss=56.168
+approx_kl=0.046855, clip_fraction=0.421, entropy=2.389
+update=890, steps=911360, mean_return=4353.74, actor_loss=-0.003, critic_loss=40.973
+approx_kl=0.029064, clip_fraction=0.356, entropy=2.377
+update=891, steps=912384, mean_return=4338.65, actor_loss=-0.009, critic_loss=208.209
+approx_kl=0.029487, clip_fraction=0.383, entropy=2.371
+update=892, steps=913408, mean_return=4154.04, actor_loss=-0.009, critic_loss=104.616
+approx_kl=0.019017, clip_fraction=0.254, entropy=2.376
+update=893, steps=914432, mean_return=4628.67, actor_loss=-0.001, critic_loss=65.739
+approx_kl=0.029374, clip_fraction=0.342, entropy=2.389
+update=894, steps=915456, mean_return=4301.50, actor_loss=0.000, critic_loss=76.967
+approx_kl=0.031621, clip_fraction=0.356, entropy=2.392
+update=895, steps=916480, mean_return=2838.64, actor_loss=-0.006, critic_loss=655.849
+approx_kl=0.026665, clip_fraction=0.347, entropy=2.380
+update=896, steps=917504, mean_return=3979.46, actor_loss=0.001, critic_loss=66.382
+approx_kl=0.045076, clip_fraction=0.431, entropy=2.357
+update=897, steps=918528, mean_return=4609.32, actor_loss=-0.007, critic_loss=72.996
+approx_kl=0.024650, clip_fraction=0.338, entropy=2.355
+update=898, steps=919552, mean_return=4351.49, actor_loss=-0.010, critic_loss=62.595
+approx_kl=0.032444, clip_fraction=0.382, entropy=2.353
+update=899, steps=920576, mean_return=4406.80, actor_loss=-0.009, critic_loss=233.036
+approx_kl=0.039900, clip_fraction=0.387, entropy=2.366
+update=900, steps=921600, mean_return=3939.15, actor_loss=-0.014, critic_loss=88.732
+��������: 4718.9 �� 92.1
+approx_kl=0.018290, clip_fraction=0.215, entropy=2.371
+update=901, steps=922624, mean_return=4269.10, actor_loss=-0.009, critic_loss=118.828
+approx_kl=0.022711, clip_fraction=0.312, entropy=2.348
+update=902, steps=923648, mean_return=4265.92, actor_loss=-0.007, critic_loss=136.749
+approx_kl=0.019407, clip_fraction=0.274, entropy=2.339
+update=903, steps=924672, mean_return=4141.27, actor_loss=-0.011, critic_loss=66.360
+approx_kl=0.031098, clip_fraction=0.369, entropy=2.337
+update=904, steps=925696, mean_return=4356.26, actor_loss=-0.005, critic_loss=63.785
+approx_kl=0.029361, clip_fraction=0.348, entropy=2.342
+update=905, steps=926720, mean_return=4293.20, actor_loss=-0.008, critic_loss=99.673
+approx_kl=0.103785, clip_fraction=0.440, entropy=2.328
+update=906, steps=927744, mean_return=4613.49, actor_loss=-0.004, critic_loss=194.174
+approx_kl=0.029865, clip_fraction=0.374, entropy=2.330
+update=907, steps=928768, mean_return=4391.87, actor_loss=-0.002, critic_loss=54.848
+approx_kl=0.021237, clip_fraction=0.271, entropy=2.295
+update=908, steps=929792, mean_return=4281.30, actor_loss=-0.004, critic_loss=51.198
+approx_kl=0.024415, clip_fraction=0.335, entropy=2.287
+update=909, steps=930816, mean_return=4398.78, actor_loss=-0.004, critic_loss=49.898
+approx_kl=0.036274, clip_fraction=0.368, entropy=2.274
+update=910, steps=931840, mean_return=4556.05, actor_loss=-0.011, critic_loss=117.966
+approx_kl=0.030447, clip_fraction=0.348, entropy=2.263
+update=911, steps=932864, mean_return=4126.57, actor_loss=-0.011, critic_loss=272.519
+approx_kl=0.022318, clip_fraction=0.296, entropy=2.247
+update=912, steps=933888, mean_return=3939.41, actor_loss=0.001, critic_loss=68.115
+approx_kl=0.020530, clip_fraction=0.283, entropy=2.249
+update=913, steps=934912, mean_return=4361.05, actor_loss=-0.014, critic_loss=89.219
+approx_kl=0.028346, clip_fraction=0.332, entropy=2.256
+update=914, steps=935936, mean_return=4466.13, actor_loss=-0.011, critic_loss=51.654
+approx_kl=0.031696, clip_fraction=0.378, entropy=2.252
+update=915, steps=936960, mean_return=4473.24, actor_loss=-0.007, critic_loss=53.276
+approx_kl=0.028583, clip_fraction=0.367, entropy=2.263
+update=916, steps=937984, mean_return=4306.73, actor_loss=-0.010, critic_loss=42.870
+approx_kl=0.032982, clip_fraction=0.318, entropy=2.252
+update=917, steps=939008, mean_return=4440.49, actor_loss=-0.010, critic_loss=52.744
+approx_kl=0.022570, clip_fraction=0.290, entropy=2.256
+update=918, steps=940032, mean_return=4103.29, actor_loss=-0.005, critic_loss=80.465
+approx_kl=0.039300, clip_fraction=0.354, entropy=2.252
+update=919, steps=941056, mean_return=4662.66, actor_loss=-0.009, critic_loss=36.149
+approx_kl=0.019618, clip_fraction=0.262, entropy=2.242
+update=920, steps=942080, mean_return=4341.50, actor_loss=-0.004, critic_loss=89.590
+approx_kl=0.056211, clip_fraction=0.432, entropy=2.220
+update=921, steps=943104, mean_return=4442.66, actor_loss=-0.005, critic_loss=40.724
+approx_kl=0.021963, clip_fraction=0.293, entropy=2.219
+update=922, steps=944128, mean_return=3993.58, actor_loss=-0.005, critic_loss=119.512
+approx_kl=0.076389, clip_fraction=0.383, entropy=2.215
+update=923, steps=945152, mean_return=2261.19, actor_loss=-0.008, critic_loss=506.094
+approx_kl=0.023959, clip_fraction=0.316, entropy=2.205
+update=924, steps=946176, mean_return=4509.12, actor_loss=-0.008, critic_loss=84.087
+approx_kl=0.021426, clip_fraction=0.259, entropy=2.199
+update=925, steps=947200, mean_return=4410.45, actor_loss=-0.008, critic_loss=35.418
+approx_kl=0.027800, clip_fraction=0.319, entropy=2.188
+update=926, steps=948224, mean_return=4379.65, actor_loss=-0.002, critic_loss=55.215
+approx_kl=0.026852, clip_fraction=0.323, entropy=2.177
+update=927, steps=949248, mean_return=4037.95, actor_loss=-0.011, critic_loss=486.207
+approx_kl=0.048164, clip_fraction=0.406, entropy=2.178
+update=928, steps=950272, mean_return=1019.90, actor_loss=-0.003, critic_loss=43.493
+approx_kl=0.028995, clip_fraction=0.340, entropy=2.163
+update=929, steps=951296, mean_return=4342.14, actor_loss=-0.015, critic_loss=95.159
+approx_kl=0.020688, clip_fraction=0.277, entropy=2.164
+update=930, steps=952320, mean_return=4546.38, actor_loss=0.010, critic_loss=51.273
+approx_kl=0.037491, clip_fraction=0.386, entropy=2.150
+update=931, steps=953344, mean_return=4343.41, actor_loss=-0.011, critic_loss=101.498
+approx_kl=0.028197, clip_fraction=0.354, entropy=2.138
+update=932, steps=954368, mean_return=4342.98, actor_loss=-0.015, critic_loss=75.606
+approx_kl=0.033016, clip_fraction=0.391, entropy=2.139
+update=933, steps=955392, mean_return=4451.48, actor_loss=0.003, critic_loss=67.414
+approx_kl=0.034165, clip_fraction=0.390, entropy=2.145
+update=934, steps=956416, mean_return=4210.85, actor_loss=-0.010, critic_loss=215.617
+approx_kl=0.030338, clip_fraction=0.334, entropy=2.139
+update=935, steps=957440, mean_return=4602.65, actor_loss=-0.004, critic_loss=61.903
+approx_kl=0.028896, clip_fraction=0.344, entropy=2.137
+update=936, steps=958464, mean_return=4250.11, actor_loss=-0.002, critic_loss=60.284
+approx_kl=0.036055, clip_fraction=0.393, entropy=2.136
+update=937, steps=959488, mean_return=4520.36, actor_loss=-0.002, critic_loss=47.276
+approx_kl=0.017659, clip_fraction=0.252, entropy=2.119
+update=938, steps=960512, mean_return=4514.34, actor_loss=-0.002, critic_loss=63.072
+approx_kl=0.019462, clip_fraction=0.270, entropy=2.117
+update=939, steps=961536, mean_return=4342.68, actor_loss=-0.007, critic_loss=60.357
+approx_kl=0.023104, clip_fraction=0.293, entropy=2.103
+update=940, steps=962560, mean_return=4437.95, actor_loss=-0.001, critic_loss=54.536
+approx_kl=0.022243, clip_fraction=0.273, entropy=2.089
+update=941, steps=963584, mean_return=4497.42, actor_loss=-0.002, critic_loss=59.059
+approx_kl=0.022078, clip_fraction=0.290, entropy=2.100
+update=942, steps=964608, mean_return=4205.37, actor_loss=-0.011, critic_loss=78.276
+approx_kl=0.020657, clip_fraction=0.254, entropy=2.088
+update=943, steps=965632, mean_return=4042.63, actor_loss=-0.018, critic_loss=209.235
+approx_kl=0.026418, clip_fraction=0.324, entropy=2.070
+update=944, steps=966656, mean_return=4494.57, actor_loss=-0.015, critic_loss=119.060
+approx_kl=0.027816, clip_fraction=0.317, entropy=2.058
+update=945, steps=967680, mean_return=4432.63, actor_loss=-0.004, critic_loss=117.169
+approx_kl=0.022885, clip_fraction=0.306, entropy=2.051
+update=946, steps=968704, mean_return=4296.10, actor_loss=-0.008, critic_loss=47.268
+approx_kl=0.049566, clip_fraction=0.421, entropy=2.043
+update=947, steps=969728, mean_return=4446.85, actor_loss=-0.010, critic_loss=72.697
+approx_kl=0.024822, clip_fraction=0.344, entropy=2.039
+update=948, steps=970752, mean_return=4228.18, actor_loss=-0.006, critic_loss=99.091
+approx_kl=0.021793, clip_fraction=0.294, entropy=2.035
+update=949, steps=971776, mean_return=4380.89, actor_loss=-0.010, critic_loss=62.432
+approx_kl=0.019843, clip_fraction=0.285, entropy=2.028
+update=950, steps=972800, mean_return=4324.52, actor_loss=-0.010, critic_loss=96.335
+��������: 4723.1 �� 124.8
+approx_kl=0.027305, clip_fraction=0.328, entropy=2.019
+update=951, steps=973824, mean_return=4402.21, actor_loss=0.001, critic_loss=36.009
+approx_kl=0.032996, clip_fraction=0.332, entropy=2.021
+update=952, steps=974848, mean_return=4559.58, actor_loss=-0.022, critic_loss=370.033
+approx_kl=0.027474, clip_fraction=0.308, entropy=2.022
+update=953, steps=975872, mean_return=2834.41, actor_loss=-0.000, critic_loss=44.231
+approx_kl=0.021896, clip_fraction=0.246, entropy=2.025
+update=954, steps=976896, mean_return=4426.46, actor_loss=-0.007, critic_loss=116.234
+approx_kl=0.024697, clip_fraction=0.311, entropy=2.028
+update=955, steps=977920, mean_return=4369.05, actor_loss=-0.013, critic_loss=175.233
+approx_kl=0.023674, clip_fraction=0.287, entropy=2.031
+update=956, steps=978944, mean_return=4319.41, actor_loss=-0.007, critic_loss=77.582
+approx_kl=0.031472, clip_fraction=0.409, entropy=2.025
+update=957, steps=979968, mean_return=4384.71, actor_loss=-0.004, critic_loss=117.738
+approx_kl=0.020033, clip_fraction=0.296, entropy=2.020
+update=958, steps=980992, mean_return=4508.08, actor_loss=-0.003, critic_loss=63.309
+approx_kl=0.032410, clip_fraction=0.379, entropy=2.011
+update=959, steps=982016, mean_return=4477.77, actor_loss=-0.000, critic_loss=75.989
+approx_kl=0.034013, clip_fraction=0.408, entropy=2.007
+update=960, steps=983040, mean_return=4389.67, actor_loss=-0.007, critic_loss=111.954
+approx_kl=0.034879, clip_fraction=0.366, entropy=2.011
+update=961, steps=984064, mean_return=4195.15, actor_loss=0.000, critic_loss=130.678
+approx_kl=0.032866, clip_fraction=0.364, entropy=1.997
+update=962, steps=985088, mean_return=4425.03, actor_loss=0.002, critic_loss=47.438
+approx_kl=0.021488, clip_fraction=0.253, entropy=2.001
+update=963, steps=986112, mean_return=4325.39, actor_loss=0.009, critic_loss=73.664
+approx_kl=0.024718, clip_fraction=0.296, entropy=1.987
+update=964, steps=987136, mean_return=4387.58, actor_loss=0.001, critic_loss=38.846
+approx_kl=0.022535, clip_fraction=0.305, entropy=1.990
+update=965, steps=988160, mean_return=4569.05, actor_loss=-0.009, critic_loss=52.363
+approx_kl=0.032964, clip_fraction=0.342, entropy=1.988
+update=966, steps=989184, mean_return=4165.99, actor_loss=-0.009, critic_loss=820.818
+approx_kl=0.023716, clip_fraction=0.305, entropy=1.981
+update=967, steps=990208, mean_return=4555.85, actor_loss=-0.012, critic_loss=52.690
+approx_kl=0.032003, clip_fraction=0.385, entropy=1.963
+update=968, steps=991232, mean_return=4572.86, actor_loss=-0.003, critic_loss=35.831
+approx_kl=0.045800, clip_fraction=0.384, entropy=1.961
+update=969, steps=992256, mean_return=3384.25, actor_loss=-0.008, critic_loss=517.189
+approx_kl=0.022593, clip_fraction=0.320, entropy=1.982
+update=970, steps=993280, mean_return=4591.73, actor_loss=-0.008, critic_loss=214.999
+approx_kl=0.022630, clip_fraction=0.289, entropy=1.990
+update=971, steps=994304, mean_return=4295.65, actor_loss=0.006, critic_loss=65.463
+approx_kl=0.021875, clip_fraction=0.296, entropy=1.980
+update=972, steps=995328, mean_return=4406.26, actor_loss=-0.004, critic_loss=68.030
+approx_kl=0.023285, clip_fraction=0.303, entropy=1.975
+update=973, steps=996352, mean_return=4772.27, actor_loss=-0.002, critic_loss=50.114
+approx_kl=0.020493, clip_fraction=0.274, entropy=1.949
+update=974, steps=997376, mean_return=4580.09, actor_loss=-0.003, critic_loss=59.966
+approx_kl=0.026860, clip_fraction=0.317, entropy=1.953
+update=975, steps=998400, mean_return=4516.72, actor_loss=-0.012, critic_loss=109.178
+approx_kl=0.022277, clip_fraction=0.322, entropy=1.946
+update=976, steps=999424, mean_return=4386.58, actor_loss=-0.008, critic_loss=44.682
+approx_kl=0.029953, clip_fraction=0.314, entropy=1.933
+update=977, steps=1000448, mean_return=4481.48, actor_loss=-0.007, critic_loss=74.603
+approx_kl=0.034429, clip_fraction=0.351, entropy=1.923
+update=978, steps=1001472, mean_return=4499.67, actor_loss=-0.000, critic_loss=41.909
+approx_kl=0.020971, clip_fraction=0.288, entropy=1.915
+update=979, steps=1002496, mean_return=4305.32, actor_loss=-0.005, critic_loss=94.864
+approx_kl=0.014667, clip_fraction=0.205, entropy=1.927
+update=980, steps=1003520, mean_return=4326.49, actor_loss=-0.001, critic_loss=82.979
+approx_kl=0.047767, clip_fraction=0.441, entropy=1.917
+update=981, steps=1004544, mean_return=4537.10, actor_loss=0.001, critic_loss=54.329
+approx_kl=0.017643, clip_fraction=0.244, entropy=1.915
+update=982, steps=1005568, mean_return=4493.29, actor_loss=-0.002, critic_loss=41.248
+approx_kl=0.016916, clip_fraction=0.222, entropy=1.925
+update=983, steps=1006592, mean_return=4261.34, actor_loss=0.007, critic_loss=110.999
+approx_kl=0.045237, clip_fraction=0.427, entropy=1.927
+update=984, steps=1007616, mean_return=4371.54, actor_loss=-0.009, critic_loss=100.935
+approx_kl=0.025616, clip_fraction=0.304, entropy=1.931
+update=985, steps=1008640, mean_return=4564.04, actor_loss=-0.004, critic_loss=50.182
+approx_kl=0.029345, clip_fraction=0.333, entropy=1.937
+update=986, steps=1009664, mean_return=4488.23, actor_loss=-0.003, critic_loss=100.505
+approx_kl=0.021435, clip_fraction=0.273, entropy=1.934
+update=987, steps=1010688, mean_return=4357.58, actor_loss=-0.004, critic_loss=63.786
+approx_kl=0.019243, clip_fraction=0.264, entropy=1.930
+update=988, steps=1011712, mean_return=4395.62, actor_loss=-0.007, critic_loss=44.128
+approx_kl=0.025082, clip_fraction=0.249, entropy=1.934
+update=989, steps=1012736, mean_return=4479.41, actor_loss=-0.016, critic_loss=291.862
+approx_kl=0.032759, clip_fraction=0.332, entropy=1.927
+update=990, steps=1013760, mean_return=1391.88, actor_loss=-0.009, critic_loss=94.235
+approx_kl=0.030431, clip_fraction=0.334, entropy=1.916
+update=991, steps=1014784, mean_return=4422.26, actor_loss=-0.005, critic_loss=67.645
+approx_kl=0.023925, clip_fraction=0.304, entropy=1.893
+update=992, steps=1015808, mean_return=4524.96, actor_loss=0.004, critic_loss=63.475
+approx_kl=0.016142, clip_fraction=0.212, entropy=1.878
+update=993, steps=1016832, mean_return=4555.81, actor_loss=-0.006, critic_loss=73.822
+approx_kl=0.043477, clip_fraction=0.403, entropy=1.865
+update=994, steps=1017856, mean_return=4381.82, actor_loss=-0.007, critic_loss=879.875
+approx_kl=0.035596, clip_fraction=0.387, entropy=1.878
+update=995, steps=1018880, mean_return=3382.64, actor_loss=-0.015, critic_loss=59.992
+approx_kl=0.047290, clip_fraction=0.435, entropy=1.878
+update=996, steps=1019904, mean_return=4363.11, actor_loss=-0.004, critic_loss=58.224
+approx_kl=0.024858, clip_fraction=0.313, entropy=1.880
+update=997, steps=1020928, mean_return=4324.34, actor_loss=-0.006, critic_loss=40.795
+approx_kl=0.020006, clip_fraction=0.274, entropy=1.864
+update=998, steps=1021952, mean_return=4519.48, actor_loss=-0.004, critic_loss=46.313
+approx_kl=0.018691, clip_fraction=0.262, entropy=1.854
+update=999, steps=1022976, mean_return=4557.98, actor_loss=0.002, critic_loss=49.775
+approx_kl=0.025767, clip_fraction=0.339, entropy=1.857
+update=1000, steps=1024000, mean_return=4265.63, actor_loss=-0.014, critic_loss=185.398
+��������: 4651.7 �� 91.5

@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "steps": 1024000,
+  "best_eval_mean": 1458.1441743989292,
+  "best_update": 1000,
+  "normalizer_count": 1024000,
+  "metrics_saved": true,
+  "checkpoint_note": "zip includes normalization. Resume restarts environment/RNG, not an exact uninterrupted trajectory."
+}

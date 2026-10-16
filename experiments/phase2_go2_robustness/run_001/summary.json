@@ -1,0 +1,123 @@
+{
+  "runs": [
+    {
+      "seed": 0,
+      "scenario": "heavy_base",
+      "return_mean": 39.707847595214844,
+      "xy_error": 0.06490282714366913,
+      "speed": 0.4837319254875183,
+      "height": 0.21486914157867432,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 0,
+      "scenario": "low_friction",
+      "return_mean": 41.33055877685547,
+      "xy_error": 0.05329141020774841,
+      "speed": 0.5231510400772095,
+      "height": 0.27438780665397644,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 0,
+      "scenario": "nominal",
+      "return_mean": 41.34223175048828,
+      "xy_error": 0.05284832417964935,
+      "speed": 0.5236862301826477,
+      "height": 0.27468162775039673,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 1,
+      "scenario": "heavy_base",
+      "return_mean": 38.11795425415039,
+      "xy_error": 0.07846063375473022,
+      "speed": 0.4536454379558563,
+      "height": 0.18450266122817993,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 1,
+      "scenario": "low_friction",
+      "return_mean": 41.116886138916016,
+      "xy_error": 0.054343827068805695,
+      "speed": 0.5176597833633423,
+      "height": 0.22125455737113953,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 1,
+      "scenario": "nominal",
+      "return_mean": 41.11854553222656,
+      "xy_error": 0.05425531417131424,
+      "speed": 0.517575204372406,
+      "height": 0.22126153111457825,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 42,
+      "scenario": "heavy_base",
+      "return_mean": 36.9572639465332,
+      "xy_error": 0.09530942142009735,
+      "speed": 0.4286608099937439,
+      "height": 0.1879183053970337,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 42,
+      "scenario": "low_friction",
+      "return_mean": 41.23670959472656,
+      "xy_error": 0.048995088785886765,
+      "speed": 0.5092867612838745,
+      "height": 0.23135334253311157,
+      "terminated": 0,
+      "completed": 16
+    },
+    {
+      "seed": 42,
+      "scenario": "nominal",
+      "return_mean": 41.23993682861328,
+      "xy_error": 0.04881560429930687,
+      "speed": 0.5097460746765137,
+      "height": 0.23140685260295868,
+      "terminated": 0,
+      "completed": 16
+    }
+  ],
+  "condition_means": {
+    "nominal": {
+      "return_mean": 41.23357137044271,
+      "xy_error": 0.051973080883423485,
+      "speed": 0.5170025030771891,
+      "height": 0.24245000382264456
+    },
+    "low_friction": {
+      "return_mean": 41.22805150349935,
+      "xy_error": 0.05221010868748029,
+      "speed": 0.5166991949081421,
+      "height": 0.24233190218607584
+    },
+    "heavy_base": {
+      "return_mean": 38.26102193196615,
+      "xy_error": 0.0795576274394989,
+      "speed": 0.45534605781237286,
+      "height": 0.195763369401296
+    }
+  },
+  "completed_episodes": 144,
+  "total_episodes": 144,
+  "checkpoint_hashes_verified": true,
+  "limitations": [
+    "Only one evaluation seed and three training seeds.",
+    "Friction scenario changed robot material settings only; effective solver contact friction not read back. Similar outcomes do not prove low-friction robustness.",
+    "Heavy-base scales base mass only and is not an explicit payload model."
+  ],
+  "friction_validation": "Invalid as a low-contact-friction test: runtime audit found contact sliding friction remained 1.0; see ../run_002."
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "directory": "phase0_sb3_ppo/run_001",
+    "steps": "—",
+    "note": "初始环境基线，保留模型及曲线"
+  },
+  {
+    "directory": "phase1_baseline/run_001",
+    "steps": 188461,
+    "note": "训练期间最佳评估均值 500.00"
+  },
+  {
+    "directory": "phase1_gae/run_001",
+    "steps": 25600,
+    "note": "训练期间最佳评估均值 500.00"
+  },
+  {
+    "directory": "phase1_gae/run_002",
+    "steps": 25600,
+    "note": "训练期间最佳评估均值 500.00"
+  },
+  {
+    "directory": "phase1_nstep/run_001",
+    "steps": 25600,
+    "note": "训练期间最佳评估均值 493.25"
+  },
+  {
+    "directory": "phase1_ppo/run_001",
+    "steps": 25600,
+    "note": "训练期间最佳评估均值 500.00"
+  },
+  {
+    "directory": "phase1_ppo/run_002",
+    "steps": 25600,
+    "note": "训练期间最佳评估均值 500.00"
+  },
+  {
+    "directory": "phase1_ppo_continuous/run_001",
+    "steps": 1024000,
+    "note": "训练期间最佳评估均值 5282.71"
+  },
+  {
+    "directory": "phase1_ppo_continuous/run_002",
+    "steps": 1024000,
+    "note": "训练期间最佳评估均值 4723.13"
+  },
+  {
+    "directory": "phase1_reinforce/run_001",
+    "steps": 182228,
+    "note": "训练期间最佳评估均值 500.00；原始日志记录，无模型"
+  },
+  {
+    "directory": "phase1_reinforce/run_002",
+    "steps": 182228,
+    "note": "训练期间最佳评估均值 500.00"
+  },
+  {
+    "directory": "phase1_sb3_continuous/run_001",
+    "steps": 1024000,
+    "note": "训练期间最佳评估均值 2305.18；从中断模型续训"
+  },
+  {
+    "directory": "phase1_sb3_continuous/run_002",
+    "steps": 1024000,
+    "note": "训练期间最佳评估均值 1458.14"
+  },
+  {
+    "directory": "phase1_sb3_official/run_001",
+    "steps": 1024000,
+    "note": "训练期间最佳评估均值 1607.19"
+  },
+  {
+    "directory": "phase1_sb3_official/run_002",
+    "steps": 1024000,
+    "note": "训练期间最佳评估均值 1465.89"
+  },
+  {
+    "directory": "phase2_go2_baseline/run_001",
+    "steps": 29491200,
+    "note": "完整官方基线；0.5 m/s 指令实测均速 0.511 m/s，20 秒视频已保存"
+  },
+  {
+    "directory": "phase2_go2_baseline/run_002",
+    "steps": 29491200,
+    "note": "官方基线 seed=0；随机指令回报 40.37；固定前进提前终止 0/16"
+  },
+  {
+    "directory": "phase2_go2_baseline/run_003",
+    "steps": 29491200,
+    "note": "官方基线 seed=1；随机指令回报 40.23；固定前进提前终止 1/16"
+  }
+]

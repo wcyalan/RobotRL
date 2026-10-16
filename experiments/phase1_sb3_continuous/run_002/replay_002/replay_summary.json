@@ -1,0 +1,29 @@
+{
+  "checkpoint": "C:\\Users\\wcyal\\Desktop\\RobotRL\\experiments\\phase1_sb3_continuous\\run_002\\best.zip",
+  "update": 1000,
+  "action": "clipped Gaussian mean",
+  "normalizer_count": 1024000,
+  "return_mean": 1462.4593806251833,
+  "return_std": 0.0,
+  "episodes": [
+    {
+      "seed": 20000,
+      "return": 1462.4593806251833,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 94.26051867298754,
+      "mean_x_velocity": 1.885210373459751,
+      "action_clipped_fraction": 0.6168333333333333,
+      "torso_pitch_range_radians": [
+        -0.12528961775221514,
+        3.4540911363834175
+      ],
+      "torso_height_range": [
+        0.11077180692835809,
+        0.806524139733581
+      ],
+      "torso_inverted_fraction": 0.983
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "checkpoint": "C:\\Users\\wcyal\\Desktop\\RobotRL\\experiments\\phase1_ppo_continuous\\run_001\\best.pt",
+  "update": 950,
+  "action": "clipped Gaussian mean",
+  "normalizer_count": 972800,
+  "return_mean": 3045.962413474791,
+  "return_std": 2134.756181237248,
+  "episodes": [
+    {
+      "seed": 20000,
+      "return": 5180.718594712039,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 283.25147532954884,
+      "mean_x_velocity": 5.665029506590977,
+      "action_clipped_fraction": 0.689,
+      "torso_pitch_range_radians": [
+        -0.1656959207973086,
+        0.31358866709024086
+      ],
+      "torso_height_range": [
+        0.43545102472979297,
+        0.7661333141604348
+      ],
+      "torso_inverted_fraction": 0.0
+    },
+    {
+      "seed": 20001,
+      "return": 911.2062322375428,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 68.35488110011946,
+      "mean_x_velocity": 1.3670976220023892,
+      "action_clipped_fraction": 0.6225,
+      "torso_pitch_range_radians": [
+        -0.13158542694498856,
+        3.552747627353676
+      ],
+      "torso_height_range": [
+        0.11196151729516501,
+        1.0600668938407223
+      ],
+      "torso_inverted_fraction": 0.972
+    }
+  ]
+}

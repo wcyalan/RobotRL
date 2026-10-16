@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-16",
+  "task_id": "9b024abb-5bce-41ca-a596-74acea5e1381",
+  "status": "completed; 9 evaluations, 144/144 episodes timed out normally; friction-effect validation remains pending",
+  "remote_directory": "/labdata2/congyuwang/RobotRL_kitless/phase2_go2_robustness/run_001",
+  "training_seeds": [
+    42,
+    0,
+    1
+  ],
+  "checkpoint": "model_299.pt",
+  "evaluation_seed": 20000,
+  "episodes_per_condition_per_model": 16,
+  "total_episodes": 144,
+  "forward_command_m_s": 0.5,
+  "scenarios": {
+    "nominal": {
+      "base_mass_scale": 1.0,
+      "robot_static_friction": 0.8,
+      "robot_dynamic_friction": 0.6
+    },
+    "low_friction": {
+      "base_mass_scale": 1.0,
+      "robot_static_friction": 0.3,
+      "robot_dynamic_friction": 0.3
+    },
+    "heavy_base": {
+      "base_mass_scale": 1.5,
+      "robot_static_friction": 0.8,
+      "robot_dynamic_friction": 0.6
+    }
+  },
+  "notes": [
+    "Evaluation only; no policy/reward tuning after the recorded failure.",
+    "Nominal control fixes base mass instead of using original mass randomization; compare within this matrix.",
+    "Mass scaling affects base body only, not total robot mass; it is a mass sensitivity test, not a physically modeled payload.",
+    "Other baseline initialization/noise/COM/push settings remain unchanged.",
+    "These are hypothetical simulation stress conditions, not hardware-calibrated ranges."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "task_id": "01cf8772-9062-4b63-a87b-7220c1b0f7a1",
+  "status": "passed",
+  "num_envs": 64,
+  "iterations": 3,
+  "agent_config_identical": true,
+  "environment_differences": [
+    "mass_distribution_params",
+    "static_friction_range",
+    "dynamic_friction_range",
+    "log_dir"
+  ],
+  "fixed": {
+    "steps": 72,
+    "base_mass_min_max_kg": [
+      6.921000003814697,
+      6.921000003814697
+    ],
+    "active_ground_friction_min_max": [
+      1.0,
+      1.0
+    ]
+  },
+  "randomized": {
+    "steps": 72,
+    "base_mass_min_max_kg": [
+      5.590643882751465,
+      8.222376823425293
+    ],
+    "active_ground_friction_min_max": [
+      0.5250766277313232,
+      1.4926705360412598
+    ]
+  }
+}

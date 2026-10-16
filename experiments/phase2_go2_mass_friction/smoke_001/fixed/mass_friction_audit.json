@@ -1,0 +1,2612 @@
+{
+  "group": "fixed",
+  "steps": 72,
+  "base_mass_kg": [
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697,
+    6.921000003814697
+  ],
+  "contacts_step_51": {
+    "solver_type": "<class 'newton._src.solvers.mujoco.solver_mujoco.SolverMuJoCo'>",
+    "arrays": {
+      "newton.shape_material_mu": {
+        "shape": [
+          1729
+        ],
+        "unique": [
+          0.5,
+          1.0
+        ]
+      },
+      "newton.shape_body": {
+        "shape": [
+          1729
+        ],
+        "unique": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38
+        ]
+      },
+      "mjw_model.geom_friction": {
+        "shape": [
+          64,
+          28,
+          3
+        ],
+        "unique": [
+          9.999999747378752e-05,
+          0.004999999888241291,
+          0.5,
+          1.0
+        ]
+      },
+      "mjw_model.geom_priority": {
+        "shape": [
+          28
+        ],
+        "unique": [
+          0
+        ]
+      },
+      "mjw_model.geom_solmix": {
+        "shape": [
+          64,
+          28
+        ],
+        "unique": [
+          1.0
+        ]
+      },
+      "contact.friction": {
+        "shape": [
+          2240,
+          5
+        ],
+        "unique": [
+          0.0,
+          9.999999747378752e-05,
+          0.004999999888241291,
+          1.0
+        ],
+        "unique_rows": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0,
+            0.004999999888241291,
+            9.999999747378752e-05,
+            9.999999747378752e-05
+          ]
+        ]
+      },
+      "contact.geom": {
+        "shape": [
+          2240,
+          2
+        ],
+        "unique": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      "contact.dim": {
+        "shape": [
+          2240
+        ],
+        "unique": [
+          0,
+          3
+        ]
+      }
+    },
+    "active_contacts": {
+      "nacon": 292,
+      "constraint_eligible_count": 125,
+      "ground_count": 125,
+      "ground_sliding_friction": [
+        1.0
+      ],
+      "rows": [
+        {
+          "world": 8,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003593228757381439,
+          "include_margin": 0.0
+        },
+        {
+          "world": 8,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00038609839975833893,
+          "include_margin": 0.0
+        },
+        {
+          "world": 47,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00031612813472747803,
+          "include_margin": 0.0
+        },
+        {
+          "world": 47,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00021053850650787354,
+          "include_margin": 0.0
+        },
+        {
+          "world": 19,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005471594631671906,
+          "include_margin": 0.0
+        },
+        {
+          "world": 19,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000360880047082901,
+          "include_margin": 0.0
+        },
+        {
+          "world": 20,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005022455006837845,
+          "include_margin": 0.0
+        },
+        {
+          "world": 20,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000545550137758255,
+          "include_margin": 0.0
+        },
+        {
+          "world": 22,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00018703937530517578,
+          "include_margin": 0.0
+        },
+        {
+          "world": 22,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004971697926521301,
+          "include_margin": 0.0
+        },
+        {
+          "world": 22,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006789602339267731,
+          "include_margin": 0.0
+        },
+        {
+          "world": 22,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005264319479465485,
+          "include_margin": 0.0
+        },
+        {
+          "world": 63,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -2.4124979972839355e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 3,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002992302179336548,
+          "include_margin": 0.0
+        },
+        {
+          "world": 3,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003761034458875656,
+          "include_margin": 0.0
+        },
+        {
+          "world": 58,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004864279180765152,
+          "include_margin": 0.0
+        },
+        {
+          "world": 59,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005722902715206146,
+          "include_margin": 0.0
+        },
+        {
+          "world": 59,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006027910858392715,
+          "include_margin": 0.0
+        },
+        {
+          "world": 7,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -8.681416511535645e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 7,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00047775544226169586,
+          "include_margin": 0.0
+        },
+        {
+          "world": 51,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005243904888629913,
+          "include_margin": 0.0
+        },
+        {
+          "world": 52,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00017016753554344177,
+          "include_margin": 0.0
+        },
+        {
+          "world": 42,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006522536277770996,
+          "include_margin": 0.0
+        },
+        {
+          "world": 24,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -4.64320182800293e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 24,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00024099089205265045,
+          "include_margin": 0.0
+        },
+        {
+          "world": 27,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.001203250139951706,
+          "include_margin": 0.0
+        },
+        {
+          "world": 27,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007254704833030701,
+          "include_margin": 0.0
+        },
+        {
+          "world": 27,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004884023219347,
+          "include_margin": 0.0
+        },
+        {
+          "world": 23,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002306923270225525,
+          "include_margin": 0.0
+        },
+        {
+          "world": 25,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007551759481430054,
+          "include_margin": 0.0
+        },
+        {
+          "world": 44,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002564825117588043,
+          "include_margin": 0.0
+        },
+        {
+          "world": 38,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004932060837745667,
+          "include_margin": 0.0
+        },
+        {
+          "world": 38,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003840159624814987,
+          "include_margin": 0.0
+        },
+        {
+          "world": 31,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.002122260630130768,
+          "include_margin": 0.0
+        },
+        {
+          "world": 25,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005023069679737091,
+          "include_margin": 0.0
+        },
+        {
+          "world": 39,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0011490192264318466,
+          "include_margin": 0.0
+        },
+        {
+          "world": 31,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006556585431098938,
+          "include_margin": 0.0
+        },
+        {
+          "world": 25,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00048471614718437195,
+          "include_margin": 0.0
+        },
+        {
+          "world": 31,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -6.506964564323425e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 39,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00023743510246276855,
+          "include_margin": 0.0
+        },
+        {
+          "world": 52,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005338303744792938,
+          "include_margin": 0.0
+        },
+        {
+          "world": 31,
+          "geom_pair": [
+            0,
+            24
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_calf/collisions/mesh_0_25"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_calf"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00027805380523204803,
+          "include_margin": 0.0
+        },
+        {
+          "world": 26,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005144178867340088,
+          "include_margin": 0.0
+        },
+        {
+          "world": 53,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006015617400407791,
+          "include_margin": 0.0
+        },
+        {
+          "world": 39,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007296763360500336,
+          "include_margin": 0.0
+        },
+        {
+          "world": 26,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005454141646623611,
+          "include_margin": 0.0
+        },
+        {
+          "world": 40,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -9.149312973022461e-06,
+          "include_margin": 0.0
+        },
+        {
+          "world": 12,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006773602217435837,
+          "include_margin": 0.0
+        },
+        {
+          "world": 15,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002962779253721237,
+          "include_margin": 0.0
+        },
+        {
+          "world": 15,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00023861974477767944,
+          "include_margin": 0.0
+        },
+        {
+          "world": 32,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00022506527602672577,
+          "include_margin": 0.0
+        },
+        {
+          "world": 10,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005223080515861511,
+          "include_margin": 0.0
+        },
+        {
+          "world": 33,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0001136884093284607,
+          "include_margin": 0.0
+        },
+        {
+          "world": 43,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000725848600268364,
+          "include_margin": 0.0
+        },
+        {
+          "world": 41,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006498415023088455,
+          "include_margin": 0.0
+        },
+        {
+          "world": 43,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003023706376552582,
+          "include_margin": 0.0
+        },
+        {
+          "world": 37,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007045548409223557,
+          "include_margin": 0.0
+        },
+        {
+          "world": 10,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00047995150089263916,
+          "include_margin": 0.0
+        },
+        {
+          "world": 44,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -4.439055919647217e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 23,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00010391697287559509,
+          "include_margin": 0.0
+        },
+        {
+          "world": 60,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00046716630458831787,
+          "include_margin": 0.0
+        },
+        {
+          "world": 29,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005824286490678787,
+          "include_margin": 0.0
+        },
+        {
+          "world": 28,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0010608173906803131,
+          "include_margin": 0.0
+        },
+        {
+          "world": 29,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003938209265470505,
+          "include_margin": 0.0
+        },
+        {
+          "world": 28,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00027050822973251343,
+          "include_margin": 0.0
+        },
+        {
+          "world": 29,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002442002296447754,
+          "include_margin": 0.0
+        },
+        {
+          "world": 45,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006403215229511261,
+          "include_margin": 0.0
+        },
+        {
+          "world": 46,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0013931002467870712,
+          "include_margin": 0.0
+        },
+        {
+          "world": 46,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006128698587417603,
+          "include_margin": 0.0
+        },
+        {
+          "world": 6,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -1.5020370483398438e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 7,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00039221346378326416,
+          "include_margin": 0.0
+        },
+        {
+          "world": 9,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000849556177854538,
+          "include_margin": 0.0
+        },
+        {
+          "world": 9,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -8.793361485004425e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 9,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002589300274848938,
+          "include_margin": 0.0
+        },
+        {
+          "world": 9,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006669890135526657,
+          "include_margin": 0.0
+        },
+        {
+          "world": 4,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000692952424287796,
+          "include_margin": 0.0
+        },
+        {
+          "world": 4,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007640086114406586,
+          "include_margin": 0.0
+        },
+        {
+          "world": 50,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006628744304180145,
+          "include_margin": 0.0
+        },
+        {
+          "world": 50,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005074720829725266,
+          "include_margin": 0.0
+        },
+        {
+          "world": 30,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005798488855361938,
+          "include_margin": 0.0
+        },
+        {
+          "world": 40,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.001057598739862442,
+          "include_margin": 0.0
+        },
+        {
+          "world": 40,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004082676023244858,
+          "include_margin": 0.0
+        },
+        {
+          "world": 40,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006844848394393921,
+          "include_margin": 0.0
+        },
+        {
+          "world": 53,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -8.442997932434082e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 12,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0016789883375167847,
+          "include_margin": 0.0
+        },
+        {
+          "world": 21,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003578942269086838,
+          "include_margin": 0.0
+        },
+        {
+          "world": 21,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005887113511562347,
+          "include_margin": 0.0
+        },
+        {
+          "world": 62,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00021613016724586487,
+          "include_margin": 0.0
+        },
+        {
+          "world": 62,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000552179291844368,
+          "include_margin": 0.0
+        },
+        {
+          "world": 62,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007466766983270645,
+          "include_margin": 0.0
+        },
+        {
+          "world": 34,
+          "geom_pair": [
+            0,
+            24
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_calf/collisions/mesh_0_25"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_calf"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00037684012204408646,
+          "include_margin": 0.0
+        },
+        {
+          "world": 57,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00021291524171829224,
+          "include_margin": 0.0
+        },
+        {
+          "world": 57,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003827270120382309,
+          "include_margin": 0.0
+        },
+        {
+          "world": 56,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0003961343318223953,
+          "include_margin": 0.0
+        },
+        {
+          "world": 57,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00041089579463005066,
+          "include_margin": 0.0
+        },
+        {
+          "world": 57,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00029266998171806335,
+          "include_margin": 0.0
+        },
+        {
+          "world": 58,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007373318076133728,
+          "include_margin": 0.0
+        },
+        {
+          "world": 58,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0009386688470840454,
+          "include_margin": 0.0
+        },
+        {
+          "world": 55,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004912279546260834,
+          "include_margin": 0.0
+        },
+        {
+          "world": 55,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006221644580364227,
+          "include_margin": 0.0
+        },
+        {
+          "world": 54,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004421509802341461,
+          "include_margin": 0.0
+        },
+        {
+          "world": 17,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004437640309333801,
+          "include_margin": 0.0
+        },
+        {
+          "world": 54,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000188436359167099,
+          "include_margin": 0.0
+        },
+        {
+          "world": 17,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005464889109134674,
+          "include_margin": 0.0
+        },
+        {
+          "world": 54,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0002721920609474182,
+          "include_margin": 0.0
+        },
+        {
+          "world": 17,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0017712265253067017,
+          "include_margin": 0.0
+        },
+        {
+          "world": 54,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00044424086809158325,
+          "include_margin": 0.0
+        },
+        {
+          "world": 5,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004671905189752579,
+          "include_margin": 0.0
+        },
+        {
+          "world": 5,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004097726196050644,
+          "include_margin": 0.0
+        },
+        {
+          "world": 34,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -9.267404675483704e-05,
+          "include_margin": 0.0
+        },
+        {
+          "world": 13,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00011953897774219513,
+          "include_margin": 0.0
+        },
+        {
+          "world": 0,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005157552659511566,
+          "include_margin": 0.0
+        },
+        {
+          "world": 13,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0008914116770029068,
+          "include_margin": 0.0
+        },
+        {
+          "world": 14,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005914792418479919,
+          "include_margin": 0.0
+        },
+        {
+          "world": 14,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.000626005232334137,
+          "include_margin": 0.0
+        },
+        {
+          "world": 0,
+          "geom_pair": [
+            0,
+            27
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RR_foot/collisions/mesh_0_5"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00041484273970127106,
+          "include_margin": 0.0
+        },
+        {
+          "world": 14,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005567390471696854,
+          "include_margin": 0.0
+        },
+        {
+          "world": 1,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00012741610407829285,
+          "include_margin": 0.0
+        },
+        {
+          "world": 18,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0006040260195732117,
+          "include_margin": 0.0
+        },
+        {
+          "world": 1,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0009285043925046921,
+          "include_margin": 0.0
+        },
+        {
+          "world": 18,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0005643367767333984,
+          "include_margin": 0.0
+        },
+        {
+          "world": 18,
+          "geom_pair": [
+            0,
+            21
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/RL_foot/collisions/mesh_0_4"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_RL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0004531480371952057,
+          "include_margin": 0.0
+        },
+        {
+          "world": 61,
+          "geom_pair": [
+            0,
+            7
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FL_foot/collisions/mesh_0_1"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FL_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.0007758289575576782,
+          "include_margin": 0.0
+        },
+        {
+          "world": 61,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00023747608065605164,
+          "include_margin": 0.0
+        },
+        {
+          "world": 45,
+          "geom_pair": [
+            0,
+            13
+          ],
+          "geom_names": [
+            "/World/ground/terrain/GroundPlane/CollisionPlane_0",
+            "/World/envs/env_0/Robot/FR_foot/collisions/mesh_0_2"
+          ],
+          "body_names": [
+            "world",
+            "_World_envs_env_0_Robot_FR_foot"
+          ],
+          "ground_contact": true,
+          "sliding_friction": 1.0,
+          "distance": -0.00043100863695144653,
+          "include_margin": 0.0
+        }
+      ]
+    }
+  }
+}

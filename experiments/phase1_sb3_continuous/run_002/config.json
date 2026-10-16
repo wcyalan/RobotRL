@@ -1,0 +1,67 @@
+{
+  "algorithm": "SB3 PPO-Clip",
+  "env": "HalfCheetah-v5",
+  "seed": 1,
+  "obs_dim": 17,
+  "action_dim": 6,
+  "num_updates": 1000,
+  "rollout_steps": 1024,
+  "minibatch_size": 64,
+  "update_epochs": 4,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_coef": 0.2,
+  "learning_rate": 0.0003,
+  "n_envs": 1,
+  "ent_coef": 0.0,
+  "vf_coef": 0.5,
+  "max_grad_norm": 0.5,
+  "target_kl": null,
+  "clip_range_vf": null,
+  "use_sde": false,
+  "net_arch": {
+    "pi": [
+      64,
+      64
+    ],
+    "vf": [
+      64,
+      64
+    ]
+  },
+  "activation": "Tanh",
+  "eval_every": 50,
+  "eval_episodes": 5,
+  "eval_seed_start": 10000,
+  "observation_normalization": true,
+  "reward_normalization": false,
+  "observation_normalization_scope": "frozen rollout/update; accumulate raw input observations after optimization",
+  "evaluation_action": "clipped Gaussian mean",
+  "torch_threads": 1,
+  "differences_from_handwritten": {
+    "initialization": "SB3 orthogonal; actor output gain 0.01",
+    "optimizer": "one Adam, lr=3e-4, eps=1e-5; handwritten separate Adam, critic lr=1e-3, eps=1e-8",
+    "gradient_clipping": "global norm 0.5; handwritten none",
+    "value_loss_weight": "0.5; handwritten critic MSE weight 1",
+    "advantage_normalization": "each minibatch, sample std; handwritten once per rollout, population std",
+    "kl_diagnostics": "SB3 averages minibatch pre-update estimates; handwritten recomputes full batch after update"
+  },
+  "versions": {
+    "sb3": "2.9.0",
+    "gymnasium": "1.4.0",
+    "mujoco": "3.15.0",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.3"
+  },
+  "source_sha256": {
+    "sb3_continuous.py": "02879ead05c661a03f9cebc158c417d647f3664e1f98b7f9f984b3cfb7703ae6",
+    "ppo_continuous.py": "faac4e57e18ad2bd34480e2edff0d8ce1839a3b6568cdf6f0931e46ce80a0347",
+    "replay_continuous.py": "3cec52efbca4e28657e27636ffd5f89cb2c385047c82f871655681c63c9182a0",
+    "experiment_io.py": "766b865c3e7e428bdc0242ca37ffc818726aff60771dc806f4b251c062fb21ba",
+    "actor_critic.py": "3265ef9c56702eeaa52c3c65f5e06beccaf9b1419c0b53b058e8cf757b5ffce7",
+    "networks.py": "30ecf38a423a6bd84fb224bc2d20d759754d06ef6026225dc3c69d7dadef3d77",
+    "ppo.py": "92faa433de9cf4fd922691386406b517130d100fc50a32eca099d2a7c4f1f146",
+    "reinforce.py": "4b962c07de784c94467b3f727f7c98065090310fe4d0465cc0b38f56c26563cf",
+    "evaluate.py": "737a646a900c0ea366154c6feb70cadc5a008e6d3e29592b2b0fb8d83390124f"
+  }
+}

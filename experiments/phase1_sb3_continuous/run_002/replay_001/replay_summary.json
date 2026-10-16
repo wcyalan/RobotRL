@@ -1,0 +1,390 @@
+{
+  "checkpoint": "C:\\Users\\wcyal\\Desktop\\RobotRL\\experiments\\phase1_sb3_continuous\\run_002\\best.zip",
+  "update": 1000,
+  "action": "clipped Gaussian mean",
+  "normalizer_count": 1024000,
+  "return_mean": 1350.263245072562,
+  "return_std": 409.0341150321234,
+  "episodes": [
+    {
+      "seed": 20000,
+      "return": 1462.4593806251833,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 94.26051867298754,
+      "mean_x_velocity": 1.885210373459751,
+      "action_clipped_fraction": 0.6168333333333333,
+      "torso_pitch_range_radians": [
+        -0.12528961775221514,
+        3.4540911363834175
+      ],
+      "torso_height_range": [
+        0.11077180692835809,
+        0.806524139733581
+      ],
+      "torso_inverted_fraction": 0.983
+    },
+    {
+      "seed": 20001,
+      "return": 1404.2717218094201,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 91.30973340083214,
+      "mean_x_velocity": 1.826194668016643,
+      "action_clipped_fraction": 0.6138333333333333,
+      "torso_pitch_range_radians": [
+        0.04522946950866763,
+        3.485512013943988
+      ],
+      "torso_height_range": [
+        0.1116651344001699,
+        0.7904683247265949
+      ],
+      "torso_inverted_fraction": 0.981
+    },
+    {
+      "seed": 20002,
+      "return": 1396.5023339323614,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 90.85315523114022,
+      "mean_x_velocity": 1.8170631046228045,
+      "action_clipped_fraction": 0.6135,
+      "torso_pitch_range_radians": [
+        0.059755406669843324,
+        3.506765167264183
+      ],
+      "torso_height_range": [
+        0.10873560555174877,
+        0.8381812477053825
+      ],
+      "torso_inverted_fraction": 0.984
+    },
+    {
+      "seed": 20003,
+      "return": 1441.1390453357426,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 93.10487814920111,
+      "mean_x_velocity": 1.8620975629840222,
+      "action_clipped_fraction": 0.6111666666666666,
+      "torso_pitch_range_radians": [
+        0.029392750516625907,
+        3.479892793644985
+      ],
+      "torso_height_range": [
+        0.11266405976959382,
+        0.7847729131358515
+      ],
+      "torso_inverted_fraction": 0.983
+    },
+    {
+      "seed": 20004,
+      "return": 1460.1827871501573,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 94.07761981375582,
+      "mean_x_velocity": 1.8815523962751164,
+      "action_clipped_fraction": 0.6135,
+      "torso_pitch_range_radians": [
+        -0.10928264181792613,
+        3.448202915484933
+      ],
+      "torso_height_range": [
+        0.10899948348147315,
+        0.7881115413038219
+      ],
+      "torso_inverted_fraction": 0.984
+    },
+    {
+      "seed": 20005,
+      "return": 1434.6735628064062,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 92.865311658584,
+      "mean_x_velocity": 1.85730623317168,
+      "action_clipped_fraction": 0.6141666666666666,
+      "torso_pitch_range_radians": [
+        0.05642726108015341,
+        3.4409820660547856
+      ],
+      "torso_height_range": [
+        0.11182034156435472,
+        0.796021132277917
+      ],
+      "torso_inverted_fraction": 0.98
+    },
+    {
+      "seed": 20006,
+      "return": 1431.8165187846366,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 92.64019249906507,
+      "mean_x_velocity": 1.8528038499813013,
+      "action_clipped_fraction": 0.6163333333333333,
+      "torso_pitch_range_radians": [
+        -0.008186846952987204,
+        3.45144859158581
+      ],
+      "torso_height_range": [
+        0.1125400059277809,
+        0.9275357261988739
+      ],
+      "torso_inverted_fraction": 0.983
+    },
+    {
+      "seed": 20007,
+      "return": 1356.881915303762,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 88.86936515620322,
+      "mean_x_velocity": 1.7773873031240643,
+      "action_clipped_fraction": 0.6128333333333333,
+      "torso_pitch_range_radians": [
+        0.06705122116875215,
+        3.461460652590467
+      ],
+      "torso_height_range": [
+        0.11150148465837972,
+        0.7914583278356678
+      ],
+      "torso_inverted_fraction": 0.981
+    },
+    {
+      "seed": 20008,
+      "return": 1396.9775309230604,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 90.86493606401335,
+      "mean_x_velocity": 1.817298721280267,
+      "action_clipped_fraction": 0.6133333333333333,
+      "torso_pitch_range_radians": [
+        0.020507089057359575,
+        3.479680495683604
+      ],
+      "torso_height_range": [
+        0.11159801495319177,
+        0.7851982169563445
+      ],
+      "torso_inverted_fraction": 0.978
+    },
+    {
+      "seed": 20009,
+      "return": 1447.5163238796852,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 93.47876221390192,
+      "mean_x_velocity": 1.8695752442780382,
+      "action_clipped_fraction": 0.6141666666666666,
+      "torso_pitch_range_radians": [
+        -0.01094765819959265,
+        3.4173421686938363
+      ],
+      "torso_height_range": [
+        0.10978894201878153,
+        0.8305097299376669
+      ],
+      "torso_inverted_fraction": 0.984
+    },
+    {
+      "seed": 20010,
+      "return": 1476.7790736543277,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 94.92705672153394,
+      "mean_x_velocity": 1.8985411344306788,
+      "action_clipped_fraction": 0.6126666666666667,
+      "torso_pitch_range_radians": [
+        0.05883355205961257,
+        3.5352998669638813
+      ],
+      "torso_height_range": [
+        0.11066362387804829,
+        0.8969979660486598
+      ],
+      "torso_inverted_fraction": 0.983
+    },
+    {
+      "seed": 20011,
+      "return": 1495.4218121096083,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 95.8810045760106,
+      "mean_x_velocity": 1.917620091520212,
+      "action_clipped_fraction": 0.6186666666666667,
+      "torso_pitch_range_radians": [
+        -0.028771350260918406,
+        3.4338975787556563
+      ],
+      "torso_height_range": [
+        0.11100006873707391,
+        0.8395181470512464
+      ],
+      "torso_inverted_fraction": 0.985
+    },
+    {
+      "seed": 20012,
+      "return": 1459.3344368350363,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 94.08113975903328,
+      "mean_x_velocity": 1.8816227951806654,
+      "action_clipped_fraction": 0.617,
+      "torso_pitch_range_radians": [
+        0.0036573211613025337,
+        3.4885060577393836
+      ],
+      "torso_height_range": [
+        0.1114303042392385,
+        0.8032649722304227
+      ],
+      "torso_inverted_fraction": 0.984
+    },
+    {
+      "seed": 20013,
+      "return": 1508.7433430143265,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 96.40705060791504,
+      "mean_x_velocity": 1.9281410121583007,
+      "action_clipped_fraction": 0.6106666666666667,
+      "torso_pitch_range_radians": [
+        -0.11872155143715973,
+        3.4548043082851305
+      ],
+      "torso_height_range": [
+        0.11054384736268041,
+        0.7873274826995964
+      ],
+      "torso_inverted_fraction": 0.984
+    },
+    {
+      "seed": 20014,
+      "return": 1506.8728348969266,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 96.37982242173882,
+      "mean_x_velocity": 1.9275964484347765,
+      "action_clipped_fraction": 0.6153333333333333,
+      "torso_pitch_range_radians": [
+        -0.03424981379171795,
+        3.458303159297708
+      ],
+      "torso_height_range": [
+        0.11172230204736144,
+        0.7859618494032914
+      ],
+      "torso_inverted_fraction": 0.985
+    },
+    {
+      "seed": 20015,
+      "return": 1408.992465701247,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 91.41422715281676,
+      "mean_x_velocity": 1.8282845430563353,
+      "action_clipped_fraction": 0.6116666666666667,
+      "torso_pitch_range_radians": [
+        -0.0967952963061346,
+        3.4472477253786216
+      ],
+      "torso_height_range": [
+        0.10770534256456654,
+        0.8261160695479854
+      ],
+      "torso_inverted_fraction": 0.978
+    },
+    {
+      "seed": 20016,
+      "return": 1391.5256017903216,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 90.60862196241676,
+      "mean_x_velocity": 1.8121724392483352,
+      "action_clipped_fraction": 0.6116666666666667,
+      "torso_pitch_range_radians": [
+        0.05553902978659348,
+        3.514287764342018
+      ],
+      "torso_height_range": [
+        0.11376319095494558,
+        0.8273512348189573
+      ],
+      "torso_inverted_fraction": 0.984
+    },
+    {
+      "seed": 20017,
+      "return": -423.837440987982,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 0.19505500169808218,
+      "mean_x_velocity": 0.0039011000339616436,
+      "action_clipped_fraction": 0.654,
+      "torso_pitch_range_radians": [
+        -0.024090989400258618,
+        1.868283400918878
+      ],
+      "torso_height_range": [
+        0.33300024715475085,
+        0.9571088595781725
+      ],
+      "torso_inverted_fraction": 0.016
+    },
+    {
+      "seed": 20018,
+      "return": 1456.3320076758966,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 93.95096875166043,
+      "mean_x_velocity": 1.8790193750332085,
+      "action_clipped_fraction": 0.6195,
+      "torso_pitch_range_radians": [
+        0.006249333940551607,
+        3.4585041015684297
+      ],
+      "torso_height_range": [
+        0.11088309740004598,
+        0.8893436306330096
+      ],
+      "torso_inverted_fraction": 0.982
+    },
+    {
+      "seed": 20019,
+      "return": 1492.679646211115,
+      "steps": 1000,
+      "terminated": false,
+      "truncated": true,
+      "x_displacement": 95.6778039825334,
+      "mean_x_velocity": 1.913556079650668,
+      "action_clipped_fraction": 0.6151666666666666,
+      "torso_pitch_range_radians": [
+        -0.057621615617464886,
+        3.4641058259021955
+      ],
+      "torso_height_range": [
+        0.10967608313819566,
+        0.7850774609364332
+      ],
+      "torso_inverted_fraction": 0.985
+    }
+  ]
+}

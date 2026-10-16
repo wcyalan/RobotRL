@@ -1,0 +1,38 @@
+{
+  "status": "verified",
+  "steps": 1024000,
+  "training_seed": 0,
+  "resumed_at_steps": 750592,
+  "best_equals_last": true,
+  "metrics_rows": 1001,
+  "training_metrics_finite": true,
+  "independent_evaluation": {
+    "episodes": 20,
+    "seeds": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019
+    ],
+    "mean": 2035.0054990172346,
+    "std": 783.4963661131171,
+    "inverted_episodes": 6,
+    "inverted_time_fraction": 0.193
+  }
+}
