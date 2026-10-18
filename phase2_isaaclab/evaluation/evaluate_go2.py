@@ -18,12 +18,16 @@ from isaaclab_tasks.utils import resolve_task_config
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument('--model', required=True)
 parser.add_argument('--output', required=True)
+parser.add_argument('--jit_policy', help='TorchScript mean actor; runs without constructing a PPO runner')
+parser.add_argument('--verify_jit', action='store_true', help='Compare official actor and exported actor on every live observation')
 parser.add_argument('--eval_seed', type=int, default=10000)
 parser.add_argument('--trace_env', type=int, default=0)
+parser.add_argument('--trace_all', action='store_true', help='Record all lanes for diagnostic replay')
 parser.add_argument('--scenario', choices=['original', 'nominal', 'low_friction', 'low_friction_both', 'heavy_base'], default='original')
 parser.add_argument('--audit_friction', action='store_true')
 parser.add_argument('--action_delay_steps', type=int, default=0)
 parser.add_argument('--dr_condition', choices=['nominal', 'light_low', 'heavy_high', 'heavy_low', 'nominal_push'])
+parser.add_argument('--behavior', choices=['turn_left', 'turn_right', 'stop_restart'])
 parser.add_argument('--forward_speed', type=float, default=None,
                     help='Controlled diagnostic: fixed body-frame forward speed, zero lateral/yaw command.')
 opts, remainder = parser.parse_known_args()
@@ -70,15 +74,43 @@ if opts.dr_condition:
                          'ground_mu':min(0.5,mu), 'com_randomization':False, 'random_push':False,
                          'fixed_push':opts.dr_condition == 'nominal_push'}
 agent.seed = opts.eval_seed
+if opts.behavior:
+    assert opts.dr_condition is None and opts.action_delay_steps == 0 and opts.forward_speed is None
+    cfg.events.base_com = None
+    cfg.events.push_robot = None
+    cfg.events.add_base_mass.params.update(mass_distribution_params=(1.,1.), operation='scale', distribution='uniform')
+    cfg.events.physics_material.params.update(static_friction_range=(1.,1.), dynamic_friction_range=(1.,1.))
+    cfg.scene.terrain.physics_material.static_friction = 1.
+    cfg.scene.terrain.physics_material.dynamic_friction = 1.
+    cmd = cfg.commands.base_velocity
+    cmd.heading_command = False
+    cmd.rel_heading_envs = cmd.rel_standing_envs = 0.
+    cmd.resampling_time_range = (1000.,1000.)
+    cmd.ranges.lin_vel_x = (0.5,0.5) if opts.behavior == 'stop_restart' else (0.,0.)
+    cmd.ranges.lin_vel_y = (0.,0.)
+    yaw_target = 0.5 if opts.behavior == 'turn_left' else -0.5 if opts.behavior == 'turn_right' else 0.
+    cmd.ranges.ang_vel_z = (yaw_target,yaw_target)
+    scenario_settings = {'name':'behavior_acceptance', 'behavior':opts.behavior,
+                         'base_mass_scale':1.,'contact_mu':1.,'com_randomization':False,'random_push':False,
+                         'note':'Initial state randomization and observation noise retained; no training.'}
 args.device = cfg.sim.device
 torch.manual_seed(opts.eval_seed)
 with launch_simulation(cfg, args):
     raw = gym.make(args.task, cfg=cfg)
     env = RslRlVecEnvWrapper(raw, clip_actions=agent.clip_actions)
     try:
-        runner = OnPolicyRunner(env, agent.to_dict(), log_dir=None, device=agent.device)
-        runner.load(opts.model)
-        policy = runner.get_inference_policy(device=raw.unwrapped.device)
+        assert not opts.verify_jit or opts.jit_policy
+        original_policy = None
+        if not opts.jit_policy or opts.verify_jit:
+            runner = OnPolicyRunner(env, agent.to_dict(), log_dir=None, device=agent.device)
+            runner.load(opts.model)
+            original_policy = runner.get_inference_policy(device=raw.unwrapped.device)
+        if opts.jit_policy:
+            exported = torch.jit.load(opts.jit_policy, map_location=raw.unwrapped.device).eval()
+            policy = lambda observation: exported(observation['policy'])
+        else:
+            policy = original_policy
+        export_max_error, export_samples = 0., 0
         base = raw.unwrapped
         n, device = base.num_envs, base.device
         assert 0 <= opts.trace_env < n
@@ -96,9 +128,11 @@ with launch_simulation(cfg, args):
         diagnostic_steps = torch.zeros(n, device=device)
         ended = torch.zeros(n, dtype=torch.bool, device=device)
         timed_out = torch.zeros_like(ended)
-        trajectory = []
+        trajectories = {i: [] for i in (range(n) if opts.trace_all else [trace_env])}
         friction_snapshots = []
         push_record = None
+        behavior_samples = []
+        previous_command = None
         assert opts.action_delay_steps >= 0
         action_delay = None
         if opts.action_delay_steps:
@@ -126,6 +160,17 @@ with launch_simulation(cfg, args):
                                    'target_world_delta':delta.cpu().tolist(),
                                    'observation_timing':'Policy uses observation measured before this external impulse; senses it after the next step.'}
                 command = base.command_manager.get_command('base_velocity')
+                if opts.behavior:
+                    from behavior_protocol import target_command
+                    target = target_command(opts.behavior, step_index*base.step_dt)
+                    if target != previous_command:
+                        command[:] = torch.tensor(target,device=device)
+                        # Refresh policy input after a command switch, before its next action.
+                        from tensordict import TensorDict
+                        obs = TensorDict(base.observation_manager.compute(), batch_size=[n])
+                        assert torch.allclose(obs['policy'][:,9:12],torch.tensor(target,device=device).expand(n,3),atol=1e-6)
+                        previous_command = target
+                    assert torch.allclose(command[active],torch.tensor(target,device=device).expand_as(command[active]),atol=1e-6)
                 linear = robot.data.root_lin_vel_b.torch
                 angular = robot.data.root_ang_vel_b.torch
                 xy = torch.linalg.vector_norm(linear[:, :2] - command[:, :2], dim=1)
@@ -135,6 +180,11 @@ with launch_simulation(cfg, args):
                     expected = torch.tensor([opts.forward_speed, 0.0, 0.0], device=device)
                     assert torch.allclose(command[active], expected.expand_as(command[active]), atol=1e-6)
                 q = robot.data.root_quat_w.torch
+                if opts.behavior:
+                    behavior_samples.append({'time_s':step_index*base.step_dt,'active':active.cpu().tolist(),
+                        'command':list(previous_command),'linear_b':linear.cpu().tolist(),
+                        'yaw_rate':angular[:,2].cpu().tolist(),
+                        'upright_cosine':(1-2*(q[:,0]**2+q[:,1]**2)).cpu().tolist()})
                 measured = {'forward_speed_m_s': linear[:, 0],
                             'xy_speed_m_s': torch.linalg.vector_norm(linear[:, :2], dim=1),
                             'root_height_m': robot.data.root_pos_w.torch[:, 2],
@@ -147,14 +197,20 @@ with launch_simulation(cfg, args):
                     diagnostics[key] += value * settled
                 xy_error += xy * active
                 yaw_error += yaw * active
-                if active[trace_env]:
-                    trajectory.append({'position': robot.data.root_pos_w.torch[trace_env].cpu().tolist(),
-                                       'quaternion_xyzw': robot.data.root_quat_w.torch[trace_env].cpu().tolist(),
-                                       'body_linear_velocity': linear[trace_env].cpu().tolist(),
-                                       'body_angular_velocity': angular[trace_env].cpu().tolist(),
-                                       'joint_positions': robot.data.joint_pos.torch[trace_env].cpu().tolist(),
-                                       'command': command[trace_env].cpu().tolist()})
+                for lane, trajectory in trajectories.items():
+                    if active[lane]:
+                        trajectory.append({'position': robot.data.root_pos_w.torch[lane].cpu().tolist(),
+                                           'quaternion_xyzw': robot.data.root_quat_w.torch[lane].cpu().tolist(),
+                                           'body_linear_velocity': linear[lane].cpu().tolist(),
+                                           'body_angular_velocity': angular[lane].cpu().tolist(),
+                                           'joint_positions': robot.data.joint_pos.torch[lane].cpu().tolist(),
+                                           'command': command[lane].cpu().tolist()})
                 actions = policy(obs)
+                if opts.verify_jit:
+                    reference_actions = original_policy(obs)
+                    torch.testing.assert_close(actions, reference_actions, atol=1e-5, rtol=1e-5)
+                    export_max_error = max(export_max_error, (actions-reference_actions).abs().max().item())
+                    export_samples += actions.shape[0]
                 assert torch.isfinite(actions).all()
                 if agent.clip_actions is not None:
                     actions = actions.clamp(-agent.clip_actions, agent.clip_actions)
@@ -185,6 +241,12 @@ with launch_simulation(cfg, args):
                  'mean_xy_velocity_error_m_s': (xy_error[i]/lengths[i]).item(),
                  'mean_yaw_velocity_error_rad_s': (yaw_error[i]/lengths[i]).item()} for i in range(n)]
         report = {'checkpoint': opts.model, 'sha256': hashlib.sha256(Path(opts.model).read_bytes()).hexdigest(),
+                  'export_validation': {'jit_policy':opts.jit_policy,
+                      'jit_sha256':hashlib.sha256(Path(opts.jit_policy).read_bytes()).hexdigest() if opts.jit_policy else None,
+                      'official_comparison':opts.verify_jit,'compared_observations':export_samples,
+                      'max_abs_action_error':export_max_error if opts.verify_jit else None,
+                      'ppo_runner_constructed':not opts.jit_policy or opts.verify_jit},
+                  'behavior_samples': behavior_samples,
                   'fixed_push': push_record,
                   'scenario': scenario_settings,
                   'friction_audit': friction_snapshots,
@@ -204,7 +266,8 @@ with launch_simulation(cfg, args):
                   'mean_yaw_velocity_error_rad_s': (yaw_error/lengths).mean().item(),
                   'protocol': 'Deterministic policy; training task randomization/noise retained except an explicit fixed-command override when forward_speed_command_m_s is set; first complete episode per lane. Velocity errors sampled before stepping, averaged per episode then across episodes.',
                   'termination_note': 'Task non-timeout termination is base_contact (proxy for falling, not visual posture inspection).',
-                  f'trajectory_env_{trace_env}': trajectory,
+                  **{f'trajectory_env_{lane}': frames for lane, frames in trajectories.items()},
+                  'trace_envs': list(trajectories),
                   'trace_env': trace_env,
                   'trajectory_note': 'Pre-step poses only; final post-step terminal pose is excluded because of automatic reset.'}
         report['settled_diagnostics'] = {
@@ -217,6 +280,6 @@ with launch_simulation(cfg, args):
             report['settled_diagnostics'][key] = ((value[valid]/diagnostic_steps[valid]).mean().item()
                                                   if valid.any() else None)
         Path(opts.output).write_text(json.dumps(report, indent=2))
-        print('ROBOTRL_EVALUATION_PASSED', {k:v for k,v in report.items() if k not in ['episodes','action_delay','friction_audit'] and not k.startswith('trajectory_env_')}, flush=True)
+        print('ROBOTRL_EVALUATION_PASSED', {k:v for k,v in report.items() if k not in ['episodes','action_delay','friction_audit','behavior_samples'] and not k.startswith('trajectory_env_')}, flush=True)
     finally:
         env.close()

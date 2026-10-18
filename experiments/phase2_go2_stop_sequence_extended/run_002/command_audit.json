@@ -1,0 +1,73 @@
+{
+  "steps": 7200,
+  "mode_order": [
+    "original_heading_motion",
+    "standing",
+    "pure_turn"
+  ],
+  "variant": "stop_sequence",
+  "sequence_lanes": 820,
+  "sequence_exposure_forward_stop": [
+    2953920,
+    2950080
+  ],
+  "sequence_switches_restart_stop_excluding_resets": [
+    5901,
+    11797
+  ],
+  "sample_count_note": "Random command counts exclude dedicated sequence lanes.",
+  "sample_counts": [
+    51318,
+    1741,
+    17799
+  ],
+  "turn_sign_order": [
+    "left",
+    "right"
+  ],
+  "turn_sign_sample_counts": [
+    8782,
+    9017
+  ],
+  "exposure_order": [
+    "original_heading_motion",
+    "standing",
+    "left_turn",
+    "right_turn"
+  ],
+  "exposure_environment_steps": [
+    20022044,
+    3526909,
+    2932705,
+    3009542
+  ],
+  "exposure_environment_seconds": [
+    400440.875,
+    70538.1796875,
+    58654.09765625,
+    60190.83984375
+  ],
+  "exposure_fractions": [
+    0.6789158582687378,
+    0.11959191411733627,
+    0.09944339096546173,
+    0.10204881429672241
+  ],
+  "transition_counts_including_episode_resets": [
+    [
+      35420,
+      1205,
+      12310
+    ],
+    [
+      1262,
+      27,
+      373
+    ],
+    [
+      12283,
+      431,
+      4271
+    ]
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "note": "Post-hoc isolated-criterion checks explain failures; original joint acceptance unchanged. Each episode has two switches, not independent episodes.",
+  "results": [
+    {
+      "seed": 0,
+      "failed_switches": [
+        {
+          "env": 0,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.1,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06835273245156684,
+          "yaw_max_0_5_to_2s": 0.18926142156124115
+        },
+        {
+          "env": 12,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.08,
+          "yaw_only": 0.0,
+          "speed_max_0_5_to_2s": 0.06824215369786915,
+          "yaw_max_0_5_to_2s": 0.22972355782985687
+        },
+        {
+          "env": 16,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.1,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.07665544644538765,
+          "yaw_max_0_5_to_2s": 0.22425460815429688
+        },
+        {
+          "env": 20,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.1,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.09002644629776492,
+          "yaw_max_0_5_to_2s": 0.2076110541820526
+        },
+        {
+          "env": 24,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.08,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06688673040208705,
+          "yaw_max_0_5_to_2s": 0.16581036150455475
+        },
+        {
+          "env": 27,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.4,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.08079275048384188,
+          "yaw_max_0_5_to_2s": 0.22381652891635895
+        },
+        {
+          "env": 29,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.1,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.07119276668761734,
+          "yaw_max_0_5_to_2s": 0.20674696564674377
+        },
+        {
+          "env": 30,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.08,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06643712895943231,
+          "yaw_max_0_5_to_2s": 0.20848040282726288
+        },
+        {
+          "env": 31,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.1,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.0778397330735107,
+          "yaw_max_0_5_to_2s": 0.20868606865406036
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "failed_switches": [
+        {
+          "env": 1,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.05576231690846595,
+          "yaw_max_0_5_to_2s": 0.23503762483596802
+        },
+        {
+          "env": 3,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.07676905203211831,
+          "yaw_max_0_5_to_2s": 0.20948909223079681
+        },
+        {
+          "env": 5,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.08071920784718956,
+          "yaw_max_0_5_to_2s": 0.19633497297763824
+        },
+        {
+          "env": 7,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": 0.68,
+          "speed_max_0_5_to_2s": 0.11959075633981799,
+          "yaw_max_0_5_to_2s": 0.19429704546928406
+        },
+        {
+          "env": 8,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.09312827573749705,
+          "yaw_max_0_5_to_2s": 0.18468688428401947
+        },
+        {
+          "env": 10,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.14,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.0643452594499299,
+          "yaw_max_0_5_to_2s": 0.22245508432388306
+        },
+        {
+          "env": 10,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.16,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.05628632182667099,
+          "yaw_max_0_5_to_2s": 0.18175733089447021
+        },
+        {
+          "env": 12,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.34,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.0751461973688909,
+          "yaw_max_0_5_to_2s": 0.1867346614599228
+        },
+        {
+          "env": 13,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.1,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.07865547792487615,
+          "yaw_max_0_5_to_2s": 0.1922481507062912
+        },
+        {
+          "env": 14,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.07416354904271967,
+          "yaw_max_0_5_to_2s": 0.19334810972213745
+        },
+        {
+          "env": 18,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.0732033727693474,
+          "yaw_max_0_5_to_2s": 0.17773599922657013
+        },
+        {
+          "env": 20,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.2,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.060940325400604636,
+          "yaw_max_0_5_to_2s": 0.17743785679340363
+        },
+        {
+          "env": 21,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.16,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06899254120830789,
+          "yaw_max_0_5_to_2s": 0.20472627878189087
+        },
+        {
+          "env": 22,
+          "switch": 5,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06763863287458753,
+          "yaw_max_0_5_to_2s": 0.18170160055160522
+        },
+        {
+          "env": 22,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.24,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06315059167266689,
+          "yaw_max_0_5_to_2s": 0.1713690161705017
+        },
+        {
+          "env": 26,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.14,
+          "yaw_only": 0.32,
+          "speed_max_0_5_to_2s": 0.1077865626708947,
+          "yaw_max_0_5_to_2s": 0.19479912519454956
+        },
+        {
+          "env": 30,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.12,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.08911610105129479,
+          "yaw_max_0_5_to_2s": 0.21445851027965546
+        },
+        {
+          "env": 31,
+          "switch": 15,
+          "joint": null,
+          "speed_only": 0.14,
+          "yaw_only": null,
+          "speed_max_0_5_to_2s": 0.06270377229038444,
+          "yaw_max_0_5_to_2s": 0.23502127826213837
+        }
+      ]
+    }
+  ]
+}

@@ -17,9 +17,11 @@ parser.add_argument('--input', default='forward_299.json')
 parser.add_argument('--env', type=int, default=0)
 parser.add_argument('--slowdown', type=int, default=1)
 parser.add_argument('--title', default='Go2 | Official baseline | Forward command 0.50 m/s')
+parser.add_argument('--source', type=Path, help='Explicit evaluation JSON path, overriding --run/--input')
+parser.add_argument('--output-stem', help='Video filename stem; use distinct names for different conditions')
 args = parser.parse_args()
 run = ROOT / 'experiments/phase2_go2_baseline' / args.run
-source = run / args.input
+source = args.source.resolve() if args.source else run / args.input
 record = json.loads(source.read_text(encoding='utf-8'))
 frames = record[f'trajectory_env_{args.env}']
 fps = round(1 / record['step_dt'])
@@ -45,6 +47,9 @@ assert len(set(addresses)) == 12
 out = source.parent / 'videos'
 out.mkdir(exist_ok=True)
 stem = 'go2_forward_20s' if args.input == 'forward_299.json' and args.env == 0 and args.slowdown == 1 else f'go2_env{args.env}_{args.slowdown}x_slow'
+if args.output_stem:
+    assert Path(args.output_stem).name == args.output_stem
+    stem = args.output_stem
 output = out / f'{stem}.mp4'
 camera = mujoco.MjvCamera()
 camera.distance = 1.65
@@ -73,14 +78,20 @@ with mujoco.Renderer(model, height=540, width=960) as renderer, imageio.get_writ
         draw = ImageDraw.Draw(image)
         draw.rectangle((0,0,960,77), fill=(17,24,34))
         draw.text((22,12), args.title, font=font, fill='white')
-        draw.text((22,44), f'Time {i/fps:05.2f} s    Forward {frame["body_linear_velocity"][0]:.2f} m/s    Height {frame["position"][2]:.3f} m', font=font, fill=(160,215,238))
+        if 'command' in frame and 'body_angular_velocity' in frame:
+            vx, vy, wz = frame['command']
+            speed = math.hypot(*frame['body_linear_velocity'][:2])
+            label = f'Time {i/fps:05.2f}s | Cmd vx {vx:.2f}, vy {vy:.2f}, yaw {wz:.2f} | Actual speed {speed:.2f} m/s, yaw {frame["body_angular_velocity"][2]:.2f} rad/s'
+        else:
+            label = f'Time {i/fps:05.2f} s    Forward {frame["body_linear_velocity"][0]:.2f} m/s    Height {frame["position"][2]:.3f} m'
+        draw.text((22,44), label, font=small, fill=(160,215,238))
         draw.rectangle((0,511,960,540), fill=(17,24,34))
         speed_label = 'Real time' if args.slowdown == 1 else f'{args.slowdown}x slow motion'
         draw.text((22,517), f'Recorded Newton trajectory | {speed_label} | Env {args.env} / eval seed {record["eval_seed"]}', font=small, fill=(205,213,224))
         for _ in range(args.slowdown):
             writer.append_data(np.asarray(image))
         if i in {0,len(frames)//4,len(frames)//2,3*len(frames)//4,len(frames)-1}:
-            image.save(out / f'preview_{i:04d}.png')
+            image.save(out / f'{stem}_preview_{i:04d}.png')
         if i % 200 == 0:
             print(f'Rendered {i}/{len(frames)}', flush=True)
 reader = imageio.get_reader(output)

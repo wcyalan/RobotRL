@@ -11,6 +11,9 @@ DELAY = ['extensions/delay/action_delay.py']
 BASE = ['training/baseline_config.py', *EVAL]
 DR = ['training/train_mass_friction.py', *AUDIT]
 JOBS = {
+    'validate_export': ('diagnostics', [*EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
+    'evaluate_checkpoints': ('diagnostics', [*EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
+    'resume_command_coverage': ('diagnostics', ['training/resume_command_coverage.py', 'training/train_command_coverage.py', *EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
     'train_baseline': ('baseline', BASE),
     'train_seeds': ('baseline', [*BASE, 'jobs/baseline/train_baseline.sh']),
     'smoke_mass_friction': ('domain_randomization', DR),
@@ -19,6 +22,11 @@ JOBS = {
     'audit_friction': ('diagnostics', [*EVAL, *AUDIT]),
     'evaluate_low_friction': ('diagnostics', [*EVAL, *AUDIT]),
     'replay_failure': ('diagnostics', EVAL),
+    'replay_dr_outlier': ('diagnostics', [*EVAL, *AUDIT]),
+    'evaluate_behaviors': ('diagnostics', [*EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
+    'replay_stop_failure': ('diagnostics', [*EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
+    'train_command_coverage': ('diagnostics', ['training/train_command_coverage.py', *EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
+    'validate_turn_coverage': ('diagnostics', [*EVAL, *AUDIT, 'evaluation/behavior_protocol.py']),
     'evaluate_delay': ('delay', [*EVAL, *DELAY]),
     'replay_delay_failure': ('delay', [*EVAL, *DELAY]),
     'train_delay_randomized': ('delay', [*EVAL, *DELAY,

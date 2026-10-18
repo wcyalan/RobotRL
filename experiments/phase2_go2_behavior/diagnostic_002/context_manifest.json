@@ -1,0 +1,25 @@
+{
+  "job": "replay_stop_failure",
+  "files": {
+    "replay_stop_failure.sh": {
+      "source": "jobs/diagnostics/replay_stop_failure.sh",
+      "sha256": "4e6f20f4f6ea1a9d61040df75125270b3263a90285afe641f80cd8f130834438"
+    },
+    "train_baseline.yaml": {
+      "source": "configs/train_baseline.yaml",
+      "sha256": "f7117c09c3c4cb960a62534439b527c90007f873ec259f9e2bb236c49bb1637e"
+    },
+    "evaluate_go2.py": {
+      "source": "evaluation/evaluate_go2.py",
+      "sha256": "2500bcb013cfd89c46cb8dcbadb02f9f6060fec9d60a5afd4f29bc391d8779e9"
+    },
+    "friction_audit.py": {
+      "source": "evaluation/friction_audit.py",
+      "sha256": "640551280d0b3803e80acd80bb650c46bd8f73fda8f195324c54fd845240e56d"
+    },
+    "behavior_protocol.py": {
+      "source": "evaluation/behavior_protocol.py",
+      "sha256": "abe04740f158f01651791a0f8931ec44db35d6df8ebc659680554593b5d33bdf"
+    }
+  }
+}

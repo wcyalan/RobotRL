@@ -1,0 +1,36 @@
+{
+  "checkpoint": "C:\\Users\\wcyal\\Desktop\\RobotRL\\experiments\\phase2_go2_stop_sequence_extended\\run_002\\logs\\rsl_rl\\unitree_go2_flat\\2026-10-17_16-20-26\\model_450.pt",
+  "checkpoint_sha256": "66b588a185058685739a427e1a510544ba72e84c9ad1ffae205fe7484a6c33f0",
+  "policy_sha256": "5f6b52842ea5cdddfd74d26d0f3c05f77cccf17b62d90b1f1f86dbcb5b6574b9",
+  "torch_version": "2.14.1+cpu",
+  "input_shape": [
+    "batch",
+    48
+  ],
+  "output_shape": [
+    "batch",
+    12
+  ],
+  "dtype": "float32",
+  "observation_normalization": false,
+  "deterministic_mean_action": true,
+  "clip_actions": null,
+  "synthetic_max_abs_error": 0.0,
+  "synthetic_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "status": "Official equivalence passed. Standalone closed-loop evaluation complete; see acceptance.json for behavior failures.",
+  "config_sha256": {
+    "agent.yaml": "b27f2935a2acc91f931894b7f6ccdf7b273a5a97526adaf4cbe5db87c94cec9f",
+    "env.yaml": "e702d42369986e1030bb4d5ecbb6cf62712ba5ad1ed2bd25dfcf3d0af6811145"
+  },
+  "official_equivalence": {
+    "jit_policy": "/robotrl/experiments/phase2_go2_deployment/run_001/run_002/policy.pt",
+    "jit_sha256": "5f6b52842ea5cdddfd74d26d0f3c05f77cccf17b62d90b1f1f86dbcb5b6574b9",
+    "official_comparison": true,
+    "compared_observations": 32000,
+    "max_abs_action_error": 0.0,
+    "ppo_runner_constructed": true
+  }
+}

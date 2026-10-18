@@ -27,3 +27,28 @@ logs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Go2 raw evidence stays on the workstation/NAS; publish compact audit reports.
+*.log
+/experiments/phase2_go2_*/**/*.json
+!/experiments/phase2_go2_*/**/acceptance.json
+!/experiments/phase2_go2_*/**/comparison*.json
+!/experiments/phase2_go2_*/**/summary.json
+!/experiments/phase2_go2_*/**/preliminary_summary.json
+!/experiments/phase2_go2_*/**/diagnosis.json
+!/experiments/phase2_go2_*/**/behavior_diagnostics.json
+!/experiments/phase2_go2_*/**/stop_diagnosis_*.json
+!/experiments/phase2_go2_*/**/command_audit.json
+!/experiments/phase2_go2_*/**/command_intervention.json
+!/experiments/phase2_go2_*/**/resume_audit.json
+!/experiments/phase2_go2_*/**/manifest.json
+!/experiments/phase2_go2_*/**/bundle_manifest.json
+!/experiments/phase2_go2_*/**/context_manifest.json
+!/experiments/phase2_go2_*/**/frozen_models.json
+!/experiments/phase2_go2_*/**/protocol.json
+!/experiments/phase2_go2_*/**/*_metadata.json
+/experiments/phase2_go2_*/**/*.py
+/experiments/phase2_go2_*/**/*.sh
+/experiments/phase2_go2_*/**/*_preview_*.png
+# Frozen runtime source bundles remain in the local/NAS reproduction archive.
+/experiments/phase2_go2_deployment/**/source/

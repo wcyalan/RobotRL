@@ -1,0 +1,36 @@
+{
+  "eval_seeds": [
+    45000,
+    46000
+  ],
+  "models": [
+    {
+      "training_seed": 0,
+      "run": "run_001",
+      "group": "coverage",
+      "path": "/robotrl/experiments/phase2_go2_stop_sequence_extended/run_001/logs/rsl_rl/unitree_go2_flat/2026-10-17_16-03-25/model_450.pt",
+      "sha256": "501aab33cc6ed962631d7d390de69d5168ee32f5c6d891908171273c11068678"
+    },
+    {
+      "training_seed": 0,
+      "run": "run_001",
+      "group": "baseline",
+      "path": "/robotrl/experiments/phase2_go2_stop_sequence/run_001/logs/rsl_rl/unitree_go2_flat/2026-10-17_12-13-51/model_299.pt",
+      "sha256": "6814a4c5daef935557edc27a0bccb130df3d949352fd54bfadae5c52cab10f9b"
+    },
+    {
+      "training_seed": 1,
+      "run": "run_002",
+      "group": "coverage",
+      "path": "/robotrl/experiments/phase2_go2_stop_sequence_extended/run_002/logs/rsl_rl/unitree_go2_flat/2026-10-17_16-20-26/model_450.pt",
+      "sha256": "66b588a185058685739a427e1a510544ba72e84c9ad1ffae205fe7484a6c33f0"
+    },
+    {
+      "training_seed": 1,
+      "run": "run_002",
+      "group": "baseline",
+      "path": "/robotrl/experiments/phase2_go2_stop_sequence/run_002/logs/rsl_rl/unitree_go2_flat/2026-10-17_12-24-15/model_299.pt",
+      "sha256": "9ade0fa83759162c4d43fa1622de467541a8e3772f2444ccac1fd22af1f49255"
+    }
+  ]
+}

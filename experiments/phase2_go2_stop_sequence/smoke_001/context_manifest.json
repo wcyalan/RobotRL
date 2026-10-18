@@ -1,0 +1,29 @@
+{
+  "job": "train_command_coverage",
+  "files": {
+    "train_command_coverage.sh": {
+      "source": "jobs/diagnostics/train_command_coverage.sh",
+      "sha256": "c0672e446be216b1ff163d9c970052250fe6ff0be6d80e5941e9f08f231679e5"
+    },
+    "train_baseline.yaml": {
+      "source": "configs/train_baseline.yaml",
+      "sha256": "f7117c09c3c4cb960a62534439b527c90007f873ec259f9e2bb236c49bb1637e"
+    },
+    "train_command_coverage.py": {
+      "source": "training/train_command_coverage.py",
+      "sha256": "41f57b0701d717bbfcac64e91ed06f52ceb51e5fa508cfc9053f1e332009dbd7"
+    },
+    "evaluate_go2.py": {
+      "source": "evaluation/evaluate_go2.py",
+      "sha256": "2500bcb013cfd89c46cb8dcbadb02f9f6060fec9d60a5afd4f29bc391d8779e9"
+    },
+    "friction_audit.py": {
+      "source": "evaluation/friction_audit.py",
+      "sha256": "640551280d0b3803e80acd80bb650c46bd8f73fda8f195324c54fd845240e56d"
+    },
+    "behavior_protocol.py": {
+      "source": "evaluation/behavior_protocol.py",
+      "sha256": "abe04740f158f01651791a0f8931ec44db35d6df8ebc659680554593b5d33bdf"
+    }
+  }
+}

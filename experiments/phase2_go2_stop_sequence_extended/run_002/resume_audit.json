@@ -1,0 +1,11 @@
+{
+  "parent": "/robotrl/experiments/phase2_go2_stop_sequence/run_002/logs/rsl_rl/unitree_go2_flat/2026-10-17_12-24-15/model_299.pt",
+  "parent_sha256": "9ade0fa83759162c4d43fa1622de467541a8e3772f2444ccac1fd22af1f49255",
+  "parent_iteration": 299,
+  "note": "Resume optimizer and policy; simulator and RNG restart, not bitwise uninterrupted training.",
+  "optimizer_restored": true,
+  "configs_match_parent": true,
+  "additional_iterations": 300,
+  "final_iteration": 598,
+  "final_sha256": "bcdb9e0c9f5547cefb3340c1982517625a9f8d601f0d65b40788c3d7b5f3d5a6"
+}
