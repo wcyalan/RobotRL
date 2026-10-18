@@ -2,6 +2,38 @@
 set -euo pipefail
 source_dir="$PWD"
 root=/robotrl/experiments/phase2_go2_deployment/run_001
+mode=${1:-full}
+if [ "$mode" = repeatability ]; then
+    outroot=/robotrl/experiments/phase2_go2_deployment/repeatability_001
+    test ! -e "$outroot"
+    mkdir -p "$outroot"
+    cp "$source_dir/"*.py "$source_dir/"*.sh "$source_dir/"*.json "$source_dir/train_baseline.yaml" "$outroot/"
+    python - "$outroot/protocol.json" <<'PY'
+import hashlib,json,sys
+from pathlib import Path
+for model in json.loads(Path(sys.argv[1]).read_text())['models']:
+    for field in ['checkpoint','policy']:
+        assert hashlib.sha256(Path(model[field]).read_bytes()).hexdigest()==model[field+'_sha256']
+print('FROZEN_MODELS_VERIFIED',flush=True)
+PY
+    for pair in 'run_001 turn_right' 'run_002 stop_restart'; do
+        read -r run behavior <<< "$pair"
+        model=$(find "/robotrl/experiments/phase2_go2_stop_sequence_extended/$run/logs" -name model_450.pt -print -quit)
+        test -n "$model"
+        for eval_seed in 47000 48000 49000; do
+            out="$outroot/$run/eval_$eval_seed"
+            mkdir -p "$out"
+            (
+                cd "$out"
+                timeout 900 python "$outroot/evaluate_go2.py" --model "$model" --jit_policy "$root/$run/policy.pt" --output "$behavior.json" --behavior "$behavior" --trace_all --audit_friction --eval_seed "$eval_seed" --num_envs 32 --task Isaac-Velocity-Flat-UnitreeGo2 physics=newton_mjwarp env.scene.robot.spawn.usd_path=/robotrl/assets/Go2/go2.usd 2>&1 | tee "$behavior.log"
+            )
+        done
+    done
+    echo REPEATABILITY_COMPLETED > "$outroot/completed.txt"
+    exit 0
+elif [ "$mode" != full ]; then
+    exit 2
+fi
 test ! -e "$root/started.txt"
 echo EXPORT_VALIDATION_STARTED > "$root/started.txt"
 mkdir -p "$root/source"

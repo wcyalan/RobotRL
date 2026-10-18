@@ -1,0 +1,33 @@
+{
+  "eval_seeds": [
+    47000,
+    48000,
+    49000
+  ],
+  "episodes_per_condition": 32,
+  "conditions": 6,
+  "total_episodes": 192,
+  "required_passes_per_condition": 29,
+  "models": [
+    {
+      "training_seed": 0,
+      "run": "run_001",
+      "behavior": "turn_right",
+      "checkpoint": "/robotrl/experiments/phase2_go2_stop_sequence_extended/run_001/logs/rsl_rl/unitree_go2_flat/2026-10-17_16-03-25/model_450.pt",
+      "checkpoint_sha256": "501aab33cc6ed962631d7d390de69d5168ee32f5c6d891908171273c11068678",
+      "policy": "/robotrl/experiments/phase2_go2_deployment/run_001/run_001/policy.pt",
+      "policy_sha256": "4bb3f57d71a539b5cdd432f1683b7302987e88601b8c500f6066c28e09ae8e5d"
+    },
+    {
+      "training_seed": 1,
+      "run": "run_002",
+      "behavior": "stop_restart",
+      "checkpoint": "/robotrl/experiments/phase2_go2_stop_sequence_extended/run_002/logs/rsl_rl/unitree_go2_flat/2026-10-17_16-20-26/model_450.pt",
+      "checkpoint_sha256": "66b588a185058685739a427e1a510544ba72e84c9ad1ffae205fe7484a6c33f0",
+      "policy": "/robotrl/experiments/phase2_go2_deployment/run_001/run_002/policy.pt",
+      "policy_sha256": "5f6b52842ea5cdddfd74d26d0f3c05f77cccf17b62d90b1f1f86dbcb5b6574b9"
+    }
+  ],
+  "stopping_rule": "Run all six conditions once, irrespective of behavior pass/fail; do not select only passing results.",
+  "scope": "Frozen exported policies; targeted weak behaviors, not a full new behavior suite or same-seed determinism test."
+}

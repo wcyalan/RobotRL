@@ -1,0 +1,72 @@
+{
+  "note": "Post-hoc descriptors only; original acceptance unchanged. Quaternion XYZW heading range is distinct from body yaw rate.",
+  "eval_seed": 48000,
+  "training_seed": 1,
+  "failed_stops": [
+    {
+      "env": 13,
+      "switch_time_s": 15,
+      "stable_window_start_delay_s": 2.1,
+      "settled_mean_speed": 0.02706128631121016,
+      "settled_mean_abs_yaw": 0.06742794922029134,
+      "speed_only_window_start_delay_s": 0.12,
+      "yaw_only_window_start_delay_s": 2.1,
+      "peak_abs_yaw_first_2_5s": 0.18584603071212769,
+      "yaw_exceedance_fraction_first_2_5s": 0.08,
+      "heading_range_degrees_first_2_5s": 4.90293918175073,
+      "heading_net_degrees_first_2_5s": -4.736526758786496
+    },
+    {
+      "env": 16,
+      "switch_time_s": 5,
+      "stable_window_start_delay_s": 2.1,
+      "settled_mean_speed": 0.023787953862151795,
+      "settled_mean_abs_yaw": 0.06712530672666617,
+      "speed_only_window_start_delay_s": 0.12,
+      "yaw_only_window_start_delay_s": 0.04,
+      "peak_abs_yaw_first_2_5s": 0.20221790671348572,
+      "yaw_exceedance_fraction_first_2_5s": 0.088,
+      "heading_range_degrees_first_2_5s": 4.608953385175325,
+      "heading_net_degrees_first_2_5s": -3.4054779575775314
+    },
+    {
+      "env": 24,
+      "switch_time_s": 15,
+      "stable_window_start_delay_s": 2.08,
+      "settled_mean_speed": 0.02427239434492926,
+      "settled_mean_abs_yaw": 0.07466548680851702,
+      "speed_only_window_start_delay_s": 0.1,
+      "yaw_only_window_start_delay_s": 2.08,
+      "peak_abs_yaw_first_2_5s": 0.20032794773578644,
+      "yaw_exceedance_fraction_first_2_5s": 0.072,
+      "heading_range_degrees_first_2_5s": 4.048279880126127,
+      "heading_net_degrees_first_2_5s": -3.1423773908441337
+    },
+    {
+      "env": 28,
+      "switch_time_s": 5,
+      "stable_window_start_delay_s": 2.14,
+      "settled_mean_speed": 0.02577361021337377,
+      "settled_mean_abs_yaw": 0.068209647131589,
+      "speed_only_window_start_delay_s": 0.12,
+      "yaw_only_window_start_delay_s": 2.14,
+      "peak_abs_yaw_first_2_5s": 0.2494635283946991,
+      "yaw_exceedance_fraction_first_2_5s": 0.128,
+      "heading_range_degrees_first_2_5s": 4.215162663566594,
+      "heading_net_degrees_first_2_5s": -2.91656251608365
+    },
+    {
+      "env": 31,
+      "switch_time_s": 5,
+      "stable_window_start_delay_s": 2.54,
+      "settled_mean_speed": 0.022085532848604067,
+      "settled_mean_abs_yaw": 0.06919223389915714,
+      "speed_only_window_start_delay_s": 0.12,
+      "yaw_only_window_start_delay_s": 2.54,
+      "peak_abs_yaw_first_2_5s": 0.19334165751934052,
+      "yaw_exceedance_fraction_first_2_5s": 0.064,
+      "heading_range_degrees_first_2_5s": 5.388191731525483,
+      "heading_net_degrees_first_2_5s": -5.263775376165201
+    }
+  ]
+}

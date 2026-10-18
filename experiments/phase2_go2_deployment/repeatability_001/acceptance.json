@@ -1,0 +1,6049 @@
+{
+  "complete": true,
+  "conditions": 6,
+  "all_passed": false,
+  "results": [
+    {
+      "training_seed": 0,
+      "eval_seed": 47000,
+      "behavior": "turn_right",
+      "source_sha256": "1eb28e08980d968fc6a4738018e0fa74324a1015ddb8827b1cd571257cbd8d9b",
+      "termination_rate": 0.0,
+      "passed_episodes": 32,
+      "episodes": 32,
+      "passed": true,
+      "failed_envs": [],
+      "rows": [
+        {
+          "env": 0,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03305913870551245,
+              "yaw_error": 0.1243761462665555,
+              "max_tilt_degrees": 3.4607396724634287,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 1,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.029575340126191015,
+              "yaw_error": 0.09588326328286999,
+              "max_tilt_degrees": 3.757026550394878,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 2,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03250893712467989,
+              "yaw_error": 0.12784934604246365,
+              "max_tilt_degrees": 3.7808216050570063,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 3,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030772000986840537,
+              "yaw_error": 0.10217564723503433,
+              "max_tilt_degrees": 3.485206612283379,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 4,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031615165781335844,
+              "yaw_error": 0.10280554496756705,
+              "max_tilt_degrees": 4.003452213620327,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 5,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03459353493950863,
+              "yaw_error": 0.1387230737933791,
+              "max_tilt_degrees": 3.500173984514768,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 6,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03245526932374346,
+              "yaw_error": 0.09210944877643334,
+              "max_tilt_degrees": 3.629790502903822,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 7,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.035664681411660695,
+              "yaw_error": 0.10441955225248085,
+              "max_tilt_degrees": 3.9598270916118485,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 8,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03416168309765605,
+              "yaw_error": 0.13917410840280353,
+              "max_tilt_degrees": 3.5399439049571533,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 9,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.029162173331498446,
+              "yaw_error": 0.10136885924607908,
+              "max_tilt_degrees": 3.7573913626012714,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 10,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03549924912123908,
+              "yaw_error": 0.11404677874653747,
+              "max_tilt_degrees": 3.5384502144982006,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 11,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03439660856581194,
+              "yaw_error": 0.11801125064296157,
+              "max_tilt_degrees": 3.763587767487076,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 12,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03228994680679521,
+              "yaw_error": 0.10310964830611881,
+              "max_tilt_degrees": 3.662280748213314,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 13,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03365656327034878,
+              "yaw_error": 0.1158806404525316,
+              "max_tilt_degrees": 3.5679858769342996,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 14,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031936225974295226,
+              "yaw_error": 0.10526370675548127,
+              "max_tilt_degrees": 3.720891217388735,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 15,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03177421801805911,
+              "yaw_error": 0.09307455549506764,
+              "max_tilt_degrees": 3.480203201414921,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 16,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030890726502114992,
+              "yaw_error": 0.11691517424861607,
+              "max_tilt_degrees": 3.7292490570804357,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 17,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03099202432532421,
+              "yaw_error": 0.14335381538558162,
+              "max_tilt_degrees": 3.6771140174806694,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 18,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030651303883813905,
+              "yaw_error": 0.10256164720183925,
+              "max_tilt_degrees": 3.8207491217852203,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 19,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031041854209989343,
+              "yaw_error": 0.11832917651516925,
+              "max_tilt_degrees": 3.711248551771602,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 20,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03308077176284557,
+              "yaw_error": 0.12437805882655084,
+              "max_tilt_degrees": 3.724783359278086,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 21,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.032782577608787375,
+              "yaw_error": 0.1274480775709411,
+              "max_tilt_degrees": 4.2233158648895515,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 22,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03221293855659624,
+              "yaw_error": 0.10411194319346626,
+              "max_tilt_degrees": 3.5986398418114596,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 23,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031573346711122656,
+              "yaw_error": 0.10225349353528336,
+              "max_tilt_degrees": 3.5827171674421474,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 24,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03252286614558854,
+              "yaw_error": 0.08911504329819428,
+              "max_tilt_degrees": 3.788065417698658,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 25,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03315307434400928,
+              "yaw_error": 0.10478075424969001,
+              "max_tilt_degrees": 3.6772737628490275,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 26,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03545574110283079,
+              "yaw_error": 0.11293708765977307,
+              "max_tilt_degrees": 3.5458571650761543,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 27,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.034144766137113376,
+              "yaw_error": 0.1093670072298693,
+              "max_tilt_degrees": 3.5561679762200518,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 28,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03594556636831185,
+              "yaw_error": 0.12335630126003372,
+              "max_tilt_degrees": 3.692152946196085,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 29,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03368385035760576,
+              "yaw_error": 0.10338857879175951,
+              "max_tilt_degrees": 4.447392831955279,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 30,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03163496374568321,
+              "yaw_error": 0.14646398584370648,
+              "max_tilt_degrees": 3.6567161673491357,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 31,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.02925767404692207,
+              "yaw_error": 0.09039689176470826,
+              "max_tilt_degrees": 3.302923472580587,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 48000,
+      "behavior": "turn_right",
+      "source_sha256": "91a8445b1671763cb3ca916ad687c5a6fb75ad6ecc2b250b53ba7e2fe6695c2e",
+      "termination_rate": 0.0,
+      "passed_episodes": 32,
+      "episodes": 32,
+      "passed": true,
+      "failed_envs": [],
+      "rows": [
+        {
+          "env": 0,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030998616406839957,
+              "yaw_error": 0.1413748426160677,
+              "max_tilt_degrees": 3.676687995946277,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 1,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03211799432113619,
+              "yaw_error": 0.1118527514259576,
+              "max_tilt_degrees": 3.604782848277694,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 2,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03134646581524348,
+              "yaw_error": 0.11719117702328061,
+              "max_tilt_degrees": 3.670505134759404,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 3,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03100149650876551,
+              "yaw_error": 0.0998295189283396,
+              "max_tilt_degrees": 3.622446848705103,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 4,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.029431494336873257,
+              "yaw_error": 0.14031444172209473,
+              "max_tilt_degrees": 3.8776750822185733,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 5,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03440794241963762,
+              "yaw_error": 0.1297357744858355,
+              "max_tilt_degrees": 3.7784384684541266,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 6,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03320241538657818,
+              "yaw_error": 0.11203870693907926,
+              "max_tilt_degrees": 3.6730115120054476,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 7,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03216728054806588,
+              "yaw_error": 0.13311148567419304,
+              "max_tilt_degrees": 3.6873237882645022,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 8,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03198298969331089,
+              "yaw_error": 0.14019929839249112,
+              "max_tilt_degrees": 3.7836172876703893,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 9,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.032704128880670785,
+              "yaw_error": 0.11017277899639387,
+              "max_tilt_degrees": 3.969902758680555,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 10,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03396941402264394,
+              "yaw_error": 0.11340595002041051,
+              "max_tilt_degrees": 4.0634142314887365,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 11,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03162187280454489,
+              "yaw_error": 0.11363057059382922,
+              "max_tilt_degrees": 3.856559460794183,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 12,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.0311919258221486,
+              "yaw_error": 0.12648891807092646,
+              "max_tilt_degrees": 3.700311029698822,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 13,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03197927176149982,
+              "yaw_error": 0.11671473363708508,
+              "max_tilt_degrees": 3.5568286132848956,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 14,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031328013896556935,
+              "yaw_error": 0.10986983777465005,
+              "max_tilt_degrees": 3.417472931283338,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 15,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03185192211854921,
+              "yaw_error": 0.12928748979184188,
+              "max_tilt_degrees": 4.151712904373638,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 16,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03375857120838087,
+              "yaw_error": 0.12723926204844918,
+              "max_tilt_degrees": 3.620500450245916,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 17,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033652910328183606,
+              "yaw_error": 0.10341217052387564,
+              "max_tilt_degrees": 3.625958536474306,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 18,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03500854105392815,
+              "yaw_error": 0.11539020295230377,
+              "max_tilt_degrees": 3.8683720646002793,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 19,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03284988309028783,
+              "yaw_error": 0.11631620841639999,
+              "max_tilt_degrees": 4.145056419174874,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 20,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030542194873388818,
+              "yaw_error": 0.10036436945984238,
+              "max_tilt_degrees": 3.7166262339696403,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 21,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.034889110013486734,
+              "yaw_error": 0.10294421929277872,
+              "max_tilt_degrees": 3.6620668820111892,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 22,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03324824803723519,
+              "yaw_error": 0.12008054950372561,
+              "max_tilt_degrees": 3.6501240458431283,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 23,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033715020705492815,
+              "yaw_error": 0.1294622662320341,
+              "max_tilt_degrees": 3.5704544470677555,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 24,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033890949522325235,
+              "yaw_error": 0.11190602028546365,
+              "max_tilt_degrees": 3.831752176232406,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 25,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.028412172187705614,
+              "yaw_error": 0.12658657412485858,
+              "max_tilt_degrees": 3.588723718263017,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 26,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030991482751252672,
+              "yaw_error": 0.1284928281962455,
+              "max_tilt_degrees": 3.5657352492984,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 27,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031176051178796595,
+              "yaw_error": 0.1137356009216685,
+              "max_tilt_degrees": 3.6395410903894936,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 28,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.035258569537654334,
+              "yaw_error": 0.11184230818168113,
+              "max_tilt_degrees": 4.425583263712726,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 29,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03151346314471105,
+              "yaw_error": 0.10080131958189764,
+              "max_tilt_degrees": 3.2626681862966054,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 30,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.034988485746416276,
+              "yaw_error": 0.10135454243343127,
+              "max_tilt_degrees": 4.52346282438865,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 31,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03126720951640647,
+              "yaw_error": 0.0995207072559156,
+              "max_tilt_degrees": 3.59275884609425,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 49000,
+      "behavior": "turn_right",
+      "source_sha256": "c80e9b52438c4bf358924c4a6bde24cb3033572559cacb5bde5e83899bafc38b",
+      "termination_rate": 0.0,
+      "passed_episodes": 32,
+      "episodes": 32,
+      "passed": true,
+      "failed_envs": [],
+      "rows": [
+        {
+          "env": 0,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03053563776178877,
+              "yaw_error": 0.11390467646372456,
+              "max_tilt_degrees": 4.314476962994688,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 1,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033225041136270256,
+              "yaw_error": 0.13495144006109944,
+              "max_tilt_degrees": 3.769929826436569,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 2,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.029280652476385907,
+              "yaw_error": 0.12255301364378905,
+              "max_tilt_degrees": 3.5034168803652967,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 3,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.036641195793025855,
+              "yaw_error": 0.12753318255301566,
+              "max_tilt_degrees": 4.278281817312024,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 4,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03497805074750571,
+              "yaw_error": 0.09202996469641987,
+              "max_tilt_degrees": 3.565845068926309,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 5,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03160258472533059,
+              "yaw_error": 0.09326379546209386,
+              "max_tilt_degrees": 3.2654272494189565,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 6,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03272600430367811,
+              "yaw_error": 0.1292189816155128,
+              "max_tilt_degrees": 3.470287604017962,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 7,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.034302143430692184,
+              "yaw_error": 0.09848330456175303,
+              "max_tilt_degrees": 3.474178337358573,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 8,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03293702365305395,
+              "yaw_error": 0.10274344217228262,
+              "max_tilt_degrees": 3.8948573411918392,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 9,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03285996632455175,
+              "yaw_error": 0.09204293040852797,
+              "max_tilt_degrees": 3.557324010672896,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 10,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03189833757700562,
+              "yaw_error": 0.1146252197115437,
+              "max_tilt_degrees": 3.7067611985740285,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 11,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.030981097663470535,
+              "yaw_error": 0.11656087662313917,
+              "max_tilt_degrees": 4.038372393335484,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 12,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03163590689746823,
+              "yaw_error": 0.12365654427656218,
+              "max_tilt_degrees": 3.6201759488964553,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 13,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03494360567147909,
+              "yaw_error": 0.11617387207421033,
+              "max_tilt_degrees": 3.884688155712403,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 14,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03165163829432348,
+              "yaw_error": 0.1102876803749486,
+              "max_tilt_degrees": 3.7256769264509924,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 15,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.032059496874482195,
+              "yaw_error": 0.11617988389654783,
+              "max_tilt_degrees": 3.4902028593117436,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 16,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.02931639723014628,
+              "yaw_error": 0.12245197968802563,
+              "max_tilt_degrees": 3.510005259184866,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 17,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.034328347544188204,
+              "yaw_error": 0.11464673737480648,
+              "max_tilt_degrees": 4.067171676034704,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 18,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03275392650053569,
+              "yaw_error": 0.09771597240120172,
+              "max_tilt_degrees": 3.8545279106622576,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 19,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03581024858285041,
+              "yaw_error": 0.12960297724624215,
+              "max_tilt_degrees": 3.964769338419841,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 20,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033604527588062726,
+              "yaw_error": 0.11173694953935123,
+              "max_tilt_degrees": 3.5344085614925294,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 21,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033105357554941414,
+              "yaw_error": 0.1098221426922828,
+              "max_tilt_degrees": 3.4384341068774673,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 22,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03280427232853435,
+              "yaw_error": 0.1379999064108798,
+              "max_tilt_degrees": 3.710245966678375,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 23,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03242288919113388,
+              "yaw_error": 0.1285435336759608,
+              "max_tilt_degrees": 3.589487468280976,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 24,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.033241330295300804,
+              "yaw_error": 0.11696134413911127,
+              "max_tilt_degrees": 3.549665171223136,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 25,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.031349497113456554,
+              "yaw_error": 0.0936711280753738,
+              "max_tilt_degrees": 3.641477325078783,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 26,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03242491323976219,
+              "yaw_error": 0.11784634799647488,
+              "max_tilt_degrees": 3.9715302478989734,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 27,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03490163671591577,
+              "yaw_error": 0.1429647630390613,
+              "max_tilt_degrees": 3.676421707452466,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 28,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.029827811663746623,
+              "yaw_error": 0.10826176906200616,
+              "max_tilt_degrees": 3.265786955555523,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 29,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03208750984126456,
+              "yaw_error": 0.11250770990540715,
+              "max_tilt_degrees": 3.538339545708679,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 30,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.0334591856653017,
+              "yaw_error": 0.1319386461585466,
+              "max_tilt_degrees": 3.9204647786681637,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        },
+        {
+          "env": 31,
+          "windows": [
+            {
+              "start": 1,
+              "end": 20,
+              "samples": 950,
+              "xy_error": 0.03293540275511641,
+              "yaw_error": 0.14225072298885177,
+              "max_tilt_degrees": 3.5289755119332145,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 47000,
+      "behavior": "stop_restart",
+      "source_sha256": "39e031920fd9469f69d27e8027f60cde7a61e35b03f5d56797f1792389f3017d",
+      "termination_rate": 0.0,
+      "passed_episodes": 29,
+      "episodes": 32,
+      "passed": true,
+      "failed_envs": [
+        3,
+        4,
+        11
+      ],
+      "rows": [
+        {
+          "env": 0,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04465655775053451,
+              "yaw_error": 0.0725216684609768,
+              "max_tilt_degrees": 2.1147958473982813,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023315475271599485,
+              "yaw_error": 0.07084224922407883,
+              "max_tilt_degrees": 2.031917576064771,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043592014264899656,
+              "yaw_error": 0.06639214808179532,
+              "max_tilt_degrees": 1.8248841583020106,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02541071577097861,
+              "yaw_error": 0.06533670677512418,
+              "max_tilt_degrees": 2.2022042366193864,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.58,
+            1.0
+          ],
+          "passed": true
+        },
+        {
+          "env": 1,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042551159728119715,
+              "yaw_error": 0.06762392522126902,
+              "max_tilt_degrees": 1.855934648920301,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025253895189079358,
+              "yaw_error": 0.06265045664622448,
+              "max_tilt_degrees": 1.647701340036755,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04431140054104471,
+              "yaw_error": 0.06952100477355998,
+              "max_tilt_degrees": 2.365791969461968,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024341627950238854,
+              "yaw_error": 0.06222116099845152,
+              "max_tilt_degrees": 1.7572485975055816,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.1
+          ],
+          "passed": true
+        },
+        {
+          "env": 2,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04490932253135609,
+              "yaw_error": 0.06546776770264842,
+              "max_tilt_degrees": 1.364296814984601,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02357048132625559,
+              "yaw_error": 0.0703877536545042,
+              "max_tilt_degrees": 1.6348238730205034,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04531070243340382,
+              "yaw_error": 0.0626446437294362,
+              "max_tilt_degrees": 1.9250861471263414,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02335387031734321,
+              "yaw_error": 0.0700869344403327,
+              "max_tilt_degrees": 1.4781671291013092,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.32,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 3,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.040896012871019155,
+              "yaw_error": 0.06732485361615545,
+              "max_tilt_degrees": 2.092747670404994,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02923984525622044,
+              "yaw_error": 0.071845198944211,
+              "max_tilt_degrees": 2.812994710934451,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043510845585960196,
+              "yaw_error": 0.06583292518684175,
+              "max_tilt_degrees": 1.8592006664070662,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.022851276226757856,
+              "yaw_error": 0.06461652693455107,
+              "max_tilt_degrees": 1.4496942280629086,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.46,
+            null
+          ],
+          "passed": false
+        },
+        {
+          "env": 4,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04291304874553657,
+              "yaw_error": 0.06494190043653361,
+              "max_tilt_degrees": 1.8899982321134388,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023653300159826182,
+              "yaw_error": 0.06946820308803581,
+              "max_tilt_degrees": 2.495282929559289,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.041841194209189414,
+              "yaw_error": 0.061191816696882596,
+              "max_tilt_degrees": 2.100309146012361,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024918969854125672,
+              "yaw_error": 0.0657463126037328,
+              "max_tilt_degrees": 1.858779567145616,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            null,
+            0.8
+          ],
+          "passed": false
+        },
+        {
+          "env": 5,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.041314536861028435,
+              "yaw_error": 0.06249983826361131,
+              "max_tilt_degrees": 1.9045425922532926,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026165230738840087,
+              "yaw_error": 0.06883703425584826,
+              "max_tilt_degrees": 2.6410096025280136,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04251201059980616,
+              "yaw_error": 0.06882244745502249,
+              "max_tilt_degrees": 1.7456279182344705,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.025129507411085123,
+              "yaw_error": 0.060402218578965404,
+              "max_tilt_degrees": 1.9528430550385723,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.4,
+            0.26
+          ],
+          "passed": true
+        },
+        {
+          "env": 6,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.043790079776219244,
+              "yaw_error": 0.057070264018839224,
+              "max_tilt_degrees": 1.9408805873630894,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026897188847557332,
+              "yaw_error": 0.06661060836864635,
+              "max_tilt_degrees": 2.7340901664828507,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04103754062656884,
+              "yaw_error": 0.06389982555701863,
+              "max_tilt_degrees": 1.956447547770467,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024164554463727565,
+              "yaw_error": 0.06913760924770031,
+              "max_tilt_degrees": 1.9541454440675663,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.18,
+            0.5
+          ],
+          "passed": true
+        },
+        {
+          "env": 7,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04037223223153826,
+              "yaw_error": 0.06870612037542742,
+              "max_tilt_degrees": 1.9524421452389529,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02551515768838018,
+              "yaw_error": 0.06121835080208257,
+              "max_tilt_degrees": 2.1578541149077193,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.045911145173388214,
+              "yaw_error": 0.06818941235824241,
+              "max_tilt_degrees": 1.861620139309765,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.03035682452929552,
+              "yaw_error": 0.061778250454808586,
+              "max_tilt_degrees": 2.2008707231219704,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.92,
+            0.54
+          ],
+          "passed": true
+        },
+        {
+          "env": 8,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0430679063719843,
+              "yaw_error": 0.06290266895288368,
+              "max_tilt_degrees": 1.5595943617181194,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02664098813053833,
+              "yaw_error": 0.0713053232213133,
+              "max_tilt_degrees": 2.3761109471447144,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04376849629122103,
+              "yaw_error": 0.06431534963077866,
+              "max_tilt_degrees": 1.9499345922121951,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.020297553106601578,
+              "yaw_error": 0.0672569529071916,
+              "max_tilt_degrees": 2.4477662164049008,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.0,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 9,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.045006058227945706,
+              "yaw_error": 0.06229168110636238,
+              "max_tilt_degrees": 1.7196495792407211,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025020405339639295,
+              "yaw_error": 0.0665647302340949,
+              "max_tilt_degrees": 2.314183893667969,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0388753245073624,
+              "yaw_error": 0.0639291628607316,
+              "max_tilt_degrees": 1.893205507309702,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02240031840057882,
+              "yaw_error": 0.06596437428786885,
+              "max_tilt_degrees": 2.2301116791879343,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.5,
+            1.96
+          ],
+          "passed": true
+        },
+        {
+          "env": 10,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04087774895363422,
+              "yaw_error": 0.06322248108073836,
+              "max_tilt_degrees": 1.6898020586095128,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02775553887815609,
+              "yaw_error": 0.06953405411564745,
+              "max_tilt_degrees": 1.857937082398256,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04529041931619794,
+              "yaw_error": 0.06398369435977656,
+              "max_tilt_degrees": 1.650786472415383,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02606234048857205,
+              "yaw_error": 0.06755433733691461,
+              "max_tilt_degrees": 2.8127859408354317,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.38,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 11,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04261163273781003,
+              "yaw_error": 0.0644727507699281,
+              "max_tilt_degrees": 1.7245361326500863,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.028069145059583828,
+              "yaw_error": 0.06976920208020601,
+              "max_tilt_degrees": 2.7702214253072674,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.03785868726939319,
+              "yaw_error": 0.06252185842749895,
+              "max_tilt_degrees": 1.8301314577537873,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02258098274510604,
+              "yaw_error": 0.07136073479836341,
+              "max_tilt_degrees": 1.9343152378822095,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.1,
+            null
+          ],
+          "passed": false
+        },
+        {
+          "env": 12,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04197704322196184,
+              "yaw_error": 0.06772310807427857,
+              "max_tilt_degrees": 1.4921343285995166,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02717552733146391,
+              "yaw_error": 0.06330842899624259,
+              "max_tilt_degrees": 1.6003443654072746,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.042910261630201375,
+              "yaw_error": 0.06804386826232076,
+              "max_tilt_degrees": 1.8092673188509774,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.025638103008816113,
+              "yaw_error": 0.06522547351312824,
+              "max_tilt_degrees": 2.280188629478609,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 13,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03998803741879022,
+              "yaw_error": 0.0630156750426977,
+              "max_tilt_degrees": 1.8469498220891287,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02395885476915237,
+              "yaw_error": 0.06661782277718885,
+              "max_tilt_degrees": 2.307916810619463,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04533662447883605,
+              "yaw_error": 0.06440386634552851,
+              "max_tilt_degrees": 1.7102923493194429,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02422627436709459,
+              "yaw_error": 0.06948975585139124,
+              "max_tilt_degrees": 2.026130219570603,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.24
+          ],
+          "passed": true
+        },
+        {
+          "env": 14,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04553927250530032,
+              "yaw_error": 0.06749765355663839,
+              "max_tilt_degrees": 2.0827169889681385,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02393413268056271,
+              "yaw_error": 0.06489162917714567,
+              "max_tilt_degrees": 2.4107029341552955,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04633149078309197,
+              "yaw_error": 0.06422378478688189,
+              "max_tilt_degrees": 1.9486293899034144,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.021757727410179922,
+              "yaw_error": 0.0692730089154793,
+              "max_tilt_degrees": 2.425757547741553,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.18,
+            0.48
+          ],
+          "passed": true
+        },
+        {
+          "env": 15,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042732945731854245,
+              "yaw_error": 0.06960369515931233,
+              "max_tilt_degrees": 1.7279371746512413,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027163438843343,
+              "yaw_error": 0.06212146721958561,
+              "max_tilt_degrees": 3.1046949576184377,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.03948382050794206,
+              "yaw_error": 0.07064677956048399,
+              "max_tilt_degrees": 1.739225963616937,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02743652714001129,
+              "yaw_error": 0.06504499955597566,
+              "max_tilt_degrees": 1.6572937950511628,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.52,
+            0.64
+          ],
+          "passed": true
+        },
+        {
+          "env": 16,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.044024350863005726,
+              "yaw_error": 0.06379221096969559,
+              "max_tilt_degrees": 2.537519143575071,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.022413697556836663,
+              "yaw_error": 0.06747646683099447,
+              "max_tilt_degrees": 2.844618562687144,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04300188016141829,
+              "yaw_error": 0.06534184753050795,
+              "max_tilt_degrees": 1.7816909797620395,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023749950253257816,
+              "yaw_error": 0.06702421592082829,
+              "max_tilt_degrees": 2.579291884107893,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.78,
+            1.56
+          ],
+          "passed": true
+        },
+        {
+          "env": 17,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03967780149905703,
+              "yaw_error": 0.06537494364078157,
+              "max_tilt_degrees": 1.3611375703239672,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023819992697667502,
+              "yaw_error": 0.06577552490285597,
+              "max_tilt_degrees": 3.0884473706273297,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.03969141396839,
+              "yaw_error": 0.06622001784155146,
+              "max_tilt_degrees": 1.7748678003554208,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024868401002081698,
+              "yaw_error": 0.07009907370782457,
+              "max_tilt_degrees": 1.6208785982846674,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.9,
+            0.6
+          ],
+          "passed": true
+        },
+        {
+          "env": 18,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04309855706161052,
+              "yaw_error": 0.0640548144801869,
+              "max_tilt_degrees": 1.7020338429542234,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02330845446059314,
+              "yaw_error": 0.07011046148603782,
+              "max_tilt_degrees": 2.0957381786089404,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04101999038500804,
+              "yaw_error": 0.06863641194679077,
+              "max_tilt_degrees": 1.5600961927193255,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.022399753405939027,
+              "yaw_error": 0.06805201107461471,
+              "max_tilt_degrees": 2.4255961668310064,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.16,
+            1.18
+          ],
+          "passed": true
+        },
+        {
+          "env": 19,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042689155620452814,
+              "yaw_error": 0.06651662106887671,
+              "max_tilt_degrees": 1.5543153565332235,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026938668003492566,
+              "yaw_error": 0.0725326934910845,
+              "max_tilt_degrees": 2.2226393641622644,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.042734656030263884,
+              "yaw_error": 0.06222063558292575,
+              "max_tilt_degrees": 1.4969789959236064,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024361283848252896,
+              "yaw_error": 0.06709182416874683,
+              "max_tilt_degrees": 1.6688257932273378,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.42,
+            0.58
+          ],
+          "passed": true
+        },
+        {
+          "env": 20,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04235414485942849,
+              "yaw_error": 0.06326517354726093,
+              "max_tilt_degrees": 1.6774811114863422,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02470303442807751,
+              "yaw_error": 0.06640958759671775,
+              "max_tilt_degrees": 3.237791398187296,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.041466762166334166,
+              "yaw_error": 0.06555698867450702,
+              "max_tilt_degrees": 1.4825295113098238,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023716999564480926,
+              "yaw_error": 0.07305627924055443,
+              "max_tilt_degrees": 2.001836222779581,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.98,
+            0.28
+          ],
+          "passed": true
+        },
+        {
+          "env": 21,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04121670162753481,
+              "yaw_error": 0.06586374950711615,
+              "max_tilt_degrees": 1.7237415909159866,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.021028648781936346,
+              "yaw_error": 0.06885070530945087,
+              "max_tilt_degrees": 2.248814444577482,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043355336107657794,
+              "yaw_error": 0.06315498476149514,
+              "max_tilt_degrees": 1.4835851271929947,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02456905269839944,
+              "yaw_error": 0.0730223634988215,
+              "max_tilt_degrees": 1.5303345524324345,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.88
+          ],
+          "passed": true
+        },
+        {
+          "env": 22,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.039371330089011,
+              "yaw_error": 0.06398260834161192,
+              "max_tilt_degrees": 1.843237462245247,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023888398172247857,
+              "yaw_error": 0.06768921940180007,
+              "max_tilt_degrees": 2.0695193459292747,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04145340829212376,
+              "yaw_error": 0.06518643942836207,
+              "max_tilt_degrees": 2.334561543648816,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02340248022674765,
+              "yaw_error": 0.06209991691619507,
+              "max_tilt_degrees": 1.9910529975806623,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.4,
+            0.72
+          ],
+          "passed": true
+        },
+        {
+          "env": 23,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04697632088799188,
+              "yaw_error": 0.0664155796088744,
+              "max_tilt_degrees": 1.9485289535271528,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.028034067109587526,
+              "yaw_error": 0.06808022894896566,
+              "max_tilt_degrees": 3.2803816243795754,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.044710349098600444,
+              "yaw_error": 0.0656712660426274,
+              "max_tilt_degrees": 2.1322152478874723,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02421519135017828,
+              "yaw_error": 0.060172443311894315,
+              "max_tilt_degrees": 1.4200998122144732,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.56,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 24,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04220740158460135,
+              "yaw_error": 0.0644469958852278,
+              "max_tilt_degrees": 1.7930780280804255,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.029633795875499257,
+              "yaw_error": 0.06376594704663148,
+              "max_tilt_degrees": 1.808726402989171,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04533877078642428,
+              "yaw_error": 0.06238677484157961,
+              "max_tilt_degrees": 1.7459642131615165,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02471867705210265,
+              "yaw_error": 0.0661733761621872,
+              "max_tilt_degrees": 2.6012815419623747,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.74,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 25,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04151836209272506,
+              "yaw_error": 0.06089924576081103,
+              "max_tilt_degrees": 1.6054720659760875,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02535534095681153,
+              "yaw_error": 0.06993931077769958,
+              "max_tilt_degrees": 2.950548966545782,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04260266961129129,
+              "yaw_error": 0.06412978514301358,
+              "max_tilt_degrees": 1.9243743844367192,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.028000205611008817,
+              "yaw_error": 0.06536878540122416,
+              "max_tilt_degrees": 3.1510726057484617,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.32,
+            0.24
+          ],
+          "passed": true
+        },
+        {
+          "env": 26,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04507881667855397,
+              "yaw_error": 0.06721173131692922,
+              "max_tilt_degrees": 1.7603641392823548,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025979185639409184,
+              "yaw_error": 0.06827308213629295,
+              "max_tilt_degrees": 2.4887638199002664,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04431818135792485,
+              "yaw_error": 0.06250475353881484,
+              "max_tilt_degrees": 1.9826803538045874,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024462738311310704,
+              "yaw_error": 0.06704236013654735,
+              "max_tilt_degrees": 2.600528966590644,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.34,
+            0.54
+          ],
+          "passed": true
+        },
+        {
+          "env": 27,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.039953015362739756,
+              "yaw_error": 0.06792912691409583,
+              "max_tilt_degrees": 1.7910031052764546,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024823952424208554,
+              "yaw_error": 0.06322733559296466,
+              "max_tilt_degrees": 2.1767278564906554,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.046037357673039646,
+              "yaw_error": 0.06550695381272817,
+              "max_tilt_degrees": 1.7279371746512413,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024844474326974578,
+              "yaw_error": 0.06460821936372668,
+              "max_tilt_degrees": 2.1137776013365674,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.36,
+            0.6
+          ],
+          "passed": true
+        },
+        {
+          "env": 28,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04523953730349557,
+              "yaw_error": 0.06667387659661472,
+              "max_tilt_degrees": 1.8889624659723638,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02714786500394211,
+              "yaw_error": 0.06299928608816117,
+              "max_tilt_degrees": 1.7348320710679674,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04332009756979314,
+              "yaw_error": 0.06296416851342655,
+              "max_tilt_degrees": 2.0429642039499663,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02611177753858589,
+              "yaw_error": 0.062153438928653486,
+              "max_tilt_degrees": 2.801139884013208,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.82,
+            0.18
+          ],
+          "passed": true
+        },
+        {
+          "env": 29,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0431129094830978,
+              "yaw_error": 0.06598802770429757,
+              "max_tilt_degrees": 1.806344449526517,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02627471635266212,
+              "yaw_error": 0.0691077479076921,
+              "max_tilt_degrees": 2.8564301491570276,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04322041480586867,
+              "yaw_error": 0.05742920356686227,
+              "max_tilt_degrees": 1.7343807862193528,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024470885802447395,
+              "yaw_error": 0.06675315315180341,
+              "max_tilt_degrees": 2.524527030212133,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 30,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04175236897524972,
+              "yaw_error": 0.06198105864517856,
+              "max_tilt_degrees": 1.8459959280744247,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027251995447555348,
+              "yaw_error": 0.07423243756886222,
+              "max_tilt_degrees": 2.243673632846419,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04241106029521509,
+              "yaw_error": 0.06267525560746436,
+              "max_tilt_degrees": 1.55808789917207,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024677246975258294,
+              "yaw_error": 0.06981905166307115,
+              "max_tilt_degrees": 2.125319866179666,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.28,
+            0.42
+          ],
+          "passed": true
+        },
+        {
+          "env": 31,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04129256667266917,
+              "yaw_error": 0.06335809798794799,
+              "max_tilt_degrees": 1.4624618809501602,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025513713288305682,
+              "yaw_error": 0.06361282332625706,
+              "max_tilt_degrees": 2.0980715485792105,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04144012441312947,
+              "yaw_error": 0.06668721699319576,
+              "max_tilt_degrees": 1.8617252624822682,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02224344167304955,
+              "yaw_error": 0.06601886035059579,
+              "max_tilt_degrees": 2.387369346336074,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.3,
+            0.84
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 48000,
+      "behavior": "stop_restart",
+      "source_sha256": "ead73f26adb33c302ee65c41458fcbfdd63d2c6ee621f6a9730dda6208103ad4",
+      "termination_rate": 0.0,
+      "passed_episodes": 27,
+      "episodes": 32,
+      "passed": false,
+      "failed_envs": [
+        13,
+        16,
+        24,
+        28,
+        31
+      ],
+      "rows": [
+        {
+          "env": 0,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04093019267258071,
+              "yaw_error": 0.06579623104305937,
+              "max_tilt_degrees": 1.8563563933020175,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.022563123714154257,
+              "yaw_error": 0.06904503398567613,
+              "max_tilt_degrees": 1.9667239274729216,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04226087318648096,
+              "yaw_error": 0.06695047330576927,
+              "max_tilt_degrees": 1.796349343878203,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02413088988378661,
+              "yaw_error": 0.0639608078316087,
+              "max_tilt_degrees": 2.3445170345155746,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.34,
+            0.24
+          ],
+          "passed": true
+        },
+        {
+          "env": 1,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0423304711674587,
+              "yaw_error": 0.06788923897547647,
+              "max_tilt_degrees": 1.891757733536279,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023943569266069158,
+              "yaw_error": 0.06958084158599377,
+              "max_tilt_degrees": 2.3965340230105516,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04208282897711833,
+              "yaw_error": 0.06125812368525658,
+              "max_tilt_degrees": 1.606446915620533,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02376616753021217,
+              "yaw_error": 0.06449821651272941,
+              "max_tilt_degrees": 2.5684170284858583,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.6,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 2,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04413046898961187,
+              "yaw_error": 0.06416604594909586,
+              "max_tilt_degrees": 2.0565225546575046,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027625908688268145,
+              "yaw_error": 0.06747102004359476,
+              "max_tilt_degrees": 2.613817548210242,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04207475149553,
+              "yaw_error": 0.06615720580011838,
+              "max_tilt_degrees": 1.8525572386354228,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02522975283910497,
+              "yaw_error": 0.0681831499922555,
+              "max_tilt_degrees": 2.2927718130776116,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.76,
+            2.0
+          ],
+          "passed": true
+        },
+        {
+          "env": 3,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.044750861700517015,
+              "yaw_error": 0.06355239161406644,
+              "max_tilt_degrees": 2.1274368247685267,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024394610512203593,
+              "yaw_error": 0.060584375821053985,
+              "max_tilt_degrees": 2.6352965321710013,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04090410673129464,
+              "yaw_error": 0.0648034082975937,
+              "max_tilt_degrees": 1.482661504387562,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02698643219336025,
+              "yaw_error": 0.06780455783358776,
+              "max_tilt_degrees": 2.4346170338980087,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.26,
+            0.38
+          ],
+          "passed": true
+        },
+        {
+          "env": 4,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04409458555977151,
+              "yaw_error": 0.0715111423021881,
+              "max_tilt_degrees": 1.9483280652481232,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.028342116184880837,
+              "yaw_error": 0.07051846390473657,
+              "max_tilt_degrees": 2.082810957179974,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.041685249312736976,
+              "yaw_error": 0.07102667210769141,
+              "max_tilt_degrees": 1.383383721409803,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023779169360090703,
+              "yaw_error": 0.06610261211579199,
+              "max_tilt_degrees": 2.2482921868019026,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.38,
+            0.76
+          ],
+          "passed": true
+        },
+        {
+          "env": 5,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04411983162668835,
+              "yaw_error": 0.06522360091781593,
+              "max_tilt_degrees": 1.745179424223682,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02402853809276058,
+              "yaw_error": 0.07162280043936335,
+              "max_tilt_degrees": 2.085628035710078,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0433894308782278,
+              "yaw_error": 0.06354585833731108,
+              "max_tilt_degrees": 1.6238941662606967,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024584833827049186,
+              "yaw_error": 0.07218872331490274,
+              "max_tilt_degrees": 1.5110313689329353,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.28,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 6,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.041002483371862006,
+              "yaw_error": 0.06139972650562413,
+              "max_tilt_degrees": 1.7344936184359316,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025686490559852056,
+              "yaw_error": 0.07773410885827615,
+              "max_tilt_degrees": 1.7604753066896295,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04584792047230365,
+              "yaw_error": 0.06305833586724476,
+              "max_tilt_degrees": 1.8112132788171946,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024870559646892873,
+              "yaw_error": 0.07267519056040328,
+              "max_tilt_degrees": 1.3370590389232486,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.6,
+            1.94
+          ],
+          "passed": true
+        },
+        {
+          "env": 7,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.043069131648332294,
+              "yaw_error": 0.06985845497867559,
+              "max_tilt_degrees": 1.7331391471693762,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025717049988208382,
+              "yaw_error": 0.07116599540502648,
+              "max_tilt_degrees": 2.3843339935858023,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04425683424566587,
+              "yaw_error": 0.06603671082229993,
+              "max_tilt_degrees": 2.113407208461724,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024629701000591798,
+              "yaw_error": 0.06568111070722807,
+              "max_tilt_degrees": 1.3472651001172797,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.82,
+            0.1
+          ],
+          "passed": true
+        },
+        {
+          "env": 8,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04297945047170122,
+              "yaw_error": 0.07441344934006339,
+              "max_tilt_degrees": 1.7722195192452646,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02502227828724221,
+              "yaw_error": 0.06490286123873375,
+              "max_tilt_degrees": 2.358500344725326,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.041827209553060435,
+              "yaw_error": 0.0638690601484268,
+              "max_tilt_degrees": 2.3395864109342956,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.022994121487654152,
+              "yaw_error": 0.06764361795096192,
+              "max_tilt_degrees": 2.09648513942914,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            1.64
+          ],
+          "passed": true
+        },
+        {
+          "env": 9,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04154785604320683,
+              "yaw_error": 0.06299491754820337,
+              "max_tilt_degrees": 1.8423878729204404,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.021983853051956017,
+              "yaw_error": 0.06712548876123037,
+              "max_tilt_degrees": 1.3304566649892355,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043133976817455434,
+              "yaw_error": 0.06643864550278522,
+              "max_tilt_degrees": 1.924170975327905,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023019759416792546,
+              "yaw_error": 0.06588188503519632,
+              "max_tilt_degrees": 2.317902238756854,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            1.62
+          ],
+          "passed": true
+        },
+        {
+          "env": 10,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04458024644234861,
+              "yaw_error": 0.0680490406381432,
+              "max_tilt_degrees": 1.6999629494394655,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02631338619232694,
+              "yaw_error": 0.06474217208538903,
+              "max_tilt_degrees": 2.3835129648241384,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04105786264352315,
+              "yaw_error": 0.0643304280473967,
+              "max_tilt_degrees": 1.6035205891938056,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023298504111668006,
+              "yaw_error": 0.07087051752692787,
+              "max_tilt_degrees": 2.272278006847118,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 11,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.040945872334246056,
+              "yaw_error": 0.07084070425160462,
+              "max_tilt_degrees": 1.894342267899921,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02308567843542784,
+              "yaw_error": 0.07144916346864193,
+              "max_tilt_degrees": 1.795804538274613,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0424799042184307,
+              "yaw_error": 0.06737650758615928,
+              "max_tilt_degrees": 1.7042170568608146,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024719092875995,
+              "yaw_error": 0.0706535274907219,
+              "max_tilt_degrees": 1.9895780314533404,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.04,
+            0.2
+          ],
+          "passed": true
+        },
+        {
+          "env": 12,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04205673107280406,
+              "yaw_error": 0.06410728252201807,
+              "max_tilt_degrees": 1.752788220185029,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026344692454087406,
+              "yaw_error": 0.06458705597673543,
+              "max_tilt_degrees": 1.7685716597682855,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0426473992414776,
+              "yaw_error": 0.06582389765186235,
+              "max_tilt_degrees": 1.9483280652481232,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02880913461490599,
+              "yaw_error": 0.07115058605792,
+              "max_tilt_degrees": 2.493713617306635,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.52,
+            0.26
+          ],
+          "passed": true
+        },
+        {
+          "env": 13,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04538482275738554,
+              "yaw_error": 0.06327575222254382,
+              "max_tilt_degrees": 1.6082731664562213,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024708090306755075,
+              "yaw_error": 0.06882558875106043,
+              "max_tilt_degrees": 1.7960224803409177,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0408493018239347,
+              "yaw_error": 0.0709538967377739,
+              "max_tilt_degrees": 1.7041022205772125,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02706128631121016,
+              "yaw_error": 0.06742794922029134,
+              "max_tilt_degrees": 2.47551600516738,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.28,
+            null
+          ],
+          "passed": false
+        },
+        {
+          "env": 14,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04549537890372951,
+              "yaw_error": 0.06311806340701878,
+              "max_tilt_degrees": 1.909776050586708,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024306972247645088,
+              "yaw_error": 0.06777016907930374,
+              "max_tilt_degrees": 1.5869594880744426,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04063305949512228,
+              "yaw_error": 0.07269806573516689,
+              "max_tilt_degrees": 1.9359333889045494,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.021762476557316134,
+              "yaw_error": 0.06682309270079713,
+              "max_tilt_degrees": 2.3726487740951065,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 15,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04861324386560759,
+              "yaw_error": 0.06979020888102241,
+              "max_tilt_degrees": 1.6450863256235133,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02523580571217763,
+              "yaw_error": 0.06504225487733492,
+              "max_tilt_degrees": 2.1896371630789506,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.044464221853578546,
+              "yaw_error": 0.061160208698129284,
+              "max_tilt_degrees": 1.9509380000302783,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024985410226056062,
+              "yaw_error": 0.06879796487588465,
+              "max_tilt_degrees": 1.8877187967045668,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.16,
+            1.0
+          ],
+          "passed": true
+        },
+        {
+          "env": 16,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.043996288769217774,
+              "yaw_error": 0.06714845721406164,
+              "max_tilt_degrees": 1.4009543037457923,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023787953862151795,
+              "yaw_error": 0.06712530672666617,
+              "max_tilt_degrees": 2.1004955049180434,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.041097496478093236,
+              "yaw_error": 0.06927793669630773,
+              "max_tilt_degrees": 2.0260336236285474,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.026511232658789165,
+              "yaw_error": 0.0687494730121398,
+              "max_tilt_degrees": 1.9799145569654808,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            null,
+            0.08
+          ],
+          "passed": false
+        },
+        {
+          "env": 17,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04666053232038185,
+              "yaw_error": 0.06628420159773668,
+              "max_tilt_degrees": 2.0592805412675808,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023579961222335175,
+              "yaw_error": 0.0676562924774771,
+              "max_tilt_degrees": 2.4664065605331342,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04099009190569989,
+              "yaw_error": 0.06546775474096649,
+              "max_tilt_degrees": 1.5169771190099133,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024487501867940784,
+              "yaw_error": 0.06198427090930636,
+              "max_tilt_degrees": 2.148127332553419,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.58
+          ],
+          "passed": true
+        },
+        {
+          "env": 18,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0443944032441715,
+              "yaw_error": 0.07263157769251848,
+              "max_tilt_degrees": 1.8247769134992378,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023519636662237817,
+              "yaw_error": 0.06695001314568799,
+              "max_tilt_degrees": 2.2279165397324627,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04162198741318502,
+              "yaw_error": 0.06476944841240766,
+              "max_tilt_degrees": 1.589546989126404,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027506417026213228,
+              "yaw_error": 0.06665775661182125,
+              "max_tilt_degrees": 1.4672711285346343,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.56,
+            0.38
+          ],
+          "passed": true
+        },
+        {
+          "env": 19,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04099622048146059,
+              "yaw_error": 0.0595342077697569,
+              "max_tilt_degrees": 1.595200186456833,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023337972425410723,
+              "yaw_error": 0.06372852521715686,
+              "max_tilt_degrees": 2.2575009625259037,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.042343589129147804,
+              "yaw_error": 0.0691284227836877,
+              "max_tilt_degrees": 1.513877901330731,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024593936758824392,
+              "yaw_error": 0.07015815894876141,
+              "max_tilt_degrees": 2.3940008808770874,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 20,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0453448576990335,
+              "yaw_error": 0.06609050659521017,
+              "max_tilt_degrees": 1.742598344306522,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02274551147285653,
+              "yaw_error": 0.061624515886651354,
+              "max_tilt_degrees": 1.5966716426161256,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.040973149377206995,
+              "yaw_error": 0.0683681456510385,
+              "max_tilt_degrees": 2.090127467378086,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02205245125497006,
+              "yaw_error": 0.06822613134398126,
+              "max_tilt_degrees": 2.1633797266555423,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.26,
+            0.52
+          ],
+          "passed": true
+        },
+        {
+          "env": 21,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04102847552639404,
+              "yaw_error": 0.06636257972655585,
+              "max_tilt_degrees": 1.7413625628162972,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027402168327014195,
+              "yaw_error": 0.06609895406174474,
+              "max_tilt_degrees": 2.7556268332459726,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0454554212252142,
+              "yaw_error": 0.06478250850574113,
+              "max_tilt_degrees": 1.7015738621413756,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024108073372851608,
+              "yaw_error": 0.06374995109043084,
+              "max_tilt_degrees": 1.8080770904185361,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.24,
+            0.32
+          ],
+          "passed": true
+        },
+        {
+          "env": 22,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04414198269883122,
+              "yaw_error": 0.06910075548134045,
+              "max_tilt_degrees": 1.4576367695391774,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025196116892303534,
+              "yaw_error": 0.06553427837177878,
+              "max_tilt_degrees": 3.026015290065498,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04192022424605312,
+              "yaw_error": 0.0606339762279822,
+              "max_tilt_degrees": 2.0096422415839523,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027039637734089503,
+              "yaw_error": 0.06853272764106805,
+              "max_tilt_degrees": 2.1760983698453837,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.24,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 23,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04104650800579983,
+              "yaw_error": 0.06568919898825698,
+              "max_tilt_degrees": 1.866344822220082,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.0254773022405998,
+              "yaw_error": 0.07194818083953577,
+              "max_tilt_degrees": 1.415683328277124,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04064881846758674,
+              "yaw_error": 0.06790712002526561,
+              "max_tilt_degrees": 1.6429436733619136,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.029534102858382344,
+              "yaw_error": 0.06453637469094246,
+              "max_tilt_degrees": 2.4671206859940376,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.7
+          ],
+          "passed": true
+        },
+        {
+          "env": 24,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.045107295417496945,
+              "yaw_error": 0.06490885534323752,
+              "max_tilt_degrees": 2.089003517606151,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024870726003444543,
+              "yaw_error": 0.07294342669454636,
+              "max_tilt_degrees": 2.573441899166514,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043202870278606406,
+              "yaw_error": 0.07246884791995399,
+              "max_tilt_degrees": 2.356424747302821,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02427239434492926,
+              "yaw_error": 0.07466548680851702,
+              "max_tilt_degrees": 1.9085459392213817,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            null
+          ],
+          "passed": false
+        },
+        {
+          "env": 25,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04432771907273132,
+              "yaw_error": 0.06560252360068261,
+              "max_tilt_degrees": 1.6718719555904122,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02752359399437594,
+              "yaw_error": 0.07375309342110996,
+              "max_tilt_degrees": 2.131939860618448,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0415534081647618,
+              "yaw_error": 0.06583424511778503,
+              "max_tilt_degrees": 1.6144669711198003,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.022044710008459693,
+              "yaw_error": 0.06614261529815849,
+              "max_tilt_degrees": 2.128264626932125,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 26,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0407093543814812,
+              "yaw_error": 0.06188753799709957,
+              "max_tilt_degrees": 1.5549447490937238,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025637515121611488,
+              "yaw_error": 0.06643479236925487,
+              "max_tilt_degrees": 1.579047626024912,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04247906756671732,
+              "yaw_error": 0.06014929969474906,
+              "max_tilt_degrees": 2.108957422253096,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02649762251170359,
+              "yaw_error": 0.06396664250118192,
+              "max_tilt_degrees": 2.8244533213915255,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 27,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.040486471504022264,
+              "yaw_error": 0.06625078420198406,
+              "max_tilt_degrees": 1.7175999187027022,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023979866696571043,
+              "yaw_error": 0.06551649461267516,
+              "max_tilt_degrees": 1.6852793510024342,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.039397590212208795,
+              "yaw_error": 0.0625213092067861,
+              "max_tilt_degrees": 1.7845445515125398,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.022524440755920024,
+              "yaw_error": 0.0697444317444024,
+              "max_tilt_degrees": 1.4583078783850225,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.32,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 28,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.041468074918955614,
+              "yaw_error": 0.06824127143685473,
+              "max_tilt_degrees": 1.7368614022834536,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02577361021337377,
+              "yaw_error": 0.068209647131589,
+              "max_tilt_degrees": 1.9173443046783762,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04145619704588863,
+              "yaw_error": 0.06482429466501344,
+              "max_tilt_degrees": 1.9869203343296615,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023447622338037252,
+              "yaw_error": 0.0646456323628081,
+              "max_tilt_degrees": 1.8096999351704304,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            null,
+            0.38
+          ],
+          "passed": false
+        },
+        {
+          "env": 29,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.045497512905734325,
+              "yaw_error": 0.0680722762500227,
+              "max_tilt_degrees": 1.5667302825601344,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026427968454935686,
+              "yaw_error": 0.06670496633974836,
+              "max_tilt_degrees": 2.0106158639083502,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.040507624689415,
+              "yaw_error": 0.06371310901609832,
+              "max_tilt_degrees": 1.9462174868859736,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02563495097371952,
+              "yaw_error": 0.06928203351562842,
+              "max_tilt_degrees": 1.789472675778195,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.48,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 30,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042381347235367135,
+              "yaw_error": 0.06384021966427099,
+              "max_tilt_degrees": 1.8573049681357168,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025852044609867387,
+              "yaw_error": 0.06232249683147529,
+              "max_tilt_degrees": 2.8202919361839243,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04234587693513735,
+              "yaw_error": 0.06848243289350649,
+              "max_tilt_degrees": 1.5319960447499383,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.026941041867815683,
+              "yaw_error": 0.06114745578670409,
+              "max_tilt_degrees": 1.8471617316635651,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.5,
+            0.5
+          ],
+          "passed": true
+        },
+        {
+          "env": 31,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03965553101328409,
+              "yaw_error": 0.06510836229892447,
+              "max_tilt_degrees": 1.6678873935561758,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.022085532848604067,
+              "yaw_error": 0.06919223389915714,
+              "max_tilt_degrees": 2.4278545239975293,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.042692978016289025,
+              "yaw_error": 0.06427473049261608,
+              "max_tilt_degrees": 1.7512244050218035,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02561827311246697,
+              "yaw_error": 0.0714922729486716,
+              "max_tilt_degrees": 2.4081034098878544,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            null,
+            0.18
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 49000,
+      "behavior": "stop_restart",
+      "source_sha256": "71e39aba02197a7fa7e727cd74743a1f6667101ff91eb714bd86396de2484628",
+      "termination_rate": 0.0,
+      "passed_episodes": 31,
+      "episodes": 32,
+      "passed": true,
+      "failed_envs": [
+        1
+      ],
+      "rows": [
+        {
+          "env": 0,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042955776076259104,
+              "yaw_error": 0.06769092780072242,
+              "max_tilt_degrees": 1.7275973716564001,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023748675473789435,
+              "yaw_error": 0.06578665893001016,
+              "max_tilt_degrees": 1.8089427887370106,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04185655926262955,
+              "yaw_error": 0.06289849699576734,
+              "max_tilt_degrees": 1.7314445685167295,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024981906926194127,
+              "yaw_error": 0.06667094066098798,
+              "max_tilt_degrees": 2.044209199327655,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.98
+          ],
+          "passed": true
+        },
+        {
+          "env": 1,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04345561403815981,
+              "yaw_error": 0.06502886244328693,
+              "max_tilt_degrees": 1.501677727980025,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026891044470113437,
+              "yaw_error": 0.06963715449324809,
+              "max_tilt_degrees": 2.5911788852200677,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043241648062292665,
+              "yaw_error": 0.06428410427877679,
+              "max_tilt_degrees": 1.8190838943087657,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023926976727754682,
+              "yaw_error": 0.0683302607567748,
+              "max_tilt_degrees": 2.257761041983264,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.38,
+            null
+          ],
+          "passed": false
+        },
+        {
+          "env": 2,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04386527684312308,
+              "yaw_error": 0.0711046643712325,
+              "max_tilt_degrees": 2.168530284140359,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02631863337677934,
+              "yaw_error": 0.06889520518714562,
+              "max_tilt_degrees": 2.320771427219713,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04440678552115391,
+              "yaw_error": 0.06517071101581678,
+              "max_tilt_degrees": 1.9530434790891387,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027931325919185294,
+              "yaw_error": 0.07198972847894765,
+              "max_tilt_degrees": 2.920875935336235,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.14,
+            0.6
+          ],
+          "passed": true
+        },
+        {
+          "env": 3,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.045468509459900636,
+              "yaw_error": 0.06500126286868181,
+              "max_tilt_degrees": 1.7385507027254585,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02497596747330985,
+              "yaw_error": 0.07017248267948162,
+              "max_tilt_degrees": 2.0013473361001295,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04005336230517541,
+              "yaw_error": 0.06144681494624819,
+              "max_tilt_degrees": 1.5226426381727902,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02820496908988404,
+              "yaw_error": 0.07004953742783983,
+              "max_tilt_degrees": 2.73315928454222,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.98,
+            0.56
+          ],
+          "passed": true
+        },
+        {
+          "env": 4,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04204891344376982,
+              "yaw_error": 0.06212615879572695,
+              "max_tilt_degrees": 2.3081712123142286,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027082442948469572,
+              "yaw_error": 0.06470007655181689,
+              "max_tilt_degrees": 2.805748289752797,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.037158980634880524,
+              "yaw_error": 0.06256302632857114,
+              "max_tilt_degrees": 1.7574713193087428,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027228776109226267,
+              "yaw_error": 0.062434597596293315,
+              "max_tilt_degrees": 2.335567381488292,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.28,
+            0.14
+          ],
+          "passed": true
+        },
+        {
+          "env": 5,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04520844461548899,
+              "yaw_error": 0.05928814095328562,
+              "max_tilt_degrees": 1.7486522449960287,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02314002909999295,
+              "yaw_error": 0.06752320202358533,
+              "max_tilt_degrees": 1.9046453472498277,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04826624348660909,
+              "yaw_error": 0.07327960514929145,
+              "max_tilt_degrees": 2.2807035870832806,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.030750843257516525,
+              "yaw_error": 0.06981988554238341,
+              "max_tilt_degrees": 1.9794202581665343,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.68,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 6,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03826826675506993,
+              "yaw_error": 0.06922371813212522,
+              "max_tilt_degrees": 1.641036745620525,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023551455039362984,
+              "yaw_error": 0.07286175062065013,
+              "max_tilt_degrees": 2.450723052171884,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043009741784580696,
+              "yaw_error": 0.06087982330922387,
+              "max_tilt_degrees": 1.6576480054329064,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02314028211864254,
+              "yaw_error": 0.0703524644029676,
+              "max_tilt_degrees": 1.6565851471397037,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.44,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 7,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04170700686805731,
+              "yaw_error": 0.06284578801831231,
+              "max_tilt_degrees": 1.736636038105544,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02761676493418141,
+              "yaw_error": 0.06735014213540126,
+              "max_tilt_degrees": 1.9625400538751778,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.046456920796137904,
+              "yaw_error": 0.058951237336732444,
+              "max_tilt_degrees": 1.95764757109282,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.026504898655587757,
+              "yaw_error": 0.06724717478587991,
+              "max_tilt_degrees": 1.9349222030380184,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.1,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 8,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04561649003063188,
+              "yaw_error": 0.06426647286250954,
+              "max_tilt_degrees": 1.4359957293325336,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024952286273812022,
+              "yaw_error": 0.06976865811797324,
+              "max_tilt_degrees": 2.795613781454213,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04669513574731371,
+              "yaw_error": 0.06767259322281462,
+              "max_tilt_degrees": 1.6989265563480531,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027730146931677968,
+              "yaw_error": 0.07173427689587697,
+              "max_tilt_degrees": 2.048608494845741,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.38,
+            0.68
+          ],
+          "passed": true
+        },
+        {
+          "env": 9,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.048805685980492675,
+              "yaw_error": 0.06120772348716855,
+              "max_tilt_degrees": 2.2173496355427456,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025644560790480588,
+              "yaw_error": 0.06971285501145758,
+              "max_tilt_degrees": 2.872353328979993,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04242189832023031,
+              "yaw_error": 0.06561566115124151,
+              "max_tilt_degrees": 1.532889948708912,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02501226573170686,
+              "yaw_error": 0.067444587010541,
+              "max_tilt_degrees": 3.5450840276179756,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.76,
+            0.42
+          ],
+          "passed": true
+        },
+        {
+          "env": 10,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042125121463765944,
+              "yaw_error": 0.06675336729997071,
+              "max_tilt_degrees": 1.9874127684938656,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02605814330955484,
+              "yaw_error": 0.0680773804555065,
+              "max_tilt_degrees": 1.9180586751470907,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.038905774160304274,
+              "yaw_error": 0.07049784181988798,
+              "max_tilt_degrees": 1.6197916198528408,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024920932074952492,
+              "yaw_error": 0.06917043031920912,
+              "max_tilt_degrees": 1.7177138528766909,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.3,
+            0.56
+          ],
+          "passed": true
+        },
+        {
+          "env": 11,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04040293035631728,
+              "yaw_error": 0.06777250306433416,
+              "max_tilt_degrees": 1.7810318141363288,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025874554058583268,
+              "yaw_error": 0.06326381908089389,
+              "max_tilt_degrees": 2.670491376845359,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04482148379410608,
+              "yaw_error": 0.06690719135687687,
+              "max_tilt_degrees": 1.6552851715743369,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02419930097435909,
+              "yaw_error": 0.07099162535741925,
+              "max_tilt_degrees": 1.8472676773379773,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.54,
+            0.16
+          ],
+          "passed": true
+        },
+        {
+          "env": 12,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04477623845705258,
+              "yaw_error": 0.06308063040894922,
+              "max_tilt_degrees": 1.5765670286047306,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.0231226192895329,
+              "yaw_error": 0.06986366293043829,
+              "max_tilt_degrees": 2.4131374464088293,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.045935933439677994,
+              "yaw_error": 0.06619810024829348,
+              "max_tilt_degrees": 1.9088535413520984,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02456330725351328,
+              "yaw_error": 0.06417817154317162,
+              "max_tilt_degrees": 2.637672296804694,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.58,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 13,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04074322028649038,
+              "yaw_error": 0.06231490132389808,
+              "max_tilt_degrees": 1.8698020048009447,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02598644348320707,
+              "yaw_error": 0.06862229884325644,
+              "max_tilt_degrees": 2.3981668890917183,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.043190381384822396,
+              "yaw_error": 0.07016610775375738,
+              "max_tilt_degrees": 2.262350851658771,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024912376070169624,
+              "yaw_error": 0.06459249945997726,
+              "max_tilt_degrees": 2.4176753141311242,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.1,
+            1.96
+          ],
+          "passed": true
+        },
+        {
+          "env": 14,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04539449271918221,
+              "yaw_error": 0.060674577836180105,
+              "max_tilt_degrees": 1.9859350998349872,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024448636003039433,
+              "yaw_error": 0.062037024791789006,
+              "max_tilt_degrees": 2.2708994349244374,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04176905026328393,
+              "yaw_error": 0.06293138928362169,
+              "max_tilt_degrees": 1.7485403261467825,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.021802419556002473,
+              "yaw_error": 0.06776210219541098,
+              "max_tilt_degrees": 2.3981668890917183,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.34,
+            0.16
+          ],
+          "passed": true
+        },
+        {
+          "env": 15,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.041631661522818296,
+              "yaw_error": 0.06491829289676389,
+              "max_tilt_degrees": 1.5538116589701867,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02388498212181499,
+              "yaw_error": 0.0645478519750759,
+              "max_tilt_degrees": 2.2765806664664696,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04163262098290582,
+              "yaw_error": 0.06670249535120093,
+              "max_tilt_degrees": 2.041526727784979,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02322472654617265,
+              "yaw_error": 0.06971813252472202,
+              "max_tilt_degrees": 1.7226058957613186,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.8,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 16,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04219078695104821,
+              "yaw_error": 0.06310506300535053,
+              "max_tilt_degrees": 1.7696778655359375,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025349991703186525,
+              "yaw_error": 0.06257692755199969,
+              "max_tilt_degrees": 2.199180445806038,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.040050701561089995,
+              "yaw_error": 0.06895720390311907,
+              "max_tilt_degrees": 1.3074600270453582,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.025652232450858035,
+              "yaw_error": 0.069418904704944,
+              "max_tilt_degrees": 1.669646460418126,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.2,
+            0.1
+          ],
+          "passed": true
+        },
+        {
+          "env": 17,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04182960737899441,
+              "yaw_error": 0.07348498214007122,
+              "max_tilt_degrees": 1.5555738870615323,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02623477151333553,
+              "yaw_error": 0.06588535774091725,
+              "max_tilt_degrees": 2.062604236683156,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04751679825979647,
+              "yaw_error": 0.06412908563157543,
+              "max_tilt_degrees": 2.2371216582842695,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02299400825775952,
+              "yaw_error": 0.0660574333252589,
+              "max_tilt_degrees": 2.130103036056299,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.3,
+            0.54
+          ],
+          "passed": true
+        },
+        {
+          "env": 18,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04409652815811821,
+              "yaw_error": 0.06722426878288389,
+              "max_tilt_degrees": 1.914279698561255,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023870596960896374,
+              "yaw_error": 0.059313423141429664,
+              "max_tilt_degrees": 1.9230518407859658,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04426861614094012,
+              "yaw_error": 0.06342997482046485,
+              "max_tilt_degrees": 1.5001131188790533,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.025185351735428,
+              "yaw_error": 0.06313406699337065,
+              "max_tilt_degrees": 1.8625660343441213,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.44,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 19,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04131889407952631,
+              "yaw_error": 0.06484490129776532,
+              "max_tilt_degrees": 1.780372404539591,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023237546325943277,
+              "yaw_error": 0.07096844657615292,
+              "max_tilt_degrees": 2.427370767092515,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0431580533750521,
+              "yaw_error": 0.06746462992188754,
+              "max_tilt_degrees": 2.016544784674458,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.025151248977696924,
+              "yaw_error": 0.06336890589998802,
+              "max_tilt_degrees": 2.4187275308354965,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.84,
+            0.66
+          ],
+          "passed": true
+        },
+        {
+          "env": 20,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.043481927486722124,
+              "yaw_error": 0.06177206247579306,
+              "max_tilt_degrees": 1.4123619041062734,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02515556369485846,
+              "yaw_error": 0.06388918971235398,
+              "max_tilt_degrees": 2.380801562228085,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04277582952824936,
+              "yaw_error": 0.061721258569450585,
+              "max_tilt_degrees": 1.8793025098132718,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.023678241006934206,
+              "yaw_error": 0.06799050933972467,
+              "max_tilt_degrees": 3.2450391552628104,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.92,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 21,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.0423793592201422,
+              "yaw_error": 0.07612791305582504,
+              "max_tilt_degrees": 1.7483164669614373,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027745452072910744,
+              "yaw_error": 0.07305256645078771,
+              "max_tilt_degrees": 3.883478168517774,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.044802992720314586,
+              "yaw_error": 0.06842592864355539,
+              "max_tilt_degrees": 2.179962346527356,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02855921765126068,
+              "yaw_error": 0.07184181242249905,
+              "max_tilt_degrees": 3.5832089902199424,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.28,
+            0.56
+          ],
+          "passed": true
+        },
+        {
+          "env": 22,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.042565341720170055,
+              "yaw_error": 0.06883208757557441,
+              "max_tilt_degrees": 1.7213557659164787,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.025599251587975002,
+              "yaw_error": 0.06595343406952452,
+              "max_tilt_degrees": 2.4464064727561654,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0438749862140796,
+              "yaw_error": 0.06620944129448617,
+              "max_tilt_degrees": 2.3439325872580588,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.0273509682678529,
+              "yaw_error": 0.07086392479832285,
+              "max_tilt_degrees": 1.2090132004843523,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.86,
+            0.32
+          ],
+          "passed": true
+        },
+        {
+          "env": 23,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04153364634974034,
+              "yaw_error": 0.06884904107908368,
+              "max_tilt_degrees": 1.7172580708394787,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026174635118778537,
+              "yaw_error": 0.07192172046168707,
+              "max_tilt_degrees": 2.7414544507723533,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.045274733246248984,
+              "yaw_error": 0.0652905271218333,
+              "max_tilt_degrees": 1.7687929562500464,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027969377534654796,
+              "yaw_error": 0.07345380064522032,
+              "max_tilt_degrees": 1.577559735521533,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.68,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 24,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03903932753853709,
+              "yaw_error": 0.06452991271828068,
+              "max_tilt_degrees": 2.0104211771490617,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.026215401866359157,
+              "yaw_error": 0.06399498543541995,
+              "max_tilt_degrees": 2.9992435246413347,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04085522276234025,
+              "yaw_error": 0.05709613182963949,
+              "max_tilt_degrees": 1.7751985577947553,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02268829867902365,
+              "yaw_error": 0.06182666892549605,
+              "max_tilt_degrees": 1.1403811274955684,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.64,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 25,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04037575974131162,
+              "yaw_error": 0.06694221493438818,
+              "max_tilt_degrees": 1.8187611152296723,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023125528172666047,
+              "yaw_error": 0.06919789442210458,
+              "max_tilt_degrees": 1.6984657342630944,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04164723815140913,
+              "yaw_error": 0.06450186208356172,
+              "max_tilt_degrees": 1.5531818073627215,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02880605516087374,
+              "yaw_error": 0.06870482526370324,
+              "max_tilt_degrees": 2.5464512281387317,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.12,
+            0.38
+          ],
+          "passed": true
+        },
+        {
+          "env": 26,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03954998399001851,
+              "yaw_error": 0.059041366314922926,
+              "max_tilt_degrees": 1.3859276116044115,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.023738252768265182,
+              "yaw_error": 0.06823175352765247,
+              "max_tilt_degrees": 1.8707437643426343,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04067496901559428,
+              "yaw_error": 0.06351784862607018,
+              "max_tilt_degrees": 1.7812515631060801,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024267763897696727,
+              "yaw_error": 0.06669394208583981,
+              "max_tilt_degrees": 1.5289272644008647,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.54,
+            0.44
+          ],
+          "passed": true
+        },
+        {
+          "env": 27,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04080799786406999,
+              "yaw_error": 0.07202916233043652,
+              "max_tilt_degrees": 1.4715328232466018,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02689194728966996,
+              "yaw_error": 0.06991085835878039,
+              "max_tilt_degrees": 2.0240040443661775,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.0389724019718239,
+              "yaw_error": 0.0714813667852286,
+              "max_tilt_degrees": 1.3914234217044723,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.025240196727324696,
+              "yaw_error": 0.07035648512537591,
+              "max_tilt_degrees": 2.884322909079551,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.2,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 28,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.044022926290538084,
+              "yaw_error": 0.06564101163559827,
+              "max_tilt_degrees": 2.219731572594428,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02455193912466334,
+              "yaw_error": 0.06212042592756916,
+              "max_tilt_degrees": 2.681609527891,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04078170869012111,
+              "yaw_error": 0.06249991391028743,
+              "max_tilt_degrees": 2.1363417990050553,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.02888608926518808,
+              "yaw_error": 0.06563248562277295,
+              "max_tilt_degrees": 2.399309234536006,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.2,
+            0.3
+          ],
+          "passed": true
+        },
+        {
+          "env": 29,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03893084861900051,
+              "yaw_error": 0.06998671937268228,
+              "max_tilt_degrees": 1.8801354241576773,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.027788908255047633,
+              "yaw_error": 0.06369759690773208,
+              "max_tilt_degrees": 3.575879310516131,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.039222206889187754,
+              "yaw_error": 0.062446501915255796,
+              "max_tilt_degrees": 2.4042802660021323,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.024163690076715056,
+              "yaw_error": 0.06365368483733619,
+              "max_tilt_degrees": 1.6194291316206348,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.1,
+            0.12
+          ],
+          "passed": true
+        },
+        {
+          "env": 30,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.04553076452783355,
+              "yaw_error": 0.06838547571474919,
+              "max_tilt_degrees": 2.0403760180006763,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.02598128173284099,
+              "yaw_error": 0.0664368188638764,
+              "max_tilt_degrees": 1.9115173537759325,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.041771938712494815,
+              "yaw_error": 0.0606226877060908,
+              "max_tilt_degrees": 2.1161835755242118,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.026565893726044624,
+              "yaw_error": 0.06321549187035998,
+              "max_tilt_degrees": 2.601732982766286,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            1.16,
+            0.2
+          ],
+          "passed": true
+        },
+        {
+          "env": 31,
+          "windows": [
+            {
+              "start": 1,
+              "end": 5,
+              "samples": 200,
+              "xy_error": 0.03907239845979016,
+              "yaw_error": 0.07429967673313513,
+              "max_tilt_degrees": 1.8759671556933863,
+              "passed": true
+            },
+            {
+              "start": 6,
+              "end": 10,
+              "samples": 200,
+              "xy_error": 0.024824839162261938,
+              "yaw_error": 0.06479569686227478,
+              "max_tilt_degrees": 1.3945140691082019,
+              "passed": true
+            },
+            {
+              "start": 11,
+              "end": 15,
+              "samples": 200,
+              "xy_error": 0.04050675103982721,
+              "yaw_error": 0.0688769521121867,
+              "max_tilt_degrees": 2.2530750208004657,
+              "passed": true
+            },
+            {
+              "start": 16,
+              "end": 20,
+              "samples": 200,
+              "xy_error": 0.027839866206323904,
+              "yaw_error": 0.07061631740361918,
+              "max_tilt_degrees": 3.0179178619453935,
+              "passed": true
+            }
+          ],
+          "stop_response_seconds": [
+            0.66,
+            1.3
+          ],
+          "passed": true
+        }
+      ]
+    }
+  ]
+}
