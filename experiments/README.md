@@ -6,7 +6,6 @@ Go2 学习项目已收尾（2026-10-19），不再追加训练或噪声对照。
 - **主要效果证据**：[独立验收](phase2_go2_stop_sequence_extended/validation_001/README.md)，左右转、启停的12组条件全部通过。
 - **已知限制**：[重复验证与停车失败分析](phase2_go2_deployment/repeatability_001/README.md)，导出闭环10/12组通过，后续薄弱行为验证5/6组通过；不能宣称所有条件稳定达标。
 
-短测试、临时提交包和无用中间模型已归档，恢复方式见[维护记录](MAINTENANCE.md)。不改变历史实验编号或正式评估数据。
 
 各算法目录独立从 `run_001` 连续编号。保留正式训练及独立评估、模型、曲线和回放；低回报不等于运行失败，因此完整 SB3 对照仍保留。
 
@@ -16,7 +15,7 @@ Go2实验主线按发生顺序：官方基线 → 质量/摩擦对照 → 指令
 
 | Go2 实验类别 | 入口 | 结论 |
 |---|---|---|
-| 质量/摩擦 | [协议](phase2_go2_mass_friction/README.md)、[初步汇总](phase2_go2_mass_friction/preliminary_summary.json) | 四组完成，保留DR退化案例，完整配置/接触审计仍以报告状态为准 |
+| 质量/摩擦 | [协议](phase2_go2_mass_friction/README.md)、[最终审计](phase2_go2_mass_friction/AUDIT.md) | 四组/20条件审计完成，改善未跨seed复现，保留DR退化案例 |
 | 指令覆盖 | [记录](phase2_go2_command_coverage/README.md) | 第一轮混合覆盖未解决左转 |
 | 转向覆盖 | [记录](phase2_go2_turn_coverage/README.md) | 转向改善，启停稳定性不足 |
 | 停车惩罚 | [记录](phase2_go2_stop_stability/README.md) | 负结果，保留证据 |
@@ -25,7 +24,6 @@ Go2实验主线按发生顺序：官方基线 → 质量/摩擦对照 → 指令
 | 检查点独立验证 | [验收](phase2_go2_stop_sequence_extended/validation_001/README.md) | 两seed的12项行为条件全部达标 |
 | 导出闭环 | [报告](phase2_go2_deployment/run_001/README.md) | 动作一致性误差0；重跑行为10/12项达标，尚有稳定性问题 |
 
-失败、短测试和诊断记录已从主目录清出，完整原件见 [备份与编号映射](../archives/experiment_cleanup_001/manifest.json)。远程原始编号不变；历史日志和源码快照中的旧编号可据此追溯。
 
 | 实验 | 编号 | 训练步数 | 结果说明 |
 |---|---|---:|---|

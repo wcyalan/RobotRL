@@ -8,7 +8,7 @@
     "sha256": "dca6aa6b97095d85434f522a8f401293b10d34f770e3263ff60cfbad52779d34"
   },
   "control_diagnostic.json": {
-    "source": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_control/run_009/control_diagnostic.json",
+    "source": "notes/go2_reference/control_diagnostic.json",
     "sha256": "78e372f26a0aa37098f3bd50bfe7ab89989c1e425ecb92853497c8d5c4449b1f",
     "note": "Historical diagnostic overrides differ from official training; use only for joint order and action mapping evidence."
   }

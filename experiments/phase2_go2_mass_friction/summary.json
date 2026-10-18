@@ -1,0 +1,620 @@
+{
+  "status": "saved_evidence_audit_complete",
+  "training_runs": 4,
+  "evaluation_conditions": 20,
+  "episodes": 640,
+  "runs": [
+    {
+      "run": "run_001",
+      "group": "fixed",
+      "seed": 0,
+      "env_differences": [],
+      "agent_differences": [],
+      "mass_range_kg": [
+        6.921000003814697,
+        6.921000003814697
+      ],
+      "contact_mu_range": [
+        1.0,
+        1.0
+      ],
+      "ground_contacts": 7781
+    },
+    {
+      "run": "run_002",
+      "group": "fixed",
+      "seed": 1,
+      "env_differences": [
+        {
+          "path": "log_dir",
+          "reference": "/robotrl/phase2_go2_mass_friction/run_001/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-51-27",
+          "value": "/robotrl/phase2_go2_mass_friction/run_002/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-58-43"
+        },
+        {
+          "path": "seed",
+          "reference": "0",
+          "value": "1"
+        }
+      ],
+      "agent_differences": [
+        {
+          "path": "seed",
+          "reference": "0",
+          "value": "1"
+        }
+      ],
+      "mass_range_kg": [
+        6.921000003814697,
+        6.921000003814697
+      ],
+      "contact_mu_range": [
+        1.0,
+        1.0
+      ],
+      "ground_contacts": 7820
+    },
+    {
+      "run": "run_003",
+      "group": "randomized",
+      "seed": 0,
+      "env_differences": [
+        {
+          "path": "events.add_base_mass.params.mass_distribution_params",
+          "reference": [
+            "1.0",
+            "1.0"
+          ],
+          "value": [
+            "0.8",
+            "1.2"
+          ]
+        },
+        {
+          "path": "events.physics_material.params.dynamic_friction_range",
+          "reference": [
+            "1.0",
+            "1.0"
+          ],
+          "value": [
+            "0.5",
+            "1.5"
+          ]
+        },
+        {
+          "path": "events.physics_material.params.static_friction_range",
+          "reference": [
+            "1.0",
+            "1.0"
+          ],
+          "value": [
+            "0.5",
+            "1.5"
+          ]
+        },
+        {
+          "path": "log_dir",
+          "reference": "/robotrl/phase2_go2_mass_friction/run_001/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-51-27",
+          "value": "/robotrl/phase2_go2_mass_friction/run_003/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-05-59"
+        }
+      ],
+      "agent_differences": [],
+      "mass_range_kg": [
+        5.536928176879883,
+        8.305098533630371
+      ],
+      "contact_mu_range": [
+        0.5000571608543396,
+        1.4999717473983765
+      ],
+      "ground_contacts": 7643
+    },
+    {
+      "run": "run_004",
+      "group": "randomized",
+      "seed": 1,
+      "env_differences": [
+        {
+          "path": "events.add_base_mass.params.mass_distribution_params",
+          "reference": [
+            "1.0",
+            "1.0"
+          ],
+          "value": [
+            "0.8",
+            "1.2"
+          ]
+        },
+        {
+          "path": "events.physics_material.params.dynamic_friction_range",
+          "reference": [
+            "1.0",
+            "1.0"
+          ],
+          "value": [
+            "0.5",
+            "1.5"
+          ]
+        },
+        {
+          "path": "events.physics_material.params.static_friction_range",
+          "reference": [
+            "1.0",
+            "1.0"
+          ],
+          "value": [
+            "0.5",
+            "1.5"
+          ]
+        },
+        {
+          "path": "log_dir",
+          "reference": "/robotrl/phase2_go2_mass_friction/run_001/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-51-27",
+          "value": "/robotrl/phase2_go2_mass_friction/run_004/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-13-16"
+        },
+        {
+          "path": "seed",
+          "reference": "0",
+          "value": "1"
+        }
+      ],
+      "agent_differences": [
+        {
+          "path": "seed",
+          "reference": "0",
+          "value": "1"
+        }
+      ],
+      "mass_range_kg": [
+        5.538606643676758,
+        8.30494213104248
+      ],
+      "contact_mu_range": [
+        0.500231146812439,
+        1.4999902248382568
+      ],
+      "ground_contacts": 7779
+    }
+  ],
+  "rows": [
+    {
+      "run": "run_001",
+      "group": "fixed",
+      "seed": 0,
+      "condition": "nominal",
+      "xy_error": 0.052716171951033175,
+      "return_mean": 41.17029786109924,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_001",
+      "group": "fixed",
+      "seed": 0,
+      "condition": "light_low",
+      "xy_error": 0.06764818169176579,
+      "return_mean": 41.12952923774719,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_001",
+      "group": "fixed",
+      "seed": 0,
+      "condition": "heavy_high",
+      "xy_error": 0.049831698881462216,
+      "return_mean": 40.77567005157471,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_001",
+      "group": "fixed",
+      "seed": 0,
+      "condition": "heavy_low",
+      "xy_error": 0.058958412264473736,
+      "return_mean": 39.182947397232056,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_001",
+      "group": "fixed",
+      "seed": 0,
+      "condition": "nominal_push",
+      "xy_error": 0.05468594515696168,
+      "return_mean": 41.11662828922272,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": 2.9802322387695312e-08
+    },
+    {
+      "run": "run_002",
+      "group": "fixed",
+      "seed": 1,
+      "condition": "nominal",
+      "xy_error": 0.048913833568803966,
+      "return_mean": 41.04464375972748,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_002",
+      "group": "fixed",
+      "seed": 1,
+      "condition": "light_low",
+      "xy_error": 0.056886650156229734,
+      "return_mean": 41.10276806354523,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_002",
+      "group": "fixed",
+      "seed": 1,
+      "condition": "heavy_high",
+      "xy_error": 0.04863158066291362,
+      "return_mean": 40.72549605369568,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_002",
+      "group": "fixed",
+      "seed": 1,
+      "condition": "heavy_low",
+      "xy_error": 0.06221033167093992,
+      "return_mean": 39.12716233730316,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_002",
+      "group": "fixed",
+      "seed": 1,
+      "condition": "nominal_push",
+      "xy_error": 0.05109635251574218,
+      "return_mean": 40.97158372402191,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": 2.9802322387695312e-08
+    },
+    {
+      "run": "run_003",
+      "group": "randomized",
+      "seed": 0,
+      "condition": "nominal",
+      "xy_error": 0.047697984031401575,
+      "return_mean": 41.516390323638916,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_003",
+      "group": "randomized",
+      "seed": 0,
+      "condition": "light_low",
+      "xy_error": 0.05107082880567759,
+      "return_mean": 41.540337443351746,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_003",
+      "group": "randomized",
+      "seed": 0,
+      "condition": "heavy_high",
+      "xy_error": 0.04925417166668922,
+      "return_mean": 41.196540117263794,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_003",
+      "group": "randomized",
+      "seed": 0,
+      "condition": "heavy_low",
+      "xy_error": 0.0625066936481744,
+      "return_mean": 39.91529643535614,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_003",
+      "group": "randomized",
+      "seed": 0,
+      "condition": "nominal_push",
+      "xy_error": 0.050391001626849174,
+      "return_mean": 41.4368212223053,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": 2.9802322387695312e-08
+    },
+    {
+      "run": "run_004",
+      "group": "randomized",
+      "seed": 1,
+      "condition": "nominal",
+      "xy_error": 0.05936671595554799,
+      "return_mean": 41.271960616111755,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_004",
+      "group": "randomized",
+      "seed": 1,
+      "condition": "light_low",
+      "xy_error": 0.06920324475504458,
+      "return_mean": 41.2378511428833,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_004",
+      "group": "randomized",
+      "seed": 1,
+      "condition": "heavy_high",
+      "xy_error": 0.08544273639563471,
+      "return_mean": 38.71249562501907,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_004",
+      "group": "randomized",
+      "seed": 1,
+      "condition": "heavy_low",
+      "xy_error": 0.06664111255668104,
+      "return_mean": 38.887815058231354,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": null
+    },
+    {
+      "run": "run_004",
+      "group": "randomized",
+      "seed": 1,
+      "condition": "nominal_push",
+      "xy_error": 0.06180432019755244,
+      "return_mean": 41.1920690536499,
+      "terminated": 0,
+      "mean_length_seconds": 20.0,
+      "contact_snapshot_steps": [
+        51,
+        501
+      ],
+      "push_velocity_error": 2.9802322387695312e-08
+    }
+  ],
+  "paired": [
+    {
+      "seed": 0,
+      "condition": "nominal",
+      "fixed_xy": 0.052716171951033175,
+      "dr_xy": 0.047697984031401575,
+      "dr_minus_fixed": -0.0050181879196316
+    },
+    {
+      "seed": 0,
+      "condition": "light_low",
+      "fixed_xy": 0.06764818169176579,
+      "dr_xy": 0.05107082880567759,
+      "dr_minus_fixed": -0.016577352886088192
+    },
+    {
+      "seed": 0,
+      "condition": "heavy_high",
+      "fixed_xy": 0.049831698881462216,
+      "dr_xy": 0.04925417166668922,
+      "dr_minus_fixed": -0.0005775272147729993
+    },
+    {
+      "seed": 0,
+      "condition": "heavy_low",
+      "fixed_xy": 0.058958412264473736,
+      "dr_xy": 0.0625066936481744,
+      "dr_minus_fixed": 0.003548281383700669
+    },
+    {
+      "seed": 0,
+      "condition": "nominal_push",
+      "fixed_xy": 0.05468594515696168,
+      "dr_xy": 0.050391001626849174,
+      "dr_minus_fixed": -0.004294943530112505
+    },
+    {
+      "seed": 1,
+      "condition": "nominal",
+      "fixed_xy": 0.048913833568803966,
+      "dr_xy": 0.05936671595554799,
+      "dr_minus_fixed": 0.010452882386744022
+    },
+    {
+      "seed": 1,
+      "condition": "light_low",
+      "fixed_xy": 0.056886650156229734,
+      "dr_xy": 0.06920324475504458,
+      "dr_minus_fixed": 0.012316594598814845
+    },
+    {
+      "seed": 1,
+      "condition": "heavy_high",
+      "fixed_xy": 0.04863158066291362,
+      "dr_xy": 0.08544273639563471,
+      "dr_minus_fixed": 0.03681115573272109
+    },
+    {
+      "seed": 1,
+      "condition": "heavy_low",
+      "fixed_xy": 0.06221033167093992,
+      "dr_xy": 0.06664111255668104,
+      "dr_minus_fixed": 0.004430780885741115
+    },
+    {
+      "seed": 1,
+      "condition": "nominal_push",
+      "fixed_xy": 0.05109635251574218,
+      "dr_xy": 0.06180432019755244,
+      "dr_minus_fixed": 0.01070796768181026
+    }
+  ],
+  "evidence_sha256": {
+    "run_001/train_mass_friction.py": "7167e02dbd37a9277f2db16dfdb3b8ae67321fea0dfc2c72a257647c7ea39029",
+    "run_001/evaluate_go2.py": "1fc3abc2635b4c3f50ed20de5e3f9ccf49e62fa21b22b78596785f6fc56d67d5",
+    "run_001/friction_audit.py": "640551280d0b3803e80acd80bb650c46bd8f73fda8f195324c54fd845240e56d",
+    "run_001/runtime_material_events.py": "214fadc46b320bf9c7cea57367b99205e8e896f0525a0846b2aedca707286638",
+    "run_001/runtime_solver.py": "d1dfe5d7c4c46b99578e01669d2d4b7de7dfe01055a74fcd73406f6f064f0518",
+    "run_001/protocol.json": "63a9b1b6ac1aa314202a68139bb95241569d2eefe4913a1bae6d8b22e5615b72",
+    "run_001/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-51-27/params/env.yaml": "638a22745826f941935b2e055a84a79efc311555e0ef689d26e9f2da31a579ea",
+    "run_001/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-51-27/params/agent.yaml": "6683bc446f9062a332e27b07880423af75a3688344b5acca73a4a092bf046118",
+    "run_001/mass_friction_audit.json": "c2fcf34f57679c579b693aa77aa8db78d6aab80a4640a7c2184953182417e94f",
+    "run_001/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-51-27/model_299.pt": "d69721ee6bf1200f8a1d60568ba6f1437b1564314751a60cada3fa89603a3aec",
+    "run_001/nominal.json": "1e0c16a641d8a3119373697f3a2ba7a4cfa61c00cc3e3559a02110615c6c1e1d",
+    "run_001/light_low.json": "2310c03d66eef6799f8e88a849da0821fad4f9067624aad3ff256d7972345eb1",
+    "run_001/heavy_high.json": "1c3658e72ee1d63db139830859c3faaa62f589df68e00525c9e0a26738bc3ab0",
+    "run_001/heavy_low.json": "c19c15bbba04f3d229e58ab31dabd532d1f286265a4c4e7d5e8f682e7ab30858",
+    "run_001/nominal_push.json": "dbaa71dc7976e73f38b12af156c37a03b792e9d703de356188f9c02bef124b4d",
+    "run_002/train_mass_friction.py": "7167e02dbd37a9277f2db16dfdb3b8ae67321fea0dfc2c72a257647c7ea39029",
+    "run_002/evaluate_go2.py": "1fc3abc2635b4c3f50ed20de5e3f9ccf49e62fa21b22b78596785f6fc56d67d5",
+    "run_002/friction_audit.py": "640551280d0b3803e80acd80bb650c46bd8f73fda8f195324c54fd845240e56d",
+    "run_002/runtime_material_events.py": "214fadc46b320bf9c7cea57367b99205e8e896f0525a0846b2aedca707286638",
+    "run_002/runtime_solver.py": "d1dfe5d7c4c46b99578e01669d2d4b7de7dfe01055a74fcd73406f6f064f0518",
+    "run_002/protocol.json": "ee74a21bec8248c758968ea17f9d8dc89085c4a2448f0389a76d4d7da5a4d5b2",
+    "run_002/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-58-43/params/env.yaml": "57efce66a299fd1d6379252f8b6c3502c597ad9c60cd3c6c04cd2d503603445f",
+    "run_002/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-58-43/params/agent.yaml": "2e6a2e6f45a23fdedc2b5f4a98152948a73d4e7b7f1a774b76dcf02727433791",
+    "run_002/mass_friction_audit.json": "c1551605a445e59846cbdfd7885dbd20b7f84eae4c84d6683ca55a8db84c923e",
+    "run_002/logs/rsl_rl/unitree_go2_flat/2026-10-16_10-58-43/model_299.pt": "209a7ea37d9b2e8cde7309ff9c314e034219248fdd0d03512b3eb384c285b0c4",
+    "run_002/nominal.json": "86409e15ed64e8ec9889df056ea14991366f78bbf247faa6768acbbd9881caff",
+    "run_002/light_low.json": "54b564f711eebecd5010ad53923dceb0a42d96ffadfb29625552fa48db10ff18",
+    "run_002/heavy_high.json": "c3a4d2f8ff8717c859d45b6002fb84e41e6b43bf68500d958e1c821c610203af",
+    "run_002/heavy_low.json": "3c2ea5eb58fdc51f967641646c463afaa12a49ca3d5ea71147df0c0a361fba2e",
+    "run_002/nominal_push.json": "47bd50480b2d9d19ad77c6644bf53bb8cda743b35f097b208e994171020d77d7",
+    "run_003/train_mass_friction.py": "7167e02dbd37a9277f2db16dfdb3b8ae67321fea0dfc2c72a257647c7ea39029",
+    "run_003/evaluate_go2.py": "1fc3abc2635b4c3f50ed20de5e3f9ccf49e62fa21b22b78596785f6fc56d67d5",
+    "run_003/friction_audit.py": "640551280d0b3803e80acd80bb650c46bd8f73fda8f195324c54fd845240e56d",
+    "run_003/runtime_material_events.py": "214fadc46b320bf9c7cea57367b99205e8e896f0525a0846b2aedca707286638",
+    "run_003/runtime_solver.py": "d1dfe5d7c4c46b99578e01669d2d4b7de7dfe01055a74fcd73406f6f064f0518",
+    "run_003/protocol.json": "627d1820806d7f3077914a7a39d1ca13929b3a4a8716589f2a25402c160c299d",
+    "run_003/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-05-59/params/env.yaml": "42d8d1361bf183a113e3c215ef9bea4e43c068506f6e227ccf6ad9968497c4f7",
+    "run_003/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-05-59/params/agent.yaml": "6683bc446f9062a332e27b07880423af75a3688344b5acca73a4a092bf046118",
+    "run_003/mass_friction_audit.json": "a8b1134865c2860da55571756e49b3f759f43eb0f1abcf400f8035276a947804",
+    "run_003/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-05-59/model_299.pt": "ced0c8039f732396ec70eed19db280d3193f07ebce382be9dbdb353f212e62d3",
+    "run_003/nominal.json": "484b79153df18ee75c75446557ee6cff63e6785aa53039ed680990dcd2622f1f",
+    "run_003/light_low.json": "2637fa8f3a174fa7e8e78fff54da68b9304a0dd7acdfdb13d9123eda1e377242",
+    "run_003/heavy_high.json": "0cef97732279b0bb0d42ad85d511e9d7a87543dd34fcfc1ec42a747aef6818c0",
+    "run_003/heavy_low.json": "a1e4038ff3d5b590cd1ffe16cbb49d09f65bffbbd465b7f4d7ff3de467f375e8",
+    "run_003/nominal_push.json": "82afd9a4b5afacee6dc342d236d6c13e78861a8a20b7a660038da2608e6ae087",
+    "run_004/train_mass_friction.py": "7167e02dbd37a9277f2db16dfdb3b8ae67321fea0dfc2c72a257647c7ea39029",
+    "run_004/evaluate_go2.py": "1fc3abc2635b4c3f50ed20de5e3f9ccf49e62fa21b22b78596785f6fc56d67d5",
+    "run_004/friction_audit.py": "640551280d0b3803e80acd80bb650c46bd8f73fda8f195324c54fd845240e56d",
+    "run_004/runtime_material_events.py": "214fadc46b320bf9c7cea57367b99205e8e896f0525a0846b2aedca707286638",
+    "run_004/runtime_solver.py": "d1dfe5d7c4c46b99578e01669d2d4b7de7dfe01055a74fcd73406f6f064f0518",
+    "run_004/protocol.json": "719257b584e9ea3b0c5ff109103879366efac719b6b333f4401a3a42ec30a35e",
+    "run_004/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-13-16/params/env.yaml": "fd9d05cccc81d5dd80e5e32639eaf11aad75e3e0c87c7038d91d6f1d0f5b4afa",
+    "run_004/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-13-16/params/agent.yaml": "2e6a2e6f45a23fdedc2b5f4a98152948a73d4e7b7f1a774b76dcf02727433791",
+    "run_004/mass_friction_audit.json": "d2c1752eb4defb2d2065893cb5134348cd7a42699dfbc857ea4e7f4133ee49b8",
+    "run_004/logs/rsl_rl/unitree_go2_flat/2026-10-16_11-13-16/model_299.pt": "6d3682be2af5843332238899a7e83b98105bec52f8b0ebabd36020cebaf322e6",
+    "run_004/nominal.json": "bee0124e92b7e8d7c6ab7c6b87bb90eca940ee928ee1ed69a2f744089248fa23",
+    "run_004/light_low.json": "28e65d14e9e35cfad6d7ed65706f8124ecc481f79e837fae0c509a9a493b390a",
+    "run_004/heavy_high.json": "a6319a2a84c7c3cb47410f0636e41e4eabf9404c97e82e0e7ee29e8b2f3ddd51",
+    "run_004/heavy_low.json": "da32adcde2fa34f5428567fc691149d487254daaac5449b36575495b96327b69",
+    "run_004/nominal_push.json": "515fae043b7811c15e716290a8400258f3d4922a05cef1631ffb0f11d58d5756"
+  },
+  "limits": [
+    "Two training seeds only; episode lanes are not independent training replicates.",
+    "Training contacts sampled at step 51; evaluation contacts at steps 51 and 501, not exhaustive.",
+    "Training mass read back for all environments; evaluation mass multiplier verified from scenario and source configuration, not an independent mass readback.",
+    "No new simulation, no real-robot or generalization guarantee."
+  ]
+}

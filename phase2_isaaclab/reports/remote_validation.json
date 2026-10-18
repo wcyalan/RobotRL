@@ -6,7 +6,6 @@
     "date": "2026-10-16",
     "timezone": "Asia/Shanghai",
     "task_id": "d925cc4c-4160-44a5-ab43-f9042a675bab",
-    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_smoke/run_002",
     "remote_directory": "/labdata2/congyuwang/RobotRL_kitless/run_002",
     "num_envs": 64,
     "iterations_completed": 10,
@@ -18,7 +17,8 @@
     "checkpoints_finite_and_loadable": true,
     "independent_evaluation_performed": false,
     "exit_code": 0,
-    "note": "Smoke test of RSL-RL PPO training and saving on Newton, not proof of learned walking. run_001 validation passed but training failed on PyTorch cache username lookup; fixed with task-specific cache directories."
+    "note": "Smoke test of RSL-RL PPO training and saving on Newton, not proof of learned walking. run_001 validation passed but training failed on PyTorch cache username lookup; fixed with task-specific cache directories.",
+    "historical_run": "experiments/phase2_go2_smoke/run_002"
   },
   "kitless_probe": {
     "task_id": "9895ab07-e1c2-425f-a82a-4c42a17d2bef",
@@ -133,34 +133,33 @@
   },
   "latest_pilot": {
     "date": "2026-10-16",
-    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_pilot/run_004",
     "summary": "comparison.json",
     "task_id": "56c2cbe1-0270-4ecb-a125-0a08258180da",
     "steps": 1228800,
     "final_return_mean": 11.050334930419922,
     "final_base_contact_termination_rate": 0.0,
     "evaluation_episodes": 16,
-    "walking_quality_accepted": false
+    "walking_quality_accepted": false,
+    "historical_run": "experiments/phase2_go2_pilot/run_004"
   },
   "latest_diagnostic": {
     "date": "2026-10-16",
-    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_diagnostic/run_005",
     "task_id": "2b91d62b-c125-4567-bb2c-2fbc96ec7ed2",
     "fixed_forward_command_m_s": 0.5,
     "final_mean_forward_speed_m_s": 7.163771078921854e-05,
     "final_mean_root_height_m": 0.10513822734355927,
     "episodes": 16,
-    "conclusion": "Final deterministic policy is nearly stationary at low root height; no visual posture proof. Zero base-contact terminations does not establish successful locomotion."
+    "conclusion": "Final deterministic policy is nearly stationary at low root height; no visual posture proof. Zero base-contact terminations does not establish successful locomotion.",
+    "historical_run": "experiments/phase2_go2_diagnostic/run_005"
   },
   "latest_control_diagnostic": {
     "date": "2026-10-16",
-    "run_directory": "archives/experiment_cleanup_001/experiments_before_cleanup.zip::experiments/phase2_go2_control/run_009",
     "action_mapping_passed": true,
     "base_contact_sensor_responds": true,
     "policy_head_calf_support_detected": true,
-    "capacity_overflow_in_confirmatory_run": false
+    "capacity_overflow_in_confirmatory_run": false,
+    "historical_run": "experiments/phase2_go2_control/run_009"
   },
-  "local_cleanup_manifest": "archives/experiment_cleanup_001/manifest.json",
   "multi_seed_baseline": {
     "status": "completed",
     "seeds": [

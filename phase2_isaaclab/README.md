@@ -1,6 +1,6 @@
 # Phase 2：Go2 仿真训练与验证
 
-使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端与 RSL-RL PPO。当前主线为[Go2 导出与独立闭环验证](../experiments/phase2_go2_deployment/run_001/README.md)：导出动作一致性通过，行为12项中10项通过，仍需处理重跑稳定性。质量/摩擦对照与延迟实验保留为历史证据，不追加训练。
+使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端与 RSL-RL PPO。当前主线为[Go2 导出与独立闭环验证](../experiments/phase2_go2_deployment/run_001/README.md)：导出动作一致性通过，行为12项中10项通过，重跑稳定性作为已知限制保留；Go2学习项目已收尾，不追加实验。质量/摩擦对照与延迟实验保留为历史证据，不追加训练。
 
 学习笔记：[任务配置](../notes/go2_task_config.md) · [控制链路](../notes/go2_control_pipeline.md)。
 
@@ -15,12 +15,18 @@
 | `deployment/` | 冻结策略导出、纯PyTorch接口和验收汇总 | `export_policy.py`、`inference.py`、`summarize.py` |
 | `extensions/delay/` | 可选延迟实验的队列、训练和验证 | 不属于当前主线 |
 | `jobs/baseline/` | 官方基线任务 | `train_baseline.sh`、`train_seeds.sh` |
-| `jobs/domain_randomization/` | 当前质量/摩擦对照任务 | `smoke_mass_friction.sh`、`train_mass_friction.sh` |
+| `jobs/domain_randomization/` | 已完成质量/摩擦对照配方 | `smoke_mass_friction.sh`、`train_mass_friction.sh` |
 | `jobs/diagnostics/` | 历史摩擦诊断与失败复现 | 按需使用 |
 | `jobs/delay/` | 可选延迟实验任务 | 保留复现入口 |
 | `configs/` | 固定镜像及任务配置 | `train_baseline.yaml` |
 | `reports/` | 环境与目录验证记录 | 历史记录标注其适用阶段 |
 | `prepare_context.py` | 按任务生成最小运行包 | 远程运行的统一准备入口 |
+
+## 日常使用
+
+当前只需从 `deployment/` 加载最终策略，从 `evaluation/` 做独立评估，从 `analysis/` 汇总结果，从 `visualization/` 回放。训练与job脚本是保留的复现配方，不是待执行任务。延迟扩展只用于历史复现，无需跟随它继续实验。
+
+DR审计命令：`python phase2_isaaclab/analysis/audit_mass_friction.py`（PyYAML；需要原始结果和experiments/source_snapshots.zip源码快照）。该操作不会申请GPU或运行新实验。
 
 ## 如何提交任务
 
@@ -34,7 +40,7 @@
 
 `--output` 必须为新目录；`--job` 为任务脚本去掉 `.sh` 的名字，所有选项可用 `--help` 查看。质量/摩擦正式任务包仅含训练入口、评估入口、摩擦审计、Bash 和 YAML，不包含本地分析、视频、延迟训练或无关历史入口。
 
-**现有 jobs 是已完成实验的可复现配方，含固定输出编号和防覆盖检查。** 新实验必须先设置新的输出编号/评估协议再打包，不能直接重跑旧配方覆盖结果。当前正式四组已运行完成，结果审计与视频检查另行进行。
+**现有 jobs 是已完成实验的可复现配方，含固定输出编号和防覆盖检查。** 新实验必须先设置新的输出编号/评估协议再打包，不能直接重跑旧配方覆盖结果。正式四组及现有证据审计已完成，见[最终DR报告](../experiments/phase2_go2_mass_friction/AUDIT.md)。
 
 将生成的目录上传到服务器 `contexts/<任务名>/`，从该目录提交，例如：
 
@@ -66,15 +72,9 @@ det command run -d --config-file /labdata2/congyuwang/RobotRL_kitless/contexts/<
 code/phase2_isaaclab/   与本地相同结构的当前源码
 experiments/           正式实验、指标、模型和当时的源码快照
 contexts/              新提交任务的最小运行包
-archives/              旧任务包、早期诊断和迁移清单
 assets/                机器人资产
 cache/                 编译与运行缓存
 ```
 
-历史 `/robotrl/run_010` 现为 `/robotrl/experiments/phase2_go2_baseline/run_001`；其他正式类别统一增加 `experiments/` 层。当前 job 路径已更新；历史实验中的源码快照和日志不改写，可通过服务器 `archives/reorganization_001/manifest.json` 查找原路径到新路径的映射。
 
-实验目录内保存的源码是产生结果时的证据，不能与 `code/` 下正在维护的源码混用。旧快照的绝对路径可能已变化，复现时应依据迁移清单解析，而不是直接原样运行。
-
-## 整理记录
-
-本地整理前备份位于 `archives/phase2_code_cleanup_002/before_cleanup.zip`，文件映射在同目录 `path_mapping.json`。服务器迁移前先确认任务全部终止，迁移后逐文件核验哈希，不删除模型、结果、资产或缓存。更早的诊断代码仍保留于 `archives/phase2_code_cleanup_001/legacy/`。
+实验目录内保存的源码是产生结果时的证据，不能与 `code/` 下正在维护的源码混用。历史快照可能包含旧路径；执行时需使用当前实验路径。
