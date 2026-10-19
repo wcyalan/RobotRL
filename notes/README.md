@@ -1,6 +1,6 @@
 # 学习笔记
 
-标题统一采用“主题：内容”的格式；以下按学习顺序列出。
+标题统一采用“主题：内容”的格式，文件按学习顺序连续编号：01–03 强化学习基础、04–06 Go2、07–09 人形机器人。
 
 ## 强化学习基础
 
@@ -10,17 +10,17 @@
 
 ## Go2 仿真实践
 
-- [Go2：任务配置与训练环境](go2_task_config.md)
-- [Go2：策略输出与控制链路](go2_control_pipeline.md)
-- [Go2：策略导出、推理接口与复现](go2_deployment.md)
+- [Go2：任务配置与训练环境](04_go2_task_config.md)
+- [Go2：策略输出与控制链路](05_go2_control_pipeline.md)
+- [Go2：策略导出、推理接口与复现](06_go2_deployment.md)
 
 ## 人形机器人学习
 
 学习流程见 [phase3 计划](../phase3/README.md)。
 
-- [人形机器人：双足平衡、接触与动力学](01_humanoid_balance.md)
-- [人形机器人：RL 任务与 PPO 训练](02_humanoid_rl.md)
-- [G1：任务配置与行为评估](03_g1_configuration_and_evaluation.md)
+- [人形机器人：双足平衡、接触与动力学](07_humanoid_balance.md)
+- [人形机器人：RL 任务与 PPO 训练](08_humanoid_rl.md)
+- [G1：任务配置与行为评估](09_g1_configuration_and_evaluation.md)
 
 ## 待补充主题
 

@@ -1,8 +1,8 @@
 # Phase 2：Go2 仿真训练与验证
 
-使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端与 RSL-RL PPO。项目最终状态见[Go2部署与复现说明](../notes/go2_deployment.md)：导出动作一致性通过，行为12项中10项通过，重跑稳定性作为已知限制保留；Go2学习项目已收尾，不追加实验。质量/摩擦对照与延迟实验保留为历史证据，不追加训练。
+使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端与 RSL-RL PPO。项目最终状态见[Go2部署与复现说明](../notes/06_go2_deployment.md)：导出动作一致性通过，行为12项中10项通过，重跑稳定性作为已知限制保留；Go2学习项目已收尾，不追加实验。质量/摩擦对照与延迟实验保留为历史证据，不追加训练。
 
-学习笔记：[任务配置](../notes/go2_task_config.md) · [控制链路](../notes/go2_control_pipeline.md)。
+学习笔记：[任务配置](../notes/04_go2_task_config.md) · [控制链路](../notes/05_go2_control_pipeline.md)。
 
 ## 先找哪个目录
 
@@ -30,7 +30,7 @@ DR审计命令：`python phase2_isaaclab/analysis/audit_mass_friction.py`（PyYA
 
 ## 如何提交任务
 
-当前模型与入口：`model_450`是筛选后通过新seed验证的检查点；不要替换成右转退化的最终`model_extended.pt`。推理接口见[部署说明](../notes/go2_deployment.md)。`jobs/diagnostics/`中`evaluate_checkpoints.sh`负责筛选/独立验证，`validate_export.sh`负责导出一致性/闭环评估，`resume_command_coverage.sh`保留延长训练配方。各任务只通过`prepare_context.py`打包执行，不重复维护另一套运行代码。
+当前模型与入口：`model_450`是筛选后通过新seed验证的检查点；不要替换成右转退化的最终`model_extended.pt`。推理接口见[部署说明](../notes/06_go2_deployment.md)。`jobs/diagnostics/`中`evaluate_checkpoints.sh`负责筛选/独立验证，`validate_export.sh`负责导出一致性/闭环评估，`resume_command_coverage.sh`保留延长训练配方。各任务只通过`prepare_context.py`打包执行，不重复维护另一套运行代码。
 
 训练/评估源码依赖固定远程镜像，按下列方式打包后在远程运行。不要从源码子目录直接运行跨目录依赖的任务；打包器会把该任务所需脚本平铺到同一目录，并统一 Linux 换行。
 

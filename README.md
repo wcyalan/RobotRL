@@ -44,15 +44,15 @@
 
 ### 阶段 2：Go2 仿真行走
 
-本轮已收尾：完成Go2仿真训练、行为评估、任务修改、DR对照及导出推理。最终模型与已知限制见[Go2部署说明](notes/go2_deployment.md)。本轮不追加实验，未覆盖的扩展不作为转入人形项目的阻塞项。
+本轮已收尾：完成Go2仿真训练、行为评估、任务修改、DR对照及导出推理。最终模型与已知限制见[Go2部署说明](notes/06_go2_deployment.md)。本轮不追加实验，未覆盖的扩展不作为转入人形项目的阻塞项。
 
 目标：能从环境配置解释机器人如何接收动作、获得奖励和结束回合，并独立完成训练与回放。
 
 1. [x] **远程 Go2 环境链路**：固定 kitless 镜像、Newton/MuJoCo Warp 后端，完成最小场景、短训练、保存、加载和轨迹回放；见[环境记录](phase2_isaaclab/reports/remote_validation.json)与[代码说明](phase2_isaaclab/README.md)。
    - 原计划远程Cartpole练习不再单独开展；环境链路已由Go2验证，不记为完成了Cartpole实验。
-2. [x] **任务配置梳理**：已按实际基线配置整理 scene、48 维 observations、actions、commands、rewards、terminations、events 和 curriculum，注明观测来源、坐标系、单位、噪声及后端摩擦差异。见 [Go2 任务配置笔记](notes/go2_task_config.md)。
+2. [x] **任务配置梳理**：已按实际基线配置整理 scene、48 维 observations、actions、commands、rewards、terminations、events 和 curriculum，注明观测来源、坐标系、单位、噪声及后端摩擦差异。见 [Go2 任务配置笔记](notes/04_go2_task_config.md)。
 3. [x] **官方 Go2 PPO 训练**：当前固定镜像实际任务 ID 为 `Isaac-Velocity-Flat-UnitreeGo2`，使用配套 RSL-RL PPO；短训练通过后完成 4096 环境、300 轮、seed=0/1/42 三组训练。见[基线报告](experiments/phase2_go2_baseline/README.md)。
-4. [x] **控制链路说明**：已整理 12 维关节顺序、默认姿态、动作缩放、PD 数值例子、执行器配置和 50 Hz 策略/200 Hz 物理步的关系，区分配置限制与 Newton 后端执行机制。见 [Go2 控制链路笔记](notes/go2_control_pipeline.md)；独立仿真闭环已完成；硬件力矩约束未验证，不属于本轮交付。
+4. [x] **控制链路说明**：已整理 12 维关节顺序、默认姿态、动作缩放、PD 数值例子、执行器配置和 50 Hz 策略/200 Hz 物理步的关系，区分配置限制与 Newton 后端执行机制。见 [Go2 控制链路笔记](notes/05_go2_control_pipeline.md)；独立仿真闭环已完成；硬件力矩约束未验证，不属于本轮交付。
 5. [x] **Go2 固定协议行为数值验收**：两训练seed的model_450经筛选后，在新评估seed45000/46000的左右转、启停全部12项均达到29/32门槛；32组1024回合均无提前终止，含原模型对照和直行评估。见[独立验收](experiments/phase2_go2_stop_sequence_extended/validation_001/README.md)。成功和失败轨迹保留，最终模型的视频与导出闭环记录在[部署准备实验](experiments/phase2_go2_deployment/run_001/README.md)；不外推到任意指令或真机。
 
 验收：从保存配置重建环境并加载自己的模型；说明至少一个奖励项、一个终止条件及动作映射。预训练模型可用于排查环境，但不替代自己的训练结果。任务与后端以安装版本的[官方环境列表](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)为准。
@@ -76,7 +76,7 @@
 核心任务：
 
 1. [x] **策略导出与动作一致性**：两个冻结model_450已导出TorchScript并记录哈希、环境/agent配置；每个模型与官方actor对比32,000条真实观测，最大动作误差均为0。当前策略无观测归一化。见[导出记录](experiments/phase2_go2_deployment/run_001/README.md)。
-2. [x] **接口文档**：已整理观测顺序、单位、坐标系、无历史窗口、动作顺序、缩放、限位语义、控制频率和reset状态，附纯PyTorch推理入口。见[部署与复现说明](notes/go2_deployment.md)。
+2. [x] **接口文档**：已整理观测顺序、单位、坐标系、无历史窗口、动作顺序、缩放、限位语义、控制频率和reset状态，附纯PyTorch推理入口。见[部署与复现说明](notes/06_go2_deployment.md)。
 3. [x] **独立闭环工程验证完成，行为仍有已知限制**：不构造PPO runner，直接加载导出策略完成16项512回合；12项行为条件中10项达标，seed0/eval46000右转27/32、seed1/eval45000启停28/32。后续薄弱行为验证5/6组达标。工程闭环已完成，跨评估seed的行为稳定性未全项通过，作为已知限制保留；勾选仅表示验证工作完成。
 4. [x] **项目整理**：维护代码、实验索引、最终模型/配置哈希、推理接口与复现包已固定。保留必要代码、模型、配置和实验数据。见[实验文件说明](experiments/ARTIFACTS.md)。Go2按学习项目收尾，重复评估未全通过作为已知限制保留，不再追加实验；整理完成不代表行为全项达标。
 
@@ -93,7 +93,7 @@
 
 目标：在 Go2 项目之后完成一个人形机器人的平地速度跟踪项目，理解双足平衡、接触切换和上身姿态对训练的影响。首轮以站立、行走、转向和停止为范围；跑跳、起身、灵巧操作和语言指令任务另作扩展。没有真机也可完成本阶段。
 
-Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核验、训练、独立评估和导出流程，保留Go2行为稳定性的已知限制。人形项目尚未开始；阶段1未完成的算法练习仍为独立待办。
+Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核验、训练、独立评估和导出流程，保留Go2行为稳定性的已知限制。人形项目已开始 [G1任务与资产核查](experiments/phase3_g1_environment/run_001/README.md)，尚未训练；阶段1未完成的算法练习仍为独立待办。
 
 1. [ ] **选择机器人与核对任务**：优先尝试 Unitree G1 的官方平地速度跟踪任务，H1 作为兼容性备选，首轮只选一个机器人。官方环境列表包含 G1/H1 平地任务，但实际任务 ID、资产版本和后端支持须以当前固定镜像的任务注册与短测试为准；不能将其他版本文档中的任务名直接当作可运行保证。参考 [Isaac Lab 官方环境列表](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)。
 2. [ ] **读懂人形任务与动作接口**：整理受控关节、观测来源、坐标系、动作缩放、默认姿态、PD 参数、控制频率、接触和终止条件。明确手臂/躯干是否参与控制、actor/critic 是否使用不同观测，以及官方配置已有的随机化与 curriculum。复用 Go2 工具流程，但重新训练人形策略，不直接加载 Go2 权重或照搬关节映射。

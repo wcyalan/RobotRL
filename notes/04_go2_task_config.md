@@ -2,7 +2,7 @@
 
 本文对应官方基线 `phase2_go2_baseline/run_001`（seed=42），任务为 `Isaac-Velocity-Flat-UnitreeGo2`，后端为 Newton/MuJoCo Warp。它不是旧版 PhysX 教程的配置，也不是后续质量/摩擦 DR 实验。
 
-证据：[实际 env.yaml](go2_reference/env.yaml)、[实际 agent.yaml](go2_reference/agent.yaml)、[原始配置哈希](go2_reference/manifest.json)、[官方 Go2 flat 配置源码快照](../experiments/phase2_go2_baseline/run_001/official_go2_source/flat_env_cfg.py)、[rough 父配置](../experiments/phase2_go2_baseline/run_001/official_go2_source/rough_env_cfg.py)。阅读时以解析后的 YAML 为最终参数依据，不能只看继承链中的某一层。
+证据：[实际 env.yaml](go2_reference/env.yaml)、[实际 agent.yaml](go2_reference/agent.yaml)、[原始配置哈希](go2_reference/manifest.json)、官方 Go2 flat 配置源码快照（`flat_env_cfg.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）、rough 父配置（`rough_env_cfg.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）。阅读时以解析后的 YAML 为最终参数依据，不能只看继承链中的某一层。
 
 ## 1. 整个任务如何连接
 
@@ -36,7 +36,7 @@ scene 建立机器人、地面、传感器
 
 ## 3. observations：48 维输入逐项解释
 
-下表是 `observations.policy` 的拼接顺序，索引从 0 开始。左右/前后关节顺序见[控制链路](go2_control_pipeline.md#2-12-维动作的关节顺序)。
+下表是 `observations.policy` 的拼接顺序，索引从 0 开始。左右/前后关节顺序见[控制链路](05_go2_control_pipeline.md#2-12-维动作的关节顺序)。
 
 | 索引 | 配置项 / 函数 | 维度 | 含义与来源 | 坐标系 / 单位 | 加性均匀噪声 |
 |---|---|---:|---|---|---|
@@ -73,7 +73,7 @@ heading 模式根据朝向误差形成偏航速度指令，并受范围限制；
 
 $$q^{\mathrm{target}}_j=q^{\mathrm{default}}_j+0.25a_j.$$
 
-策略不直接输出力矩。动作配置 `clip=null`，runner 的 `clip_actions=null`；不能假定动作被限制在 `[-1,1]`。后续执行器约束与关节限位是不同层面的机制。完整例子见[控制链路笔记](go2_control_pipeline.md)。
+策略不直接输出力矩。动作配置 `clip=null`，runner 的 `clip_actions=null`；不能假定动作被限制在 `[-1,1]`。后续执行器约束与关节限位是不同层面的机制。完整例子见[控制链路笔记](05_go2_control_pipeline.md)。
 
 ## 6. rewards 和 terminations
 
@@ -113,7 +113,7 @@ startup 表示建立环境时采样，不能写成“每局都随机”。reset 
 
 特别注意当前后端的摩擦：Newton 材料事件使用单个滑动摩擦参数；现有审计发现等优先级 MuJoCo 接触取两侧摩擦较大值。官方 ground=1.0、robot=0.8 的活动接触实际为 1.0，而不是从 `friction_combine_mode=multiply` 推算出 0.8。只降低机器人摩擦到 0.3，仍会被地面 1.0 覆盖。
 
-证据与工具：[低摩擦修正结果](../experiments/phase2_go2_robustness/run_003/README.md)、[活动接触审计代码](../phase2_isaaclab/evaluation/friction_audit.py)、[镜像运行时事件源码](../experiments/phase2_go2_robustness/run_003/runtime_material_events.py)。因此官方基线不能直接命名为“无 DR”。
+证据与工具：[低摩擦修正结果](../experiments/phase2_go2_robustness/run_003/README.md)、[活动接触审计代码](../phase2_isaaclab/evaluation/friction_audit.py)、镜像运行时事件源码（`runtime_material_events.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）。因此官方基线不能直接命名为“无 DR”。
 
 ## 8. 与当前质量/摩擦对照的关系
 

@@ -52,3 +52,11 @@ Thumbs.db
 /experiments/phase2_go2_*/**/*_preview_*.png
 # Frozen runtime source bundles remain in the local/NAS reproduction archive.
 /experiments/phase2_go2_deployment/**/source/
+
+# G1 environment evidence: keep compact results, retain raw snapshots locally/NAS.
+/experiments/phase3_g1_environment/**/source/
+/experiments/phase3_g1_environment/**/official_*.json
+/experiments/phase3_g1_environment/**/smoke_env.json
+/experiments/phase3_g1_environment/**/*.py
+/experiments/phase3_g1_environment/**/*.sh
+/experiments/phase3_g1_environment/**/environment.yaml

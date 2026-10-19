@@ -1,6 +1,6 @@
 # Go2：策略输出与控制链路
 
-本文以[官方基线实际环境配置](go2_reference/env.yaml)和 [PPO 配置](go2_reference/agent.yaml)为依据。任务整体说明见[Go2 任务配置](go2_task_config.md)。数值例子用于理解映射，不是一次实测力矩记录。
+本文以[官方基线实际环境配置](go2_reference/env.yaml)和 [PPO 配置](go2_reference/agent.yaml)为依据。任务整体说明见[Go2 任务配置](04_go2_task_config.md)。数值例子用于理解映射，不是一次实测力矩记录。
 
 ## 1. 一次策略决策发生了什么
 
@@ -78,7 +78,7 @@ $$25\times0.1+0.5\times(0-0.2)=2.4\;\mathrm{N\,m}.$$
 
 **本次后端差异：** `use_newton_actuators=true`，控制通过 Newton 原生执行器进入 MuJoCo Warp。运行时求解器源码把位置目标与 `joint_target_ke`、速度目标与 `joint_target_kd` 对接到相应执行器；求解器采用 `implicitfast`。因此上面的公式是 PD 控制意图的解释，不能直接断言运行了 PhysX 路线的 Python `DCMotor.compute()`，也不能未经后端核验就声称完全执行了相同的速度相关力矩裁剪。
 
-源码证据：[运行时求解器快照](../experiments/phase2_go2_robustness/run_003/runtime_solver.py)，检索 `CtrlType`、`joint_target_q`、`joint_target_ke`、`joint_target_kd`。当前已经核验动作到位置目标；部署前仍需核对目标后端的力矩约束与实际输出，不能把这份笔记当作完整部署验收。
+源码证据：运行时求解器快照（`runtime_solver.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)），检索 `CtrlType`、`joint_target_q`、`joint_target_ke`、`joint_target_kd`。当前已经核验动作到位置目标；部署前仍需核对目标后端的力矩约束与实际输出，不能把这份笔记当作完整部署验收。
 
 ## 5. 三层时间尺度
 

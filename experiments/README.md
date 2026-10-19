@@ -1,6 +1,8 @@
 # 实验结果索引
 
-Go2 学习项目已收尾（2026-10-19），[最终模型、交付结论与使用入口](../notes/go2_deployment.md)已固定，不再追加训练或噪声对照。日常查看以下三个入口即可；历史对照和负结果保留用于追溯。
+G1 已开始 [固定镜像的任务与资产核查](phase3_g1_environment/run_001/README.md)，尚未启动训练。
+
+Go2 学习项目已收尾（2026-10-19），[最终模型、交付结论与使用入口](../notes/06_go2_deployment.md)已固定，不再追加训练或噪声对照。日常查看以下三个入口即可；历史对照和负结果保留用于追溯。
 
 - **最终模型与复现**：[部署包](phase2_go2_deployment/run_001/README.md)，固定两个训练 seed 的 model_450。
 - **主要效果证据**：[独立验收](phase2_go2_stop_sequence_extended/validation_001/README.md)，左右转、启停的12组条件全部通过。
