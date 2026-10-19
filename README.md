@@ -89,7 +89,7 @@
 
 ### 阶段 5：人形机器人仿真行走
 
-详细学习与实践流程已放入 [phase3](phase3/README.md)，先阅读其中三篇入门笔记，再核对实际G1任务；目前尚未启动人形训练。
+详细学习与实践流程已放入 [phase3](phase3/README.md)，先阅读 `notes/` 中的三篇人形机器人入门笔记，再核对实际G1任务；目前尚未启动人形训练。
 
 目标：在 Go2 项目之后完成一个人形机器人的平地速度跟踪项目，理解双足平衡、接触切换和上身姿态对训练的影响。首轮以站立、行走、转向和停止为范围；跑跳、起身、灵巧操作和语言指令任务另作扩展。没有真机也可完成本阶段。
 
@@ -122,10 +122,10 @@ Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核�
 | `phase0_setup/` | 阶段 0 工具链验证脚本 |
 | `phase1_ppo/` | 阶段 1 手写算法代码 |
 | [`phase2_isaaclab/`](phase2_isaaclab/README.md) | Go2 训练、独立评估、鲁棒性测试和视频回放 |
-| [`phase3/`](phase3/README.md) | 人形机器人学习计划、入门笔记及后续实现 |
+| [`phase3/`](phase3/README.md) | 人形机器人学习计划及后续实现 |
 | `experiments/` | 实验记录：config + 曲线 + 结论 |
 
-Isaac Lab 代码统一维护在 `phase2_isaaclab/`，训练、评估、分析和渲染分别位于 `training/`、`evaluation/`、`analysis/`、`visualization/`；远程任务入口与配置位于 `jobs/`、`configs/`，通过 `prepare_context.py --job` 按需打包；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验按类别使用 `run_001`、`run_002` 顺序编号。人形项目使用 `phase3/`，目前先保存学习计划与笔记，有实际实现后再增加代码子目录和独立实验目录；路线阶段编号与代码目录编号不强制一致，Go2 原目录保持不变。
+Isaac Lab 代码统一维护在 `phase2_isaaclab/`，训练、评估、分析和渲染分别位于 `training/`、`evaluation/`、`analysis/`、`visualization/`；远程任务入口与配置位于 `jobs/`、`configs/`，通过 `prepare_context.py --job` 按需打包；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验按类别使用 `run_001`、`run_002` 顺序编号。人形项目使用 `phase3/`，目前保留学习计划，相关笔记统一放在 `notes/`；有实际实现后再增加代码子目录和独立实验目录；路线阶段编号与代码目录编号不强制一致，Go2 原目录保持不变。
 
 ## 约定
 

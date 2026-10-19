@@ -10,11 +10,11 @@
 
 ## 人形机器人学习
 
-新项目笔记集中在 [phase3/notes](../phase3/README.md)：
+人形机器人笔记与其他理论笔记统一存放在本目录；学习流程见 [phase3计划](../phase3/README.md)：
 
-1. [双足平衡、接触与动力学](../phase3/notes/01_humanoid_balance.md)
-2. [人形RL任务与PPO训练](../phase3/notes/02_humanoid_rl.md)
-3. [G1配置阅读与行为评估](../phase3/notes/03_g1_configuration_and_evaluation.md)
+1. [双足平衡、接触与动力学](01_humanoid_balance.md)
+2. [人形RL任务与PPO训练](02_humanoid_rl.md)
+3. [G1配置阅读与行为评估](03_g1_configuration_and_evaluation.md)
 
 ## 写作约定（数学渲染）
 
