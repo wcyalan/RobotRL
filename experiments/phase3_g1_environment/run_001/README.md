@@ -7,21 +7,20 @@
 - 4环境、1100个策略步；观测123维、动作37维；观测、奖励、接触力均有限。
 - 69次躯干触地终止及自动reset，另完成两次显式reset；未出现时间截断。零动作本身不代表平衡策略，跌倒不影响本次链路通过结论。
 - 奖励范围约 -4.1044 至 0.03856，峰值接触力约2305.96 N；这些是零动作预检数据，不是行为验收指标。
-- USD包含44个body、37个可动关节；3个碰撞几何位于躯干、左脚和右脚。资产质量/惯量已读取，文件哈希匹配。
-- 详细证据：[步进结果](smoke/smoke.json)、[资产](smoke/asset.json)、[实际镜像与源码哈希](smoke/inventory.json)。完整配置与日志另保留在本地/NAS。
+- USD包含44个body、37个可动关节；3个碰撞几何位于躯干、左脚和右脚。资产质量/惯量已读取。
+- 详细证据：[步进结果](smoke/smoke.json)、[资产](smoke/asset.json)、[运行环境与源码版本](smoke/inventory.json)。完整配置与日志另保留在本地/NAS。
 
 这只证明当前任务和后端可加载、步进并重置，不证明训练收敛、真实动力学精度或G1视频渲染可用。后续已接入 [短训练验证](../../phase3_g1_smoke/run_001/README.md)。
 
 ## 固定环境
 
-- 镜像：`nvcr.io/nvidia/isaac-lab@sha256:d5c31452ae21d0cb040b7195b3a66e202b2d2a6ac389719a04528f6cd93e7d3b`。
+- 镜像：NVIDIA Isaac Lab，固定版本见[环境配置](../../../phase3/environment/environment.yaml)。
 - 配置解析在 `64c128t_512_4090` 完成；后续4090被占满，最小仿真改用 `128c256t_768_6000Ada` 的单张 RTX 6000 Ada。镜像和仿真参数相同，正式训练的性能仍需另测。
 - 实际版本：Isaac Lab 17.0.2、PyTorch 2.11.0+cu128、Newton 1.5.2、Warp 1.16.0、RSL-RL 5.4.1、Gymnasium 1.3.0。
-- 镜像内没有可读取的 Isaac Lab Git HEAD；使用镜像 digest 和配置源码 SHA-256 固定来源，不编造源码提交号。
 - 实际任务：`Isaac-Velocity-Flat-G1`；另有 `Isaac-Velocity-Rough-G1` 及其他操作任务，首轮不使用。
 - 原始资产：`https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.1/Isaac/IsaacLab/Robots/Unitree/G1/g1_minimal.usd`。
 - NAS 资产：`/labdata2/congyuwang/RobotRL_kitless/assets/G1/g1_minimal.usd`，容器中为 `/robotrl/assets/G1/g1_minimal.usd`。仅改变资产存放位置。
-- 资产大小：22,164,053字节；SHA-256：`9dfe7a710aa791e49abf2d9ea74ad3163e291f02f21f59bda9bfcc40f3fab428`。碰撞和惯量已由容器内 USD 解析。
+- 资产大小：22,164,053字节。碰撞和惯量已由容器内 USD 解析。
 
 ## 复现入口
 

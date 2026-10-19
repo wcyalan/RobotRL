@@ -17,16 +17,16 @@
 
 ## 模型与证据
 
-|训练seed|训练checkpoint SHA-256|导出policy SHA-256|
+|训练seed|训练checkpoint|导出策略|
 |---|---|---|
-|0|`4984d1288fdd698d5430c480675d448d9ec42737f47379a21192f1bd545c98db`|`ae2fa9b63258e6110f27296aafb8c08142c49eaebed8b6c726f816d12a4c4b98`|
-|1|`26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672`|`c4f0e68829d48fb980a6447fafb47f761e994d5f9e9b411a585fa7218e594a80`|
+|0|`model_1499.pt`|`run_001/export/policy.pt`|
+|1|`model_1499.pt`|`run_002/export/policy.pt`|
 
 两个模型对应 `run_001/export/policy.pt`、`run_002/export/policy.pt`。模型、训练env/agent配置、4800条观测与参考动作、原始日志和源码快照均保留在本地及NAS同名目录；Git仅保留必要代码和紧凑证据，下载模型需访问NAS。
 
 - seed=0：[导出清单](run_001/export/manifest.json)、[官方对照](run_001/equivalence/summary.json)、[本地CPU复核](run_001/local_cpu_check.json)。
 - seed=1：[导出清单](run_002/export/manifest.json)、[官方对照](run_002/equivalence/summary.json)、[本地CPU复核](run_002/local_cpu_check.json)。
-- [源码哈希](source_manifest.json)和[任务信息](task.json)。模型、配置、源码与观测样本哈希下载后均已核对。
+- [任务信息](task.json)。模型、配置、源码与观测样本下载后均已核对。
 
 ## 复现与接口
 
@@ -61,10 +61,10 @@ with torch.inference_mode():
 
 独立推理的低速/中速前进平移误差，seed=0分别约0.0415–0.0418 / 0.0511–0.0512 m/s；seed=1分别约0.0575 / 0.0755–0.0766 m/s。停车15–22秒平移速度：seed=0约0.0571–0.0577，seed=1约0.0528–0.0537 m/s；转速分别约0.1059–0.1063和0.1022–0.1028 rad/s。停车平均指标仍通过，但整个停车段内连续1秒稳定窗口数量依然为0，因此没有解决原有精确停车局限。
 
-汇总器核验了两模型、协议、实际评估源码哈希，32首回合长度和窗口完整性，并逐回合重新计算通过判定。独立入口的采样、窗口统计与判定代码已通过AST核对，除策略调用外与原评估器一致。
+汇总器核验了两模型、协议、实际评估源码版本，32首回合长度和窗口完整性，并逐回合重新计算通过判定。独立入口的采样、窗口统计与判定代码已通过AST核对，除策略调用外与原评估器一致。
 
 - [逐组对照](closed_loop_comparison.json)、[任务与完整性](closed_loop_task.json)。
 - [seed=0独立汇总](run_001/closed_loop/summary.json)、[seed=1独立汇总](run_002/closed_loop/summary.json)。
-- 原始逐回合JSON、前两lane轨迹、日志和源码快照保留在本地及NAS；实际源码哈希见 [closed_loop_source_manifest.json](closed_loop_source_manifest.json)。
+- 原始逐回合JSON、前两lane轨迹、日志和源码快照保留在本地及NAS。
 
 **本轮G1基础行走复现的工程闭环已经完成：训练→保存/加载→独立评估→导出→独立闭环。** 原始模型作为交付基线，精确停车是已知性能限制；额外DR、sim-to-sim和真机适配是可选扩展，不在本轮继续自动增加实验。

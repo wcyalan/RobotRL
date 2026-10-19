@@ -6,18 +6,18 @@
 
 每个seed使用4096环境 × 24步 × 1500轮 = 147,456,000环境步，单张RTX 6000 Ada，串行运行。官方奖励、PPO、网络、物理参数、噪声和随机化保持原样；覆盖训练seed及资产本地路径。两个实际保存的agent配置仅seed不同，环境配置仅seed和日志目录不同；源码快照一致。官方基线本身含质量、初始化、推扰等随机化，不能称为无DR。
 
-|训练seed|结果目录|训练耗时|最终模型 SHA-256|
-|---|---|---:|---|
-|0|[run_001](run_001/README.md)|1104.38秒|`4984d1288fdd698d5430c480675d448d9ec42737f47379a21192f1bd545c98db`|
-|1|[run_002](run_002/README.md)|1072.90秒|`26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672`|
+|训练seed|结果目录|训练耗时|
+|---|---|---:|
+|0|[run_001](run_001/README.md)|1104.38秒|
+|1|[run_002](run_002/README.md)|1072.90秒|
 
 耗时为官方训练日志记录，未计入排队、首次镜像拉取及12个独立评估进程。两组各1500条loss均有限，actor/critic参数确实改变；最终模型为预先指定的 `model_1499.pt`，没有挑选最好checkpoint。
 
-镜像、资产哈希及运行依赖见[环境记录](../phase3_g1_environment/run_001/README.md)。训练入口：[train_baseline.sh](../../phase3/training/train_baseline.sh)，评估入口：[evaluate_behaviors.py](../../phase3/evaluation/evaluate_behaviors.py)。远程任务context保留在 `/labdata2/congyuwang/RobotRL_kitless/contexts/g1_baseline_001`；进入对应context后，通过 `environment.yaml` 调度 `bash train_baseline.sh /robotrl/experiments/phase3_g1_baseline/<新编号目录> <0或1>`，脚本会拒绝覆盖已有训练日志。任务命令需用集群的 `det command run` 提交，不能在登录节点直接训练。
+镜像、机器人资产及运行依赖见[环境记录](../phase3_g1_environment/run_001/README.md)。训练入口：[train_baseline.sh](../../phase3/training/train_baseline.sh)，评估入口：[evaluate_behaviors.py](../../phase3/evaluation/evaluate_behaviors.py)。远程任务context保留在 `/labdata2/congyuwang/RobotRL_kitless/contexts/g1_baseline_001`；进入对应context后，通过 `environment.yaml` 调度 `bash train_baseline.sh /robotrl/experiments/phase3_g1_baseline/<新编号目录> <0或1>`，脚本会拒绝覆盖已有训练日志。任务命令需用集群的 `det command run` 提交，不能在登录节点直接训练。
 
 ## 冻结评估
 
-使用[训练前固定的协议](../../phase3/evaluation/protocol.json)，SHA-256 `894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc`。每个模型使用评估seed=20000、21000，每条件32个首回合，每组门槛29/32。评估固定质量倍率1、取消推扰、初始机身速度0、直接指定速度指令；保留官方观测噪声及摩擦。不能将这个名义评估结果当作鲁棒性测试。
+使用[训练前固定的协议](../../phase3/evaluation/protocol.json)。每个模型使用评估seed=20000、21000，每条件32个首回合，每组门槛29/32。评估固定质量倍率1、取消推扰、初始机身速度0、直接指定速度指令；保留官方观测噪声及摩擦。不能将这个名义评估结果当作鲁棒性测试。
 
 表中两个数依次对应评估seed=20000 / 21000，分母各32。
 
@@ -30,7 +30,7 @@
 |右转 −0.5 rad/s|32 / 32|32 / 32|
 |启停|0 / 0|0 / 0|
 
-共24组、768个首回合，全部达到规定时长，无提前躯干触地终止；20组达标。静态条件20秒、启停30秒，自动reset后的回合没有拼接进成绩。每组模型/协议哈希均匹配，并依据原始逐回合窗口均值重新计算通过判定。
+共24组、768个首回合，全部达到规定时长，无提前躯干触地终止；20组达标。静态条件20秒、启停30秒，自动reset后的回合没有拼接进成绩。每组均使用预定模型与协议，并依据原始逐回合窗口均值重新计算通过判定。
 
 ## 误差与失败解释
 
@@ -71,12 +71,12 @@
 
 停车后15–22秒，seed=0的左右膝分别在28.8–53.3°、27.9–49.8°之间活动，seed=1分别为37.4–56.7°、37.8–58.0°。这说明零速度指令下仍有腿部运动，不能把通过均值门槛描述成静止站稳；不能单凭此确定奖励机制或训练预算是原因。视频初查不替代已有768回合的定量结果，仍保留启停失败。
 
-复现入口：[replay_g1.py](../../phase3/visualization/replay_g1.py)。运行方法见[phase3回放说明](../../phase3/README.md#本地姿态回放)。每条视频旁的metadata记录原轨迹、模型、协议及USD哈希、关节顺序、依赖版本、完整片段索引。已核对3250帧/130秒、37关节一一对应、零姿态关节链与USD静态变换最大矩阵差约1.22e-6。
+复现入口：[replay_g1.py](../../phase3/visualization/replay_g1.py)。运行方法见[phase3回放说明](../../phase3/README.md#本地姿态回放)。每条视频旁的metadata记录原轨迹、模型、协议及机器人资产信息、关节顺序、依赖版本、完整片段索引。已核对3250帧/130秒、37关节一一对应、零姿态关节链与USD静态变换最大矩阵差约1.22e-6。
 
 
 ## 停车失败定位
 
-本次仅分析已有数据，并用同一固定镜像执行只读源码复制（CPU、0 GPU槽位；任务 `5f3ee5e8-e53f-4545-86ef-4cb901ec76f6` 成功退出）。没有新增训练，也没有修改评估门槛。结果见 [stop_diagnosis.json](stop_diagnosis.json)，复现入口为 [diagnose_stop.py](../../phase3/analysis/diagnose_stop.py)；奖励、指令及RewardManager的实际镜像源码哈希见 [source_manifest.json](diagnosis/source_manifest.json)，原文件保留在本地/NAS。
+本次仅分析已有数据，并用同一固定镜像执行只读源码复制（CPU、0 GPU槽位；任务 `5f3ee5e8-e53f-4545-86ef-4cb901ec76f6` 成功退出）。没有新增训练，也没有修改评估门槛。结果见 [stop_diagnosis.json](stop_diagnosis.json)，复现入口为 [diagnose_stop.py](../../phase3/analysis/diagnose_stop.py)；奖励、指令及RewardManager的实际镜像源码版本见 [source_manifest.json](diagnosis/source_manifest.json)，原文件保留在本地/NAS。
 
 **可确定的现象：零指令下仍有持续运动和漂移，不只是指令切换瞬间没有刹住。** 原评估中的128条启停回合均未获得连续稳定窗口。已保存姿态的8条轨迹（每训练seed×每评估seed的前2条）显示：
 

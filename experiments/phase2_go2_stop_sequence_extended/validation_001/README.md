@@ -2,13 +2,13 @@
 
 2026-10-18 提交任务 `5c2ca91d-7029-4973-8c5a-309f4764df5e`，运行包 `contexts/checkpoint_validation_001`，入口 `bash evaluate_checkpoints.sh validate`。
 
-两训练seed的model_450由checkpoints_001按预先规定的三项行为标准选出。此次冻结候选模型与原stop_sequence同训练seed的model_299对照，具体SHA256见frozen_models.json，运行前核对服务器文件。只评估，不更新参数。
+两训练seed的model_450由checkpoints_001按预先规定的三项行为标准选出。此次冻结候选模型与原stop_sequence同训练seed的model_299对照，模型选择见frozen_models.json，运行前核对服务器文件。只评估，不更新参数。
 
 使用尚未参与前轮筛选的eval45000/46000；2评估seed × 2训练seed × 新旧模型 × 左转/右转/启停/直行，共32组1024回合，每组32环境。行为验收沿用原标准且每组至少29/32，所有训练/评估seed分别报告，不用合并均值掩盖不通过组。直行误差描述性比较，不临时增加通过阈值。新模型启停保存全部32环境姿态。
 
 本验证仅覆盖固定速度和5秒启停节奏下随机初始状态、观测扰动变化；不能推广到任意指令或真机。若不通过，保留完整失败证据，不在这两个新seed上再次挑检查点并宣称独立验证通过。
 
-已成功完成32/32组1024回合；全部无提前终止。冻结模型文件SHA256、结果模型SHA256、场景和eval seed均核验通过，结果见acceptance.json。
+已成功完成32/32组1024回合；全部无提前终止。冻结模型与评估记录一致，场景和eval seed均核验通过，结果见acceptance.json。
 
 ## 独立验证结果
 

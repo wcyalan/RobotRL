@@ -28,7 +28,7 @@
 
 ## 输出与状态
 
-运行入口：`phase2_isaaclab/jobs/diagnostics/evaluate_behaviors.sh`，使用 `prepare_context.py --job evaluate_behaviors` 打包。输出目录 `run_001/`，保存协议、源码、模型哈希、逐局指标与轨迹。总计 9 项评估、288 局。
+运行入口：`phase2_isaaclab/jobs/diagnostics/evaluate_behaviors.sh`，使用 `prepare_context.py --job evaluate_behaviors` 打包。输出目录 `run_001/`，保存协议、源码、模型、逐局指标与轨迹。总计 9 项评估、288 局。
 
 2026-10-16 已完成全部 9 项评估、288 局，逐局判定见 `run_001/acceptance.json`。以下为满足全部对应条件的局数；每项至少 29/32 才通过。
 
@@ -44,14 +44,14 @@ seed=0 左转的 32 局均因偏航跟踪误差超限失败，并非 32 局摔�
 
 ## 定点诊断（2026-10-17）
 
-`phase2_isaaclab/analysis/diagnose_behaviors.py` 将逐环境诊断保存到 `run_001/behavior_diagnostics.json`，包含输入 SHA256；不修改正式验收线。
+`phase2_isaaclab/analysis/diagnose_behaviors.py` 将逐环境诊断保存到 `run_001/behavior_diagnostics.json`；不修改正式验收线。
 
 - seed=0 左转：第 1 秒后全部环境的平均偏航角速度约 0.3829 rad/s，目标为 0.5。env 0 均值 0.3784、标准差 0.2480、平均绝对误差 0.1914 rad/s，说明同时存在平均跟踪不足和波动，不能只看均值误差。
 - seed=1 停止：env 2 的第二次停止、env 8 的第二次停止、env 9 的第一次停止，合格连续窗口的起始延迟分别为 2.82、2.58、2.44 s。这里扩展搜索到整个停止阶段只用于诊断，超过 2 s 仍判失败。
 - 后两个样本在切换后 0.5–2 s 内平移速度均未超过 0.1 m/s，但绝对偏航速度分别有约 6.7%、9.3% 的样本超过 0.15 rad/s。因此不能把这些失败直接描述为“机器人一直向前走、刹不住”。
 - 已保存的完整姿态仅为 env 0。seed=1 的 env 0 是通过案例，两次停止响应为 0.90、0.08 s；其回放不能替代失败环境的姿态证据。
 
-回放：`run_001/videos/seed0_left.mp4`（左转失败 env 0）与 `run_001/videos/seed1_stop.mp4`（启停通过 env 0），均验证为 20 s、1000 帧、50 fps、960×540；元数据记录源 JSON 哈希。已抽查第 5 秒左转与第 10 秒停止姿态，结合速度记录进行诊断；没有将抽帧检查当作对全部环境的完整视觉验收。视频仅对记录姿态做运动学渲染，不是新物理仿真。
+回放：`run_001/videos/seed0_left.mp4`（左转失败 env 0）与 `run_001/videos/seed1_stop.mp4`（启停通过 env 0），均验证为 20 s、1000 帧、50 fps、960×540；元数据记录源 JSON 信息。已抽查第 5 秒左转与第 10 秒停止姿态，结合速度记录进行诊断；没有将抽帧检查当作对全部环境的完整视觉验收。视频仅对记录姿态做运动学渲染，不是新物理仿真。
 
 后续优先补录一个停止失败环境的姿态，再验证指令覆盖假设：原训练使用 heading 指令、约 2% 站立采样、10 s 重采样；本评估使用固定角速度及每 5 s 启停。该差异不等于已证明因果。若做训练对照，先保持奖励和 DR 配置不变，仅研究指令分布，保留原模型作对照。
 

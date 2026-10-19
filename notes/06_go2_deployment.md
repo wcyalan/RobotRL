@@ -17,7 +17,7 @@ Go2学习项目已于2026-10-19收尾：完成仿真训练、独立评估、模�
 
 本轮最终保留的模型是 `experiments/phase2_go2_stop_sequence_extended/run_001`（训练seed0）和 `run_002`（seed1）各自logs下的model_450.pt。这两个检查点经筛选后在eval45000/46000完成独立行为验收，不能用model_extended.pt替代（seed0最终模型右转退化）。
 
-导出文件在 `experiments/phase2_go2_deployment/run_001/run_001/policy.pt` 与 `run_002/policy.pt`。各manifest.json记录父模型和导出文件SHA256。TorchScript用于当前固定运行环境；本地PyTorch2.14发出deprecated提示，格式选择不意味着它是新项目通用首选。服务器2.11的兼容性由实际加载/推理验证确认，不能仅靠版本推测。
+导出文件在 `experiments/phase2_go2_deployment/run_001/run_001/policy.pt` 与 `run_002/policy.pt`。TorchScript用于当前固定运行环境；本地PyTorch2.14发出deprecated提示，格式选择不意味着它是新项目通用首选。服务器2.11的兼容性由实际加载/推理验证确认，不能仅靠版本推测。
 
 ## 输入与输出契约
 
@@ -51,9 +51,9 @@ actor为48→128→128→128→12的ELU MLP。输入float32、形状[B,48]，输
 
 在仓库根目录使用`.venv/Scripts/python.exe phase2_isaaclab/deployment/export_policy.py --checkpoint <model_450.pt> --output <新的导出目录>`。导出目录必须不存在，避免覆盖冻结策略。
 
-远程运行包使用 `python phase2_isaaclab/prepare_context.py --job validate_export --output <新运行包目录>`。固定镜像及NAS挂载见phase2_isaaclab/configs/train_baseline.yaml。先将导出策略及manifest上传到实验目录，再用 `bash validate_export.sh` 执行。该job固定run_001且有防覆盖检查，复现实验须先改成新的编号，保留原模型路径与哈希。
+远程运行包使用 `python phase2_isaaclab/prepare_context.py --job validate_export --output <新运行包目录>`。固定镜像及NAS挂载见phase2_isaaclab/configs/train_baseline.yaml。先将导出策略及manifest上传到实验目录，再用 `bash validate_export.sh` 执行。该job固定run_001且有防覆盖检查，复现实验须先改成新的编号，保留原模型路径与配置。
 
-无需PPO训练runner的单项推理入口：`python evaluate_go2.py --model <父检查点> --jit_policy <policy.pt> --output <结果.json> --behavior stop_restart --eval_seed 45000 --num_envs 32 --task Isaac-Velocity-Flat-UnitreeGo2 physics=newton_mjwarp env.scene.robot.spawn.usd_path=/robotrl/assets/Go2/go2.usd`。其中model在此模式只用于来源哈希，不加载网络权重；网络来自jit_policy。添加`--verify_jit`才构造官方runner作参考比较。
+无需PPO训练runner的单项推理入口：`python evaluate_go2.py --model <父检查点> --jit_policy <policy.pt> --output <结果.json> --behavior stop_restart --eval_seed 45000 --num_envs 32 --task Isaac-Velocity-Flat-UnitreeGo2 physics=newton_mjwarp env.scene.robot.spawn.usd_path=/robotrl/assets/Go2/go2.usd`。其中model在此模式仅用于核对策略来源，不加载网络权重；网络来自jit_policy。添加`--verify_jit`才构造官方runner作参考比较。
 
 远程验证已完整结束：官方actor比较各32,000条观测最大误差0；导出策略独立闭环16项512回合无提前终止，但12项行为中10项通过，不能标为全部行为验收通过。结果见experiments/phase2_go2_deployment/run_001/README.md和acceptance.json。工程链路与行为稳定性分开验收。
 

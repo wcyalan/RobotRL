@@ -33,7 +33,7 @@
 
 先做只读核查，再做最小仿真。Go2可运行只说明现有kitless/Newton链路可用，不证明同镜像中的G1资产和任务可用。
 
-1. 记录实际镜像digest、Isaac Lab版本/源码版本、物理后端、RSL-RL与PyTorch版本。
+1. 记录实际镜像与Isaac Lab版本/源码版本、物理后端、RSL-RL与PyTorch版本。
 2. 在 **实际运行容器** 中列出注册任务，查找G1平地速度跟踪任务；定位其环境配置、agent配置和资产配置。登录节点的另一份源码只能作参考。
 3. 核对资产能否读取：文件路径、关节名、碰撞形状、质量/惯量、足部与终止检测用到的body名称。
 4. 先用1–4个环境完成reset和有限步进，确认观测、奖励有限，接触与自动reset不报错。
@@ -128,7 +128,7 @@
 
 实际结果按实验内容和顺序编号：环境核查已放入 `experiments/phase3_g1_environment/run_001/`；正式基线已存于 `experiments/phase3_g1_baseline/run_001/`（seed=0）与 `run_002/`（seed=1）。如果最终选H1，名称随实际机器人修改。
 
-可以复用Go2的任务打包方式、日志格式、模型哈希核验、冻结评估和轨迹回放思路。必须重新实现或核对关节映射、观测布局、执行器配置、资产、接触body、终止条件、归一化、动作输出和行为门槛。
+可以复用Go2的任务打包方式、日志格式、模型一致性检查、冻结评估和轨迹回放思路。必须重新实现或核对关节映射、观测布局、执行器配置、资产、接触body、终止条件、归一化、动作输出和行为门槛。
 
 ## 当前已核实的配置
 
@@ -192,7 +192,7 @@
 
 入口：[visualization/replay_g1.py](visualization/replay_g1.py)。本地Windows显示使用训练时同一份USD，读取保存的轨迹并重建关节运动，不运行新物理仿真。关节局部变换按[OpenUSD Joint定义](https://openusd.org/release/api/class_usd_physics_joint.html)组合；四元数从记录的xyzw转换后使用。43个可见网格从USD的实例代理提取，3个不可见碰撞网格不作为外观显示。
 
-将NAS `/labdata2/congyuwang/RobotRL_kitless/assets/G1/g1_minimal.usd` 下载到仓库 `assets/G1/g1_minimal.usd`，脚本会核验SHA-256。原资产及自动生成的 `replay_meshes/` 不提交Git；原始来源和哈希见环境核查文档。依赖为 `usd-core`、`mujoco`、`numpy`、`imageio`、`imageio-ffmpeg`、`Pillow`，本次具体版本记录在视频metadata中。
+将NAS `/labdata2/congyuwang/RobotRL_kitless/assets/G1/g1_minimal.usd` 下载到仓库 `assets/G1/g1_minimal.usd`。原资产及自动生成的 `replay_meshes/` 不提交Git；原始来源见环境核查文档。依赖为 `usd-core`、`mujoco`、`numpy`、`imageio`、`imageio-ffmpeg`、`Pillow`，本次具体版本记录在视频metadata中。
 
 从仓库根目录执行：
 

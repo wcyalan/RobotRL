@@ -2,7 +2,7 @@
 
 本文对应官方基线 `phase2_go2_baseline/run_001`（seed=42），任务为 `Isaac-Velocity-Flat-UnitreeGo2`，后端为 Newton/MuJoCo Warp。它不是旧版 PhysX 教程的配置，也不是后续质量/摩擦 DR 实验。
 
-证据：[实际 env.yaml](go2_reference/env.yaml)、[实际 agent.yaml](go2_reference/agent.yaml)、[原始配置哈希](go2_reference/manifest.json)、官方 Go2 flat 配置源码快照（`flat_env_cfg.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）、rough 父配置（`rough_env_cfg.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）。阅读时以解析后的 YAML 为最终参数依据，不能只看继承链中的某一层。
+证据：[实际 env.yaml](go2_reference/env.yaml)、[实际 agent.yaml](go2_reference/agent.yaml)、[配置来源](go2_reference/manifest.json)、官方 Go2 flat 配置源码快照（`flat_env_cfg.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）、rough 父配置（`rough_env_cfg.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）。阅读时以解析后的 YAML 为最终参数依据，不能只看继承链中的某一层。
 
 ## 1. 整个任务如何连接
 

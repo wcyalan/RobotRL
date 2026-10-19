@@ -8,7 +8,7 @@
 
 运行包：contexts/stop_sequence_validation_001；入口 `bash validate_turn_coverage.sh stop_sequence`。汇总：`python phase2_isaaclab/analysis/summarize_turn_validation.py --profile stop_sequence`。
 
-已成功完成，32/32 项结果已同步；acceptance.json 的模型 SHA256、评估 seed 与场景配置核对通过。
+已成功完成，32/32 项结果已同步；acceptance.json 的模型、评估 seed 与场景配置核对通过。
 
 ## 验收结果
 

@@ -13,12 +13,12 @@
 
 ## 文件
 
-- `config.json`：超参数、版本、训练时 Git 状态及源码哈希。
+- `config.json`：超参数、版本、训练时 Git 状态及源码版本。
 - `metrics.csv`：回报、actor / critic loss、更新后的 approximate KL、clip fraction 和 entropy。
 - `curve.png`：训练与评估曲线。
 - `summary.json`：完成状态和最佳 / 最终评估摘要。
 - `source/`：训练时的源码快照。
-- `reload_evaluation.json`：此次 best / last 重新加载评估结果及 checkpoint SHA-256。
+- `reload_evaluation.json`：此次 best / last 重新加载评估结果及 checkpoint信息。
 - `best.pt`、`last.pt`：模型与优化器状态，仅保留本地，按仓库规则不上传 GitHub。
 
 ## 复现

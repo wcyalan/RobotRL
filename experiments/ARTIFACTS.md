@@ -4,7 +4,7 @@
 
 DR最终结论见[审计报告](phase2_go2_mass_friction/AUDIT.md)。日常从[结果索引](README.md)进入。
 
-GitHub保存：维护中的phase2_isaaclab代码、notes说明、实验README、acceptance/comparison/diagnosis等紧凑JSON、模型哈希及配置。原始轨迹JSON（部分单文件约38MB）、日志、模型、视频、运行时第三方源码快照与ZIP不新增到Git。
+GitHub保存：维护中的phase2_isaaclab代码、notes说明、实验README、acceptance/comparison/diagnosis等紧凑JSON、模型信息及配置。原始轨迹JSON（部分单文件约38MB）、日志、模型、视频、运行时第三方源码快照与ZIP不新增到Git。
 
 完整原件的位置：
 
@@ -12,7 +12,7 @@ GitHub保存：维护中的phase2_isaaclab代码、notes说明、实验README、
 - 服务器：`/labdata2/congyuwang/RobotRL_kitless/experiments/`，容器内为`/robotrl/experiments/`。
 - 对应正式实验目录结构保持一致。
 
-最新部署复现包：`phase2_go2_deployment/run_001/reproduction_bundle.zip`，包含两个父检查点、导出策略、配置、运行源码快照、官方动作比较、闭环结果、接口说明及bundle_manifest.json。下载后按manifest逐文件校验SHA256。该包记录的是10/12行为条件通过的真实结果，并非全部通过的发布模型。
+最新部署复现包：`phase2_go2_deployment/run_001/reproduction_bundle.zip`，包含两个父检查点、导出策略、配置、运行源码快照、官方动作比较、闭环结果、接口说明及bundle_manifest.json。该包记录的是10/12行为条件通过的真实结果，并非全部通过的发布模型。
 
 有服务器权限时，在仓库根目录执行：
 

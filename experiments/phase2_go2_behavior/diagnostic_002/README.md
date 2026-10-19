@@ -4,7 +4,7 @@
 
 原因：前一次单环境补录的 env 2 通过，但整组仍有 7/32 停止失败。全部环境留存能避免失败编号变化导致姿态证据缺失。该复测不属于新的独立 seed，也不替代正式 run_001 统计。
 
-任务已正常完成，32 局均完成 20 s、没有非超时终止，全部 32 条姿态轨迹各 1000 帧。模型哈希、scenario、指令序列、评估 seed 与原实验一致。运行包为 `contexts/replay_stop_failure_002`；源码及哈希保存在本实验目录。
+任务已正常完成，32 局均完成 20 s、没有非超时终止，全部 32 条姿态轨迹各 1000 帧。模型、scenario、指令序列、评估 seed 与原实验一致。运行包为 `contexts/replay_stop_failure_002`；源码保存在本实验目录。
 
 ## 结果
 
@@ -14,11 +14,11 @@
 
 在 15.5–17 s，平移速度最大仅 0.0736 m/s，但 75 个样本中有 4 个绝对偏航速度超过 0.15 rad/s，发生于 15.68、15.80、16.28、16.66 s，最大约 0.1623 rad/s。短暂偏航越界打断连续稳定窗口，因此该案例不能描述为“无法减速”或“摔倒”。保留预先声明的严格连续窗口标准，不事后放宽；同时报告越界幅度，避免把轻微越界等同于严重失控。
 
-可复现指标命令：`python phase2_isaaclab/analysis/diagnose_behaviors.py --directory experiments/phase2_go2_behavior/diagnostic_002`，输出 `behavior_diagnostics.json`，带输入 SHA256。
+可复现指标命令：`python phase2_isaaclab/analysis/diagnose_behaviors.py --directory experiments/phase2_go2_behavior/diagnostic_002`，输出 `behavior_diagnostics.json`。
 
 ## 回放核验
 
-已导出 `videos/seed1_env8_stop_failure.mp4`，验证 20 s、1000 帧、50 fps、960×540。画面同时显示零速度目标、实际平移速度和偏航角速度；对应 metadata JSON 保存输入哈希。该视频是记录姿态的运动学渲染，不是新物理仿真。
+已导出 `videos/seed1_env8_stop_failure.mp4`，验证 20 s、1000 帧、50 fps、960×540。画面同时显示零速度目标、实际平移速度和偏航角速度；对应 metadata JSON 记录输入来源。该视频是记录姿态的运动学渲染，不是新物理仿真。
 
 抽查 15.68 s（越界）及 17.58 s（合格连续窗口开始）画面：机身保持接近水平、腿部姿态不同，未见该时刻翻倒；数值显示平移速度约 0.05 m/s，偏航分别约 −0.16、−0.14 rad/s。图像与指标支持“低速状态下短暂偏航越界”的解释，不能凭两帧断言足端滑动或全程静止。
 
