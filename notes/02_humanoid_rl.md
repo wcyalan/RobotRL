@@ -6,9 +6,9 @@ PPO仍然负责“根据采样数据更新策略”。人形任务变化的是�
 
 一个常见的平地运动指令是：
 
-$$
-c_t=[v_{x,t}^{*},v_{y,t}^{*},\omega_{z,t}^{*}].
-$$
+```math
+c_t=[v_{x,t}^{\ast},v_{y,t}^{\ast},\omega_{z,t}^{\ast}].
+```
 
 这里是目标前进速度、侧向速度和偏航角速度。通常还要明确它们是在机身坐标系还是世界坐标系。若任务使用目标朝向再转换为yaw rate，不能把heading模式与直接转速命令混为一谈。
 
@@ -20,9 +20,9 @@ $$
 
 仿真完整状态可能包含所有物体状态、接触参数、质量和随机扰动。actor通常只能看到其中一部分。一个教学用观测形式是：
 
-$$
+```math
 o_t=[\omega_t^b,\hat{g}_t^b,c_t,q_t-q_0,\dot{q}_t,a_{t-1}].
-$$
+```
 
 可能还加入机身线速度、历史观测、步态相位或其他量。 **这不是G1的已核实观测表** ；具体布局必须读取选定任务。
 
@@ -43,15 +43,15 @@ $$
 
 假设某任务采用关节位置偏移控制：
 
-$$
-q_t^{*}=q_0+s\odot a_t,
-$$
+```math
+q_t^{\ast}=q_0+s\odot a_t,
+```
 
 其中 $s$ 可以是每个关节不同的缩放系数， $\odot$ 表示逐元素相乘。执行器可能近似使用：
 
-$$
-\tau_t=K_p\odot(q_t^{*}-q_t)+K_d\odot(\dot{q}_t^{*}-\dot{q}_t).
-$$
+```math
+\tau_t=K_p\odot(q_t^{\ast}-q_t)+K_d\odot(\dot{q}_t^{\ast}-\dot{q}_t).
+```
 
 这两式是教学模型。实际执行器还可能有限幅、速度相关力矩、延迟、隐式积分或其他机制。
 
@@ -68,10 +68,10 @@ $$
 
 如果物理步长为 $\Delta t_{\mathrm{sim}}$ ，每 $d$ 个物理步更新一次策略，则：
 
-$$
+```math
 \Delta t_{\mathrm{policy}}=d\Delta t_{\mathrm{sim}},\qquad
 f_{\mathrm{policy}}=\frac{1}{d\Delta t_{\mathrm{sim}}}.
-$$
+```
 
 例如0.005秒与decimation=4对应50 Hz；这是频率换算示例，不是预先给G1指定的参数。改变频率会同时影响响应速度、动作变化惩罚、每秒采样数以及折扣的实际时间意义，因此它不是一个可以随便调整的加速开关。
 
@@ -87,23 +87,23 @@ $$
 
 举例，速度跟踪奖励可采用：
 
-$$
-r_t^v=\exp\left(-\frac{\|v_t^{*}-v_t\|^2}{\sigma_v^2}\right).
-$$
+```math
+r_t^v=\exp\left(-\frac{\|v_t^{\ast}-v_t\|^2}{\sigma_v^2}\right).
+```
 
 这是常见设计形式的例子，需核对实际任务比较的是哪些速度分量、是否使用同一坐标系。误差越小奖励越大；当误差已很大时，指数奖励可能非常接近零。
 
 动作平滑代价的例子为：
 
-$$
+```math
 c_t^a=\|a_t-a_{t-1}\|^2.
-$$
+```
 
 总奖励可组合为：
 
-$$
+```math
 r_t=w_vr_t^v+w_\omega r_t^\omega-w_ac_t^a-w_\tau\|\tau_t\|^2+\cdots.
-$$
+```
 
 权重大小不能脱离各项原始数值和时间积分方式比较。还要检查管理器是否再乘策略步长；同一个配置数字在不同频率下可能不具有相同的实际作用。
 
@@ -115,20 +115,20 @@ Go2中新增停车偏航惩罚后，其他运动也退化了。这提醒我们�
 
 训练时，策略常用高斯分布采样动作：
 
-$$
+```math
 a_t\sim\pi_\theta(\cdot\mid o_t).
-$$
+```
 
 环境执行动作，返回奖励和下一观测。critic估计未来回报，GAE提供优势估计，PPO用新旧动作概率之比约束更新幅度：
 
-$$
+```math
 \rho_t(\theta)=\frac{\pi_\theta(a_t\mid o_t)}{\pi_{\theta_{\mathrm{old}}}(a_t\mid o_t)},
-$$
+```
 
-$$
+```math
 L(\theta)=\mathbb{E}_{t}\left[\min\left(\rho_t(\theta)\hat{A}_t,
 \mathrm{clip}(\rho_t(\theta),1-\epsilon,1+\epsilon)\hat{A}_t\right)\right].
-$$
+```
 
 与手写PPO相同，旧log-prob、优势和return target要在这一轮优化前冻结。训练循环大体是“并行采样→GAE→多轮minibatch更新→继续采样”。
 
