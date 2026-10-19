@@ -1,0 +1,70 @@
+{
+  "condition": "stop_restart",
+  "steps": 1500,
+  "duration_s": 30.0,
+  "early_termination": false,
+  "max_torso_contact_force_n": 0.0,
+  "windows": [
+    {
+      "start_s": 3,
+      "end_s": 5,
+      "kind": "stopped",
+      "samples": 100,
+      "expected_samples": 100,
+      "means": [
+        0.0521920408848296,
+        0.09524719093141126,
+        2.09549431904271
+      ],
+      "passed": true
+    },
+    {
+      "start_s": 8,
+      "end_s": 12,
+      "kind": "moving",
+      "samples": 200,
+      "expected_samples": 200,
+      "means": [
+        0.07584620341602191,
+        0.11086882457555612,
+        3.169311406741036
+      ],
+      "passed": true
+    },
+    {
+      "start_s": 15,
+      "end_s": 22,
+      "kind": "stopped",
+      "samples": 350,
+      "expected_samples": 350,
+      "means": [
+        0.054589333240409266,
+        0.12153681576972797,
+        1.9476322447675576
+      ],
+      "passed": true
+    },
+    {
+      "start_s": 25,
+      "end_s": 30,
+      "kind": "moving",
+      "samples": 250,
+      "expected_samples": 250,
+      "means": [
+        0.08385057662387453,
+        0.11686967763099727,
+        2.5882429577282213
+      ],
+      "passed": true
+    }
+  ],
+  "stop_stable_time_s": null,
+  "pilot_episode_passed": false,
+  "final_root_position": [
+    4.45312630221013,
+    0.37023415472106114,
+    0.6920695229369024
+  ],
+  "max_abs_action": 4.034963130950928,
+  "training_seed": 0
+}

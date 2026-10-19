@@ -1,0 +1,31 @@
+{
+  "condition": "turn_right",
+  "steps": 1000,
+  "duration_s": 20.0,
+  "early_termination": false,
+  "max_torso_contact_force_n": 0.0,
+  "windows": [
+    {
+      "start_s": 3,
+      "end_s": 20,
+      "kind": "moving",
+      "samples": 850,
+      "expected_samples": 850,
+      "means": [
+        0.07846040896457028,
+        0.13694936518400372,
+        1.69011970100931
+      ],
+      "passed": true
+    }
+  ],
+  "stop_stable_time_s": null,
+  "pilot_episode_passed": true,
+  "final_root_position": [
+    0.3302148949405652,
+    0.0373539776254099,
+    0.7023163565947127
+  ],
+  "max_abs_action": 3.802229881286621,
+  "training_seed": 0
+}

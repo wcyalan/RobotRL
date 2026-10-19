@@ -78,3 +78,6 @@ Thumbs.db
 /experiments/phase3_g1_standing/**/official_*.json
 /experiments/phase3_g1_deployment/source/
 /experiments/phase3_g1_deployment/closed_loop_source/
+
+# Runtime source reference stays local/NAS; maintain only sim2sim implementation.
+/experiments/phase3_g1_sim2sim/**/reference/

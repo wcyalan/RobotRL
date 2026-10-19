@@ -1,0 +1,31 @@
+{
+  "condition": "forward_medium",
+  "steps": 1000,
+  "duration_s": 20.0,
+  "early_termination": false,
+  "max_torso_contact_force_n": 0.0,
+  "windows": [
+    {
+      "start_s": 3,
+      "end_s": 20,
+      "kind": "moving",
+      "samples": 850,
+      "expected_samples": 850,
+      "means": [
+        0.08272355688378949,
+        0.12526836196382823,
+        2.988697689259316
+      ],
+      "passed": true
+    }
+  ],
+  "stop_stable_time_s": null,
+  "pilot_episode_passed": true,
+  "final_root_position": [
+    10.136055468144718,
+    2.083537442758036,
+    0.6926433832666608
+  ],
+  "max_abs_action": 3.8398561477661133,
+  "training_seed": 0
+}
