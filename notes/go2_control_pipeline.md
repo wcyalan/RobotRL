@@ -1,4 +1,4 @@
-# Go2 控制链路：从策略输出到机器人运动
+# Go2：策略输出与控制链路
 
 本文以[官方基线实际环境配置](go2_reference/env.yaml)和 [PPO 配置](go2_reference/agent.yaml)为依据。任务整体说明见[Go2 任务配置](go2_task_config.md)。数值例子用于理解映射，不是一次实测力矩记录。
 

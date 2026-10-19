@@ -1,4 +1,4 @@
-# 强化学习方法框架与策略梯度
+# 策略梯度：强化学习方法与策略优化
 
 > 参考：[知乎：PPO 算法理解——从策略梯度开始](https://zhuanlan.zhihu.com/p/614115887) §1；[Berkeley CS285 Lecture 5: Policy Gradients](https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-5.pdf)（Levine）；S&B 第 13 章。
 

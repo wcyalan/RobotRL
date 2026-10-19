@@ -1,4 +1,4 @@
-# Go2 任务配置：我们实际训练了什么
+# Go2：任务配置与训练环境
 
 本文对应官方基线 `phase2_go2_baseline/run_001`（seed=42），任务为 `Isaac-Velocity-Flat-UnitreeGo2`，后端为 Newton/MuJoCo Warp。它不是旧版 PhysX 教程的配置，也不是后续质量/摩擦 DR 实验。
 

@@ -10,11 +10,11 @@
 
 |顺序|笔记|读完应能解释|
 |---|---|---|
-|1|[从Go2到双足：平衡、接触与动力学](../notes/01_humanoid_balance.md)|为什么能站不等于能走，落脚点为什么重要|
-|2|[人形机器人的RL任务与PPO训练](../notes/02_humanoid_rl.md)|观测、动作、奖励如何连接起来，PPO到底学什么|
-|3|[读取G1配置与检查训练结果](../notes/03_g1_configuration_and_evaluation.md)|如何核对关节/执行器、拆分奖励、设计不自欺的评估|
+|1|[人形机器人：双足平衡、接触与动力学](../notes/01_humanoid_balance.md)|为什么能站不等于能走，落脚点为什么重要|
+|2|[人形机器人：RL 任务与 PPO 训练](../notes/02_humanoid_rl.md)|观测、动作、奖励如何连接起来，PPO到底学什么|
+|3|[G1：任务配置与行为评估](../notes/03_g1_configuration_and_evaluation.md)|如何核对关节/执行器、拆分奖励、设计不自欺的评估|
 
-已有基础按需回看：[GAE](../notes/02_gae.md)、[PPO](../notes/03_ppo.md)、[Go2控制链路](../notes/go2_control_pipeline.md)。不要求先推导完整机器人动力学，也不需要先实现MPC。
+已有基础按需回看：[GAE：λ-Return 与优势估计](../notes/02_gae.md)、[PPO：从策略梯度到近端策略优化](../notes/03_ppo.md)、[Go2：策略输出与控制链路](../notes/go2_control_pipeline.md)。不要求先推导完整机器人动力学，也不需要先实现MPC。
 
 ## 学习与实践顺序
 

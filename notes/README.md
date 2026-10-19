@@ -1,20 +1,33 @@
-# 理论笔记
+# 学习笔记
 
-- [x] [RL 方法框架与策略梯度](01_policy_gradient.md) — value/policy/actor-critic 三分法、策略梯度定理、PG=加权极大似然类比、高方差与三板斧（causality/baseline/critic）、on-policy
-- [x] [λ-Return 与 GAE(λ)](02_gae.md) — 定义、在 PPO 中的角色（policy 信号 + critic target）、γ vs λ、默认值诊断
-- [x] [PPO：从策略梯度到近端策略优化](03_ppo.md) — 详细版：ratio / surrogate 推导、自然梯度与 TRPO、Clip 六情形及数值例子、REINFORCE / A2C / 自然梯度 / TRPO / PPO-Penalty / PPO-Clip 六套伪代码、GAE / loss / 边界处理、连续动作、诊断与 SB3 源码对照
-- [ ] 特权学习：LUPI / 非对称 actor-critic / teacher-student 蒸馏 / RMA
-- [ ] 机器人奖励设计三分类（任务/塑形/正则）与 reward hacking 案例
-- [ ] sim-to-real 方法总览（DR、ADR、SysID、real2sim、残差策略、world model）
-- [ ] 虚拟细胞项目：机器人 RL → 细胞干预的映射表与 MDP 形式化
+标题统一采用“主题：内容”的格式；以下按学习顺序列出。
+
+## 强化学习基础
+
+- [策略梯度：强化学习方法与策略优化](01_policy_gradient.md)
+- [GAE：λ-Return 与优势估计](02_gae.md)
+- [PPO：从策略梯度到近端策略优化](03_ppo.md)
+
+## Go2 仿真实践
+
+- [Go2：任务配置与训练环境](go2_task_config.md)
+- [Go2：策略输出与控制链路](go2_control_pipeline.md)
+- [Go2：策略导出、推理接口与复现](go2_deployment.md)
 
 ## 人形机器人学习
 
-人形机器人笔记与其他理论笔记统一存放在本目录；学习流程见 [phase3计划](../phase3/README.md)：
+学习流程见 [phase3 计划](../phase3/README.md)。
 
-1. [双足平衡、接触与动力学](01_humanoid_balance.md)
-2. [人形RL任务与PPO训练](02_humanoid_rl.md)
-3. [G1配置阅读与行为评估](03_g1_configuration_and_evaluation.md)
+- [人形机器人：双足平衡、接触与动力学](01_humanoid_balance.md)
+- [人形机器人：RL 任务与 PPO 训练](02_humanoid_rl.md)
+- [G1：任务配置与行为评估](03_g1_configuration_and_evaluation.md)
+
+## 待补充主题
+
+- [ ] 特权学习：非对称 Actor-Critic、Teacher-Student 蒸馏与 RMA
+- [ ] 奖励设计：任务目标、行为塑形与正则化
+- [ ] Sim-to-Real：域随机化、系统辨识与残差策略
+- [ ] 虚拟细胞：机器人 RL 与细胞干预的联系
 
 ## 写作约定（数学渲染）
 

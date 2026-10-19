@@ -1,4 +1,4 @@
-# λ-Return 与 GAE(λ)：advantage 的估计器
+# GAE：λ-Return 与优势估计
 
 > 详细推导见 S&B 第 12 章；这里只保留 PPO 视角需要的东西。
 
