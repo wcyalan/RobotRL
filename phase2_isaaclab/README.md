@@ -1,6 +1,6 @@
 # Phase 2：Go2 仿真训练与验证
 
-使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端与 RSL-RL PPO。当前主线为[Go2 导出与独立闭环验证](../experiments/phase2_go2_deployment/run_001/README.md)：导出动作一致性通过，行为12项中10项通过，重跑稳定性作为已知限制保留；Go2学习项目已收尾，不追加实验。质量/摩擦对照与延迟实验保留为历史证据，不追加训练。
+使用固定 Isaac Lab kitless 镜像、Newton/MuJoCo Warp 后端与 RSL-RL PPO。项目最终状态见[Go2部署与复现说明](../notes/go2_deployment.md)：导出动作一致性通过，行为12项中10项通过，重跑稳定性作为已知限制保留；Go2学习项目已收尾，不追加实验。质量/摩擦对照与延迟实验保留为历史证据，不追加训练。
 
 学习笔记：[任务配置](../notes/go2_task_config.md) · [控制链路](../notes/go2_control_pipeline.md)。
 

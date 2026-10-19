@@ -1,8 +1,21 @@
 # Go2 策略导出、推理接口与复现
 
+Go2学习项目已于2026-10-19收尾：完成仿真训练、独立评估、模型导出与推理链路；不追加训练、重复评估或噪声对照。当前模型保留为学习项目成果，尚未达到所有行为条件稳定通过，也未做真机或跨物理引擎部署。
+
+|交付|最终结果与入口|
+|---|---|
+|模型|训练seed0、1各保留model_450；下文列出加载路径，不使用退化的最终迭代替换|
+|独立行为评估|[检查点验收](../experiments/phase2_go2_stop_sequence_extended/validation_001/README.md)：12/12行为条件达标，含对照/直行的1024回合无提前终止|
+|导出与闭环|[冻结报告](../experiments/phase2_go2_deployment/run_001/README.md)：每模型32,000条观测动作误差0；闭环10/12行为条件达标，512回合无提前终止|
+|重复表现|[薄弱行为验证](../experiments/phase2_go2_deployment/repeatability_001/README.md)：5/6组达标，192回合无提前终止；启停仍有一组27/32，门槛29/32|
+|DR对照|[最终审计](../experiments/phase2_go2_mass_friction/AUDIT.md)：4次训练、20条件、640回合，改善未跨训练seed复现|
+|复现数据|[数据位置与获取](../experiments/ARTIFACTS.md)：模型、配置、原始结果、源码快照与复现包保留本地/NAS|
+
+停车失败主要体现为转速未及时满足连续稳定窗口；未证明具体根因。原验收阈值和负结果保持不变。冻结报告中“下一步继续验证、暂不进入人形”的文字是当时决定；当前项目状态以本说明为准。`reproduction_bundle.zip`及其内部文档保持原样，65项文件校验通过，不改写历史证据。
+
 ## 固定模型
 
-当前候选是 `experiments/phase2_go2_stop_sequence_extended/run_001`（训练seed0）和 `run_002`（seed1）各自logs下的model_450.pt。这两个检查点经筛选后在eval45000/46000完成独立行为验收，不能用model_extended.pt替代（seed0最终模型右转退化）。
+本轮最终保留的模型是 `experiments/phase2_go2_stop_sequence_extended/run_001`（训练seed0）和 `run_002`（seed1）各自logs下的model_450.pt。这两个检查点经筛选后在eval45000/46000完成独立行为验收，不能用model_extended.pt替代（seed0最终模型右转退化）。
 
 导出文件在 `experiments/phase2_go2_deployment/run_001/run_001/policy.pt` 与 `run_002/policy.pt`。各manifest.json记录父模型和导出文件SHA256。TorchScript用于当前固定运行环境；本地PyTorch2.14发出deprecated提示，格式选择不意味着它是新项目通用首选。服务器2.11的兼容性由实际加载/推理验证确认，不能仅靠版本推测。
 
