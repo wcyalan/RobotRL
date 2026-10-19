@@ -8,6 +8,14 @@
 - [ ] sim-to-real 方法总览（DR、ADR、SysID、real2sim、残差策略、world model）
 - [ ] 虚拟细胞项目：机器人 RL → 细胞干预的映射表与 MDP 形式化
 
+## 人形机器人学习
+
+新项目笔记集中在 [phase3/notes](../phase3/README.md)：
+
+1. [双足平衡、接触与动力学](../phase3/notes/01_humanoid_balance.md)
+2. [人形RL任务与PPO训练](../phase3/notes/02_humanoid_rl.md)
+3. [G1配置阅读与行为评估](../phase3/notes/03_g1_configuration_and_evaluation.md)
+
 ## 写作约定（数学渲染）
 
 - 行内公式 `$...$` 两侧与中文之间**留一个空格**（GitHub 的 `$` 识别对紧贴中文/全角标点的情况会失效）
