@@ -1,0 +1,129 @@
+{
+  "video": "g1_seed1_eval20000_lane0.mp4",
+  "training_seed": 1,
+  "eval_seed": 20000,
+  "lane": 0,
+  "selection": "first saved lane, first frozen evaluation seed; no selection by visual quality",
+  "asset_sha256": "9dfe7a710aa791e49abf2d9ea74ad3163e291f02f21f59bda9bfcc40f3fab428",
+  "joint_order": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "torso_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_pitch_joint",
+    "left_elbow_roll_joint",
+    "left_five_joint",
+    "left_six_joint",
+    "left_three_joint",
+    "left_four_joint",
+    "left_zero_joint",
+    "left_one_joint",
+    "left_two_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_pitch_joint",
+    "right_elbow_roll_joint",
+    "right_five_joint",
+    "right_six_joint",
+    "right_three_joint",
+    "right_four_joint",
+    "right_zero_joint",
+    "right_one_joint",
+    "right_two_joint"
+  ],
+  "method": "Original USD meshes and joint frames; root xyzw and 37 joint positions; MuJoCo mocap + mj_forward, never mj_step. Not a new simulation or original Isaac rendering.",
+  "fps": 25,
+  "frames": 3250,
+  "duration_s": 130.0,
+  "resolution": [
+    960,
+    540
+  ],
+  "renderer_checks": {
+    "body_count": 44,
+    "visual_mesh_count": 43,
+    "zero_pose_max_matrix_error": 1.21888869306086e-06
+  },
+  "segments": [
+    {
+      "condition": "stand",
+      "source_sha256": "1cff600b0119db1f8f910a3171077c4ee2cd379d63a3c6377df87be7871cebf7",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+      "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+      "start_video_s": 0,
+      "duration_s": 20.0,
+      "lane_passed": true,
+      "summary_sha256": "49659048e6acfc7500465ba17f87d9f7586e8f6b25c8a8c9509ed1a4a960f61b"
+    },
+    {
+      "condition": "forward_low",
+      "source_sha256": "0538e2bd8afc8c8929843dfc80d7b1fe17a9655a4ca8d51b39ff5c3693bc474b",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+      "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+      "start_video_s": 20.0,
+      "duration_s": 20.0,
+      "lane_passed": true,
+      "summary_sha256": "fe2df7818ac9980d41d63dedd7f700ed4c92f93e5b150cfaee5b0a158eef773b"
+    },
+    {
+      "condition": "forward_medium",
+      "source_sha256": "60ca69936238754703e2d7580e536ed5f6d549c4b299395be62012434faa883f",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+      "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+      "start_video_s": 40.0,
+      "duration_s": 20.0,
+      "lane_passed": true,
+      "summary_sha256": "78065eea929e183eeebb0c96340fd6f819f914a931827b352d913c6ce1dd06a4"
+    },
+    {
+      "condition": "turn_left",
+      "source_sha256": "581bde482519bebff83bd309d3cea5e366ac8d8b26462b2e12f757928b5d85d6",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+      "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+      "start_video_s": 60.0,
+      "duration_s": 20.0,
+      "lane_passed": true,
+      "summary_sha256": "02f8a31d68d754dd0779e0691260eadb0fa2ca09b8800c8f8431363f599da621"
+    },
+    {
+      "condition": "turn_right",
+      "source_sha256": "a460827ea75c7571d8e1447ec21cbf527fe5e3dbda65ab6e020a7720556ec60e",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+      "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+      "start_video_s": 80.0,
+      "duration_s": 20.0,
+      "lane_passed": true,
+      "summary_sha256": "0d085f5ad5dc2fbe7b54760d1bb317ca11ec7cf955ca3977805a6faf9367a739"
+    },
+    {
+      "condition": "stop_restart",
+      "source_sha256": "e86a0bcee4e9f1a4b67f012b994aecd811a23c6e8f750096eee4d64f65719fcb",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+      "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+      "start_video_s": 100.0,
+      "duration_s": 30.0,
+      "lane_passed": false,
+      "summary_sha256": "0f6d91b9e31ed931155b2f0eccac97787b66ebd80ebacb1bb9ae900a912e5333"
+    }
+  ],
+  "versions": {
+    "usd-core": "26.8",
+    "mujoco": "3.15.0",
+    "imageio": "2.38.0",
+    "imageio-ffmpeg": "0.6.0",
+    "Pillow": "12.3.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_id": "2c8f337f-740a-42f0-8a47-b714979a1a19",
+  "status": "completed",
+  "exit_status": "allocation exited successfully",
+  "context": "contexts/g1_deployment_001",
+  "image": "nvcr.io/nvidia/isaac-lab@sha256:d5c31452ae21d0cb040b7195b3a66e202b2d2a6ac389719a04528f6cd93e7d3b",
+  "description_override": "congyuwang-G1-export-validation",
+  "resource_pool": "128c256t_768_6000Ada",
+  "gpu_slots": 1,
+  "new_training": false,
+  "scope": "TorchScript export and official action equivalence, not independent closed-loop acceptance"
+}

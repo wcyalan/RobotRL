@@ -1,0 +1,38 @@
+{
+  "checkpoint": "/robotrl/experiments/phase3_g1_baseline/run_002/logs/rsl_rl/g1_flat/2026-10-19_09-52-32/model_1499.pt",
+  "checkpoint_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+  "policy_sha256": "c4f0e68829d48fb980a6447fafb47f761e994d5f9e9b411a585fa7218e594a80",
+  "torch_version": "2.11.0+cu128",
+  "config_sha256": {
+    "agent.yaml": "f741007ea3128360c98937bec2838a02fd357e46ad4b377c1d62950a82bef8a3",
+    "env.yaml": "8656a2e1162dc3471a66f5f746cfb2864878bb4f3f0da25b12e179c1cc83b47f"
+  },
+  "exporter_sha256": "d94856d7929bf88510c612968ace6ebc5687fa010ae51a00976462638a59a553",
+  "input_shape": [
+    "batch",
+    123
+  ],
+  "output_shape": [
+    "batch",
+    37
+  ],
+  "dtype": "float32",
+  "hidden_dims": [
+    256,
+    128,
+    128
+  ],
+  "activation": "ELU",
+  "observation_normalization": false,
+  "history": false,
+  "recurrent": false,
+  "deterministic_mean_action": true,
+  "clip_actions": null,
+  "synthetic_max_abs_error": 0.0,
+  "tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "action_semantics": "Unscaled action; environment applies default_joint_pos + 0.5 * action.",
+  "status": "Synthetic check passed; official runtime comparison on real observations still required."
+}

@@ -2,20 +2,15 @@
 
 日期：2026-10-19。仅检查任务、资产和最小仿真，不训练策略。
 
-**任务与配置解析已通过，官方 G1 资产已下载；最小仿真尚未完成。** GPU 节点正在首次拉取固定镜像，不能将此状态当成后端兼容性通过。
+**最小仿真已通过。** 任务 `dd4b64fb-5d02-41b9-a1b8-90acfb54ea78` 于2026-10-19 16:29（北京时间）成功退出。
 
-- 已完成：实际容器内任务注册、完整环境/agent配置、软件版本和源码哈希；资产下载及文件哈希。
-- 待运行：USD 碰撞/质量/惯量读取、实际关节/观测/动作维数、4环境 reset、1100个策略步（每环境22秒模拟时间，含可能的回合重置）、有限数值、接触与自动reset。
-- 当前任务：`dd4b64fb-5d02-41b9-a1b8-90acfb54ea78`。远程输出：`/labdata2/congyuwang/RobotRL_kitless/experiments/phase3_g1_environment/run_001/smoke`。
-- 首次步进尝试在检查脚本中把 USD 内部空引用误判成缺失依赖，尚未进入仿真就退出。已修正；未判定为资产或后端故障。之后排队的4090任务已取消，只保留上述一个预检任务。
+- 4环境、1100个策略步；观测123维、动作37维；观测、奖励、接触力均有限。
+- 69次躯干触地终止及自动reset，另完成两次显式reset；未出现时间截断。零动作本身不代表平衡策略，跌倒不影响本次链路通过结论。
+- 奖励范围约 -4.1044 至 0.03856，峰值接触力约2305.96 N；这些是零动作预检数据，不是行为验收指标。
+- USD包含44个body、37个可动关节；3个碰撞几何位于躯干、左脚和右脚。资产质量/惯量已读取，文件哈希匹配。
+- 详细证据：[步进结果](smoke/smoke.json)、[资产](smoke/asset.json)、[实际镜像与源码哈希](smoke/inventory.json)。完整配置与日志另保留在本地/NAS。
 
-在登录节点查看进展：
-
-```bash
-det command logs --tail 30 dd4b64fb-5d02-41b9-a1b8-90acfb54ea78
-```
-
-只有任务成功退出且生成 `smoke/smoke.json` 的 `passed=true`，才能更新最小仿真通过状态；还需查看 `automatic_reset_observed` 是否为真。不得仅凭有 `inventory.json` 判定成功。
+这只证明当前任务和后端可加载、步进并重置，不证明训练收敛、真实动力学精度或G1视频渲染可用。后续已接入 [短训练验证](../../phase3_g1_smoke/run_001/README.md)。
 
 ## 固定环境
 
@@ -26,7 +21,7 @@ det command logs --tail 30 dd4b64fb-5d02-41b9-a1b8-90acfb54ea78
 - 实际任务：`Isaac-Velocity-Flat-G1`；另有 `Isaac-Velocity-Rough-G1` 及其他操作任务，首轮不使用。
 - 原始资产：`https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.1/Isaac/IsaacLab/Robots/Unitree/G1/g1_minimal.usd`。
 - NAS 资产：`/labdata2/congyuwang/RobotRL_kitless/assets/G1/g1_minimal.usd`，容器中为 `/robotrl/assets/G1/g1_minimal.usd`。仅改变资产存放位置。
-- 资产大小：22,164,053字节；SHA-256：`9dfe7a710aa791e49abf2d9ea74ad3163e291f02f21f59bda9bfcc40f3fab428`。碰撞和惯量尚待容器内 USD 解析。
+- 资产大小：22,164,053字节；SHA-256：`9dfe7a710aa791e49abf2d9ea74ad3163e291f02f21f59bda9bfcc40f3fab428`。碰撞和惯量已由容器内 USD 解析。
 
 ## 复现入口
 
@@ -40,6 +35,6 @@ det command run -d --config-file environment.yaml --context . \
 
 不带 `--steps` 时只解析配置；运行仿真时覆盖环境数、seed=0和本地资产位置。默认奖励、执行器、终止、物理配置保持官方值。结果目录使用新编号。
 
-零动作对应默认关节位置目标，不是零力矩；此测试不要求机器人站稳，也不证明训练收敛。尚未验证 G1 离线视频渲染。
+零动作对应默认关节位置目标，不是零力矩；此测试不要求机器人站稳，也不证明训练收敛。后续已完成G1姿态回放，见[基线结果](../../phase3_g1_baseline/README.md)；姿态回放不运行新物理仿真。
 
 本地/NAS 保留完整解析配置、资产信息、源码快照和运行日志；GitHub仅保留紧凑结果与文档，源码工具存于 `phase3/environment/`。

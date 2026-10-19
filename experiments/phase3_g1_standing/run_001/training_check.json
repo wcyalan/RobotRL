@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "first_checkpoint": "/robotrl/experiments/phase3_g1_standing/run_001/logs/rsl_rl/g1_flat/2026-10-19_11-13-20/model_0.pt",
+  "final_checkpoint": "/robotrl/experiments/phase3_g1_standing/run_001/logs/rsl_rl/g1_flat/2026-10-19_11-13-20/model_1499.pt",
+  "final_checkpoint_sha256": "5e890bea57b3d9d535d6c9f696317bf1578a5a615a6762aaf9aef6b44c5a61f8",
+  "actor_tensors_changed": 9,
+  "critic_tensors_changed": 8,
+  "loss_metrics": {
+    "Loss/value": {
+      "count": 1500,
+      "first": 0.1896502524614334,
+      "last": 0.0012658358318731189
+    },
+    "Loss/surrogate": {
+      "count": 1500,
+      "first": -0.0038438125047832727,
+      "last": -0.00372732849791646
+    },
+    "Loss/entropy": {
+      "count": 1500,
+      "first": 52.52846908569336,
+      "last": 16.805566787719727
+    },
+    "Loss/learning_rate": {
+      "count": 1500,
+      "first": 0.00019753086962737143,
+      "last": 5.852766480529681e-05
+    }
+  },
+  "all_logged_scalars_finite": true,
+  "training_envs": 4096,
+  "iterations": 1500,
+  "rollout_steps": 24,
+  "environment_steps": 147456000
+}

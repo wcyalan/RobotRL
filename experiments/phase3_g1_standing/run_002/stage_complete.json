@@ -1,0 +1,81 @@
+{
+  "completed": true,
+  "stage": "seed1",
+  "training_seed": 1,
+  "model_sha256": "a405d242f38e0ca105c625c18a5a7d602bf1f41b1fb7de30415912338a199555",
+  "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+  "evaluations": [
+    {
+      "eval_seed": 20000,
+      "condition": "stand",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 20000,
+      "condition": "forward_low",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 20000,
+      "condition": "forward_medium",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 20000,
+      "condition": "turn_left",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 20000,
+      "condition": "turn_right",
+      "passed": 0,
+      "early_terminations": 4
+    },
+    {
+      "eval_seed": 20000,
+      "condition": "stop_restart",
+      "passed": 5,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 21000,
+      "condition": "stand",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 21000,
+      "condition": "forward_low",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 21000,
+      "condition": "forward_medium",
+      "passed": 32,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 21000,
+      "condition": "turn_left",
+      "passed": 31,
+      "early_terminations": 0
+    },
+    {
+      "eval_seed": 21000,
+      "condition": "turn_right",
+      "passed": 0,
+      "early_terminations": 9
+    },
+    {
+      "eval_seed": 21000,
+      "condition": "stop_restart",
+      "passed": 4,
+      "early_terminations": 0
+    }
+  ]
+}

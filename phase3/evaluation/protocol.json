@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "purpose": "Predeclared learning-project behavior targets, not an official benchmark or hardware safety certification",
+  "task": "Isaac-Velocity-Flat-G1",
+  "training_seeds": [
+    0,
+    1
+  ],
+  "training_num_envs": 4096,
+  "training_iterations": 1500,
+  "rollout_steps": 24,
+  "checkpoint_selection": "final model_1499 only; no selection using evaluation results",
+  "eval_seeds": [
+    20000,
+    21000
+  ],
+  "num_envs": 32,
+  "minimum_pass_count": 29,
+  "evaluation_overrides": {
+    "base_mass_scale": 1.0,
+    "push_robot": false,
+    "initial_base_velocity": 0.0,
+    "heading_command": false,
+    "standing_fraction": 0.0,
+    "command_resampling_s": 1000.0,
+    "observation_noise": "official retained",
+    "friction": "official unchanged"
+  },
+  "thresholds": {
+    "moving_xy_error_m_s": 0.15,
+    "moving_yaw_error_rad_s": 0.2,
+    "stopped_xy_speed_m_s": 0.1,
+    "stopped_yaw_speed_rad_s": 0.15,
+    "mean_tilt_deg": 15.0,
+    "stop_stable_window_s": 1.0,
+    "stop_stable_by_s": 3.0
+  },
+  "conditions": {
+    "stand": {
+      "duration_s": 20,
+      "segments": [
+        [
+          0,
+          20,
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "measurement_windows": [
+        [
+          3,
+          20,
+          "stopped"
+        ]
+      ]
+    },
+    "forward_low": {
+      "duration_s": 20,
+      "segments": [
+        [
+          0,
+          20,
+          [
+            0.3,
+            0,
+            0
+          ]
+        ]
+      ],
+      "measurement_windows": [
+        [
+          3,
+          20,
+          "moving"
+        ]
+      ]
+    },
+    "forward_medium": {
+      "duration_s": 20,
+      "segments": [
+        [
+          0,
+          20,
+          [
+            0.6,
+            0,
+            0
+          ]
+        ]
+      ],
+      "measurement_windows": [
+        [
+          3,
+          20,
+          "moving"
+        ]
+      ]
+    },
+    "turn_left": {
+      "duration_s": 20,
+      "segments": [
+        [
+          0,
+          20,
+          [
+            0,
+            0,
+            0.5
+          ]
+        ]
+      ],
+      "measurement_windows": [
+        [
+          3,
+          20,
+          "moving"
+        ]
+      ]
+    },
+    "turn_right": {
+      "duration_s": 20,
+      "segments": [
+        [
+          0,
+          20,
+          [
+            0,
+            0,
+            -0.5
+          ]
+        ]
+      ],
+      "measurement_windows": [
+        [
+          3,
+          20,
+          "moving"
+        ]
+      ]
+    },
+    "stop_restart": {
+      "duration_s": 30,
+      "segments": [
+        [
+          0,
+          5,
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          5,
+          12,
+          [
+            0.4,
+            0,
+            0
+          ]
+        ],
+        [
+          12,
+          22,
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          22,
+          30,
+          [
+            0.4,
+            0,
+            0
+          ]
+        ]
+      ],
+      "measurement_windows": [
+        [
+          3,
+          5,
+          "stopped"
+        ],
+        [
+          8,
+          12,
+          "moving"
+        ],
+        [
+          15,
+          22,
+          "stopped"
+        ],
+        [
+          25,
+          30,
+          "moving"
+        ]
+      ],
+      "stop_time_s": 12.0
+    }
+  },
+  "success_rule": "Each lane must finish its full first episode without physical termination, meet every measurement-window mean XY/yaw error and mean tilt threshold, and for stop_restart complete a continuous 1 s low-speed window by 3 s after stop. Group target is at least 29/32 (>=90%). Report all groups, early failures and continuous errors even if targets fail.",
+  "threshold_rationale": "Set before full training: forward commands 30%/60% of configured maximum; 0.15 m/s absolute error distinguishes tracking from staying still at either speed. Separate 0.10 m/s and 0.15 rad/s stop criteria prevent residual motion being hidden by forward averages. 15-degree mean tilt is a project posture target; 90% first-episode group success is an explicit learning objective. Thresholds are not claims of official G1 acceptance.",
+  "frozen_date": "2026-10-19"
+}

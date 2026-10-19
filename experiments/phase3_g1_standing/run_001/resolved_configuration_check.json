@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "expected_standing_probability": 0.2,
+  "differences": [
+    {
+      "path": "/commands/base_velocity/rel_standing_envs",
+      "baseline": 0.02,
+      "treatment": 0.2
+    }
+  ]
+}

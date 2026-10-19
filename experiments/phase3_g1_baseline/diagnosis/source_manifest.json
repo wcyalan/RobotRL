@@ -1,0 +1,13 @@
+{
+  "image": "nvcr.io/nvidia/isaac-lab@sha256:d5c31452ae21d0cb040b7195b3a66e202b2d2a6ac389719a04528f6cd93e7d3b",
+  "method": "read-only copy from pinned image, slots=0, no simulation or training",
+  "sha256": {
+    "isaaclab_tasks/isaaclab_tasks/core/velocity/mdp/rewards.py": "1b85f9b25d6a1089a37c5049b4f55523377aa8c96a3f288f7099a4ccac2febd6",
+    "isaaclab/isaaclab/envs/mdp/commands/velocity_command.py": "47ca7426190cbab810c5d2197ec0412fe33db80270400b5a25ef08ab3a4e4f26",
+    "isaaclab/isaaclab/envs/mdp/rewards.py": "2aef8c1ea395b7dfc8a893f7a2d33a2187ad06507134c9198ca34911f8b56b28",
+    "isaaclab/isaaclab/managers/reward_manager.py": "6be44a98df5aed8a0ebac2913ebea33010633e007e816697a6d99f7ccfd731db",
+    "isaaclab_tasks/isaaclab_tasks/core/velocity/config/g1/flat_env_cfg.py": "001d2628577f77e183f37fffe4c8d04c20683f6ac3a6ac76507e2946040777da"
+  },
+  "task_id": "5f3ee5e8-e53f-4545-86ef-4cb901ec76f6",
+  "task_completed": true
+}

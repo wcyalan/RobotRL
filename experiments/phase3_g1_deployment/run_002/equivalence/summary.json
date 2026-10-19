@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "purpose": "Official/export action equivalence; not behavior acceptance",
+  "checkpoint_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672",
+  "policy_sha256": "c4f0e68829d48fb980a6447fafb47f761e994d5f9e9b411a585fa7218e594a80",
+  "verifier_sha256": "02a14ea414064e46139acaf62cd9f07166c9767b5812de2937f16816cbc88ab2",
+  "eval_seed": 22000,
+  "num_envs": 32,
+  "steps": 1500,
+  "compared_observations": 48000,
+  "max_abs_error": 0.0,
+  "atol": 1e-05,
+  "rtol": 1e-05,
+  "reset_transitions": 32,
+  "explicit_reset_checked": true,
+  "commands": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.6,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      -0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "step_dt": 0.02,
+  "joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "torso_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_pitch_joint",
+    "left_elbow_roll_joint",
+    "left_five_joint",
+    "left_six_joint",
+    "left_three_joint",
+    "left_four_joint",
+    "left_zero_joint",
+    "left_one_joint",
+    "left_two_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_pitch_joint",
+    "right_elbow_roll_joint",
+    "right_five_joint",
+    "right_six_joint",
+    "right_three_joint",
+    "right_four_joint",
+    "right_zero_joint",
+    "right_one_joint",
+    "right_two_joint"
+  ],
+  "saved_observations": 4800,
+  "torch_version": "2.11.0+cu128",
+  "samples_sha256": "043ef4901933724a138a5d23ca6e427ccf16fc2f6c6859462392b46345934a27",
+  "rsl_rl_version": "5.4.1"
+}

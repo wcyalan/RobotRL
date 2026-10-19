@@ -1,0 +1,29 @@
+{
+  "task_id": "ec49e11f-f8f7-4ec5-b196-d55c5ffe6a74",
+  "status": "completed",
+  "context": "contexts/g1_closed_loop_001",
+  "gpu_slots": 1,
+  "new_training": false,
+  "training_seeds": [
+    0,
+    1
+  ],
+  "eval_seeds": [
+    20000,
+    21000
+  ],
+  "groups": 24,
+  "episodes_per_group": 32,
+  "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+  "policy_source": "original 2% baseline exports",
+  "ppo_runner_constructed": false,
+  "rollout_scoring_ast_matches_frozen_evaluator": true,
+  "original_evaluator_sha256": "f46ca94ae726bc7d0e8cee2b541216b52a3c2a4d8b2fbc1f011757cb7f703544",
+  "independent_evaluator_sha256": "26ab5c86cd85277d678e59c02ffb83114afe8875fa7ace8d2331dd80eb0eb3b0",
+  "exit_status": "allocation exited successfully",
+  "groups_completed": 24,
+  "episodes_completed": 768,
+  "groups_passed": 20,
+  "early_terminations": 0,
+  "matching_original_pass_counts": true
+}

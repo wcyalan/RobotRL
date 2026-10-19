@@ -1,0 +1,213 @@
+{
+  "completed": true,
+  "evaluator_smoke": true,
+  "condition": "stop_restart",
+  "eval_seed": 19000,
+  "num_envs": 4,
+  "model_sha256": "14cb9ae95b4bb7020a4627f9e4f5843c00a33dc13204309c46466427cf5ef374",
+  "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+  "pass_count": 0,
+  "group_passed": null,
+  "lane_passed": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "early_termination": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "time_out": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "lengths": [
+    66,
+    64,
+    65,
+    65
+  ],
+  "returns": [
+    -3.0604872703552246,
+    -3.245149612426758,
+    -3.091578722000122,
+    -3.188490390777588
+  ],
+  "windows": [
+    {
+      "start_s": 3,
+      "end_s": 5,
+      "kind": "stopped",
+      "expected_samples": 100,
+      "counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_xy_error_m_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_yaw_error_rad_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_tilt_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Means with zero/partial sample counts cannot pass and are not complete-episode performance."
+    },
+    {
+      "start_s": 8,
+      "end_s": 12,
+      "kind": "moving",
+      "expected_samples": 200,
+      "counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_xy_error_m_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_yaw_error_rad_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_tilt_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Means with zero/partial sample counts cannot pass and are not complete-episode performance."
+    },
+    {
+      "start_s": 15,
+      "end_s": 22,
+      "kind": "stopped",
+      "expected_samples": 350,
+      "counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_xy_error_m_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_yaw_error_rad_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_tilt_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Means with zero/partial sample counts cannot pass and are not complete-episode performance."
+    },
+    {
+      "start_s": 25,
+      "end_s": 30,
+      "kind": "moving",
+      "expected_samples": 250,
+      "counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_xy_error_m_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_yaw_error_rad_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_tilt_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "Means with zero/partial sample counts cannot pass and are not complete-episode performance."
+    }
+  ],
+  "command_switches": [
+    {
+      "time_s": 0.0,
+      "command": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time_s": 5.0,
+      "command": [
+        0.4,
+        0,
+        0
+      ]
+    },
+    {
+      "time_s": 12.0,
+      "command": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time_s": 22.0,
+      "command": [
+        0.4,
+        0,
+        0
+      ]
+    }
+  ],
+  "stop_stable_time_s": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "step_dt": 0.02,
+  "trace_lanes": [
+    0,
+    1
+  ],
+  "trace_semantics": "pre-action state, active excludes reset episodes; next transition termination is done_after_step"
+}

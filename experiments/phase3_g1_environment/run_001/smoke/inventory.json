@@ -1,0 +1,47 @@
+{
+  "task": "Isaac-Velocity-Flat-G1",
+  "registered_g1_tasks": [
+    "Isaac-Velocity-Flat-G1",
+    "Isaac-Velocity-Rough-G1",
+    "IsaacContrib-Assemble-Trocar-G129-Dex3",
+    "IsaacContrib-Assemble-Trocar-G129-Dex3-Eval",
+    "IsaacContrib-PickPlace-FixedBaseUpperBodyIK-G1-Abs",
+    "IsaacContrib-PickPlace-G1-InspireFTP-Abs",
+    "IsaacContrib-PickPlace-Locomanipulation-G1-Abs"
+  ],
+  "entry_points": {
+    "env_cfg_entry_point": "isaaclab_tasks.core.velocity.config.g1.flat_env_cfg:G1FlatEnvCfg",
+    "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.velocity.config.g1.agents.rsl_rl_ppo_cfg:G1FlatPPORunnerCfg",
+    "default_agent": "rsl_rl",
+    "skrl_cfg_entry_point": "isaaclab_tasks.core.velocity.config.g1.agents:skrl_flat_ppo_cfg.yaml"
+  },
+  "versions": {
+    "isaaclab": "17.0.2",
+    "torch": "2.11.0+cu128",
+    "newton": "1.5.2",
+    "warp-lang": "1.16.0",
+    "rsl-rl-lib": "5.4.1",
+    "gymnasium": "1.3.0"
+  },
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "isaaclab_commit": null,
+  "source_sha256": {
+    "/workspace/isaaclab/source/isaaclab/isaaclab/envs/manager_based_env_cfg.py": "5d9943976589f22fdfaddb0807500c97c05d484d84ee3e0c00309e870de44559",
+    "/workspace/isaaclab/source/isaaclab/isaaclab/envs/manager_based_rl_env_cfg.py": "cb45ec71d2bb86a1673a26f4e74cfa5be6701c1323a091e4e66ac3d40d254fb5",
+    "/workspace/isaaclab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py": "d3b677e2d919a15c73b82d33b434aee3e6e1ca6b16821896284d7045dc0be27d",
+    "/workspace/isaaclab/source/isaaclab_rl/isaaclab_rl/rsl_rl/rl_cfg.py": "780351aa7effb41c6467676e775d3f82b9bbc5c54e094784785944ae221e988b",
+    "/workspace/isaaclab/source/isaaclab_tasks/isaaclab_tasks/core/velocity/config/g1/agents/rsl_rl_ppo_cfg.py": "876c030df9002b374ca7eec662ca6efd573ac3b6eb03fd47942a426add8b152c",
+    "/workspace/isaaclab/source/isaaclab_tasks/isaaclab_tasks/core/velocity/config/g1/flat_env_cfg.py": "001d2628577f77e183f37fffe4c8d04c20683f6ac3a6ac76507e2946040777da",
+    "/workspace/isaaclab/source/isaaclab_tasks/isaaclab_tasks/core/velocity/config/g1/rough_env_cfg.py": "7497178a0857387fff31f4e3c8f3477604d63b2a21dd3b7c8520b4242c2b4abc",
+    "/workspace/isaaclab/source/isaaclab_tasks/isaaclab_tasks/core/velocity/velocity_env_cfg.py": "1e88e244a643178aade10993389ac8c2f6c7884969e47e4e92e8554d1166de9a"
+  },
+  "source_asset_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.1/Isaac/IsaacLab/Robots/Unitree/G1/g1_minimal.usd",
+  "official_num_envs": 4096,
+  "max_iterations": 1500,
+  "num_steps_per_env": 24,
+  "total_environment_steps": 147456000,
+  "physics_dt": 0.005,
+  "decimation": 4,
+  "episode_length_s": 20.0,
+  "simulation_requested": true
+}

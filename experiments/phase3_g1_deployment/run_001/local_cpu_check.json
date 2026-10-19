@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "policy_sha256": "ae2fa9b63258e6110f27296aafb8c08142c49eaebed8b6c726f816d12a4c4b98",
+  "samples_sha256": "8054050c1b2e20403762e94f433b20b287b07a4bb8c7fb4838410c46e637dc53",
+  "torch_version": "2.14.1+cpu",
+  "device": "cpu",
+  "observations": 4800,
+  "max_abs_error": 1.6689300537109375e-06,
+  "atol": 1e-05,
+  "rtol": 1e-05
+}

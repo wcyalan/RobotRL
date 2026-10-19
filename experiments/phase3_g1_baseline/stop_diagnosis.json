@@ -1,0 +1,495 @@
+{
+  "method": "No new training/evaluation. Frozen acceptance for 128 episodes; pose-only descriptions for 8 preselected lanes.",
+  "limitations": "Pose sampling gives displacement and interval-average speed, not instantaneous simulator velocity. Do not use these derivatives to replace the frozen stable-window result or infer contact forces/reward attribution.",
+  "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
+  "joint_names_evidence_sha256": "cb9c46596300d5b50d4db155a514ca35a5f8830fb92cc674e4d32d7d4678e7df",
+  "runtime_source_manifest_sha256": "d5e1607a166cee74cdc02d7cda71202d5179d08de3d0a79e07154cd3ab50e9be",
+  "groups": [
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "pass_count": 0,
+      "total": 32,
+      "early_terminations": 0,
+      "stable_window_reached_count": 0,
+      "summary_sha256": "9c99f047b02118036369d054bbd3bf963cf20d35bb08998ec2651dd66dbfcb1c",
+      "trace_sha256": "f71b433e421f711d4a8f0515b586ea6887e341c892f7a248a086df73659057cb",
+      "model_sha256": "4984d1288fdd698d5430c480675d448d9ec42737f47379a21192f1bd545c98db"
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "pass_count": 0,
+      "total": 32,
+      "early_terminations": 0,
+      "stable_window_reached_count": 0,
+      "summary_sha256": "c1ae926414b38f7b23feded0fa493d4e97482e98840f9e35f72fab6ea874283a",
+      "trace_sha256": "71fc463a7e9e24b02ac35b54efdc012ee7c6f492ae68465e644c4f4d0463b63a",
+      "model_sha256": "4984d1288fdd698d5430c480675d448d9ec42737f47379a21192f1bd545c98db"
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "pass_count": 0,
+      "total": 32,
+      "early_terminations": 0,
+      "stable_window_reached_count": 0,
+      "summary_sha256": "0f6d91b9e31ed931155b2f0eccac97787b66ebd80ebacb1bb9ae900a912e5333",
+      "trace_sha256": "e86a0bcee4e9f1a4b67f012b994aecd811a23c6e8f750096eee4d64f65719fcb",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672"
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "pass_count": 0,
+      "total": 32,
+      "early_terminations": 0,
+      "stable_window_reached_count": 0,
+      "summary_sha256": "d2c39144ee716fa4ad03e6b00f929c8215f6ebe9908538a5eb5ae4f68911117e",
+      "trace_sha256": "a76dc408ecf3a88a0ab55426aceefa2e1dcf6a93cec6be855589d8584f9e1723",
+      "model_sha256": "26a235fecc7d737b685a2fef8c3df07de15faea9efc3818979b9691e6706f672"
+    }
+  ],
+  "saved_lanes": [
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "lane": 0,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.45010568480381785,
+        "net_forward_from_start_heading_m": 0.44708122572254183,
+        "net_lateral_from_start_heading_m": -0.052091315006855,
+        "sampled_xy_path_length_m": 0.6554064272474801,
+        "interval_mean_path_speed_m_s": 0.06554064272474801,
+        "net_heading_change_deg": 10.368699386384252,
+        "heading_range_deg": 10.735485777386167,
+        "pelvis_height_min_m": 0.6900095343589783,
+        "pelvis_height_max_m": 0.7107013463973999,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.79431193687331,
+            "max_deg": 54.38822604001584,
+            "range_deg": 25.593914103142527
+          },
+          "right_knee_joint": {
+            "min_deg": 27.28730241349628,
+            "max_deg": 50.71645636109497,
+            "range_deg": 23.42915394759869
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.25125399844903323,
+        "net_forward_from_start_heading_m": 0.24760757371004455,
+        "net_lateral_from_start_heading_m": -0.04265045343313072,
+        "sampled_xy_path_length_m": 0.40057806963481785,
+        "interval_mean_path_speed_m_s": 0.057225438519259694,
+        "net_heading_change_deg": 6.731924602421777,
+        "heading_range_deg": 7.510952684190327,
+        "pelvis_height_min_m": 0.6914893388748169,
+        "pelvis_height_max_m": 0.7107013463973999,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.79431193687331,
+            "max_deg": 53.255165958602426,
+            "range_deg": 24.460854021729116
+          },
+          "right_knee_joint": {
+            "min_deg": 27.93369785616795,
+            "max_deg": 49.84750603450761,
+            "range_deg": 21.91380817833966
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "lane": 1,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.43811541273404775,
+        "net_forward_from_start_heading_m": 0.43096350221240903,
+        "net_lateral_from_start_heading_m": -0.0788389157455882,
+        "sampled_xy_path_length_m": 0.6470520067838776,
+        "interval_mean_path_speed_m_s": 0.06470520067838777,
+        "net_heading_change_deg": 5.163400960522595,
+        "heading_range_deg": 6.263538320844196,
+        "pelvis_height_min_m": 0.6899463534355164,
+        "pelvis_height_max_m": 0.7117946147918701,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.715214931189976,
+            "max_deg": 53.72497710556717,
+            "range_deg": 25.009762174377194
+          },
+          "right_knee_joint": {
+            "min_deg": 23.28296228615103,
+            "max_deg": 51.35639044481181,
+            "range_deg": 28.07342815866078
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.23542407930251943,
+        "net_forward_from_start_heading_m": 0.23230963316978928,
+        "net_lateral_from_start_heading_m": -0.03816715147816122,
+        "sampled_xy_path_length_m": 0.3925569108916163,
+        "interval_mean_path_speed_m_s": 0.05607955869880233,
+        "net_heading_change_deg": 4.49149256879743,
+        "heading_range_deg": 5.308329918105853,
+        "pelvis_height_min_m": 0.6899463534355164,
+        "pelvis_height_max_m": 0.7095840573310852,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.715214931189976,
+            "max_deg": 53.72497710556717,
+            "range_deg": 25.009762174377194
+          },
+          "right_knee_joint": {
+            "min_deg": 28.353870603339622,
+            "max_deg": 51.35639044481181,
+            "range_deg": 23.002519841472186
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "lane": 0,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.41918504075469254,
+        "net_forward_from_start_heading_m": 0.4133109756126351,
+        "net_lateral_from_start_heading_m": -0.0699295061518743,
+        "sampled_xy_path_length_m": 0.6499551951729234,
+        "interval_mean_path_speed_m_s": 0.06499551951729235,
+        "net_heading_change_deg": 9.078970504759772,
+        "heading_range_deg": 10.142695858149072,
+        "pelvis_height_min_m": 0.6905819773674011,
+        "pelvis_height_max_m": 0.7131960391998291,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.364553019201523,
+            "max_deg": 52.72554967526505,
+            "range_deg": 24.360996656063527
+          },
+          "right_knee_joint": {
+            "min_deg": 27.27352762948766,
+            "max_deg": 52.59275030723249,
+            "range_deg": 25.319222677744833
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.24261526083788532,
+        "net_forward_from_start_heading_m": 0.23318561896868123,
+        "net_lateral_from_start_heading_m": -0.06698232526292411,
+        "sampled_xy_path_length_m": 0.40581683832127313,
+        "interval_mean_path_speed_m_s": 0.057973834045896164,
+        "net_heading_change_deg": 4.65078281493124,
+        "heading_range_deg": 5.975335155208307,
+        "pelvis_height_min_m": 0.6905819773674011,
+        "pelvis_height_max_m": 0.7090015411376953,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 29.302174067704193,
+            "max_deg": 52.48068739352009,
+            "range_deg": 23.1785133258159
+          },
+          "right_knee_joint": {
+            "min_deg": 28.93759564528184,
+            "max_deg": 52.460961807197094,
+            "range_deg": 23.523366161915256
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "lane": 1,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.5067939278102754,
+        "net_forward_from_start_heading_m": 0.4892615180530805,
+        "net_lateral_from_start_heading_m": -0.13214859900037523,
+        "sampled_xy_path_length_m": 0.6880375200957403,
+        "interval_mean_path_speed_m_s": 0.06880375200957403,
+        "net_heading_change_deg": 10.742698106652522,
+        "heading_range_deg": 11.530332840584988,
+        "pelvis_height_min_m": 0.692503035068512,
+        "pelvis_height_max_m": 0.7141274213790894,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.994368177662984,
+            "max_deg": 52.970995938184046,
+            "range_deg": 23.976627760521062
+          },
+          "right_knee_joint": {
+            "min_deg": 26.154105728299466,
+            "max_deg": 50.7035575488474,
+            "range_deg": 24.549451820547933
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.3135374836943995,
+        "net_forward_from_start_heading_m": 0.2928952972984608,
+        "net_lateral_from_start_heading_m": -0.11188430855961011,
+        "sampled_xy_path_length_m": 0.43617269563594907,
+        "interval_mean_path_speed_m_s": 0.062310385090849865,
+        "net_heading_change_deg": 7.484230991674652,
+        "heading_range_deg": 8.042343193508326,
+        "pelvis_height_min_m": 0.692503035068512,
+        "pelvis_height_max_m": 0.7141274213790894,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 28.994368177662984,
+            "max_deg": 52.193320844570145,
+            "range_deg": 23.19895266690716
+          },
+          "right_knee_joint": {
+            "min_deg": 26.154105728299466,
+            "max_deg": 48.92444353422082,
+            "range_deg": 22.770337805921354
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "lane": 0,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.25568505211878984,
+        "net_forward_from_start_heading_m": 0.14792002762133238,
+        "net_lateral_from_start_heading_m": -0.20855337759310574,
+        "sampled_xy_path_length_m": 0.5530962092346724,
+        "interval_mean_path_speed_m_s": 0.05530962092346724,
+        "net_heading_change_deg": 4.669789939766349,
+        "heading_range_deg": 5.653976958851999,
+        "pelvis_height_min_m": 0.6678926348686218,
+        "pelvis_height_max_m": 0.6900099515914917,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 37.43249999151263,
+            "max_deg": 58.480523635945225,
+            "range_deg": 21.048023644432597
+          },
+          "right_knee_joint": {
+            "min_deg": 33.408770664661,
+            "max_deg": 58.01170628150472,
+            "range_deg": 24.602935616843723
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.15713051197356684,
+        "net_forward_from_start_heading_m": 0.01712838387738143,
+        "net_lateral_from_start_heading_m": -0.15619416205103281,
+        "sampled_xy_path_length_m": 0.3256585729204935,
+        "interval_mean_path_speed_m_s": 0.046522653274356215,
+        "net_heading_change_deg": 4.871191693975942,
+        "heading_range_deg": 5.653976958851999,
+        "pelvis_height_min_m": 0.6678926348686218,
+        "pelvis_height_max_m": 0.6900099515914917,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 37.43249999151263,
+            "max_deg": 56.7197555094293,
+            "range_deg": 19.28725551791667
+          },
+          "right_knee_joint": {
+            "min_deg": 37.79870058386286,
+            "max_deg": 58.01170628150472,
+            "range_deg": 20.21300569764186
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "lane": 1,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.31374703790581693,
+        "net_forward_from_start_heading_m": 0.03627389610428334,
+        "net_lateral_from_start_heading_m": -0.31164307830608046,
+        "sampled_xy_path_length_m": 0.5763023772844946,
+        "interval_mean_path_speed_m_s": 0.05763023772844946,
+        "net_heading_change_deg": 6.704218865699409,
+        "heading_range_deg": 7.335836853742297,
+        "pelvis_height_min_m": 0.6690057516098022,
+        "pelvis_height_max_m": 0.6880727410316467,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 35.46739651069201,
+            "max_deg": 58.56342847209084,
+            "range_deg": 23.09603196139883
+          },
+          "right_knee_joint": {
+            "min_deg": 37.944753933979825,
+            "max_deg": 59.31138199753143,
+            "range_deg": 21.3666280635516
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.1901459595417867,
+        "net_forward_from_start_heading_m": -0.045023665005530594,
+        "net_lateral_from_start_heading_m": -0.18473861404572828,
+        "sampled_xy_path_length_m": 0.3596403446984003,
+        "interval_mean_path_speed_m_s": 0.05137719209977147,
+        "net_heading_change_deg": 4.127614612878815,
+        "heading_range_deg": 5.121239698120329,
+        "pelvis_height_min_m": 0.6708678007125854,
+        "pelvis_height_max_m": 0.6877174973487854,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 38.01460627862155,
+            "max_deg": 57.953758956586334,
+            "range_deg": 19.939152677964785
+          },
+          "right_knee_joint": {
+            "min_deg": 37.944753933979825,
+            "max_deg": 59.31138199753143,
+            "range_deg": 21.3666280635516
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "lane": 0,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.2849362100749154,
+        "net_forward_from_start_heading_m": 0.13324262940356768,
+        "net_lateral_from_start_heading_m": -0.25186314839904594,
+        "sampled_xy_path_length_m": 0.5469465066691006,
+        "interval_mean_path_speed_m_s": 0.05469465066691006,
+        "net_heading_change_deg": 11.210659737558213,
+        "heading_range_deg": 11.702090051449598,
+        "pelvis_height_min_m": 0.6686092615127563,
+        "pelvis_height_max_m": 0.6881165504455566,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 37.97607376641892,
+            "max_deg": 60.349734675913446,
+            "range_deg": 22.373660909494525
+          },
+          "right_knee_joint": {
+            "min_deg": 37.754884920337226,
+            "max_deg": 59.04533246898109,
+            "range_deg": 21.29044754864386
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.18483593226610112,
+        "net_forward_from_start_heading_m": 0.03570587715567276,
+        "net_lateral_from_start_heading_m": -0.1813543828894762,
+        "sampled_xy_path_length_m": 0.34059473445372274,
+        "interval_mean_path_speed_m_s": 0.048656390636246105,
+        "net_heading_change_deg": 5.776175938320537,
+        "heading_range_deg": 6.267606252211921,
+        "pelvis_height_min_m": 0.6688498258590698,
+        "pelvis_height_max_m": 0.6881165504455566,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 37.97607376641892,
+            "max_deg": 57.101546008560085,
+            "range_deg": 19.125472242141164
+          },
+          "right_knee_joint": {
+            "min_deg": 38.06680941444795,
+            "max_deg": 59.04533246898109,
+            "range_deg": 20.978523054533134
+          }
+        }
+      }
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "lane": 1,
+      "whole_stop": {
+        "start_s": 12,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.2984480060279974,
+        "net_forward_from_start_heading_m": 0.14450427433050556,
+        "net_lateral_from_start_heading_m": -0.2611316277326467,
+        "sampled_xy_path_length_m": 0.5539334772504848,
+        "interval_mean_path_speed_m_s": 0.05539334772504848,
+        "net_heading_change_deg": 11.565164067028007,
+        "heading_range_deg": 12.25137201003937,
+        "pelvis_height_min_m": 0.6679586172103882,
+        "pelvis_height_max_m": 0.6887762546539307,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 37.685572160639936,
+            "max_deg": 57.17593018371611,
+            "range_deg": 19.490358023076176
+          },
+          "right_knee_joint": {
+            "min_deg": 36.59088066688907,
+            "max_deg": 59.1731321385412,
+            "range_deg": 22.58225147165213
+          }
+        }
+      },
+      "late_stop": {
+        "start_s": 15,
+        "end_s": 22,
+        "net_xy_displacement_m": 0.18031845305431185,
+        "net_forward_from_start_heading_m": 0.03286263760213628,
+        "net_lateral_from_start_heading_m": -0.17729859435915085,
+        "sampled_xy_path_length_m": 0.3369089658847098,
+        "interval_mean_path_speed_m_s": 0.04812985226924426,
+        "net_heading_change_deg": 8.32552181992452,
+        "heading_range_deg": 8.848277283132994,
+        "pelvis_height_min_m": 0.6697036623954773,
+        "pelvis_height_max_m": 0.6887762546539307,
+        "knees": {
+          "left_knee_joint": {
+            "min_deg": 37.685572160639936,
+            "max_deg": 57.17593018371611,
+            "range_deg": 19.490358023076176
+          },
+          "right_knee_joint": {
+            "min_deg": 36.59088066688907,
+            "max_deg": 59.1731321385412,
+            "range_deg": 22.58225147165213
+          }
+        }
+      }
+    }
+  ]
+}
