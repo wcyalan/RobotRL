@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "decoded_frames": 3250,
+  "fps": 25.0,
+  "size": [
+    1280,
+    720
+  ],
+  "duration_s": 130.0,
+  "video_bytes": 26888699,
+  "video_sha256": "18b717f2c344c1469686c180fd294c6b029fe8560c58e1a8efe90593a58ad8c1",
+  "check": "Full sequential decode, dimensions, fps, duration, selected nonblank scenes"
+}

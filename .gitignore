@@ -81,3 +81,6 @@ Thumbs.db
 
 # Runtime source reference stays local/NAS; maintain only sim2sim implementation.
 /experiments/phase3_g1_sim2sim/**/reference/
+
+# Selected demo meshes and traces are local reproduction inputs.
+/experiments/phase3_g1_sim2sim/demo_*/inputs/

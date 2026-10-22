@@ -1,5 +1,7 @@
 # 实验结果索引
 
+**2026-10-22：本轮学习项目收尾，不再追加训练。** 下列记录保留各实验成果与未达标项，复现边界见[文件说明](ARTIFACTS.md)。当前演示见[G1双模型回放](phase3_g1_sim2sim/demo_001/README.md)；下列历史对照与负结果继续保留。
+
 G1 已完成环境预检、短训练、两个训练seed的完整官方PPO基线及独立评估：[结果与学习曲线](phase3_g1_baseline/README.md)。24组768回合无提前终止，20组达标；启停连续稳定停车未通过，跨训练/评估seed复现；两个seed的六条件姿态回放已生成并初查。
 
 Go2 学习项目已收尾（2026-10-19），[最终模型、交付结论与使用入口](../notes/06_go2_deployment.md)已固定，不再追加训练或噪声对照。日常查看以下三个入口即可；历史对照和负结果保留用于追溯。
@@ -48,7 +50,7 @@ Go2实验主线按发生顺序：官方基线 → 质量/摩擦对照 → 指令
 | phase2_go2_stop_sequence_extended | [独立验收](phase2_go2_stop_sequence_extended/validation_001/) | — | 两seed的model_450通过新评估seed的全部12项行为条件；1024回合无提前终止 |
 | phase2_go2_deployment | [run_001](phase2_go2_deployment/run_001/) | 无新增训练 | 两模型每个32,000条真实观测与官方actor最大误差0；独立闭环16项完成，12项行为中10项达标 |
 
-Go2 视频：[20 秒前进回放](phase2_go2_baseline/run_001/videos/go2_forward_20s.mp4)。
+Go2 视频记录见[基线实验](phase2_go2_baseline/README.md)。历史20秒视频位于 `phase2_go2_baseline/run_001/videos/go2_forward_20s.mp4`，当前桌面克隆未包含该视频；本机可直接查看的演示为[G1双模型回放](phase3_g1_sim2sim/demo_001/README.md)。
 
 表中训练期间最佳评估用于索引，不代替独立测试结果；详细结果保留在各运行的评估文件中。
 
@@ -63,3 +65,5 @@ Go2 视频：[20 秒前进回放](phase2_go2_baseline/run_001/videos/go2_forward
 G1 后续：[零指令采样2%→20%的单变量对照](phase3_g1_standing/README.md)已完成两个训练seed：停车略有改善但仍未达标，右转退步；保留原始基线，失败对照大文件已清理，不追加训练。
 
 G1 导出：[两个原始基线模型](phase3_g1_deployment/README.md)各48,000条真实观测与官方推理动作误差为0，本地CPU复核通过；独立闭环24组768回合完成、通过数与原模型一致，无提前终止，精确停车为已知局限。
+
+G1迁移后续：[2026-10-21只读核验](phase3_g1_sim2sim/audit_001/README.md)复算768回合；[多指令演示](phase3_g1_sim2sim/demo_001/README.md)并排回放两个模型的六个独立条件，保留停车失败。较新的原始评估与源码保存在服务器。

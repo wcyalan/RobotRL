@@ -1,6 +1,6 @@
 # G1：独立 MuJoCo 的 sim-to-sim 迁移
 
-当前完成第一步：由训练时同一份 `g1_minimal.usd` 建立可运行的原生 MuJoCo 模型，接入两个已导出的策略，完成接口检查和单回合闭环预检。结果见[首轮记录](../../experiments/phase3_g1_sim2sim/run_001/README.md)。没有重新训练模型。
+下文记录run_001的原始预检流程。进度更新（2026-10-21）：服务器已完成run_002参数对齐和run_003正式评估，24组768回合中20组达标、精确停车仍失败；[独立复核](../../experiments/phase3_g1_sim2sim/audit_001/README.md)已核对全部保存指标。本地新增[多指令演示与复现](../../experiments/phase3_g1_sim2sim/demo_001/README.md)。完整后续代码与权重仍在服务器，本目录早期脚本不能替代服务器的分组评估入口。
 
 ## 这一步迁移了什么
 

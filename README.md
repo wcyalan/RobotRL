@@ -4,7 +4,28 @@
 
 实验结果统一入口：[实验索引](experiments/README.md)。各算法独立连续编号。
 
-## 项目路线与进度
+## 本轮已收尾（2026-10-22）
+
+已完成从手写PPO到Go2、G1仿真训练与部署准备的学习主线，本轮不再追加训练。精确停车和重复测试中的稳定性问题作为已知限制保留，历史未完成项不改记为通过。
+
+**先看：[Sim-to-Real方法笔记](notes/10_sim_to_real.md) · [G1双模型演示](experiments/phase3_g1_sim2sim/demo_001/README.md) · [实验索引](experiments/README.md) · [文件与复现说明](experiments/ARTIFACTS.md)。**
+
+|成果|结论与入口|
+|---|---|
+|手写强化学习|REINFORCE→GAE→PPO，CartPole验收与HalfCheetah初步对照完成；[算法笔记](notes/README.md)|
+|Go2|训练、任务修改、DR对照和导出闭环已完成；重复行为验证未全过，见[最终交付](notes/06_go2_deployment.md)|
+|G1原模型与导出|两训练seed，各次评估24组768回合，20组达标；精确停车未通过，见[导出闭环](experiments/phase3_g1_deployment/README.md)|
+|G1原生MuJoCo迁移|24组768回合，20组达标，无提前终止；[832,000策略步保存结果复核](experiments/phase3_g1_sim2sim/audit_001/README.md)|
+|演示与复现|130秒、双模型、六条件、3250帧校验通过；[查看回放](experiments/phase3_g1_sim2sim/demo_001/README.md)，属于保存轨迹回放|
+
+当前桌面有最小渲染素材和视频，完整权重、全部实验及较新的迁移代码未同步。Git克隆不包含被忽略的大文件；完整评估需要服务器上的对应材料。工程流程完成与行为全部达标分开报告，尚未开展真机验证。
+
+## 历史路线与完成证据
+
+<details>
+<summary>展开各阶段记录与原验收标准</summary>
+
+以下保留学习过程和原验收标准。未完成练习及可选扩展均退出本轮待办；其中的训练步骤用于追溯方法，不是继续执行的计划。
 
 按项目内容和验收结果推进，不设置周次或完成日期。先完成可复现的 Go2 仿真项目，再将训练、评估与部署准备流程迁移到人形机器人；进入下一阶段不代表前面的未完成项自动通过。
 
@@ -40,7 +61,7 @@
    - [ ] **采样扩展（未完成）**：手写实现尚未改为同步向量环境；向量环境自动 reset 的末状态处理须另行验证，子进程优化按需进行。
 6. [x] **HalfCheetah 初步对照**：手写 PPO 与 SB3 均完成 seed=0、1、每 seed 1,024,000 步训练，保留学习曲线、独立评估和回放；另完成 SB3 构造器默认配置对照（不等于 RL Zoo 调优配置）。见[实验索引](experiments/README.md)、[手写 PPO 比较](experiments/phase1_ppo_continuous/comparison_001.json)和 [SB3 默认配置比较](experiments/phase1_sb3_official/comparison_001.json)。配置及预处理差异随实验记录保留，两个 seed 只支持初步比较；80% 仍为挑战目标，不作为已完成项的依据。
 
-本阶段验收：手写 PPO 的更新、终止处理和归一化有检查证据；CartPole 与 HalfCheetah 的训练、保存、加载和独立评估可复现。λ 配对实验和手写向量采样仍保留待办。
+本阶段验收：手写 PPO 的更新、终止处理和归一化有检查证据；CartPole 与 HalfCheetah 的训练、保存、加载和独立评估可复现。λ 配对实验和手写向量采样未完成，本轮不继续开展。
 
 ### 阶段 2：Go2 仿真行走
 
@@ -93,9 +114,9 @@
 
 目标：在 Go2 项目之后完成一个人形机器人的平地速度跟踪项目，理解双足平衡、接触切换和上身姿态对训练的影响。首轮以站立、行走、转向和停止为范围；跑跳、起身、灵巧操作和语言指令任务另作扩展。没有真机也可完成本阶段。
 
-Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核验、训练、独立评估和导出流程，保留Go2行为稳定性的已知限制。人形基础行走复现及导出独立闭环已收尾，额外DR为可选扩展。已完成 [G1任务与资产核查](experiments/phase3_g1_environment/run_001/README.md)，[两个seed基线](experiments/phase3_g1_baseline/README.md)各10/12组达标，768回合无提前终止；启停连续稳定停车未通过；阶段1未完成的算法练习仍为独立待办。
+Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核验、训练、独立评估和导出流程，保留Go2行为稳定性的已知限制。人形基础行走复现及导出独立闭环已收尾，额外DR为可选扩展。已完成 [G1任务与资产核查](experiments/phase3_g1_environment/run_001/README.md)，[两个seed基线](experiments/phase3_g1_baseline/README.md)各10/12组达标，768回合无提前终止；启停连续稳定停车未通过；阶段1未完成的算法练习保留未完成状态，不列入本轮待办。
 
-当前已开始 [G1独立MuJoCo迁移](phase3/sim2sim/README.md)：两个原策略完成六条件单回合预检，12局均无提前终止，站立、前进和左右转通过单回合指标，精确停车仍未通过。下一步核对目标物理设置后扩大评估；当前不等同于32回合组验收，见[首轮结果](experiments/phase3_g1_sim2sim/run_001/README.md)。
+G1独立MuJoCo迁移已在服务器完成参数对齐和正式分组评估：24组768回合，20组达标，精确停车仍未通过。2026-10-21已对保存的832,000个策略步独立复算，见[核验记录](experiments/phase3_g1_sim2sim/audit_001/README.md)。本机新增[130秒双模型多指令演示与复现说明](experiments/phase3_g1_sim2sim/demo_001/README.md)。桌面保留早期sim2sim实现，服务器较新的完整评估代码与权重未批量同步；演示是保存状态回放，不是新增仿真。
 
 1. [x] **选择机器人与核对任务**：固定镜像内的 `Isaac-Velocity-Flat-G1` / `G1_MINIMAL_CFG` / `newton_mjwarp` 已通过4环境1100步验证；123维观测、37维动作，资产与源码版本、接触、有限数值及自动reset均有记录。见 [环境核查](experiments/phase3_g1_environment/run_001/README.md)。
 2. [x] **整理人形任务与动作接口**（实测配置见[phase3说明](phase3/README.md#实测接口与配置解读)）：整理受控关节、观测来源、坐标系、动作缩放、默认姿态、PD 参数、控制频率、接触和终止条件。明确手臂/躯干是否参与控制、actor/critic 是否使用不同观测，以及官方配置已有的随机化与 curriculum。复用 Go2 工具流程，但重新训练人形策略，不直接加载 Go2 权重或照搬关节映射。
@@ -112,9 +133,11 @@ Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核�
 ### 可选扩展与优先级
 
 - 按 Go2 → 人形机器人推进 Isaac Lab 实操，暂不安排其他独立 MuJoCo 训练任务。
-- G1的sim-to-sim已开始；粗糙地形、观测延迟、执行器随机化、更多训练 seed 和特权蒸馏以后按需增加。
+- G1的名义平地sim-to-sim评估与多指令回放已完成；精确停车为已知局限。粗糙地形、观测延迟、执行器随机化、更多训练seed和特权蒸馏以后按需增加。
 - 真机测试独立安排：取得硬件与测试条件后再完成接口适配、动作限幅、急停和低风险试运行；本轮不依赖机器人实物。
-- Go2学习项目已收尾，下一项目为人形机器人；各机器人均先完成官方基线与最小对照，再按需要增加粗糙地形、额外 DR 维度、特权学习、sim-to-sim 或性能优化。扩展实验不替代主线验收。
+- Go2与G1本轮均已收尾；各机器人均先完成官方基线与最小对照，再按需要增加粗糙地形、额外 DR 维度、特权学习、sim-to-sim 或性能优化。扩展实验不替代主线验收。
+
+</details>
 
 ## 目录结构
 
@@ -124,7 +147,7 @@ Go2已完成本轮学习项目交付，可以转入本阶段：复用环境核�
 | `phase0_setup/` | 阶段 0 工具链验证脚本 |
 | `phase1_ppo/` | 阶段 1 手写算法代码 |
 | [`phase2_isaaclab/`](phase2_isaaclab/README.md) | Go2 训练、独立评估、鲁棒性测试和视频回放 |
-| [`phase3/`](phase3/README.md) | 人形机器人学习计划及后续实现 |
+| [`phase3/`](phase3/README.md) | G1任务、训练、评估、导出与回放实现 |
 | `experiments/` | 实验记录：config + 曲线 + 结论 |
 
 Go2的Isaac Lab代码维护在 `phase2_isaaclab/`，训练、评估、分析和渲染分别位于 `training/`、`evaluation/`、`analysis/`、`visualization/`；远程任务入口与配置位于 `jobs/`、`configs/`，通过 `prepare_context.py --job` 按需打包；Isaac Lab 本体和独立 Python 环境不纳入本仓库。实验按类别使用 `run_001`、`run_002` 顺序编号。人形项目使用 `phase3/`，已包含 `environment/`、`training/`、`evaluation/`、`analysis/`、`deployment/` 和 `visualization/`，相关笔记统一放在 `notes/`，实验存于 `experiments/phase3_g1_*`；路线阶段编号与代码目录编号不强制一致，Go2 原目录保持不变。

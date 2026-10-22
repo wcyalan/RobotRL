@@ -1,0 +1,78 @@
+{
+  "completed": true,
+  "kind": "kinematic replay of saved native-MuJoCo evaluation states",
+  "new_physics_steps": 0,
+  "new_training": false,
+  "fps": 25,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 3250,
+  "duration_s": 130.0,
+  "preview_only": false,
+  "selection": {
+    "training_seeds": [
+      0,
+      1
+    ],
+    "eval_seed": 20000,
+    "lane": 0,
+    "rule": "fixed before rendering; not best episode selection"
+  },
+  "chapters": [
+    {
+      "condition": "stand",
+      "start_s": 0,
+      "duration_s": 20,
+      "expected_frames": 500
+    },
+    {
+      "condition": "forward_low",
+      "start_s": 20,
+      "duration_s": 20,
+      "expected_frames": 500
+    },
+    {
+      "condition": "forward_medium",
+      "start_s": 40,
+      "duration_s": 20,
+      "expected_frames": 500
+    },
+    {
+      "condition": "turn_left",
+      "start_s": 60,
+      "duration_s": 20,
+      "expected_frames": 500
+    },
+    {
+      "condition": "turn_right",
+      "start_s": 80,
+      "duration_s": 20,
+      "expected_frames": 500
+    },
+    {
+      "condition": "stop_restart",
+      "start_s": 100,
+      "duration_s": 30,
+      "expected_frames": 750
+    }
+  ],
+  "renderer_sha256": "518265014d9fe91b3fa807ff3bf9d4977a12536c7296087098c30e05c669c260",
+  "visual_only_changes": [
+    "checkerboard ground material",
+    "following camera",
+    "text overlays"
+  ],
+  "input_manifest_sha256": "7de533b8ce272224bd6361f9762690eee1be764d126af0b0e8d47e045e9aa599",
+  "versions": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "Pillow": "13.0.0",
+    "imageio": "2.38.1",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "limits": [
+    "Six independent episodes, not a single continuous six-command rollout.",
+    "Stop/restart shows an actual failed acceptance case; thresholds unchanged.",
+    "Pose replay does not revalidate contacts, dynamics or hardware safety."
+  ]
+}

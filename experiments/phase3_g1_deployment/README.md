@@ -17,6 +17,8 @@
 
 ## 模型与证据
 
+下文“本地及NAS保留”是原实验工作机的历史记录；当前Administrator桌面克隆尚无这两个导出权重，参见[当前材料位置](../ARTIFACTS.md)。
+
 |训练seed|训练checkpoint|导出策略|
 |---|---|---|
 |0|`model_1499.pt`|`run_001/export/policy.pt`|
@@ -67,4 +69,4 @@ with torch.inference_mode():
 - [seed=0独立汇总](run_001/closed_loop/summary.json)、[seed=1独立汇总](run_002/closed_loop/summary.json)。
 - 原始逐回合JSON、前两lane轨迹、日志和源码快照保留在本地及NAS。
 
-**本轮G1基础行走复现的工程闭环已经完成：训练→保存/加载→独立评估→导出→独立闭环。** 原始模型作为交付基线，精确停车是已知性能限制；额外DR、sim-to-sim和真机适配是可选扩展，不在本轮继续自动增加实验。
+**本轮G1基础行走复现的工程闭环已经完成：训练→保存/加载→独立评估→导出→独立闭环。** 原始模型作为交付基线，精确停车是已知性能限制。后续原生MuJoCo迁移也已完成[保存结果复核](../phase3_g1_sim2sim/audit_001/README.md)和[多指令回放](../phase3_g1_sim2sim/demo_001/README.md)。2026-10-22按现有成果收尾，不再追加训练；额外DR和真机适配未开展。其他结果见[实验索引](../README.md)。

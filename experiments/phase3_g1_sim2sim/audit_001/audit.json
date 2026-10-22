@@ -1,0 +1,227 @@
+{
+  "audited_at_utc": "2026-10-21T10:55:37.193404+00:00",
+  "run": "/labdata2/congyuwang/RobotRL_kitless/experiments/phase3_g1_sim2sim/run_003",
+  "audit_passed": true,
+  "frozen_files_verified": 50,
+  "groups_verified": 24,
+  "episodes_verified": 768,
+  "policy_steps_verified": 832000,
+  "representative_initial_states_verified": 48,
+  "early_terminations": 0,
+  "groups_passed": 20,
+  "groups": [
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "condition": "stand",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "condition": "forward_low",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "condition": "forward_medium",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "condition": "turn_left",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "condition": "turn_right",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 20000,
+      "condition": "stop_restart",
+      "pass_count": 0,
+      "group_passed": false,
+      "stop_diagnostics": {
+        "longest_stable_seconds_min_median_max": [
+          0.18,
+          0.26,
+          0.46
+        ],
+        "mean_xy_violation_fraction": 0.1244375,
+        "mean_yaw_violation_fraction": 0.26056250000000003,
+        "stable_window_reached": 0
+      }
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "condition": "stand",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "condition": "forward_low",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "condition": "forward_medium",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "condition": "turn_left",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "condition": "turn_right",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 0,
+      "eval_seed": 21000,
+      "condition": "stop_restart",
+      "pass_count": 0,
+      "group_passed": false,
+      "stop_diagnostics": {
+        "longest_stable_seconds_min_median_max": [
+          0.18,
+          0.25,
+          0.34
+        ],
+        "mean_xy_violation_fraction": 0.12475,
+        "mean_yaw_violation_fraction": 0.263875,
+        "stable_window_reached": 0
+      }
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "condition": "stand",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "condition": "forward_low",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "condition": "forward_medium",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "condition": "turn_left",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "condition": "turn_right",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 20000,
+      "condition": "stop_restart",
+      "pass_count": 0,
+      "group_passed": false,
+      "stop_diagnostics": {
+        "longest_stable_seconds_min_median_max": [
+          0.2,
+          0.39,
+          0.7000000000000001
+        ],
+        "mean_xy_violation_fraction": 0.110625,
+        "mean_yaw_violation_fraction": 0.233625,
+        "stable_window_reached": 0
+      }
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "condition": "stand",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "condition": "forward_low",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "condition": "forward_medium",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "condition": "turn_left",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "condition": "turn_right",
+      "pass_count": 32,
+      "group_passed": true
+    },
+    {
+      "training_seed": 1,
+      "eval_seed": 21000,
+      "condition": "stop_restart",
+      "pass_count": 0,
+      "group_passed": false,
+      "stop_diagnostics": {
+        "longest_stable_seconds_min_median_max": [
+          0.22,
+          0.3,
+          0.46
+        ],
+        "mean_xy_violation_fraction": 0.1151875,
+        "mean_yaw_violation_fraction": 0.24262499999999998,
+        "stable_window_reached": 0
+      }
+    }
+  ],
+  "limits": [
+    "Read-only replay of saved metrics, not a new dynamics simulation.",
+    "No independent remeasurement of source-runtime physics in this audit.",
+    "Stop-axis violation fractions describe saved errors; they do not establish a causal mechanism."
+  ]
+}
