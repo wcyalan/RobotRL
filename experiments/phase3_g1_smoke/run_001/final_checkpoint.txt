@@ -1,1 +1,0 @@
-/robotrl/experiments/phase3_g1_smoke/run_001/logs/rsl_rl/g1_flat/2026-10-19_08-50-25/model_19.pt

@@ -13,7 +13,7 @@
 
 耗时为官方训练日志记录，未计入排队、首次镜像拉取及12个独立评估进程。两组各1500条loss均有限，actor/critic参数确实改变；最终模型为预先指定的 `model_1499.pt`，没有挑选最好checkpoint。
 
-镜像、机器人资产及运行依赖见[环境记录](../phase3_g1_environment/run_001/README.md)。训练入口：[train_baseline.sh](../../phase3/training/train_baseline.sh)，评估入口：[evaluate_behaviors.py](../../phase3/evaluation/evaluate_behaviors.py)。远程任务context保留在 `/labdata2/congyuwang/RobotRL_kitless/contexts/g1_baseline_001`；进入对应context后，通过 `environment.yaml` 调度 `bash train_baseline.sh /robotrl/experiments/phase3_g1_baseline/<新编号目录> <0或1>`，脚本会拒绝覆盖已有训练日志。任务命令需用集群的 `det command run` 提交，不能在登录节点直接训练。
+镜像、机器人资产及运行依赖见[环境记录](https://github.com/wcyalan/RobotRL/blob/4048eebbc349b73ddd7d1d9b3a115cfa29495f92/experiments/phase3_g1_environment/run_001/README.md)。训练入口：[train_baseline.sh](../../phase3/training/train_baseline.sh)，评估入口：[evaluate_behaviors.py](../../phase3/evaluation/evaluate_behaviors.py)。远程任务context保留在 `/labdata2/congyuwang/RobotRL_kitless/contexts/g1_baseline_001`；进入对应context后，通过 `environment.yaml` 调度 `bash train_baseline.sh /robotrl/experiments/phase3_g1_baseline/<新编号目录> <0或1>`，脚本会拒绝覆盖已有训练日志。任务命令需用集群的 `det command run` 提交，不能在登录节点直接训练。
 
 ## 冻结评估
 
@@ -47,7 +47,7 @@
 
 ## 学习曲线与证据
 
-![两组官方基线的训练回报](learning_curve.svg)
+![两组官方基线的训练回报](learning_curve.png)
 
 曲线显示官方日志的训练平均episode reward，两个seed各1500点，未额外平滑、抽样或跨seed求平均。日志值有打印精度限制；不是独立行为评估分数，较高训练回报不能替代停车验收。完整指标与分项奖励仍在每个run的训练日志和TensorBoard文件中。
 

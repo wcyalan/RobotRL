@@ -113,7 +113,7 @@ startup 表示建立环境时采样，不能写成“每局都随机”。reset 
 
 特别注意当前后端的摩擦：Newton 材料事件使用单个滑动摩擦参数；现有审计发现等优先级 MuJoCo 接触取两侧摩擦较大值。官方 ground=1.0、robot=0.8 的活动接触实际为 1.0，而不是从 `friction_combine_mode=multiply` 推算出 0.8。只降低机器人摩擦到 0.3，仍会被地面 1.0 覆盖。
 
-证据与工具：[低摩擦修正结果](../experiments/phase2_go2_robustness/run_003/README.md)、[活动接触审计代码](../phase2_isaaclab/evaluation/friction_audit.py)、镜像运行时事件源码（`runtime_material_events.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）。因此官方基线不能直接命名为“无 DR”。
+证据与工具：[低摩擦修正结果](https://github.com/wcyalan/RobotRL/blob/4048eebbc349b73ddd7d1d9b3a115cfa29495f92/experiments/phase2_go2_robustness/run_003/README.md)、[活动接触审计代码](../phase2_isaaclab/evaluation/friction_audit.py)、镜像运行时事件源码（`runtime_material_events.py`，位于[实验源码快照](../experiments/ARTIFACTS.md)）。因此官方基线不能直接命名为“无 DR”。
 
 ## 8. 与当前质量/摩擦对照的关系
 

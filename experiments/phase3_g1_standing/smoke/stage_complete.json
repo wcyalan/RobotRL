@@ -1,8 +1,0 @@
-{
-  "completed": true,
-  "stage": "smoke",
-  "training_seed": 0,
-  "model_sha256": "e5c5b54ba8a0416ff40394a448b4a29d1a3ac5e20a4305c2c07ddcd9ffe72188",
-  "protocol_sha256": "894cad975e0ca4bf06fe1c605e7fe0dc21b46caddfd2a5d786ddafa2fdcf17dc",
-  "evaluations": []
-}

@@ -1,6 +1,6 @@
 # G1：任务配置与行为评估
 
-这篇笔记是动手时的阅读指南。2026-10-19 已在固定运行镜像内解析 G1 配置，确认官方平地任务、资产地址和训练预算，见 [Phase 3 实测配置](../phase3/README.md#当前已核实的配置)。关节数、观测维数及后端实际运行结果以 [环境核查](../experiments/phase3_g1_environment/run_001/README.md)为准。
+这篇笔记是动手时的阅读指南。2026-10-19 已在固定运行镜像内解析 G1 配置，确认官方平地任务、资产地址和训练预算，见 [Phase 3 实测配置](../phase3/README.md#当前已核实的配置)。关节数、观测维数及后端实际运行结果以 [环境核查](https://github.com/wcyalan/RobotRL/blob/4048eebbc349b73ddd7d1d9b3a115cfa29495f92/experiments/phase3_g1_environment/run_001/README.md)为准。
 
 ## 1. 按依赖顺序读源码
 

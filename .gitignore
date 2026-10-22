@@ -84,3 +84,34 @@ Thumbs.db
 
 # Selected demo meshes and traces are local reproduction inputs.
 /experiments/phase3_g1_sim2sim/demo_*/inputs/
+
+# Curated public experiments; existing historical files remain local.
+/experiments/phase0_sb3_ppo/
+/experiments/phase1_baseline/
+/experiments/phase1_gae/
+/experiments/phase1_nstep/
+/experiments/phase1_reinforce/
+/experiments/phase1_sb3_continuous/
+/experiments/phase1_sb3_official/
+/experiments/phase2_go2_baseline/
+/experiments/phase2_go2_behavior/
+/experiments/phase2_go2_command_coverage/
+/experiments/phase2_go2_delay_training/
+/experiments/phase2_go2_robustness/
+/experiments/phase2_go2_stop_sequence/
+/experiments/phase2_go2_stop_stability/
+/experiments/phase2_go2_turn_coverage/
+/experiments/phase3_g1_environment/
+/experiments/phase3_g1_smoke/
+/experiments/phase3_g1_standing/
+/experiments/local_archive/
+/experiments/phase3_g1_sim2sim/run_001/
+/experiments/phase1_*/**/source/
+/experiments/**/completed.txt
+/experiments/**/started.txt
+/experiments/**/closed_loop_completed.txt
+/experiments/**/preliminary_summary.json
+/experiments/**/batch_status.json
+/experiments/phase1_ppo_continuous/**/frame_*.png
+/experiments/phase3_g1_baseline/learning_curve.pdf
+/experiments/phase3_g1_baseline/learning_curve.svg
